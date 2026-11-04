@@ -1,0 +1,29 @@
+/// Whether months still filling in are included.
+table PickMonths
+	lineageTag: 666de164-b9ed-465f-b348-8f8c4c68a21e
+
+	column Months
+		isNameInferred
+		sourceColumn: [Months]
+		sortByColumn: SortOrder
+
+	column MonthSet
+		isNameInferred
+		sourceColumn: [MonthSet]
+
+	column SortOrder
+		isNameInferred
+		sourceColumn: [SortOrder]
+
+	partition PickMonths = calculated
+		mode: import
+		source =
+				// Whether months still filling in are in.
+				DATATABLE (
+				    "Months", STRING, "MonthSet", STRING, "SortOrder", INTEGER,
+				    {
+				        { "Complete months only", "Complete months", 1 },
+				        { "All months, including part-complete", "All months", 2 }
+				    }
+				)
+

@@ -1,0 +1,406 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "0a1a7bcd03c405fab156",
+  "position": {
+    "x": 40,
+    "y": 122,
+    "z": 2,
+    "width": 1320,
+    "height": 868,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RuleGrid"
+                    }
+                  },
+                  "Property": "rule_order"
+                }
+              },
+              "queryRef": "RuleGrid.rule_order",
+              "nativeQueryRef": "rule_order"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RuleGrid"
+                    }
+                  },
+                  "Property": "id"
+                }
+              },
+              "queryRef": "RuleGrid.id",
+              "nativeQueryRef": "id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RuleGrid"
+                    }
+                  },
+                  "Property": "title"
+                }
+              },
+              "queryRef": "RuleGrid.title",
+              "nativeQueryRef": "title"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RuleGrid"
+                    }
+                  },
+                  "Property": "dimension"
+                }
+              },
+              "queryRef": "RuleGrid.dimension",
+              "nativeQueryRef": "dimension"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RuleGrid"
+                    }
+                  },
+                  "Property": "severity"
+                }
+              },
+              "queryRef": "RuleGrid.severity",
+              "nativeQueryRef": "severity"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RuleGrid"
+                    }
+                  },
+                  "Property": "status"
+                }
+              },
+              "queryRef": "RuleGrid.status",
+              "nativeQueryRef": "status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RuleGrid"
+                    }
+                  },
+                  "Property": "failed"
+                }
+              },
+              "queryRef": "RuleGrid.failed",
+              "nativeQueryRef": "failed"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RuleGrid"
+                    }
+                  },
+                  "Property": "eligible"
+                }
+              },
+              "queryRef": "RuleGrid.eligible",
+              "nativeQueryRef": "eligible"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RuleGrid"
+                    }
+                  },
+                  "Property": "failed_pct"
+                }
+              },
+              "queryRef": "RuleGrid.failed_pct",
+              "nativeQueryRef": "failed_pct"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RuleGrid"
+                    }
+                  },
+                  "Property": "test_outcome"
+                }
+              },
+              "queryRef": "RuleGrid.test_outcome",
+              "nativeQueryRef": "test_outcome"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RuleGrid"
+                    }
+                  },
+                  "Property": "owner_role"
+                }
+              },
+              "queryRef": "RuleGrid.owner_role",
+              "nativeQueryRef": "owner_role"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RuleGrid"
+                    }
+                  },
+                  "Property": "why"
+                }
+              },
+              "queryRef": "RuleGrid.why",
+              "nativeQueryRef": "why"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RuleGrid"
+                    }
+                  },
+                  "Property": "months_packed"
+                }
+              },
+              "queryRef": "RuleGrid.months_packed",
+              "nativeQueryRef": "months_packed"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RuleGrid"
+                    }
+                  },
+                  "Property": "runs_packed"
+                }
+              },
+              "queryRef": "RuleGrid.runs_packed",
+              "nativeQueryRef": "runs_packed"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Selected Rule Id"
+                }
+              },
+              "queryRef": "Report Measures.Selected Rule Id",
+              "nativeQueryRef": "Selected Rule Id"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Tracking Text"
+                }
+              },
+              "queryRef": "Report Measures.Tracking Text",
+              "nativeQueryRef": "Tracking Text"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "vega": [
+        {
+          "properties": {
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vega'"
+                }
+              }
+            },
+            "jsonSpec": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"$schema\":\"https://vega.github.io/schema/vega/v6.json\",\"description\":\"Every rule against every sample month, with tonight''s outcome and the planted defect result\",\"width\":{\"signal\":\"pbiContainerWidth\"},\"height\":{\"signal\":\"pbiContainerHeight\"},\"padding\":0,\"autosize\":{\"type\":\"none\"},\"background\":\"#0A111E\",\"config\":{\"text\":{\"font\":\"Segoe UI, sans-serif\",\"fill\":\"#FFFFFF\"},\"tooltip\":{\"offset\":12}},\"usermeta\":{\"denebFields\":{\"rule_order\":\"rule_order\",\"id\":\"id\",\"title\":\"title\",\"dimension\":\"dimension\",\"severity\":\"severity\",\"status\":\"status\",\"failed\":\"failed\",\"eligible\":\"eligible\",\"failed_pct\":\"failed_pct\",\"test_outcome\":\"test_outcome\",\"owner_role\":\"owner_role\",\"why\":\"why\",\"months_packed\":\"months_packed\",\"runs_packed\":\"runs_packed\",\"Picked\":\"Selected Rule Id\",\"Since\":\"Tracking Text\"}},\"signals\":[{\"name\":\"fieldMap\",\"value\":{\"rule_order\":\"rule_order\",\"id\":\"id\",\"title\":\"title\",\"dimension\":\"dimension\",\"severity\":\"severity\",\"status\":\"status\",\"failed\":\"failed\",\"eligible\":\"eligible\",\"failed_pct\":\"failed_pct\",\"test_outcome\":\"test_outcome\",\"owner_role\":\"owner_role\",\"why\":\"why\",\"months_packed\":\"months_packed\",\"runs_packed\":\"runs_packed\",\"Picked\":\"Selected Rule Id\",\"Since\":\"Tracking Text\"},\"description\":\"EDIT HERE if a field arrives under a different name: set the right-hand value to the name Power BI delivers (Deneb editor > Data tab).\"},{\"name\":\"missingFields\",\"update\":\"length(data(''dataset'')) ? ((isDefined(data(''dataset'')[0][fieldMap[''rule_order'']]) ? '''' : ''rule_order  '') + (isDefined(data(''dataset'')[0][fieldMap[''id'']]) ? '''' : ''id  '') + (isDefined(data(''dataset'')[0][fieldMap[''title'']]) ? '''' : ''title  '') + (isDefined(data(''dataset'')[0][fieldMap[''dimension'']]) ? '''' : ''dimension  '') + (isDefined(data(''dataset'')[0][fieldMap[''severity'']]) ? '''' : ''severity  '') + (isDefined(data(''dataset'')[0][fieldMap[''status'']]) ? '''' : ''status  '') + (isDefined(data(''dataset'')[0][fieldMap[''failed'']]) ? '''' : ''failed  '') + (isDefined(data(''dataset'')[0][fieldMap[''eligible'']]) ? '''' : ''eligible  '') + (isDefined(data(''dataset'')[0][fieldMap[''failed_pct'']]) ? '''' : ''failed_pct  '') + (isDefined(data(''dataset'')[0][fieldMap[''test_outcome'']]) ? '''' : ''test_outcome  '') + (isDefined(data(''dataset'')[0][fieldMap[''owner_role'']]) ? '''' : ''owner_role  '') + (isDefined(data(''dataset'')[0][fieldMap[''why'']]) ? '''' : ''why  '') + (isDefined(data(''dataset'')[0][fieldMap[''months_packed'']]) ? '''' : ''months_packed  '') + (isDefined(data(''dataset'')[0][fieldMap[''runs_packed'']]) ? '''' : ''runs_packed  '') + (isDefined(data(''dataset'')[0][fieldMap[''Picked'']]) ? '''' : ''Picked  '') + (isDefined(data(''dataset'')[0][fieldMap[''Since'']]) ? '''' : ''Since  '')) : ''''\"},{\"name\":\"W\",\"update\":\"max(pbiContainerWidth, 10)\"},{\"name\":\"H\",\"update\":\"max(pbiContainerHeight, 10)\"},{\"name\":\"u\",\"update\":\"max(0.35, min(W / 1320, H / 868))\"},{\"name\":\"r0\",\"update\":\"length(data(''rules'')) ? data(''rules'')[0] : {}\"},{\"name\":\"rowH\",\"update\":\"(H - (104 + 8) * u) / max(1, length(data(''src'')))\"},{\"name\":\"letterWord\",\"value\":{\"P\":\"Pass\",\"F\":\"Fail\",\"R\":\"For review\",\"N\":\"Not checked\",\"D\":\"No data\"}}],\"data\":[{\"name\":\"dataset\"},{\"name\":\"src\",\"source\":\"dataset\",\"transform\":[{\"type\":\"formula\",\"as\":\"rule_order\",\"expr\":\"toNumber(datum[fieldMap[''rule_order'']])\"},{\"type\":\"formula\",\"as\":\"id\",\"expr\":\"datum[fieldMap[''id'']]\"},{\"type\":\"formula\",\"as\":\"title\",\"expr\":\"datum[fieldMap[''title'']]\"},{\"type\":\"formula\",\"as\":\"dimension\",\"expr\":\"datum[fieldMap[''dimension'']]\"},{\"type\":\"formula\",\"as\":\"severity\",\"expr\":\"datum[fieldMap[''severity'']]\"},{\"type\":\"formula\",\"as\":\"status\",\"expr\":\"datum[fieldMap[''status'']]\"},{\"type\":\"formula\",\"as\":\"failed\",\"expr\":\"toNumber(datum[fieldMap[''failed'']])\"},{\"type\":\"formula\",\"as\":\"eligible\",\"expr\":\"toNumber(datum[fieldMap[''eligible'']])\"},{\"type\":\"formula\",\"as\":\"failed_pct\",\"expr\":\"toNumber(datum[fieldMap[''failed_pct'']])\"},{\"type\":\"formula\",\"as\":\"test_outcome\",\"expr\":\"datum[fieldMap[''test_outcome'']]\"},{\"type\":\"formula\",\"as\":\"owner_role\",\"expr\":\"datum[fieldMap[''owner_role'']]\"},{\"type\":\"formula\",\"as\":\"why\",\"expr\":\"datum[fieldMap[''why'']]\"},{\"type\":\"formula\",\"as\":\"months_packed\",\"expr\":\"datum[fieldMap[''months_packed'']]\"},{\"type\":\"formula\",\"as\":\"runs_packed\",\"expr\":\"datum[fieldMap[''runs_packed'']]\"},{\"type\":\"formula\",\"as\":\"Picked\",\"expr\":\"datum[fieldMap[''Picked'']]\"},{\"type\":\"formula\",\"as\":\"Since\",\"expr\":\"datum[fieldMap[''Since'']]\"}]},{\"name\":\"key\",\"values\":[{\"word\":\"Pass\",\"x\":14},{\"word\":\"For review\",\"x\":92},{\"word\":\"Fail\",\"x\":208},{\"word\":\"Not checked\",\"x\":280}]},{\"name\":\"rules\",\"source\":\"src\",\"transform\":[{\"type\":\"collect\",\"sort\":{\"field\":\"rule_order\"}},{\"type\":\"window\",\"ops\":[\"row_number\"],\"as\":[\"rowNo\"]},{\"type\":\"formula\",\"as\":\"y\",\"expr\":\"104 * u + (datum.rowNo - 1) * rowH\"},{\"type\":\"formula\",\"as\":\"tip\",\"expr\":\"{''Rule'': datum.id + '' · '' + datum.title, ''Why it matters'': datum.why, ''At the last check'': datum.status, ''Failed records'': format(datum.failed, '','') + '' of '' + format(datum.eligible, '',''), ''Planted defect'': datum.test_outcome, ''Owner (illustrative)'': datum.owner_role}\"}]},{\"name\":\"groups\",\"source\":\"rules\",\"transform\":[{\"type\":\"window\",\"ops\":[\"lag\"],\"fields\":[\"dimension\"],\"as\":[\"prev\"]},{\"type\":\"filter\",\"expr\":\"datum.rowNo > 1 && datum.prev !== datum.dimension\"}]},{\"name\":\"cells\",\"source\":\"rules\",\"transform\":[{\"type\":\"filter\",\"expr\":\"length(datum.months_packed || '''') > 0\"},{\"type\":\"formula\",\"as\":\"piece\",\"expr\":\"split(datum.months_packed, '';'')\"},{\"type\":\"flatten\",\"fields\":[\"piece\"]},{\"type\":\"formula\",\"as\":\"p\",\"expr\":\"split(datum.piece, '':'')\"},{\"type\":\"formula\",\"as\":\"month\",\"expr\":\"datum.p[0]\"},{\"type\":\"formula\",\"as\":\"word\",\"expr\":\"letterWord[datum.p[1]]\"},{\"type\":\"formula\",\"as\":\"tip\",\"expr\":\"{''Rule'': datum.id + '' · '' + datum.title, ''Month'': datum.month, ''Outcome'': datum.word, ''Failed records'': format(toNumber(datum.p[2]), '','') + '' of '' + format(toNumber(datum.p[3]), '','')}\"}]},{\"name\":\"monthList\",\"source\":\"cells\",\"transform\":[{\"type\":\"aggregate\",\"groupby\":[\"month\"]},{\"type\":\"collect\",\"sort\":{\"field\":\"month\"}},{\"type\":\"window\",\"ops\":[\"row_number\"],\"as\":[\"n\"]}]},{\"name\":\"placed\",\"source\":\"cells\",\"transform\":[{\"type\":\"lookup\",\"from\":\"monthList\",\"key\":\"month\",\"fields\":[\"month\"],\"values\":[\"n\"],\"as\":[\"n\"]},{\"type\":\"formula\",\"as\":\"cx\",\"expr\":\"(556 + (datum.n - 1) * 22) * u\"}]},{\"name\":\"nights\",\"source\":\"rules\",\"transform\":[{\"type\":\"formula\",\"as\":\"piece\",\"expr\":\"split(datum.runs_packed || '''', '';'')\"},{\"type\":\"flatten\",\"fields\":[\"piece\"]},{\"type\":\"filter\",\"expr\":\"length(datum.piece) > 0\"},{\"type\":\"formula\",\"as\":\"p\",\"expr\":\"split(datum.piece, '':'')\"},{\"type\":\"formula\",\"as\":\"day\",\"expr\":\"datum.p[0]\"},{\"type\":\"formula\",\"as\":\"word\",\"expr\":\"letterWord[datum.p[1]]\"},{\"type\":\"formula\",\"as\":\"tip\",\"expr\":\"{''Rule'': datum.id + '' · '' + datum.title, ''Night'': datum.day, ''Outcome'': datum.word, ''Failed records'': format(toNumber(datum.p[2]), '','')}\"}]},{\"name\":\"dayList\",\"source\":\"nights\",\"transform\":[{\"type\":\"aggregate\",\"groupby\":[\"day\"]},{\"type\":\"window\",\"sort\":{\"field\":\"day\",\"order\":\"descending\"},\"ops\":[\"row_number\"],\"as\":[\"back\"]},{\"type\":\"filter\",\"expr\":\"datum.back <= 12\"},{\"type\":\"collect\",\"sort\":{\"field\":\"day\"}},{\"type\":\"window\",\"ops\":[\"row_number\"],\"as\":[\"n\"]}]},{\"name\":\"nightsPlaced\",\"source\":\"nights\",\"transform\":[{\"type\":\"lookup\",\"from\":\"dayList\",\"key\":\"day\",\"fields\":[\"day\"],\"values\":[\"n\"],\"as\":[\"n\"]},{\"type\":\"filter\",\"expr\":\"isValid(datum.n)\"},{\"type\":\"formula\",\"as\":\"cx\",\"expr\":\"(1112 + (datum.n - 1) * 16) * u\"}]},{\"name\":\"monthTicks\",\"source\":\"monthList\",\"transform\":[{\"type\":\"filter\",\"expr\":\"(datum.n - 1) % 4 === 0\"}]}],\"marks\":[{\"type\":\"rect\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"0\"},\"y\":{\"signal\":\"0\"},\"width\":{\"signal\":\"W\"},\"height\":{\"signal\":\"H\"},\"cornerRadius\":{\"signal\":\"16 * u\"},\"fill\":{\"value\":\"#121B2C\"},\"stroke\":{\"value\":\"#2B3A55\"},\"strokeWidth\":{\"value\":1}}}},{\"type\":\"rect\",\"from\":{\"data\":\"key\"},\"interactive\":false,\"encode\":{\"update\":{\"opacity\":{\"signal\":\"length(data(''rules'')) ? 1 : 0\"},\"x\":{\"signal\":\"datum.x * u\"},\"y\":{\"signal\":\"20 * u\"},\"width\":{\"signal\":\"20 * u\"},\"height\":{\"signal\":\"18 * u\"},\"cornerRadius\":{\"signal\":\"2 * u\"},\"fill\":{\"signal\":\"(datum.word === ''Pass'' || datum.word === ''Fit'' || datum.word === ''Caught'') ? ''#1F9E74'' : (datum.word === ''Fail'' || datum.word === ''Not fit'' || datum.word === ''Missed'') ? ''#D9542C'' : (datum.word === ''For review'' || datum.word === ''Fit with conditions'') ? ''#D9A21B'' : ''#9AA3B2''\"},\"fillOpacity\":{\"signal\":\"!((datum.word === ''Pass'' || datum.word === ''Fit'' || datum.word === ''Caught'') || (datum.word === ''Fail'' || datum.word === ''Not fit'' || datum.word === ''Missed'') || (datum.word === ''For review'' || datum.word === ''Fit with conditions'')) ? 0 : datum.word === ''Pass'' ? 0.55 : 1\"},\"stroke\":{\"signal\":\"(datum.word === ''Pass'' || datum.word === ''Fit'' || datum.word === ''Caught'') ? ''#1F9E74'' : (datum.word === ''Fail'' || datum.word === ''Not fit'' || datum.word === ''Missed'') ? ''#D9542C'' : (datum.word === ''For review'' || datum.word === ''Fit with conditions'') ? ''#D9A21B'' : ''#9AA3B2''\"},\"strokeWidth\":{\"signal\":\"1 * u\"}}}},{\"type\":\"symbol\",\"from\":{\"data\":\"key\"},\"interactive\":false,\"encode\":{\"update\":{\"opacity\":{\"signal\":\"length(data(''rules'')) ? 1 : 0\"},\"x\":{\"signal\":\"(datum.x + 10) * u\"},\"y\":{\"signal\":\"29 * u\"},\"shape\":{\"signal\":\"datum.word === ''Pass'' ? ''M-0.75,0.05 L-0.25,0.55 L0.8,-0.6'' : datum.word === ''Fail'' ? ''M-0.6,-0.6 L0.6,0.6 M0.6,-0.6 L-0.6,0.6'' : datum.word === ''For review'' ? ''M0,-0.85 L0,0.2 M0,0.66 L0,0.8'' : ''M-0.6,0 L0.6,0''\"},\"size\":{\"signal\":\"pow(12 * u / 1.6, 2)\"},\"stroke\":{\"signal\":\"datum.word === ''Pass'' ? ''#FFFFFF'' : datum.word === ''Fail'' || datum.word === ''For review'' ? ''#0A111E'' : ''#CAD4E3''\"},\"strokeWidth\":{\"signal\":\"2 * u\"},\"strokeCap\":{\"value\":\"round\"},\"fill\":{\"value\":\"transparent\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"key\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"(datum.x + 26) * u\"},\"y\":{\"signal\":\"35 * u\"},\"text\":{\"signal\":\"length(data(''rules'')) ? datum.word : ''''\"},\"fontSize\":{\"signal\":\"16 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"14 * u\"},\"y\":{\"signal\":\"60 * u\"},\"text\":{\"signal\":\"length(data(''rules'')) ? ''Now: the last check.  Test: caught its own planted defect.'' : ''''\"},\"fontSize\":{\"signal\":\"15 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"528 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"14 * u\"},\"y\":{\"signal\":\"90 * u\"},\"text\":{\"signal\":\"length(data(''rules'')) ? ''Rule'' : ''''\"},\"fontSize\":{\"signal\":\"16 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"472 * u\"},\"y\":{\"signal\":\"90 * u\"},\"text\":{\"signal\":\"length(data(''rules'')) ? ''Now'' : ''''\"},\"fontSize\":{\"signal\":\"16 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"510 * u\"},\"y\":{\"signal\":\"90 * u\"},\"text\":{\"signal\":\"length(data(''rules'')) ? ''Test'' : ''''\"},\"fontSize\":{\"signal\":\"16 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"556 * u\"},\"y\":{\"signal\":\"34 * u\"},\"text\":{\"signal\":\"length(data(''rules'')) ? ''By sample month, from the data'' : ''''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"556 * u\"},\"y\":{\"signal\":\"60 * u\"},\"text\":{\"signal\":\"length(data(''rules'')) ? ''A line means the rule checks a whole list, so it has no months.'' : ''''\"},\"fontSize\":{\"signal\":\"15 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"536 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"monthTicks\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"(556 + (datum.n - 1) * 22) * u\"},\"y\":{\"signal\":\"90 * u\"},\"text\":{\"signal\":\"timeFormat(datetime(toNumber(substring(datum.month, 0, 4)), toNumber(substring(datum.month, 5, 7)) - 1, 1), ''%b %y'')\"},\"fontSize\":{\"signal\":\"15 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"1112 * u\"},\"y\":{\"signal\":\"34 * u\"},\"text\":{\"signal\":\"length(data(''rules'')) ? ''By night'' : ''''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W - 14 * u\"},\"y\":{\"signal\":\"68 * u\"},\"text\":{\"signal\":\"r0.Since || ''''\"},\"fontSize\":{\"signal\":\"15 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"right\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"}}}},{\"type\":\"rect\",\"from\":{\"data\":\"rules\"},\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"6 * u\"},\"x2\":{\"signal\":\"W - 6 * u\"},\"y\":{\"signal\":\"datum.y\"},\"height\":{\"signal\":\"rowH\"},\"cornerRadius\":{\"signal\":\"4 * u\"},\"fill\":{\"value\":\"#1A263C\"},\"stroke\":{\"value\":\"#CAD4E3\"},\"strokeWidth\":{\"signal\":\"1.2 * u\"},\"opacity\":{\"signal\":\"datum.id === r0.Picked ? 1 : 0\"}}}},{\"type\":\"rule\",\"from\":{\"data\":\"groups\"},\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"10 * u\"},\"x2\":{\"signal\":\"W - 10 * u\"},\"y\":{\"signal\":\"datum.y\"},\"stroke\":{\"value\":\"#2B3A55\"},\"strokeWidth\":{\"signal\":\"1 * u\"}}}},{\"type\":\"rect\",\"from\":{\"data\":\"rules\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"6 * u\"},\"width\":{\"signal\":\"448 * u\"},\"y\":{\"signal\":\"datum.y\"},\"height\":{\"signal\":\"rowH\"},\"fill\":{\"value\":\"transparent\"},\"tooltip\":{\"signal\":\"datum.tip\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"rules\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"14 * u\"},\"y\":{\"signal\":\"datum.y + rowH / 2 + 1 * u\"},\"text\":{\"signal\":\"datum.id\"},\"fontSize\":{\"signal\":\"15 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"middle\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"rules\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"74 * u\"},\"y\":{\"signal\":\"datum.y + rowH / 2 + 1 * u\"},\"text\":{\"signal\":\"datum.title\"},\"fontSize\":{\"signal\":\"15 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"middle\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"380 * u\"}}}},{\"type\":\"symbol\",\"from\":{\"data\":\"rules\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"472 * u\"},\"y\":{\"signal\":\"datum.y + rowH / 2\"},\"shape\":{\"signal\":\"datum.status === ''Pass'' ? ''M-0.75,0.05 L-0.25,0.55 L0.8,-0.6'' : datum.status === ''Fail'' ? ''M-0.6,-0.6 L0.6,0.6 M0.6,-0.6 L-0.6,0.6'' : datum.status === ''For review'' ? ''M0,-0.8 L0,0.2 M0,0.68 L0,0.72'' : ''M-0.6,0 L0.6,0''\"},\"size\":{\"signal\":\"pow(16 * u / 1.6, 2)\"},\"stroke\":{\"signal\":\"(datum.status === ''Pass'' || datum.status === ''Fit'' || datum.status === ''Caught'') ? ''#4CD8B0'' : (datum.status === ''Fail'' || datum.status === ''Not fit'' || datum.status === ''Missed'') ? ''#FF8A73'' : (datum.status === ''For review'' || datum.status === ''Fit with conditions'') ? ''#F2CE6B'' : ''#CAD4E3''\"},\"strokeWidth\":{\"signal\":\"2.6 * u\"},\"strokeCap\":{\"value\":\"round\"},\"fill\":{\"value\":\"transparent\"},\"tooltip\":{\"signal\":\"datum.tip\"}}}},{\"type\":\"symbol\",\"from\":{\"data\":\"rules\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"510 * u\"},\"y\":{\"signal\":\"datum.y + rowH / 2\"},\"shape\":{\"signal\":\"datum.test_outcome === ''Caught'' || datum.test_outcome === ''Proved by its own test'' ? ''M-0.75,0.05 L-0.25,0.55 L0.8,-0.6'' : datum.test_outcome === ''Missed'' ? ''M-0.6,-0.6 L0.6,0.6 M0.6,-0.6 L-0.6,0.6'' : ''M-0.6,0 L0.6,0''\"},\"size\":{\"signal\":\"pow(16 * u / 1.6, 2)\"},\"stroke\":{\"signal\":\"datum.test_outcome === ''Caught'' || datum.test_outcome === ''Proved by its own test'' ? ''#4CD8B0'' : datum.test_outcome === ''Missed'' ? ''#FF8A73'' : ''#CAD4E3''\"},\"strokeWidth\":{\"signal\":\"2.6 * u\"},\"strokeCap\":{\"value\":\"round\"},\"fill\":{\"value\":\"transparent\"},\"tooltip\":{\"signal\":\"{''Rule'': datum.id, ''Planted defect'': datum.test_outcome}\"}}}},{\"type\":\"rule\",\"from\":{\"data\":\"rules\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"556 * u\"},\"x2\":{\"signal\":\"(1112 - 16) * u\"},\"y\":{\"signal\":\"datum.y + rowH / 2\"},\"stroke\":{\"value\":\"#2B3A55\"},\"strokeWidth\":{\"signal\":\"2 * u\"},\"opacity\":{\"signal\":\"length(datum.months_packed || '''') > 0 ? 0 : 1\"},\"tooltip\":{\"signal\":\"{''Rule'': datum.id + '' · '' + datum.title, ''By month'': ''This rule checks the whole list, so it has no months''}\"}}}},{\"type\":\"rect\",\"from\":{\"data\":\"placed\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"datum.cx\"},\"y\":{\"signal\":\"datum.y + 1.5 * u\"},\"width\":{\"signal\":\"20 * u\"},\"height\":{\"signal\":\"rowH - 3 * u\"},\"cornerRadius\":{\"signal\":\"2 * u\"},\"fill\":{\"signal\":\"(datum.word === ''Pass'' || datum.word === ''Fit'' || datum.word === ''Caught'') ? ''#1F9E74'' : (datum.word === ''Fail'' || datum.word === ''Not fit'' || datum.word === ''Missed'') ? ''#D9542C'' : (datum.word === ''For review'' || datum.word === ''Fit with conditions'') ? ''#D9A21B'' : ''#9AA3B2''\"},\"fillOpacity\":{\"signal\":\"!((datum.word === ''Pass'' || datum.word === ''Fit'' || datum.word === ''Caught'') || (datum.word === ''Fail'' || datum.word === ''Not fit'' || datum.word === ''Missed'') || (datum.word === ''For review'' || datum.word === ''Fit with conditions'')) ? 0 : datum.word === ''Pass'' ? 0.55 : 1\"},\"stroke\":{\"signal\":\"(datum.word === ''Pass'' || datum.word === ''Fit'' || datum.word === ''Caught'') ? ''#1F9E74'' : (datum.word === ''Fail'' || datum.word === ''Not fit'' || datum.word === ''Missed'') ? ''#D9542C'' : (datum.word === ''For review'' || datum.word === ''Fit with conditions'') ? ''#D9A21B'' : ''#9AA3B2''\"},\"strokeWidth\":{\"signal\":\"1 * u\"},\"tooltip\":{\"signal\":\"datum.tip\"}}}},{\"type\":\"symbol\",\"from\":{\"data\":\"placed\"},\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"datum.cx + 10 * u\"},\"y\":{\"signal\":\"datum.y + rowH / 2\"},\"shape\":{\"signal\":\"datum.word === ''Pass'' ? ''M-0.75,0.05 L-0.25,0.55 L0.8,-0.6'' : datum.word === ''Fail'' ? ''M-0.6,-0.6 L0.6,0.6 M0.6,-0.6 L-0.6,0.6'' : datum.word === ''For review'' ? ''M0,-0.85 L0,0.2 M0,0.66 L0,0.8'' : ''M-0.6,0 L0.6,0''\"},\"size\":{\"signal\":\"pow(11 * u / 1.6, 2)\"},\"stroke\":{\"signal\":\"datum.word === ''Pass'' ? ''#FFFFFF'' : datum.word === ''Fail'' || datum.word === ''For review'' ? ''#0A111E'' : ''#CAD4E3''\"},\"strokeWidth\":{\"signal\":\"1.8 * u\"},\"strokeCap\":{\"value\":\"round\"},\"fill\":{\"value\":\"transparent\"}}}},{\"type\":\"rect\",\"from\":{\"data\":\"nightsPlaced\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"datum.cx\"},\"y\":{\"signal\":\"datum.y + 1.5 * u\"},\"width\":{\"signal\":\"14 * u\"},\"height\":{\"signal\":\"rowH - 3 * u\"},\"cornerRadius\":{\"signal\":\"2 * u\"},\"fill\":{\"signal\":\"(datum.word === ''Pass'' || datum.word === ''Fit'' || datum.word === ''Caught'') ? ''#1F9E74'' : (datum.word === ''Fail'' || datum.word === ''Not fit'' || datum.word === ''Missed'') ? ''#D9542C'' : (datum.word === ''For review'' || datum.word === ''Fit with conditions'') ? ''#D9A21B'' : ''#9AA3B2''\"},\"fillOpacity\":{\"signal\":\"!((datum.word === ''Pass'' || datum.word === ''Fit'' || datum.word === ''Caught'') || (datum.word === ''Fail'' || datum.word === ''Not fit'' || datum.word === ''Missed'') || (datum.word === ''For review'' || datum.word === ''Fit with conditions'')) ? 0 : datum.word === ''Pass'' ? 0.55 : 1\"},\"stroke\":{\"signal\":\"(datum.word === ''Pass'' || datum.word === ''Fit'' || datum.word === ''Caught'') ? ''#1F9E74'' : (datum.word === ''Fail'' || datum.word === ''Not fit'' || datum.word === ''Missed'') ? ''#D9542C'' : (datum.word === ''For review'' || datum.word === ''Fit with conditions'') ? ''#D9A21B'' : ''#9AA3B2''\"},\"strokeWidth\":{\"signal\":\"1 * u\"},\"tooltip\":{\"signal\":\"datum.tip\"}}}},{\"type\":\"symbol\",\"from\":{\"data\":\"nightsPlaced\"},\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"datum.cx + 7 * u\"},\"y\":{\"signal\":\"datum.y + rowH / 2\"},\"shape\":{\"signal\":\"datum.word === ''Pass'' ? ''M-0.75,0.05 L-0.25,0.55 L0.8,-0.6'' : datum.word === ''Fail'' ? ''M-0.6,-0.6 L0.6,0.6 M0.6,-0.6 L-0.6,0.6'' : datum.word === ''For review'' ? ''M0,-0.85 L0,0.2 M0,0.66 L0,0.8'' : ''M-0.6,0 L0.6,0''\"},\"size\":{\"signal\":\"pow(9 * u / 1.6, 2)\"},\"stroke\":{\"signal\":\"datum.word === ''Pass'' ? ''#FFFFFF'' : datum.word === ''Fail'' || datum.word === ''For review'' ? ''#0A111E'' : ''#CAD4E3''\"},\"strokeWidth\":{\"signal\":\"1.6 * u\"},\"strokeCap\":{\"value\":\"round\"},\"fill\":{\"value\":\"transparent\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H / 2\"},\"text\":{\"signal\":\"(!length(data(''src''))) ? ''No rules have been run yet'' : ''''\"},\"fontSize\":{\"signal\":\"24 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"middle\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 48 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H / 2 + 34 * u\"},\"text\":{\"signal\":\"(!length(data(''src''))) ? ''The nightly check publishes the results. Try refreshing the data.'' : ''''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"middle\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 48 * u\"}}}},{\"type\":\"text\",\"name\":\"fieldMapDiagnostic\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H - 8\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"bottom\"},\"text\":{\"signal\":\"missingFields ? ''Deneb field map: not found in data -> '' + missingFields : ''''\"},\"fill\":{\"value\":\"#FF8A73\"},\"fontSize\":{\"value\":15},\"font\":{\"value\":\"Segoe UI, sans-serif\"}}}}]}'"
+                }
+              }
+            },
+            "jsonConfig": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{}'"
+                }
+              }
+            },
+            "isNewDialogOpen": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableContextMenu": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "renderMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'canvas'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Every rule against every sample month, each cell with a sign, beside the outcome at the last check, whether the rule caught its planted defect, and a strip with one cell per night since tracking began.'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

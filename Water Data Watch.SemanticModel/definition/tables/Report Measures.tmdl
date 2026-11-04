@@ -1,0 +1,798 @@
+/// Holds every measure. Its one column is a hidden placeholder, because a table must have a column.
+table 'Report Measures'
+	lineageTag: 02cab197-86e2-4d13-abfd-c3edf68bfb47
+
+	/// The number of the newest run in the log, which every figure from the last check reads.
+	measure 'Latest Run No' =
+			// The number of the newest run in the log, which every figure from the last check reads.
+			CALCULATE ( MAX ( RunLog[RunNo] ), REMOVEFILTERS ( RunLog ) )
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: b0db438a-295b-4b2f-a39e-07987747c26a
+
+	/// How many runs the log holds.
+	measure 'Run Count' =
+			// How many runs the log holds.
+			CALCULATE ( COUNTROWS ( RunLog ), REMOVEFILTERS ( RunLog ) )
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: 628b3bd1-e5e9-4f9a-b718-fa614e1ca3bf
+
+	/// The date of the first run. Nothing the engine measures goes back further.
+	measure 'Tracking Since' =
+			// The date of the first run. Nothing the engine measures goes back further.
+			CALCULATE ( MIN ( RunLog[as_of] ), REMOVEFILTERS ( RunLog ) )
+		formatString: d mmm yyyy
+		displayFolder: Latest run
+		lineageTag: 92d89fed-0433-4bff-a91b-c79828c77c4a
+
+	/// Days since tracking began, counting the first day, measured to the last refresh.
+	measure 'Days Tracked' =
+			// Days since tracking began, counting the first day, measured to the last refresh.
+			VAR Since = [Tracking Since]
+			VAR RefreshDay = MAX ( RefreshInfo[RefreshedUKDate] )
+			RETURN IF ( NOT ISBLANK ( Since ), DATEDIFF ( Since, RefreshDay, DAY ) + 1 )
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: 605efa13-4842-45aa-8704-5dfdf9a385d4
+
+	/// States when tracking began, because trends and histories can only go back that far.
+	measure 'Tracking Text' =
+			// States when tracking began, because trends and histories can only go back that far.
+			VAR Days = [Days Tracked]
+			RETURN
+			    "Tracking since " & FORMAT ( [Tracking Since], "d mmm yyyy" )
+			        & IF ( Days = 1, " (day 1)", " (" & FORMAT ( Days, "#,0" ) & " days)" )
+		displayFolder: Latest run
+		lineageTag: e87108f3-af73-4c2a-bf8c-928e6001c6c5
+
+	/// When the newest run finished, in UK time.
+	measure 'Last Check Text' =
+			// When the newest run finished, in UK time.
+			VAR Latest = [Latest Run No]
+			RETURN CALCULATE ( MAX ( RunLog[RunUKText] ), REMOVEFILTERS ( RunLog ), RunLog[RunNo] = Latest )
+		displayFolder: Latest run
+		lineageTag: 18afb01d-e050-4438-88a9-0bcab3bf394e
+
+	/// Hours between the newest run finishing and the last refresh. The refresh time is the report's only now.
+	measure 'Hours Since Check' =
+			// Hours between the newest run finishing and the last refresh. The refresh time is the report's only "now".
+			VAR Latest = [Latest Run No]
+			VAR RunTime = CALCULATE ( MAX ( RunLog[RunUTC] ), REMOVEFILTERS ( RunLog ), RunLog[RunNo] = Latest )
+			VAR RefreshTime = MAX ( RefreshInfo[RefreshedUTC] )
+			RETURN IF ( NOT ISBLANK ( RunTime ), DATEDIFF ( RunTime, RefreshTime, HOUR ) )
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: 99e9b6de-02cc-48e4-8ad2-be13a3fdbc8b
+
+	/// A warning once the newest run is over 36 hours old. GitHub can start a nightly run hours late, so a day alone isn't a problem.
+	measure 'Stale Warning' =
+			// A warning once the newest run is over 36 hours old. GitHub can start a nightly run hours late, so a day alone isn't a problem.
+			VAR Hours = [Hours Since Check]
+			RETURN IF ( Hours > 36, "The last check is " & FORMAT ( ROUNDDOWN ( Hours / 24, 0 ), "0" ) & " days old", "" )
+		displayFolder: Latest run
+		lineageTag: b1134639-b8ca-4a57-8038-680baed6068d
+
+	/// The header's freshness line: last check, tracking start and any warning.
+	measure 'Freshness Text' =
+			// The header's freshness line: last check, tracking start and any warning.
+			VAR Warning = [Stale Warning]
+			RETURN
+			    "Last check " & [Last Check Text] & "  ·  " & [Tracking Text]
+			        & IF ( Warning <> "", "  ·  " & Warning )
+		displayFolder: Latest run
+		lineageTag: 84bd28c3-eb3b-4946-9df0-8107df028f98
+
+	/// Rows the source says it holds.
+	measure 'Source Rows' =
+			// Rows the source says it holds.
+			CALCULATE ( SUM ( ControlTotals[row_count] ), ControlTotals[stage_no] = 1 )
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: d85df096-dc0b-449e-a93c-73a156079e5f
+
+	/// Rows that arrived.
+	measure 'Arrived Rows' =
+			// Rows that arrived.
+			CALCULATE ( SUM ( ControlTotals[row_count] ), ControlTotals[stage_no] = 2 )
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: 9eb5aa22-627f-4df8-a042-6fae92baf8fe
+
+	/// Rows the rules checked.
+	measure 'Checked Rows' =
+			// Rows the rules checked.
+			CALCULATE ( SUM ( ControlTotals[row_count] ), ControlTotals[stage_no] = 3 )
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: 5fd6d643-5c75-4b21-b769-e850c9b9cc9a
+
+	/// Rows the report's summaries add up to.
+	measure 'Summarised Rows' =
+			// Rows the report's summaries add up to.
+			CALCULATE ( SUM ( ControlTotals[row_count] ), ControlTotals[stage_no] = 4 )
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: 3422d624-0456-4de4-96d8-4efaade35a10
+
+	/// 1 when the row count is the same at all four stages, so nothing was lost on the way.
+	measure 'Totals Agree' =
+			// 1 when the row count is the same at all four stages, so nothing was lost on the way.
+			VAR Source = [Source Rows]
+			RETURN IF ( Source > 0 && Source = [Arrived Rows] && Source = [Checked Rows] && Source = [Summarised Rows], 1, 0 )
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: f54e8120-3feb-4dbf-adcd-395eb591ef69
+
+	/// Rules that passed at the last check.
+	measure 'Rules Pass' =
+			// Rules that passed at the last check.
+			CALCULATE ( COUNTROWS ( Rules ), REMOVEFILTERS ( Rules ), Rules[status] = "Pass" ) + 0
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: f0d5ba4b-f002-4733-93b8-43e101fc736b
+
+	/// Rules that failed at the last check.
+	measure 'Rules Fail' =
+			// Rules that failed at the last check.
+			CALCULATE ( COUNTROWS ( Rules ), REMOVEFILTERS ( Rules ), Rules[status] = "Fail" ) + 0
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: 20cab12a-fc0b-4598-b921-689679b232dd
+
+	/// Rules that need a person to look, after the last check.
+	measure 'Rules Review' =
+			// Rules that need a person to look, after the last check.
+			CALCULATE ( COUNTROWS ( Rules ), REMOVEFILTERS ( Rules ), Rules[status] = "For review" ) + 0
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: 2ec6219a-dadf-4966-8de9-ee5c352b2abd
+
+	/// Rules that couldn't run at the last check. Never counted as a pass.
+	measure 'Rules Not Checked' =
+			// Rules that couldn't run at the last check. Never counted as a pass.
+			CALCULATE ( COUNTROWS ( Rules ), REMOVEFILTERS ( Rules ), Rules[status] = "Not checked" ) + 0
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: 9e2c5bde-9ab5-4cf3-9478-a0c50baa0ab6
+
+	/// Rules that found nothing to check at the last check. Never counted as a pass.
+	measure 'Rules No Data' =
+			// Rules that found nothing to check at the last check. Never counted as a pass.
+			CALCULATE ( COUNTROWS ( Rules ), REMOVEFILTERS ( Rules ), Rules[status] = "No data" ) + 0
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: cd36918b-e3d1-4010-8540-82e68cf9c7bd
+
+	/// All the rules in the register.
+	measure 'Rules Total' =
+			// All the rules in the register.
+			CALCULATE ( COUNTROWS ( Rules ), REMOVEFILTERS ( Rules ) )
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: 1b134b41-356c-495f-9072-84b662221dfd
+
+	/// Planted defects the rules caught at the last check.
+	measure 'Planted Caught' =
+			// Planted defects the rules caught at the last check.
+			VAR Latest = [Latest Run No]
+			RETURN CALCULATE ( MAX ( RunLog[planted_caught] ), REMOVEFILTERS ( RunLog ), RunLog[RunNo] = Latest )
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: 675ac308-8dc5-447b-8c04-002b67c0c17e
+
+	/// Planted defects tried at the last check.
+	measure 'Planted Tested' =
+			// Planted defects tried at the last check.
+			VAR Latest = [Latest Run No]
+			RETURN CALCULATE ( MAX ( RunLog[planted_tested] ), REMOVEFILTERS ( RunLog ), RunLog[RunNo] = Latest )
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: 7c694b88-7aeb-4343-b7d6-f7ff502a0e2e
+
+	/// How long the last check took.
+	measure 'Run Seconds' =
+			// How long the last check took.
+			VAR Latest = [Latest Run No]
+			RETURN CALCULATE ( MAX ( RunLog[seconds] ), REMOVEFILTERS ( RunLog ), RunLog[RunNo] = Latest )
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: 49776ae0-5f87-45a3-bcfb-bafb0b6c33d0
+
+	/// Issues open at the last check. The engine opens and closes them by stated logic.
+	measure 'Issues Open' =
+			// Issues open at the last check. The engine opens and closes them by stated logic.
+			CALCULATE ( COUNTROWS ( Issues ), REMOVEFILTERS ( Issues ), REMOVEFILTERS ( Rules ), Issues[state] = "Open" ) + 0
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: 9d34d6b7-5824-4b16-bae3-8f81229346e1
+
+	/// Records that arrived since the last run.
+	measure 'Records New' =
+			// Records that arrived since the last run.
+			VAR LastRun = CALCULATE ( MAX ( Ledger[run_id] ), REMOVEFILTERS ( Ledger ) )
+			RETURN CALCULATE ( SUM ( Ledger[records_new] ), REMOVEFILTERS ( Ledger ), Ledger[run_id] = LastRun ) + 0
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: 10b9091c-02c3-4996-8932-58878fb22364
+
+	/// Records whose contents changed since the last run. A change isn't an error: the publisher says records can change as quality assurance continues.
+	measure 'Records Changed' =
+			// Records whose contents changed since the last run. A change isn't an error: the publisher says records can change as quality assurance continues.
+			VAR LastRun = CALCULATE ( MAX ( Ledger[run_id] ), REMOVEFILTERS ( Ledger ) )
+			RETURN CALCULATE ( SUM ( Ledger[records_changed] ), REMOVEFILTERS ( Ledger ), Ledger[run_id] = LastRun ) + 0
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: b0a561c0-4baa-4f7c-9c0b-4e18597b71de
+
+	/// Records gone since the last run, among months both runs cover.
+	measure 'Records Removed' =
+			// Records gone since the last run, among months both runs cover.
+			VAR LastRun = CALCULATE ( MAX ( Ledger[run_id] ), REMOVEFILTERS ( Ledger ) )
+			RETURN CALCULATE ( SUM ( Ledger[records_removed] ), REMOVEFILTERS ( Ledger ), Ledger[run_id] = LastRun ) + 0
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: e24769e3-d25d-4b7b-80c7-209f11ac946e
+
+	/// How many verdicts, rules and publisher statements moved since the last run.
+	measure 'Changes Count' =
+			// How many verdicts, rules and publisher statements moved since the last run.
+			COUNTROWS ( Changes ) + 0
+		formatString: #,0
+		displayFolder: Latest run
+		lineageTag: ec3e7684-a466-4f5b-bb16-717d4f98cf61
+
+	/// What moved since the last run, in words. Lists the first four, and says how many more.
+	measure 'Changes Text' =
+			// What moved since the last run, in words. Lists the first four, and says how many more.
+			VAR Listed = TOPN ( 4, Changes, Changes[change_order], ASC )
+			VAR Moved = COUNTROWS ( Changes ) + 0
+			RETURN
+			    IF (
+			        Moved = 0,
+			        IF ( [Run Count] <= 1, "This is the first run, so there's nothing to compare yet.", "No verdict or rule moved since the last run." ),
+			        CONCATENATEX ( Listed, Changes[item] & ": " & Changes[before] & " to " & Changes[after], ".  ", Changes[change_order], ASC )
+			            & IF ( Moved > 4, ".  And " & ( Moved - 4 ) & " more." )
+			    )
+		displayFolder: Latest run
+		lineageTag: 242a9876-186a-4f32-8d07-f738b235ac4e
+
+	/// What the change ledger found at the last comparison.
+	measure 'Ledger Text' =
+			// What the change ledger found at the last comparison.
+			VAR Compared = CALCULATE ( MAX ( Ledger[run_id] ), REMOVEFILTERS ( Ledger ), Ledger[is_baseline] = FALSE (), Ledger[compared] = TRUE () )
+			RETURN
+			    IF (
+			        ISBLANK ( Compared ),
+			        "The first run set the baseline, so the ledger starts comparing at the next run.",
+			        FORMAT ( [Records New], "#,0" ) & " new, " & FORMAT ( [Records Changed], "#,0" ) & " changed and " & FORMAT ( [Records Removed], "#,0" ) & " removed since the last run."
+			    )
+		displayFolder: Latest run
+		lineageTag: 3bda85d7-3bdc-48a3-b3bb-86defedf5d06
+
+	/// The decision picked; training an AI model when nothing is picked.
+	measure 'Selected Use Id' =
+			// The decision picked; training an AI model when nothing is picked.
+			COALESCE ( SELECTEDVALUE ( Uses[use_id] ), "ai" )
+		displayFolder: Trust
+		lineageTag: 1005bf4c-3b02-4381-9a18-9797ea5ce9ab
+
+	/// The name of the decision picked.
+	measure 'Selected Use Name' =
+			// The name of the decision picked.
+			VAR Picked = [Selected Use Id]
+			RETURN CALCULATE ( MAX ( Uses[use_name] ), REMOVEFILTERS ( Uses ), Uses[use_id] = Picked )
+		displayFolder: Trust
+		lineageTag: 2c7d16de-c6db-42ec-a9f0-32c8d4411d87
+
+	/// 1 while the page still shows its starting example.
+	measure 'Is Default Use' =
+			// 1 while the page still shows its starting example.
+			IF ( [Selected Use Id] = "ai", 1, 0 )
+		formatString: #,0
+		displayFolder: Trust
+		lineageTag: 50c955fb-db44-48c4-8410-6a77c7b5f335
+
+	/// What is selected, in large type at the top of the page. It names the first month with results, so it stays true as the window moves.
+	measure 'Showing Trust' =
+			// What is selected, in large type at the top of the page. It names the first month with results, so it stays true as the window moves.
+			VAR StartMonth = MINX ( FILTER ( Months, Months[samples] > 0 ), Months[sample_month] )
+			VAR StartDay = DATE ( VALUE ( LEFT ( StartMonth, 4 ) ), VALUE ( RIGHT ( StartMonth, 2 ) ), 1 )
+			RETURN
+			    [Selected Use Name] & "  ·  North West England  ·  " & FORMAT ( [Source Rows], "#,0" ) & " results since " & FORMAT ( StartDay, "mmm yyyy" )
+		displayFolder: Trust
+		lineageTag: b67314cb-5c57-4bd1-80c2-d1553b9a62ae
+
+	/// The overall verdict for the decision picked.
+	measure 'Selected Verdict' =
+			// The overall verdict for the decision picked.
+			VAR Picked = [Selected Use Id]
+			RETURN CALCULATE ( MAX ( Verdicts[verdict] ), Verdicts[use_id] = Picked, Verdicts[dataset_id] = "overall" )
+		displayFolder: Trust
+		lineageTag: baffaa12-5b4f-4887-98ec-22bbeee3f1e6
+
+	/// Distinct must-pass checks that failed for the decision picked. Rules about the pipeline apply to each dataset but count once here.
+	measure 'Gates Failed' =
+			// Distinct must-pass checks that failed for the decision picked. Rules about the pipeline apply to each dataset but count once here.
+			VAR Picked = [Selected Use Id]
+			RETURN CALCULATE ( DISTINCTCOUNT ( VerdictReasons[rule_id] ), VerdictReasons[use_id] = Picked, VerdictReasons[role] = "Gate", VerdictReasons[status] = "Fail" ) + 0
+		formatString: #,0
+		displayFolder: Trust
+		lineageTag: f23b8480-adc4-463a-ab6d-a874f2bb9aeb
+
+	/// Distinct must-pass checks that couldn't run or had no data for the decision picked.
+	measure 'Gates Unchecked' =
+			// Distinct must-pass checks that couldn't run or had no data for the decision picked.
+			VAR Picked = [Selected Use Id]
+			RETURN CALCULATE ( DISTINCTCOUNT ( VerdictReasons[rule_id] ), VerdictReasons[use_id] = Picked, VerdictReasons[role] = "Gate", VerdictReasons[status] IN { "Not checked", "No data" } ) + 0
+		formatString: #,0
+		displayFolder: Trust
+		lineageTag: a9220aa7-a26f-4513-aaee-2bd99a0bfa7c
+
+	/// Distinct rules that attach a condition to the decision picked.
+	measure 'Conditions Open' =
+			// Distinct rules that attach a condition to the decision picked.
+			VAR Picked = [Selected Use Id]
+			RETURN CALCULATE ( DISTINCTCOUNT ( VerdictReasons[rule_id] ), VerdictReasons[use_id] = Picked, VerdictReasons[matters] = TRUE (), NOT ( VerdictReasons[role] = "Gate" && VerdictReasons[status] IN { "Fail", "Not checked", "No data" } ) ) + 0
+		formatString: #,0
+		displayFolder: Trust
+		lineageTag: 88628b65-cc8c-46e8-b158-937a37ee1e98
+
+	/// One sentence that follows the verdict, so nobody has to work it out from counts.
+	measure 'Selected Verdict Text' =
+			// One sentence that follows the verdict, so nobody has to work it out from counts.
+			VAR Failed = [Gates Failed]
+			VAR Unchecked = [Gates Unchecked]
+			VAR OpenCount = [Conditions Open]
+			VAR Picked = [Selected Use Name]
+			VAR Verdict = [Selected Verdict]
+			RETURN
+			    SWITCH (
+			        Verdict,
+			        "Not fit", Picked & ": not fit. " & Failed & IF ( Failed = 1, " must-pass check fails", " must-pass checks fail" ) & ", and passing the others can't outvote that.",
+			        "Not checked", Picked & ": not checked. " & Unchecked & IF ( Unchecked = 1, " must-pass check", " must-pass checks" ) & " couldn't be run, so nobody knows yet.",
+			        "Fit with conditions", Picked & ": fit, if " & OpenCount & IF ( OpenCount = 1, " condition is", " conditions are" ) & " met. Every must-pass check passes.",
+			        "Fit", Picked & ": fit. Everything it depends on passed.",
+			        "There's no verdict yet."
+			    )
+		displayFolder: Trust
+		lineageTag: d8353d14-d61f-4cd2-8c96-a3852f9a536d
+
+	/// The page's answer in one sentence, built from the verdicts at the last check. No figure is hard-coded. It ignores the row it is shown on, as the board has one row per cell.
+	measure Headline =
+			// The page's answer in one sentence, built from the verdicts at the last check. No figure is hard-coded. It ignores the row it is shown on, as the board has one row per cell.
+			VAR Overall = CALCULATETABLE ( Verdicts, REMOVEFILTERS ( Verdicts ), Verdicts[dataset_id] = "overall" )
+			VAR FitList = CONCATENATEX ( FILTER ( Overall, Verdicts[verdict] = "Fit" ), Verdicts[use_phrase], " and ", Verdicts[use_order], ASC )
+			VAR CondList = CONCATENATEX ( FILTER ( Overall, Verdicts[verdict] = "Fit with conditions" ), Verdicts[use_phrase], " and ", Verdicts[use_order], ASC )
+			VAR NotFitList = CONCATENATEX ( FILTER ( Overall, Verdicts[verdict] = "Not fit" ), Verdicts[use_phrase], " and ", Verdicts[use_order], ASC )
+			VAR NotCheckedList = CONCATENATEX ( FILTER ( Overall, Verdicts[verdict] = "Not checked" ), Verdicts[use_phrase], " and ", Verdicts[use_order], ASC )
+			VAR Parts =
+			    IF ( FitList <> "", "fit for " & FitList & ", " )
+			        & IF ( CondList <> "", "fit with conditions for " & CondList & ", " )
+			        & IF ( NotFitList <> "", "not fit for " & NotFitList & ", " )
+			        & IF ( NotCheckedList <> "", "not checked for " & NotCheckedList & ", " )
+			RETURN IF ( Parts = "", "There's no verdict yet.", "At the last check, this data is " & LEFT ( Parts, LEN ( Parts ) - 2 ) & "." )
+		displayFolder: Trust
+		lineageTag: a11e08cc-80b5-4614-be8d-4e4998072481
+
+	/// The rule's outcome for the decision shown, only when it holds that decision back. Everything in the reasons table reads this.
+	measure 'Reason Status' =
+			// The rule's outcome for the decision shown, only when it holds that decision back. Everything in the reasons table reads this.
+			VAR Picked = [Selected Use Id]
+			RETURN CALCULATE ( MAX ( VerdictReasons[status] ), VerdictReasons[use_id] = Picked, VerdictReasons[matters] = TRUE () )
+		displayFolder: Trust
+		lineageTag: defa873e-05f3-432b-a710-4bb47167e59a
+
+	/// The outcome as a sign and a word, so colour is never the only cue. These signs sort fails first, then not checked, then for review.
+	measure 'Reason Sign' =
+			// The outcome as a sign and a word, so colour is never the only cue. These signs sort fails first, then not checked, then for review.
+			VAR Outcome = [Reason Status]
+			RETURN
+			    SWITCH ( Outcome, "Pass", "✓ Pass", "Fail", "✗ Fail", "For review", "! For review", "Not checked", "– Not checked", "No data", "– No data" )
+		displayFolder: Trust
+		lineageTag: b645c13e-f342-4144-ae3c-c82669688c56
+
+	/// What the rule is to this decision, in plain words. Blank for rules not holding it back, which removes them from the table.
+	measure 'Reason Part' =
+			// What the rule is to this decision, in plain words. Blank for rules not holding it back, which removes them from the table.
+			VAR Picked = [Selected Use Id]
+			VAR IsGate = CALCULATE ( COUNTROWS ( VerdictReasons ), VerdictReasons[use_id] = Picked, VerdictReasons[matters] = TRUE (), VerdictReasons[role] = "Gate" )
+			RETURN IF ( NOT ISBLANK ( [Reason Status] ), IF ( IsGate > 0, "Must pass", "Condition" ) )
+		displayFolder: Trust
+		lineageTag: d519d6d5-74a3-43c7-9e67-e49b4d1b6300
+
+	/// What a person needs to do about this rule, for the decision shown.
+	measure 'Reason Needed' =
+			// What a person needs to do about this rule, for the decision shown.
+			VAR Picked = [Selected Use Id]
+			RETURN CALCULATE ( MAX ( VerdictReasons[condition] ), VerdictReasons[use_id] = Picked, VerdictReasons[matters] = TRUE () )
+		displayFolder: Trust
+		lineageTag: 4e32ff1c-1a2d-4db3-b68f-c3cd0a0008c1
+
+	/// Rows lost between the source and the report. Should be nothing.
+	measure 'Lineage Lost Rows' =
+			// Rows lost between the source and the report. Should be nothing.
+			[Source Rows] - [Summarised Rows]
+		formatString: #,0
+		displayFolder: How it works
+		lineageTag: 449ddb5a-c1c6-42b4-9b94-0ab377fe7b7a
+
+	/// The planted defect result, in a sentence.
+	measure 'Planted Text' =
+			// The planted defect result, in a sentence.
+			FORMAT ( [Planted Caught], "0" ) & " of " & FORMAT ( [Planted Tested], "0" ) & " planted defects were caught. A rule that misses its own defect fails CHK-01, which every decision must pass. The defects only ever go into a private copy, and the source data is never changed."
+		displayFolder: How it works
+		lineageTag: 45ed9850-65ea-44e0-80b3-d9aca6d10409
+
+	/// Each publisher statement at the last check, with a sign and a word. A change is a prompt to look, not a fault.
+	measure 'Watch Sign' =
+			// Each publisher statement at the last check, with a sign and a word. A change is a prompt to look, not a fault.
+			VAR Outcome = SELECTEDVALUE ( SourceWatch[status] )
+			VAR PrintBefore = SELECTEDVALUE ( SourceWatch[previous_fingerprint] )
+			VAR PrintLatest = SELECTEDVALUE ( SourceWatch[fingerprint] )
+			RETURN
+			    SWITCH (
+			        TRUE (),
+			        Outcome <> "ok", "– Couldn't be read",
+			        PrintBefore = "", "✓ Read, first look",
+			        PrintBefore <> PrintLatest, "! Changed: please look",
+			        "✓ Read, unchanged"
+			    )
+		displayFolder: How it works
+		lineageTag: 7daf11ca-17e9-489b-8760-c4ae0a7d60d9
+
+	/// How many records the ledger is tracking.
+	measure 'Fingerprints Text' =
+			// How many records the ledger is tracking.
+			VAR LastRun = CALCULATE ( MAX ( Ledger[run_id] ), REMOVEFILTERS ( Ledger ) )
+			VAR Tracked = CALCULATE ( MAX ( Ledger[records_now] ), REMOVEFILTERS ( Ledger ), Ledger[run_id] = LastRun )
+			RETURN FORMAT ( Tracked, "#,0" ) & " records fingerprinted at the last run."
+		displayFolder: How it works
+		lineageTag: cfdfcb1c-c5f9-4959-9e1e-102242b7c2bf
+
+	/// Says plainly whether the second service was read live, or stood in for by a saved copy.
+	measure 'Bathing Source Text' =
+			// Says plainly whether the second service was read live, or stood in for by a saved copy.
+			VAR Latest = [Latest Run No]
+			VAR State = CALCULATE ( MAX ( RunLog[bathing_status] ), REMOVEFILTERS ( RunLog ), RunLog[RunNo] = Latest )
+			VAR Taken = CALCULATE ( MAX ( Manifest[taken_on] ), Manifest[source] = "bathing" )
+			RETURN
+			    SWITCH (
+			        State,
+			        "ok", "The bathing water service was read live at the last check.",
+			        "copy", "The bathing water service doesn't accept requests from the server that runs the nightly check, so a copy taken on " & FORMAT ( Taken, "d mmm yyyy" ) & " stands in. A rule says when it's out of date.",
+			        "The bathing water service couldn't be read at the last check, and its rules show Not checked."
+			    )
+		displayFolder: How it works
+		lineageTag: 43dfcb1c-35f1-4e0b-929d-b921f4302968
+
+	/// The licence statements as read at the last check, with a polite note when they differ.
+	measure 'Licence Text' =
+			// The licence statements as read at the last check, with a polite note when they differ.
+			VAR Different = CALCULATE ( COUNTROWS ( SourceWatch ), SourceWatch[kind] = "licence", SourceWatch[status] = "ok", SourceWatch[value] <> "Open Government Licence" )
+			RETURN
+			    IF (
+			        Different > 0,
+			        "The service's own pages state the Open Government Licence v3.0, which this report relies on. Its catalogue record reads differently, so that's recorded as a question for a steward.",
+			        "The statements read at the last check agree on the Open Government Licence v3.0."
+			    )
+		displayFolder: How it works
+		lineageTag: 312544ea-e826-4cc3-94fe-8b1b87d9f7a7
+
+	/// What was measured, as its code; ammonia when nothing is picked.
+	measure 'Selected Det Code' =
+			// What was measured, as its code; ammonia when nothing is picked.
+			COALESCE ( SELECTEDVALUE ( PickMeasured[det_code] ), "0111" )
+		displayFolder: Same data
+		lineageTag: 9a86c0df-28d3-40ec-abc8-a2e76369b265
+
+	/// What was measured, in words.
+	measure 'Selected Det Name' =
+			// What was measured, in words.
+			VAR Code = [Selected Det Code]
+			RETURN CALCULATE ( MAX ( PickMeasured[det_name] ), REMOVEFILTERS ( PickMeasured ), PickMeasured[det_code] = Code )
+		displayFolder: Same data
+		lineageTag: 4223f8cc-785e-46cf-89f9-f2f791425546
+
+	/// The unit of what was measured.
+	measure 'Selected Unit' =
+			// The unit of what was measured.
+			VAR Code = [Selected Det Code]
+			RETURN CALCULATE ( MAX ( PickMeasured[unit_label] ), REMOVEFILTERS ( PickMeasured ), PickMeasured[det_code] = Code )
+		displayFolder: Same data
+		lineageTag: aff8238c-b8f9-4540-91e7-317845c3cdae
+
+	/// Finds the scenario the pickers describe. Defaults are the stated method: half the limit, routine samples, complete months, average.
+	measure 'Your Key' =
+			// Finds the scenario the pickers describe. Defaults are the stated method: half the limit, routine samples, complete months, average.
+			[Selected Det Code] & "|" & COALESCE ( SELECTEDVALUE ( PickMethod[Method] ), "Half the limit" ) & "|" & COALESCE ( SELECTEDVALUE ( PickSamples[SampleSet] ), "Routine samples" ) & "|" & COALESCE ( SELECTEDVALUE ( PickMonths[MonthSet] ), "Complete months" ) & "|" & COALESCE ( SELECTEDVALUE ( PickStatistic[StatKey] ), "Average" )
+		displayFolder: Same data
+		lineageTag: 93a497dd-b27e-4cbd-9b8e-ae9a36053fdb
+
+	/// The quick way: drop below-limit results, use every sample and month, take a plain average.
+	measure 'Quick Key' =
+			// The quick way: drop below-limit results, use every sample and month, take a plain average.
+			[Selected Det Code] & "|Dropped|All samples|All months|Average"
+		displayFolder: Same data
+		lineageTag: 538600d9-557e-4cfd-94e7-2e7ab525668f
+
+	/// One sub-area's figure the quick way. Only ranked sub-areas have one.
+	measure 'Quick Figure' =
+			// One sub-area's figure the quick way. Only ranked sub-areas have one.
+			VAR AreaNow = SELECTEDVALUE ( RankedAreas[area_name] )
+			VAR KeyNow = [Quick Key]
+			RETURN CALCULATE ( MAX ( SameData[figure] ), SameData[scenario_key] = KeyNow, SameData[area_name] = AreaNow )
+		formatString: 0.00
+		displayFolder: Same data
+		lineageTag: df85c382-b33a-4db4-bd95-c42b539f8c74
+
+	/// Where the quick way places one sub-area. 1 is the highest figure. This describes the calculation, not whose water is better.
+	measure 'Quick Rank' =
+			// Where the quick way places one sub-area. 1 is the highest figure. This describes the calculation, not whose water is better.
+			VAR AreaNow = SELECTEDVALUE ( RankedAreas[area_name] )
+			VAR KeyNow = [Quick Key]
+			RETURN CALCULATE ( MAX ( SameData[area_rank] ), SameData[scenario_key] = KeyNow, SameData[area_name] = AreaNow )
+		formatString: #,0
+		displayFolder: Same data
+		lineageTag: 93f950ee-f4c8-4e3f-9407-7aa159716dbe
+
+	/// One sub-area's figure, the way the pickers say.
+	measure 'Your Figure' =
+			// One sub-area's figure, the way the pickers say.
+			VAR AreaNow = SELECTEDVALUE ( RankedAreas[area_name] )
+			VAR KeyNow = [Your Key]
+			RETURN CALCULATE ( MAX ( SameData[figure] ), SameData[scenario_key] = KeyNow, SameData[area_name] = AreaNow )
+		formatString: 0.00
+		displayFolder: Same data
+		lineageTag: bb5531fd-bd34-49d0-84c6-4ee274c623a3
+
+	/// Where the pickers' method places one sub-area. 1 is the highest figure.
+	measure 'Your Rank' =
+			// Where the pickers' method places one sub-area. 1 is the highest figure.
+			VAR AreaNow = SELECTEDVALUE ( RankedAreas[area_name] )
+			VAR KeyNow = [Your Key]
+			RETURN CALCULATE ( MAX ( SameData[area_rank] ), SameData[scenario_key] = KeyNow, SameData[area_name] = AreaNow )
+		formatString: #,0
+		displayFolder: Same data
+		lineageTag: 3d7973ee-2993-4246-8b97-6b5949d9d8f9
+
+	/// The whole North West's figure the quick way.
+	measure 'Region Quick' =
+			// The whole North West's figure the quick way.
+			VAR KeyNow = [Quick Key]
+			RETURN CALCULATE ( MAX ( SameData[figure] ), REMOVEFILTERS ( SameData ), SameData[scenario_key] = KeyNow, SameData[sub_area] = "North West" )
+		formatString: 0.00
+		displayFolder: Same data
+		lineageTag: ceae2abb-5ff0-4706-8756-ac56c0a9f98f
+
+	/// The whole North West's figure, the way the pickers say.
+	measure 'Region Yours' =
+			// The whole North West's figure, the way the pickers say.
+			VAR KeyNow = [Your Key]
+			RETURN CALCULATE ( MAX ( SameData[figure] ), REMOVEFILTERS ( SameData ), SameData[scenario_key] = KeyNow, SameData[sub_area] = "North West" )
+		formatString: 0.00
+		displayFolder: Same data
+		lineageTag: 648c01dd-a55c-4bbf-9ffc-44262bdc33c5
+
+	/// The sub-area ranked highest the quick way.
+	measure 'Quick Top Area' =
+			// The sub-area ranked highest the quick way.
+			VAR KeyNow = [Quick Key]
+			RETURN CALCULATE ( MAX ( SameData[area_name] ), REMOVEFILTERS ( SameData ), SameData[scenario_key] = KeyNow, SameData[area_rank] = 1 )
+		displayFolder: Same data
+		lineageTag: 79d84e41-c2bf-417f-8cf2-393bfaa165f1
+
+	/// The sub-area ranked highest the way the pickers say.
+	measure 'Your Top Area' =
+			// The sub-area ranked highest the way the pickers say.
+			VAR KeyNow = [Your Key]
+			RETURN CALCULATE ( MAX ( SameData[area_name] ), REMOVEFILTERS ( SameData ), SameData[scenario_key] = KeyNow, SameData[area_rank] = 1 )
+		displayFolder: Same data
+		lineageTag: bf78f501-0954-4580-bd1a-44cf943b166a
+
+	/// The finding as a plain comparison, built from the two figures. It follows the direction of the difference.
+	measure 'Same Data Headline' =
+			// The finding as a plain comparison, built from the two figures. It follows the direction of the difference.
+			VAR Quick = [Region Quick]
+			VAR Yours = [Region Yours]
+			VAR Unit = [Selected Unit]
+			VAR TopQuick = [Quick Top Area]
+			VAR TopYours = [Your Top Area]
+			VAR Times = IF ( Quick > 0 && Yours > 0, MAX ( Quick, Yours ) / MIN ( Quick, Yours ) )
+			RETURN
+			    IF (
+			        ISBLANK ( Quick ) || ISBLANK ( Yours ),
+			        "There's no figure for this combination.",
+			        "The quick way gives " & FORMAT ( Quick, "0.00" ) & " " & Unit & " for the North West. Your way gives " & FORMAT ( Yours, "0.00" ) & " " & Unit
+			            & IF ( Times >= 1.05, ", about " & FORMAT ( Times, IF ( Times >= 10, "0", "0.0" ) ) & " times " & IF ( Yours < Quick, "lower", "higher" ) )
+			            & ". "
+			            & IF ( TopQuick <> TopYours, "The highest sub-area changes from " & TopQuick & " to " & TopYours & ".", "The highest sub-area stays " & TopYours & "." )
+			    )
+		displayFolder: Same data
+		lineageTag: 68b100a1-ee2e-4d49-ba3f-28d79cce7bf9
+
+	/// What is selected, in large type at the top of the page.
+	measure 'Showing Same Data' =
+			// What is selected, in large type at the top of the page.
+			[Selected Det Name] & " in rivers  ·  " & COALESCE ( SELECTEDVALUE ( PickMethod[Below-limit results] ), "Count at half the limit" ) & "  ·  " & COALESCE ( SELECTEDVALUE ( PickSamples[Samples] ), "Routine samples only" ) & "  ·  " & COALESCE ( SELECTEDVALUE ( PickMonths[Months] ), "Complete months only" ) & "  ·  " & COALESCE ( SELECTEDVALUE ( PickStatistic[Statistic] ), "Average" )
+		displayFolder: Same data
+		lineageTag: 37d77665-540e-4e25-a531-682c10708a43
+
+	/// 1 while the page still shows its starting example.
+	measure 'Is Default Same Data' =
+			// 1 while the page still shows its starting example.
+			IF ( [Your Key] = "0111|Half the limit|Routine samples|Complete months|Average", 1, 0 )
+		formatString: #,0
+		displayFolder: Same data
+		lineageTag: 50a148eb-592d-4467-a60f-6c10012a5a85
+
+	/// The North West's figure with one switch changed from the quick way.
+	measure 'Switch Figure' =
+			// The North West's figure with one switch changed from the quick way.
+			VAR Code = [Selected Det Code]
+			VAR KeyNow = Code & "|" & SELECTEDVALUE ( SwitchEffects[Method] ) & "|" & SELECTEDVALUE ( SwitchEffects[SampleSet] ) & "|" & SELECTEDVALUE ( SwitchEffects[MonthSet] ) & "|" & SELECTEDVALUE ( SwitchEffects[StatKey] )
+			RETURN CALCULATE ( MAX ( SameData[figure] ), REMOVEFILTERS ( SameData ), SameData[scenario_key] = KeyNow, SameData[sub_area] = "North West" )
+		formatString: 0.00
+		displayFolder: Same data
+		lineageTag: 65feb0d9-b98e-4b65-ad5c-b600ee3fa3cc
+
+	/// The quick way's figure, repeated on each row of the switch chart, so bars can start from it.
+	measure 'Switch Base' =
+			// The quick way's figure, repeated on each row of the switch chart, so bars can start from it.
+			[Region Quick]
+		formatString: 0.00
+		displayFolder: Same data
+		lineageTag: 694ac933-bc90-415e-8aab-11281a1c5fda
+
+	/// The rule picked, or blank when several are in view. The chart uses it to highlight a row.
+	measure 'Selected Rule Id' =
+			// The rule picked, or blank when several are in view. The chart uses it to highlight a row.
+			SELECTEDVALUE ( Rules[id] )
+		displayFolder: Rules
+		lineageTag: 8bd33ba3-6e1c-4a71-b04e-5fca4ef0ef53
+
+	/// The rule's result in one sentence, using the true number of failed records.
+	measure 'Rule Card Text' =
+			// The rule's result in one sentence, using the true number of failed records. Small shares keep extra decimals so they don't read as nothing.
+			VAR Outcome = SELECTEDVALUE ( Rules[status] )
+			VAR Failed = SUM ( Rules[failed] )
+			VAR Checked = SUM ( Rules[eligible] )
+			VAR ShareFailed = SUM ( Rules[failed_pct] )
+			RETURN
+			    SWITCH (
+			        Outcome,
+			        "Not checked", "This rule couldn't run at the last check. " & SELECTEDVALUE ( Rules[note] ),
+			        "No data", "There was nothing for this rule to check.",
+			        BLANK (), "Pick a rule to see its result.",
+			        FORMAT ( Failed, "#,0" ) & " of " & FORMAT ( Checked, "#,0" ) & " records (" & FORMAT ( ShareFailed, IF ( ShareFailed >= 1, "0.0", "0.0##" ) ) & "%) break this rule."
+			    )
+		displayFolder: Rules
+		lineageTag: a220afb3-8d64-4293-a56e-aeca2cc45440
+
+	/// The rule's stated tolerance. Thresholds are illustrative.
+	measure 'Rule Threshold Text' =
+			// The rule's stated tolerance, in plain words. Thresholds are illustrative. Joining a number to text keeps it plain, with no stray decimal point.
+			VAR FailAbove = SELECTEDVALUE ( Rules[fail_above] )
+			VAR ReviewAbove = SELECTEDVALUE ( Rules[review_above] )
+			RETURN
+			    IF ( NOT ISBLANK ( FailAbove ), IF ( FailAbove = 0, "Any break fails it", "Fails above " & FailAbove & "%" ), "Never fails outright" )
+			        & IF ( NOT ISBLANK ( ReviewAbove ) && ( ISBLANK ( FailAbove ) || ReviewAbove < FailAbove ), ". Needs review above " & ReviewAbove & "%" )
+			        & ". Illustrative."
+		displayFolder: Rules
+		lineageTag: a80b2d38-8959-4acc-ad1b-e95cdc92b1fb
+
+	/// Whether this rule's problem changes the answer, with the two figures. Says so plainly when no effect was measured.
+	measure 'Rule Effect Text' =
+			// Whether this rule's problem changes the answer, with the two figures. Says so plainly when no effect was measured. Whole numbers are shown without a stray decimal point.
+			VAR Measured = SELECTEDVALUE ( Rules[measured] )
+			VAR Careful = SUM ( Rules[careful] )
+			VAR Careless = SUM ( Rules[careless] )
+			VAR Effect = SUM ( Rules[effect_pct] )
+			VAR Unit = SELECTEDVALUE ( Rules[unit] )
+			VAR CarefulText = FORMAT ( Careful, IF ( ROUND ( Careful, 2 ) = ROUND ( Careful, 0 ), "#,0", "#,0.00" ) )
+			VAR CarelessText = FORMAT ( Careless, IF ( ROUND ( Careless, 2 ) = ROUND ( Careless, 0 ), "#,0", "#,0.00" ) )
+			RETURN
+			    IF (
+			        Measured = TRUE (),
+			        SELECTEDVALUE ( Rules[figure] ) & ": " & CarefulText & " worked out carefully, " & CarelessText & " carelessly"
+			            & IF ( Unit <> "", " (" & Unit & ")" )
+			            & IF ( NOT ISBLANK ( Effect ), ". That moves it by " & FORMAT ( Effect, "+#,0.0;-#,0.0" ) & "%." , "." ),
+			        "No effect on a figure was measured for this rule."
+			    )
+		displayFolder: Rules
+		lineageTag: b4ebd32a-cbd2-48a6-bcf7-14742be8550a
+
+	/// Whether the rule caught its planted defect at the last check.
+	measure 'Rule Test Text' =
+			// Whether the rule caught its planted defect at the last check.
+			VAR Outcome = SELECTEDVALUE ( Rules[test_outcome] )
+			VAR CountBefore = SUM ( Rules[test_failed_before] )
+			VAR CountAfter = SUM ( Rules[test_failed_after] )
+			RETURN
+			    SWITCH (
+			        Outcome,
+			        "Caught", "Caught at the last check: its count rose from " & FORMAT ( CountBefore, "#,0" ) & " to " & FORMAT ( CountAfter, "#,0" ) & " when its own defect was planted in a private copy.",
+			        "Missed", "Missed at the last check: this rule didn't notice its own planted defect.",
+			        "Proved by its own test", "This rule checks the others. A separate test proves it fails when a rule misses.",
+			        "Not checked", "Not tested at the last check, because the rule couldn't run.",
+			        "Not tested at the last check."
+			    )
+		displayFolder: Rules
+		lineageTag: 0584b049-982b-45f7-93c0-e8babee6513c
+
+	/// What is selected, in large type at the top of the page.
+	measure 'Showing Rules' =
+			// What is selected, in large type at the top of the page.
+			COALESCE ( SELECTEDVALUE ( Rules[rule_label] ), "Every rule" ) & "  ·  " & [Rules Total] & " rules run every night"
+		displayFolder: Rules
+		lineageTag: 28187fa2-66ca-4682-bcc7-078da0e321f9
+
+	/// What is selected, in large type at the top of the exceptions page.
+	measure 'Showing Exceptions' =
+			// What is selected, in large type at the top of the exceptions page.
+			COALESCE ( SELECTEDVALUE ( Rules[rule_label] ), "Pick a rule" ) & IF ( ISFILTERED ( Exceptions[month_label] ), "  ·  " & SELECTEDVALUE ( Exceptions[month_label] ) )
+		displayFolder: Rules
+		lineageTag: 9695847d-3555-4584-8db4-417ff6e5ec7c
+
+	/// 1 while the page still shows its starting example.
+	measure 'Is Default Rule' =
+			// 1 while the page still shows its starting example.
+			IF ( SELECTEDVALUE ( Rules[id] ) = "VAL-07", 1, 0 )
+		formatString: #,0
+		displayFolder: Rules
+		lineageTag: 1792d4e5-3b71-46df-9293-cb979e5b540d
+
+	/// Failed records listed for what is picked.
+	measure 'Exceptions Shown' =
+			// Failed records listed for what is picked.
+			COUNTROWS ( Exceptions ) + 0
+		formatString: #,0
+		displayFolder: Rules
+		lineageTag: ba2cd959-1bb3-40d6-ab71-9280cfa1571d
+
+	/// States the true total beside the rows shown, so nobody takes a capped list for the whole story.
+	measure 'Exceptions Text' =
+			// States the true total beside the rows shown, so nobody takes a capped list for the whole story.
+			VAR Shown = [Exceptions Shown]
+			VAR TrueTotal = SUM ( Rules[failed] )
+			VAR Picked = SELECTEDVALUE ( Rules[id] )
+			VAR MonthPicked = ISFILTERED ( Exceptions[month_label] )
+			RETURN
+			    IF (
+			        ISBLANK ( Picked ),
+			        "Pick a rule to see its failed records.",
+			        IF (
+			            TrueTotal = 0,
+			            "Nothing failed this rule at the last check.",
+			            IF (
+			                MonthPicked,
+			                "Showing " & FORMAT ( Shown, "#,0" ) & " listed records for that month. This rule has " & FORMAT ( TrueTotal, "#,0" ) & " in all.",
+			                IF (
+			                    Shown < TrueTotal,
+			                    "Showing the newest " & FORMAT ( Shown, "#,0" ) & " of " & FORMAT ( TrueTotal, "#,0" ) & " failed records. The count comes from the check itself, and only the listing is capped.",
+			                    "Showing all " & FORMAT ( TrueTotal, "#,0" ) & " failed records."
+			                )
+			            )
+			        )
+			    )
+		displayFolder: Rules
+		lineageTag: 19e828a7-4e5c-41e0-8988-85401ac13d16
+
+	/// The rule a listed record broke, shown on each row. It's blank for records of other rules, which keeps the list to the rule picked.
+	measure 'Exception Rule' =
+			// The rule a listed record broke, shown on each row. It's blank for records of other rules, which keeps the list to the rule picked.
+			IF ( COUNTROWS ( Exceptions ) > 0, SELECTEDVALUE ( Rules[id] ) )
+		displayFolder: Rules
+		lineageTag: 1f1b2306-d759-4ec9-b8bd-bff44f149a20
+
+	column Placeholder
+		isHidden
+		isNameInferred
+		sourceColumn: [Placeholder]
+
+	partition 'Report Measures' = calculated
+		mode: import
+		source =
+				// Holds every measure. It has one hidden placeholder column, because a table must have a column.
+				ROW ( "Placeholder", 0 )
+

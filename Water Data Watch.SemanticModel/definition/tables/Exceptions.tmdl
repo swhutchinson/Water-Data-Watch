@@ -57,9 +57,9 @@ table Exceptions
 	column source_url
 		dataType: string
 		lineageTag: 8ad479ad-fc1b-4904-bfbb-8de502181be9
+		dataCategory: WebUrl
 		summarizeBy: none
 		sourceColumn: source_url
-		dataCategory: WebUrl
 
 	partition Exceptions = m
 		mode: import
@@ -75,3 +75,4 @@ table Exceptions
 				    Typed
 
 	annotation PBI_ResultType = Table
+

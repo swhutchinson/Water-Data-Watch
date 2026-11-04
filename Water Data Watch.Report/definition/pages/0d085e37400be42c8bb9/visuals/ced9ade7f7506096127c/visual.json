@@ -1,0 +1,315 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "ced9ade7f7506096127c",
+  "position": {
+    "x": 1236,
+    "y": 226,
+    "z": 8,
+    "width": 644,
+    "height": 680,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SwitchEffects"
+                    }
+                  },
+                  "Property": "SwitchOrder"
+                }
+              },
+              "queryRef": "SwitchEffects.SwitchOrder",
+              "nativeQueryRef": "SwitchOrder"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SwitchEffects"
+                    }
+                  },
+                  "Property": "SwitchLabel"
+                }
+              },
+              "queryRef": "SwitchEffects.SwitchLabel",
+              "nativeQueryRef": "SwitchLabel"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SwitchEffects"
+                    }
+                  },
+                  "Property": "SwitchKind"
+                }
+              },
+              "queryRef": "SwitchEffects.SwitchKind",
+              "nativeQueryRef": "SwitchKind"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SwitchEffects"
+                    }
+                  },
+                  "Property": "Method"
+                }
+              },
+              "queryRef": "SwitchEffects.Method",
+              "nativeQueryRef": "Method"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SwitchEffects"
+                    }
+                  },
+                  "Property": "SampleSet"
+                }
+              },
+              "queryRef": "SwitchEffects.SampleSet",
+              "nativeQueryRef": "SampleSet"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SwitchEffects"
+                    }
+                  },
+                  "Property": "MonthSet"
+                }
+              },
+              "queryRef": "SwitchEffects.MonthSet",
+              "nativeQueryRef": "MonthSet"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SwitchEffects"
+                    }
+                  },
+                  "Property": "StatKey"
+                }
+              },
+              "queryRef": "SwitchEffects.StatKey",
+              "nativeQueryRef": "StatKey"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Switch Figure"
+                }
+              },
+              "queryRef": "Report Measures.Switch Figure",
+              "nativeQueryRef": "Switch Figure"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Switch Base"
+                }
+              },
+              "queryRef": "Report Measures.Switch Base",
+              "nativeQueryRef": "Switch Base"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Selected Unit"
+                }
+              },
+              "queryRef": "Report Measures.Selected Unit",
+              "nativeQueryRef": "Selected Unit"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "vega": [
+        {
+          "properties": {
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vega'"
+                }
+              }
+            },
+            "jsonSpec": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"$schema\":\"https://vega.github.io/schema/vega/v6.json\",\"description\":\"What each switch does alone, from the quick way\",\"width\":{\"signal\":\"pbiContainerWidth\"},\"height\":{\"signal\":\"pbiContainerHeight\"},\"padding\":0,\"autosize\":{\"type\":\"none\"},\"background\":\"#0A111E\",\"config\":{\"text\":{\"font\":\"Segoe UI, sans-serif\",\"fill\":\"#FFFFFF\"},\"tooltip\":{\"offset\":12}},\"usermeta\":{\"denebFields\":{\"SwitchOrder\":\"SwitchOrder\",\"SwitchLabel\":\"SwitchLabel\",\"SwitchKind\":\"SwitchKind\",\"Fig\":\"Switch Figure\",\"Base\":\"Switch Base\",\"Unit\":\"Selected Unit\"}},\"signals\":[{\"name\":\"fieldMap\",\"value\":{\"SwitchOrder\":\"SwitchOrder\",\"SwitchLabel\":\"SwitchLabel\",\"SwitchKind\":\"SwitchKind\",\"Fig\":\"Switch Figure\",\"Base\":\"Switch Base\",\"Unit\":\"Selected Unit\"},\"description\":\"EDIT HERE if a field arrives under a different name: set the right-hand value to the name Power BI delivers (Deneb editor > Data tab).\"},{\"name\":\"missingFields\",\"update\":\"length(data(''dataset'')) ? ((isDefined(data(''dataset'')[0][fieldMap[''SwitchOrder'']]) ? '''' : ''SwitchOrder  '') + (isDefined(data(''dataset'')[0][fieldMap[''SwitchLabel'']]) ? '''' : ''SwitchLabel  '') + (isDefined(data(''dataset'')[0][fieldMap[''SwitchKind'']]) ? '''' : ''SwitchKind  '') + (isDefined(data(''dataset'')[0][fieldMap[''Fig'']]) ? '''' : ''Fig  '') + (isDefined(data(''dataset'')[0][fieldMap[''Base'']]) ? '''' : ''Base  '') + (isDefined(data(''dataset'')[0][fieldMap[''Unit'']]) ? '''' : ''Unit  '')) : ''''\"},{\"name\":\"W\",\"update\":\"max(pbiContainerWidth, 10)\"},{\"name\":\"H\",\"update\":\"max(pbiContainerHeight, 10)\"},{\"name\":\"u\",\"update\":\"max(0.35, min(W / 644, H / 680))\"},{\"name\":\"r0\",\"update\":\"length(data(''rows'')) ? data(''rows'')[0] : {}\"},{\"name\":\"plotL\",\"update\":\"30 * u\"},{\"name\":\"plotR\",\"update\":\"W - 110 * u\"},{\"name\":\"rowH\",\"update\":\"(H - 196 * u) / max(1, length(data(''rows'')))\"}],\"data\":[{\"name\":\"dataset\"},{\"name\":\"src\",\"source\":\"dataset\",\"transform\":[{\"type\":\"formula\",\"as\":\"SwitchOrder\",\"expr\":\"toNumber(datum[fieldMap[''SwitchOrder'']])\"},{\"type\":\"formula\",\"as\":\"SwitchLabel\",\"expr\":\"datum[fieldMap[''SwitchLabel'']]\"},{\"type\":\"formula\",\"as\":\"SwitchKind\",\"expr\":\"datum[fieldMap[''SwitchKind'']]\"},{\"type\":\"formula\",\"as\":\"Fig\",\"expr\":\"toNumber(datum[fieldMap[''Fig'']])\"},{\"type\":\"formula\",\"as\":\"Base\",\"expr\":\"toNumber(datum[fieldMap[''Base'']])\"},{\"type\":\"formula\",\"as\":\"Unit\",\"expr\":\"datum[fieldMap[''Unit'']]\"}]},{\"name\":\"rows\",\"source\":\"src\",\"transform\":[{\"type\":\"filter\",\"expr\":\"isValid(datum.Fig)\"},{\"type\":\"collect\",\"sort\":{\"field\":\"SwitchOrder\"}},{\"type\":\"window\",\"ops\":[\"row_number\"],\"as\":[\"n\"]},{\"type\":\"formula\",\"as\":\"pct\",\"expr\":\"datum.Base ? 100 * (datum.Fig - datum.Base) / datum.Base : null\"},{\"type\":\"formula\",\"as\":\"isMistake\",\"expr\":\"datum.SwitchKind === ''Fixes a mistake''\"},{\"type\":\"formula\",\"as\":\"tip\",\"expr\":\"{''Change'': datum.SwitchLabel, ''Which is'': datum.SwitchKind, ''The quick way'': format(datum.Base, ''.2f'') + '' '' + datum.Unit, ''With this change'': format(datum.Fig, ''.2f'') + '' '' + datum.Unit, ''Moves it by'': (datum.pct >= 0 ? ''+'' : '''') + format(datum.pct, ''.0f'') + ''%''}\"}]},{\"name\":\"span\",\"source\":\"rows\",\"transform\":[{\"type\":\"aggregate\",\"ops\":[\"max\",\"max\"],\"fields\":[\"Fig\",\"Base\"],\"as\":[\"maxFig\",\"maxBase\"]},{\"type\":\"formula\",\"as\":\"top\",\"expr\":\"max(datum.maxFig, datum.maxBase) * 1.02\"}]}],\"scales\":[{\"name\":\"x\",\"type\":\"linear\",\"domain\":[0,{\"signal\":\"length(data(''span'')) ? data(''span'')[0].top : 1\"}],\"range\":[{\"signal\":\"plotL\"},{\"signal\":\"plotR\"}],\"zero\":true}],\"marks\":[{\"type\":\"rect\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"0\"},\"y\":{\"signal\":\"0\"},\"width\":{\"signal\":\"W\"},\"height\":{\"signal\":\"H\"},\"cornerRadius\":{\"signal\":\"16 * u\"},\"fill\":{\"value\":\"#121B2C\"},\"stroke\":{\"value\":\"#2B3A55\"},\"strokeWidth\":{\"value\":1}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"42 * u\"},\"text\":{\"signal\":\"''What each change does alone''\"},\"fontSize\":{\"signal\":\"25 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"72 * u\"},\"text\":{\"signal\":\"''Each row changes one thing from the quick way.''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 48 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"98 * u\"},\"text\":{\"signal\":\"length(data(''rows'')) ? ''The white line marks the quick way: '' + format(r0.Base, ''.2f'') + '' '' + r0.Unit : ''''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 48 * u\"}}}},{\"type\":\"rule\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"scale(''x'', r0.Base)\"},\"x2\":{\"signal\":\"scale(''x'', r0.Base)\"},\"y\":{\"signal\":\"116 * u\"},\"y2\":{\"signal\":\"H - 36 * u\"},\"stroke\":{\"value\":\"#FFFFFF\"},\"strokeWidth\":{\"signal\":\"2 * u\"},\"strokeDash\":{\"signal\":\"[6 * u, 5 * u]\"},\"opacity\":{\"signal\":\"length(data(''rows'')) ? 1 : 0\"}}}},{\"type\":\"rect\",\"from\":{\"data\":\"rows\"},\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"130 * u + (datum.n - 1) * rowH\"},\"width\":{\"signal\":\"(datum.isMistake ? 148 : 92) * u\"},\"height\":{\"signal\":\"28 * u\"},\"cornerRadius\":{\"signal\":\"6 * u\"},\"fill\":{\"signal\":\"datum.isMistake ? ''#3D8FD9'' : ''transparent''\"},\"stroke\":{\"value\":\"#8FC6F5\"},\"strokeWidth\":{\"signal\":\"1.5 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"rows\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"34 * u\"},\"y\":{\"signal\":\"150 * u + (datum.n - 1) * rowH\"},\"text\":{\"signal\":\"datum.SwitchKind\"},\"fontSize\":{\"signal\":\"16 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"rows\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"186 * u + (datum.n - 1) * rowH\"},\"text\":{\"signal\":\"datum.SwitchLabel\"},\"fontSize\":{\"signal\":\"19 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 48 * u\"}}}},{\"type\":\"rect\",\"from\":{\"data\":\"rows\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"scale(''x'', min(datum.Base, datum.Fig))\"},\"x2\":{\"signal\":\"scale(''x'', max(datum.Base, datum.Fig))\"},\"y\":{\"signal\":\"200 * u + (datum.n - 1) * rowH\"},\"height\":{\"signal\":\"22 * u\"},\"cornerRadius\":{\"signal\":\"4 * u\"},\"fill\":{\"value\":\"#3D8FD9\"},\"tooltip\":{\"signal\":\"datum.tip\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"rows\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"scale(''x'', max(datum.Fig, datum.Base)) + 8 * u\"},\"y\":{\"signal\":\"217 * u + (datum.n - 1) * rowH\"},\"text\":{\"signal\":\"format(datum.Fig, ''.2f'') + ''  ('' + (datum.pct >= 0 ? ''+'' : ''−'') + format(abs(datum.pct), ''.0f'') + ''%)''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 20 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H / 2\"},\"text\":{\"signal\":\"(!length(data(''rows''))) ? ''No figure for this measurement'' : ''''\"},\"fontSize\":{\"signal\":\"24 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"middle\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 48 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H / 2 + 34 * u\"},\"text\":{\"signal\":\"(!length(data(''rows''))) ? ''Pick another with the picker above.'' : ''''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"middle\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 48 * u\"}}}},{\"type\":\"text\",\"name\":\"fieldMapDiagnostic\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H - 8\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"bottom\"},\"text\":{\"signal\":\"missingFields ? ''Deneb field map: not found in data -> '' + missingFields : ''''\"},\"fill\":{\"value\":\"#FF8A73\"},\"fontSize\":{\"value\":15},\"font\":{\"value\":\"Segoe UI, sans-serif\"}}}}]}'"
+                }
+              }
+            },
+            "jsonConfig": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{}'"
+                }
+              }
+            },
+            "isNewDialogOpen": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableContextMenu": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'What each change does alone: four changes from the quick way, each labelled a mistake put right or a choice, with the North West figure each gives.'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "name": "Water Data Watch",
+  "dataColors": [
+    "#3D8FD9",
+    "#1F9E74",
+    "#D9542C",
+    "#D9A21B",
+    "#9AA3B2",
+    "#8FC6F5"
+  ],
+  "background": "#0A111E",
+  "backgroundLight": "#1A263C",
+  "backgroundNeutral": "#121B2C",
+  "backgroundDark": "#050A12",
+  "foreground": "#FFFFFF",
+  "foregroundNeutralSecondary": "#CAD4E3",
+  "foregroundNeutralTertiary": "#A8B5C9",
+  "tableAccent": "#3D8FD9",
+  "good": "#1F9E74",
+  "bad": "#D9542C",
+  "neutral": "#9AA3B2",
+  "maximum": "#1F9E74",
+  "center": "#D9A21B",
+  "minimum": "#D9542C",
+  "hyperlink": "#8FC6F5",
+  "visitedHyperlink": "#CAD4E3",
+  "textClasses": {
+    "title": {
+      "fontFace": "Bahnschrift",
+      "color": "#FFFFFF",
+      "fontSize": 14
+    },
+    "header": {
+      "fontFace": "Bahnschrift",
+      "color": "#FFFFFF",
+      "fontSize": 13
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "color": "#CAD4E3",
+      "fontSize": 12
+    },
+    "callout": {
+      "fontFace": "Bahnschrift",
+      "color": "#FFFFFF",
+      "fontSize": 32
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "show": false
+          }
+        ],
+        "border": [
+          {
+            "show": false
+          }
+        ],
+        "dropShadow": [
+          {
+            "show": false
+          }
+        ],
+        "title": [
+          {
+            "show": false
+          }
+        ],
+        "padding": [
+          {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#0A111E"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "outspace": [
+          {
+            "color": {
+              "solid": {
+                "color": "#0A111E"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "tableEx": {
+      "*": {
+        "grid": [
+          {
+            "gridVertical": false,
+            "gridHorizontal": true,
+            "gridHorizontalColor": {
+              "solid": {
+                "color": "#2B3A55"
+              }
+            },
+            "outlineColor": {
+              "solid": {
+                "color": "#2B3A55"
+              }
+            },
+            "rowPadding": 6
+          }
+        ],
+        "columnHeaders": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#CAD4E3"
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": "#121B2C"
+              }
+            },
+            "fontFamily": "Bahnschrift",
+            "fontSize": 12,
+            "bold": true,
+            "wordWrap": true,
+            "autoSizeColumnWidth": false
+          }
+        ],
+        "values": [
+          {
+            "fontColorPrimary": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "backColorPrimary": {
+              "solid": {
+                "color": "#121B2C"
+              }
+            },
+            "fontColorSecondary": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "backColorSecondary": {
+              "solid": {
+                "color": "#121B2C"
+              }
+            },
+            "fontFamily": "Segoe UI",
+            "fontSize": 13,
+            "wordWrap": true,
+            "urlIcon": true
+          }
+        ],
+        "total": [
+          {
+            "totals": false
+          }
+        ]
+      }
+    },
+    "slicer": {
+      "*": {
+        "items": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "background": {
+              "solid": {
+                "color": "#1A263C"
+              }
+            },
+            "fontFamily": "Bahnschrift",
+            "textSize": 13
+          }
+        ],
+        "header": [
+          {
+            "show": false
+          }
+        ]
+      }
+    }
+  }
+}

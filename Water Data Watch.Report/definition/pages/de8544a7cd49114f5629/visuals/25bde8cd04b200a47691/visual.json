@@ -1,0 +1,259 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "25bde8cd04b200a47691",
+  "position": {
+    "x": 40,
+    "y": 122,
+    "z": 2,
+    "width": 1840,
+    "height": 280,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Source Rows"
+                }
+              },
+              "queryRef": "Report Measures.Source Rows",
+              "nativeQueryRef": "Source Rows"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Arrived Rows"
+                }
+              },
+              "queryRef": "Report Measures.Arrived Rows",
+              "nativeQueryRef": "Arrived Rows"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Checked Rows"
+                }
+              },
+              "queryRef": "Report Measures.Checked Rows",
+              "nativeQueryRef": "Checked Rows"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Summarised Rows"
+                }
+              },
+              "queryRef": "Report Measures.Summarised Rows",
+              "nativeQueryRef": "Summarised Rows"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Lineage Lost Rows"
+                }
+              },
+              "queryRef": "Report Measures.Lineage Lost Rows",
+              "nativeQueryRef": "Lineage Lost Rows"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Totals Agree"
+                }
+              },
+              "queryRef": "Report Measures.Totals Agree",
+              "nativeQueryRef": "Totals Agree"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "vega": [
+        {
+          "properties": {
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vega'"
+                }
+              }
+            },
+            "jsonSpec": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"$schema\":\"https://vega.github.io/schema/vega/v6.json\",\"description\":\"The route from the source to this report, with the row count at each stage\",\"width\":{\"signal\":\"pbiContainerWidth\"},\"height\":{\"signal\":\"pbiContainerHeight\"},\"padding\":0,\"autosize\":{\"type\":\"none\"},\"background\":\"#0A111E\",\"config\":{\"text\":{\"font\":\"Segoe UI, sans-serif\",\"fill\":\"#FFFFFF\"},\"tooltip\":{\"offset\":12}},\"usermeta\":{\"denebFields\":{\"Source\":\"Source Rows\",\"Arrived\":\"Arrived Rows\",\"Checked\":\"Checked Rows\",\"Summarised\":\"Summarised Rows\",\"Lost\":\"Lineage Lost Rows\",\"Agree\":\"Totals Agree\"}},\"signals\":[{\"name\":\"fieldMap\",\"value\":{\"Source\":\"Source Rows\",\"Arrived\":\"Arrived Rows\",\"Checked\":\"Checked Rows\",\"Summarised\":\"Summarised Rows\",\"Lost\":\"Lineage Lost Rows\",\"Agree\":\"Totals Agree\"},\"description\":\"EDIT HERE if a field arrives under a different name: set the right-hand value to the name Power BI delivers (Deneb editor > Data tab).\"},{\"name\":\"missingFields\",\"update\":\"length(data(''dataset'')) ? ((isDefined(data(''dataset'')[0][fieldMap[''Source'']]) ? '''' : ''Source  '') + (isDefined(data(''dataset'')[0][fieldMap[''Arrived'']]) ? '''' : ''Arrived  '') + (isDefined(data(''dataset'')[0][fieldMap[''Checked'']]) ? '''' : ''Checked  '') + (isDefined(data(''dataset'')[0][fieldMap[''Summarised'']]) ? '''' : ''Summarised  '') + (isDefined(data(''dataset'')[0][fieldMap[''Lost'']]) ? '''' : ''Lost  '') + (isDefined(data(''dataset'')[0][fieldMap[''Agree'']]) ? '''' : ''Agree  '')) : ''''\"},{\"name\":\"W\",\"update\":\"max(pbiContainerWidth, 10)\"},{\"name\":\"H\",\"update\":\"max(pbiContainerHeight, 10)\"},{\"name\":\"u\",\"update\":\"max(0.35, min(W / 1840, H / 280))\"},{\"name\":\"r0\",\"update\":\"length(data(''src'')) ? data(''src'')[0] : {}\"},{\"name\":\"boxW\",\"update\":\"(W - 48 * u - 4 * 44 * u) / 5\"}],\"data\":[{\"name\":\"dataset\"},{\"name\":\"src\",\"source\":\"dataset\",\"transform\":[{\"type\":\"formula\",\"as\":\"Source\",\"expr\":\"toNumber(datum[fieldMap[''Source'']])\"},{\"type\":\"formula\",\"as\":\"Arrived\",\"expr\":\"toNumber(datum[fieldMap[''Arrived'']])\"},{\"type\":\"formula\",\"as\":\"Checked\",\"expr\":\"toNumber(datum[fieldMap[''Checked'']])\"},{\"type\":\"formula\",\"as\":\"Summarised\",\"expr\":\"toNumber(datum[fieldMap[''Summarised'']])\"},{\"type\":\"formula\",\"as\":\"Lost\",\"expr\":\"toNumber(datum[fieldMap[''Lost'']])\"},{\"type\":\"formula\",\"as\":\"Agree\",\"expr\":\"toNumber(datum[fieldMap[''Agree'']])\"}]},{\"name\":\"stages\",\"values\":[{\"i\":0,\"head\":\"The source\",\"a\":\"Environment Agency\",\"b\":\"public services\",\"tip\":\"What the source says it holds, read from its own count for each month\"},{\"i\":1,\"head\":\"Kept as served\",\"a\":\"Nothing changed,\",\"b\":\"every field as text\",\"tip\":\"Every field kept as it arrived, beside a record of what was asked for and what came back\"},{\"i\":2,\"head\":\"Read and screened\",\"a\":\"Numbers, limits and\",\"b\":\"words kept apart\",\"tip\":\"The result column is read into numbers, limits and words. Labels are screened for personal details\"},{\"i\":3,\"head\":\"Checked and tested\",\"a\":\"Every rule, with a\",\"b\":\"planted defect for each\",\"tip\":\"Every rule runs. Planted defects prove each still works. Effects on figures are measured\"},{\"i\":4,\"head\":\"Summarised for this report\",\"a\":\"Small public files,\",\"b\":\"refreshed each morning\",\"tip\":\"Small files on a public branch, guarded against lost history and personal details\"}],\"transform\":[{\"type\":\"formula\",\"as\":\"x\",\"expr\":\"24 * u + datum.i * (boxW + 44 * u)\"},{\"type\":\"formula\",\"as\":\"n\",\"expr\":\"[r0.Source, r0.Arrived, r0.Checked, r0.Checked, r0.Summarised][datum.i]\"},{\"type\":\"formula\",\"as\":\"tipRow\",\"expr\":\"{''Stage'': datum.head, ''What happens'': datum.tip, ''Rows here'': format(datum.n, '','')}\"}]},{\"name\":\"joins\",\"source\":\"stages\",\"transform\":[{\"type\":\"filter\",\"expr\":\"datum.i < 4\"}]}],\"marks\":[{\"type\":\"rect\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"0\"},\"y\":{\"signal\":\"0\"},\"width\":{\"signal\":\"W\"},\"height\":{\"signal\":\"H\"},\"cornerRadius\":{\"signal\":\"16 * u\"},\"fill\":{\"value\":\"#121B2C\"},\"stroke\":{\"value\":\"#2B3A55\"},\"strokeWidth\":{\"value\":1}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"38 * u\"},\"text\":{\"signal\":\"length(data(''src'')) ? ''How the data travels'' : ''''\"},\"fontSize\":{\"signal\":\"24 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"}}}},{\"type\":\"rect\",\"from\":{\"data\":\"stages\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"datum.x\"},\"y\":{\"signal\":\"56 * u\"},\"width\":{\"signal\":\"boxW\"},\"height\":{\"signal\":\"162 * u\"},\"cornerRadius\":{\"signal\":\"10 * u\"},\"fill\":{\"value\":\"#1A263C\"},\"stroke\":{\"value\":\"#2B3A55\"},\"strokeWidth\":{\"signal\":\"1 * u\"},\"tooltip\":{\"signal\":\"datum.tipRow\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"stages\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"datum.x + 16 * u\"},\"y\":{\"signal\":\"88 * u\"},\"text\":{\"signal\":\"datum.head\"},\"fontSize\":{\"signal\":\"22 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"boxW - 24 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"stages\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"datum.x + 16 * u\"},\"y\":{\"signal\":\"116 * u\"},\"text\":{\"signal\":\"datum.a\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"boxW - 24 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"stages\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"datum.x + 16 * u\"},\"y\":{\"signal\":\"140 * u\"},\"text\":{\"signal\":\"datum.b\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"boxW - 24 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"stages\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"datum.x + 16 * u\"},\"y\":{\"signal\":\"196 * u\"},\"text\":{\"signal\":\"format(datum.n, '','') + '' rows''\"},\"fontSize\":{\"signal\":\"26 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"boxW - 24 * u\"}}}},{\"type\":\"rule\",\"from\":{\"data\":\"joins\"},\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"datum.x + boxW + 8 * u\"},\"x2\":{\"signal\":\"datum.x + boxW + 34 * u\"},\"y\":{\"signal\":\"137 * u\"},\"stroke\":{\"value\":\"#CAD4E3\"},\"strokeWidth\":{\"signal\":\"3 * u\"},\"strokeCap\":{\"value\":\"round\"}}}},{\"type\":\"symbol\",\"from\":{\"data\":\"joins\"},\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"datum.x + boxW + 34 * u\"},\"y\":{\"signal\":\"137 * u\"},\"shape\":{\"value\":\"triangle-right\"},\"size\":{\"signal\":\"90 * u * u\"},\"fill\":{\"value\":\"#CAD4E3\"}}}},{\"type\":\"symbol\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"38 * u\"},\"y\":{\"signal\":\"252 * u\"},\"shape\":{\"signal\":\"(r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Pass'' || r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Fit'' || r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Caught'') ? ''M-0.75,0.05 L-0.25,0.55 L0.8,-0.6'' : (r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Fail'' || r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Not fit'' || r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Missed'') ? ''M-0.6,-0.6 L0.6,0.6 M0.6,-0.6 L-0.6,0.6'' : (r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''For review'' || r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Fit with conditions'') ? ''M0,-0.85 L0,0.2 M0,0.66 L0,0.8'' : ''M-0.6,0 L0.6,0''\"},\"size\":{\"signal\":\"pow((24) * u / 1.6, 2)\"},\"stroke\":{\"signal\":\"(r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Pass'' || r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Fit'' || r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Caught'') ? ''#4CD8B0'' : (r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Fail'' || r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Not fit'' || r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Missed'') ? ''#FF8A73'' : (r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''For review'' || r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Fit with conditions'') ? ''#F2CE6B'' : ''#CAD4E3''\"},\"strokeWidth\":{\"signal\":\"4 * u\"},\"strokeCap\":{\"value\":\"round\"},\"strokeJoin\":{\"value\":\"round\"},\"fill\":{\"value\":\"transparent\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"60 * u\"},\"y\":{\"signal\":\"259 * u\"},\"text\":{\"signal\":\"r0.Agree === 1 ? ''No rows were lost on the way.'' : format(abs(r0.Lost), '','') + '' rows differ between the source and this report, so look before relying on the latest figures.''\"},\"fontSize\":{\"signal\":\"20 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"signal\":\"r0.Agree === 1 ? ''#4CD8B0'' : ''#FF8A73''\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 90 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H / 2\"},\"text\":{\"signal\":\"(!length(data(''src''))) ? ''No check has been recorded yet'' : ''''\"},\"fontSize\":{\"signal\":\"24 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"middle\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 48 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H / 2 + 34 * u\"},\"text\":{\"signal\":\"(!length(data(''src''))) ? '''' : ''''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"middle\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 48 * u\"}}}},{\"type\":\"text\",\"name\":\"fieldMapDiagnostic\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H - 8\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"bottom\"},\"text\":{\"signal\":\"missingFields ? ''Deneb field map: not found in data -> '' + missingFields : ''''\"},\"fill\":{\"value\":\"#FF8A73\"},\"fontSize\":{\"value\":15},\"font\":{\"value\":\"Segoe UI, sans-serif\"}}}}]}'"
+                }
+              }
+            },
+            "jsonConfig": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{}'"
+                }
+              }
+            },
+            "isNewDialogOpen": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableContextMenu": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'The route from the source to this report in five stages, with the row count at each, and whether any rows were lost.'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

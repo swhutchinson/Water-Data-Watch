@@ -1,6 +1,6 @@
 {
   "project": "Water Data Watch (working title; folder: Water Data Quality)",
-  "phase": "model",
+  "phase": "pages",
   "completed": [
     "Skills loaded, brief read",
     "Re-probed the sources",
@@ -12,7 +12,7 @@
     "Deneb specs drawn and checked offline against real output",
     "Report generator written; schema and binding checks clean on a copy"
   ],
-  "nextAction": "Sam presses Ctrl+S in Desktop and closes it. Check the measures reached the TMDL (79 expected, none yet at last look). Run node build/report.mjs and the validators with Desktop closed. Sam reopens, activates the theme and refreshes. Then export fixtures, render, check every page in Desktop, and publish.",
+  "nextAction": "Sam reopens Water Data Watch.pbip and activates the theme (View, Themes, Browse for themes, WaterDataWatchTheme.json). Connect the MCP, refresh all tables, check every page in Desktop, Sam saves. Then publish. SRC-04 shows No data until the next nightly run, because the watched item was renamed: expected to clear by itself, then check it does.",
   "decisions": [
     "Scope by region, with no storm overflow data",
     "Rely on the service's own licence statement, and record the difference as AUD-02",

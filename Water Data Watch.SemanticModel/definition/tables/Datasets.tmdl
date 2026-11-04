@@ -11,8 +11,8 @@ table Datasets
 
 	column dataset_order
 		dataType: int64
-		formatString: #,0
 		isHidden
+		formatString: #,0
 		lineageTag: 97b3aee7-96db-4a11-9dab-9a26ae58aeee
 		summarizeBy: none
 		sourceColumn: dataset_order
@@ -103,3 +103,4 @@ table Datasets
 				    Typed
 
 	annotation PBI_ResultType = Table
+

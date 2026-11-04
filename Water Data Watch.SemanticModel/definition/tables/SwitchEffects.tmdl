@@ -1,0 +1,46 @@
+/// The rows of the chart showing what each change does alone. Kind separates a mistake from a choice.
+table SwitchEffects
+	lineageTag: cf83702a-9abd-4be0-b1b9-6acc7761c5af
+
+	column SwitchOrder
+		isNameInferred
+		sourceColumn: [SwitchOrder]
+
+	column SwitchLabel
+		isNameInferred
+		sourceColumn: [SwitchLabel]
+
+	column SwitchKind
+		isNameInferred
+		sourceColumn: [SwitchKind]
+
+	column Method
+		isNameInferred
+		sourceColumn: [Method]
+
+	column SampleSet
+		isNameInferred
+		sourceColumn: [SampleSet]
+
+	column MonthSet
+		isNameInferred
+		sourceColumn: [MonthSet]
+
+	column StatKey
+		isNameInferred
+		sourceColumn: [StatKey]
+
+	partition SwitchEffects = calculated
+		mode: import
+		source =
+				// The rows of "what each switch does alone": each changes one thing from the quick way. Kind separates a mistake from a choice.
+				DATATABLE (
+				    "SwitchOrder", INTEGER, "SwitchLabel", STRING, "SwitchKind", STRING, "Method", STRING, "SampleSet", STRING, "MonthSet", STRING, "StatKey", STRING,
+				    {
+				        { 1, "Keep below-limit results, at half the limit", "Fixes a mistake", "Half the limit", "All samples", "All months", "Average" },
+				        { 2, "Leave out pollution samples", "A choice", "Dropped", "Routine samples", "All months", "Average" },
+				        { 3, "Leave out part-complete months", "A choice", "Dropped", "All samples", "Complete months", "Average" },
+				        { 4, "Use the median, not the average", "A choice", "Dropped", "All samples", "All months", "Median" }
+				    }
+				)
+

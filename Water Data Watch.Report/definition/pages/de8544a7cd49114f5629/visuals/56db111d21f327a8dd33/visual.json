@@ -1,0 +1,189 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "56db111d21f327a8dd33",
+  "position": {
+    "x": 40,
+    "y": 14,
+    "z": 1,
+    "width": 1840,
+    "height": 100,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Freshness Text"
+                }
+              },
+              "queryRef": "Report Measures.Freshness Text",
+              "nativeQueryRef": "Freshness Text"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "vega": [
+        {
+          "properties": {
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vega'"
+                }
+              }
+            },
+            "jsonSpec": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"$schema\":\"https://vega.github.io/schema/vega/v6.json\",\"description\":\"Water Data Watch: header\",\"width\":{\"signal\":\"pbiContainerWidth\"},\"height\":{\"signal\":\"pbiContainerHeight\"},\"padding\":0,\"autosize\":{\"type\":\"none\"},\"background\":\"#0A111E\",\"config\":{\"text\":{\"font\":\"Segoe UI, sans-serif\",\"fill\":\"#FFFFFF\"},\"tooltip\":{\"offset\":12}},\"usermeta\":{\"denebFields\":{\"Fresh\":\"Freshness Text\"}},\"signals\":[{\"name\":\"fieldMap\",\"value\":{\"Fresh\":\"Freshness Text\"},\"description\":\"EDIT HERE if a field arrives under a different name: set the right-hand value to the name Power BI delivers (Deneb editor > Data tab).\"},{\"name\":\"missingFields\",\"update\":\"length(data(''dataset'')) ? ((isDefined(data(''dataset'')[0][fieldMap[''Fresh'']]) ? '''' : ''Fresh  '')) : ''''\"},{\"name\":\"W\",\"update\":\"max(pbiContainerWidth, 10)\"},{\"name\":\"H\",\"update\":\"max(pbiContainerHeight, 10)\"},{\"name\":\"u\",\"update\":\"max(0.35, min(W / 1840, H / 100))\"},{\"name\":\"r0\",\"update\":\"length(data(''src'')) ? data(''src'')[0] : {}\"}],\"data\":[{\"name\":\"dataset\"},{\"name\":\"src\",\"source\":\"dataset\",\"transform\":[{\"type\":\"formula\",\"as\":\"Fresh\",\"expr\":\"datum[fieldMap[''Fresh'']]\"}]}],\"marks\":[{\"type\":\"path\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"27 * u\"},\"path\":{\"value\":\"M0,-23 C9,-10 17,-2 17,8 C17,18 9,24 0,24 C-9,24 -17,18 -17,8 C-17,-2 -9,-10 0,-23 Z\"},\"scaleX\":{\"signal\":\"u\"},\"scaleY\":{\"signal\":\"u\"},\"fill\":{\"value\":\"#3D8FD9\"}}}},{\"type\":\"symbol\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"34 * u\"},\"shape\":{\"signal\":\"(''Pass'' === ''Pass'' || ''Pass'' === ''Fit'' || ''Pass'' === ''Caught'') ? ''M-0.75,0.05 L-0.25,0.55 L0.8,-0.6'' : (''Pass'' === ''Fail'' || ''Pass'' === ''Not fit'' || ''Pass'' === ''Missed'') ? ''M-0.6,-0.6 L0.6,0.6 M0.6,-0.6 L-0.6,0.6'' : (''Pass'' === ''For review'' || ''Pass'' === ''Fit with conditions'') ? ''M0,-0.85 L0,0.2 M0,0.66 L0,0.8'' : ''M-0.6,0 L0.6,0''\"},\"size\":{\"signal\":\"pow((18) * u / 1.6, 2)\"},\"stroke\":{\"value\":\"#FFFFFF\"},\"strokeWidth\":{\"signal\":\"3 * u\"},\"strokeCap\":{\"value\":\"round\"},\"strokeJoin\":{\"value\":\"round\"},\"fill\":{\"value\":\"transparent\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"58 * u\"},\"y\":{\"signal\":\"38 * u\"},\"text\":{\"signal\":\"''Water Data Watch''\"},\"fontSize\":{\"signal\":\"34 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"368 * u\"},\"y\":{\"signal\":\"37 * u\"},\"text\":{\"signal\":\"\\\"How does this work, and what should you not read into it?\\\"\"},\"fontSize\":{\"signal\":\"20 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 1030 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"name\":\"showing\",\"encode\":{\"update\":{\"x\":{\"signal\":\"0\"},\"y\":{\"signal\":\"84 * u\"},\"text\":{\"signal\":\"\\\"Showing: the whole system, as it stood at the last check\\\"\"},\"fontSize\":{\"signal\":\"27 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"(length(''Showing: '' + (r0.Showing || '''')) * 12 + 24) * u\"},\"y\":{\"signal\":\"83 * u\"},\"text\":{\"signal\":\"''''\"},\"fontSize\":{\"signal\":\"19 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 900 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W\"},\"y\":{\"signal\":\"34 * u\"},\"text\":{\"signal\":\"r0.Fresh || ''''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"right\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"660 * u\"}}}},{\"type\":\"text\",\"name\":\"fieldMapDiagnostic\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H - 8\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"bottom\"},\"text\":{\"signal\":\"missingFields ? ''Deneb field map: not found in data -> '' + missingFields : ''''\"},\"fill\":{\"value\":\"#FF8A73\"},\"fontSize\":{\"value\":15},\"font\":{\"value\":\"Segoe UI, sans-serif\"}}}}]}'"
+                }
+              }
+            },
+            "jsonConfig": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{}'"
+                }
+              }
+            },
+            "isNewDialogOpen": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableContextMenu": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Water Data Watch header. How does this work, and what should you not read into it? States what is selected and when the data was last checked.'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

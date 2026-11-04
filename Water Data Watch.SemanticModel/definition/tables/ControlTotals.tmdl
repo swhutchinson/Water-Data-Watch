@@ -36,3 +36,4 @@ table ControlTotals
 				    Typed
 
 	annotation PBI_ResultType = Table
+

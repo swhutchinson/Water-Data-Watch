@@ -1,0 +1,245 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "706fb847bcd97964de5f",
+  "position": {
+    "x": 646,
+    "y": 414,
+    "z": 4,
+    "width": 620,
+    "height": 576,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Planted Text"
+                }
+              },
+              "queryRef": "Report Measures.Planted Text",
+              "nativeQueryRef": "Planted Text"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Fingerprints Text"
+                }
+              },
+              "queryRef": "Report Measures.Fingerprints Text",
+              "nativeQueryRef": "Fingerprints Text"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Ledger Text"
+                }
+              },
+              "queryRef": "Report Measures.Ledger Text",
+              "nativeQueryRef": "Ledger Text"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Bathing Source Text"
+                }
+              },
+              "queryRef": "Report Measures.Bathing Source Text",
+              "nativeQueryRef": "Bathing Source Text"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Licence Text"
+                }
+              },
+              "queryRef": "Report Measures.Licence Text",
+              "nativeQueryRef": "Licence Text"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "vega": [
+        {
+          "properties": {
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vega'"
+                }
+              }
+            },
+            "jsonSpec": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"$schema\":\"https://vega.github.io/schema/vega/v6.json\",\"description\":\"What the last check recorded, in sentences\",\"width\":{\"signal\":\"pbiContainerWidth\"},\"height\":{\"signal\":\"pbiContainerHeight\"},\"padding\":0,\"autosize\":{\"type\":\"none\"},\"background\":\"#0A111E\",\"config\":{\"text\":{\"font\":\"Segoe UI, sans-serif\",\"fill\":\"#FFFFFF\"},\"tooltip\":{\"offset\":12}},\"usermeta\":{\"denebFields\":{\"Planted\":\"Planted Text\",\"Prints\":\"Fingerprints Text\",\"Ledger\":\"Ledger Text\",\"Bathing\":\"Bathing Source Text\",\"Licence\":\"Licence Text\"}},\"signals\":[{\"name\":\"fieldMap\",\"value\":{\"Planted\":\"Planted Text\",\"Prints\":\"Fingerprints Text\",\"Ledger\":\"Ledger Text\",\"Bathing\":\"Bathing Source Text\",\"Licence\":\"Licence Text\"},\"description\":\"EDIT HERE if a field arrives under a different name: set the right-hand value to the name Power BI delivers (Deneb editor > Data tab).\"},{\"name\":\"missingFields\",\"update\":\"length(data(''dataset'')) ? ((isDefined(data(''dataset'')[0][fieldMap[''Planted'']]) ? '''' : ''Planted  '') + (isDefined(data(''dataset'')[0][fieldMap[''Prints'']]) ? '''' : ''Prints  '') + (isDefined(data(''dataset'')[0][fieldMap[''Ledger'']]) ? '''' : ''Ledger  '') + (isDefined(data(''dataset'')[0][fieldMap[''Bathing'']]) ? '''' : ''Bathing  '') + (isDefined(data(''dataset'')[0][fieldMap[''Licence'']]) ? '''' : ''Licence  '')) : ''''\"},{\"name\":\"W\",\"update\":\"max(pbiContainerWidth, 10)\"},{\"name\":\"H\",\"update\":\"max(pbiContainerHeight, 10)\"},{\"name\":\"u\",\"update\":\"max(0.35, min(W / 620, H / 576))\"},{\"name\":\"r0\",\"update\":\"length(data(''src'')) ? data(''src'')[0] : {}\"}],\"data\":[{\"name\":\"dataset\"},{\"name\":\"src\",\"source\":\"dataset\",\"transform\":[{\"type\":\"formula\",\"as\":\"Planted\",\"expr\":\"datum[fieldMap[''Planted'']]\"},{\"type\":\"formula\",\"as\":\"Prints\",\"expr\":\"datum[fieldMap[''Prints'']]\"},{\"type\":\"formula\",\"as\":\"Ledger\",\"expr\":\"datum[fieldMap[''Ledger'']]\"},{\"type\":\"formula\",\"as\":\"Bathing\",\"expr\":\"datum[fieldMap[''Bathing'']]\"},{\"type\":\"formula\",\"as\":\"Licence\",\"expr\":\"datum[fieldMap[''Licence'']]\"}]},{\"name\":\"plantedLines\",\"values\":[{}],\"transform\":[{\"type\":\"formula\",\"as\":\"r0\",\"expr\":\"trim('''' + (r0.Planted || ''''))\"},{\"type\":\"formula\",\"as\":\"n\",\"expr\":\"max(10, floor((W - 48 * u) / (9.3 * u)))\"},{\"type\":\"formula\",\"as\":\"c0\",\"expr\":\"length(datum.r0) <= datum.n ? length(datum.r0) : (lastindexof(substring(datum.r0, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r0, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r1\",\"expr\":\"trim(substring(datum.r0, datum.c0))\"},{\"type\":\"formula\",\"as\":\"c1\",\"expr\":\"length(datum.r1) <= datum.n ? length(datum.r1) : (lastindexof(substring(datum.r1, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r1, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r2\",\"expr\":\"trim(substring(datum.r1, datum.c1))\"},{\"type\":\"formula\",\"as\":\"c2\",\"expr\":\"length(datum.r2) <= datum.n ? length(datum.r2) : (lastindexof(substring(datum.r2, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r2, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r3\",\"expr\":\"trim(substring(datum.r2, datum.c2))\"},{\"type\":\"formula\",\"as\":\"c3\",\"expr\":\"length(datum.r3) <= datum.n ? length(datum.r3) : (lastindexof(substring(datum.r3, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r3, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r4\",\"expr\":\"trim(substring(datum.r3, datum.c3))\"},{\"type\":\"formula\",\"as\":\"c4\",\"expr\":\"length(datum.r4) <= datum.n ? length(datum.r4) : (lastindexof(substring(datum.r4, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r4, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r5\",\"expr\":\"trim(substring(datum.r4, datum.c4))\"},{\"type\":\"formula\",\"as\":\"c5\",\"expr\":\"length(datum.r5) <= datum.n ? length(datum.r5) : (lastindexof(substring(datum.r5, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r5, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r6\",\"expr\":\"trim(substring(datum.r5, datum.c5))\"},{\"type\":\"formula\",\"as\":\"c6\",\"expr\":\"length(datum.r6) <= datum.n ? length(datum.r6) : (lastindexof(substring(datum.r6, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r6, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r7\",\"expr\":\"trim(substring(datum.r6, datum.c6))\"},{\"type\":\"formula\",\"as\":\"c7\",\"expr\":\"length(datum.r7) <= datum.n ? length(datum.r7) : (lastindexof(substring(datum.r7, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r7, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r8\",\"expr\":\"trim(substring(datum.r7, datum.c7))\"},{\"type\":\"formula\",\"as\":\"c8\",\"expr\":\"length(datum.r8) <= datum.n ? length(datum.r8) : (lastindexof(substring(datum.r8, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r8, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r9\",\"expr\":\"trim(substring(datum.r8, datum.c8))\"},{\"type\":\"formula\",\"as\":\"c9\",\"expr\":\"length(datum.r9) <= datum.n ? length(datum.r9) : (lastindexof(substring(datum.r9, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r9, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r10\",\"expr\":\"trim(substring(datum.r9, datum.c9))\"},{\"type\":\"formula\",\"as\":\"lines\",\"expr\":\"[substring(datum.r0, 0, datum.c0), substring(datum.r1, 0, datum.c1), substring(datum.r2, 0, datum.c2), substring(datum.r3, 0, datum.c3), substring(datum.r4, 0, datum.c4), substring(datum.r5, 0, datum.c5), substring(datum.r6, 0, datum.c6), substring(datum.r7, 0, datum.c7), substring(datum.r8, 0, datum.c8), datum.r9]\"},{\"type\":\"flatten\",\"fields\":[\"lines\"],\"as\":[\"text\"],\"index\":\"line\"},{\"type\":\"filter\",\"expr\":\"datum.text !== '''' || datum.line === 0\"}]},{\"name\":\"ledgerLines\",\"values\":[{}],\"transform\":[{\"type\":\"formula\",\"as\":\"r0\",\"expr\":\"trim('''' + ((r0.Prints || '''') + '' '' + (r0.Ledger || '''') || ''''))\"},{\"type\":\"formula\",\"as\":\"n\",\"expr\":\"max(10, floor((W - 48 * u) / (9.3 * u)))\"},{\"type\":\"formula\",\"as\":\"c0\",\"expr\":\"length(datum.r0) <= datum.n ? length(datum.r0) : (lastindexof(substring(datum.r0, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r0, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r1\",\"expr\":\"trim(substring(datum.r0, datum.c0))\"},{\"type\":\"formula\",\"as\":\"c1\",\"expr\":\"length(datum.r1) <= datum.n ? length(datum.r1) : (lastindexof(substring(datum.r1, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r1, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r2\",\"expr\":\"trim(substring(datum.r1, datum.c1))\"},{\"type\":\"formula\",\"as\":\"c2\",\"expr\":\"length(datum.r2) <= datum.n ? length(datum.r2) : (lastindexof(substring(datum.r2, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r2, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r3\",\"expr\":\"trim(substring(datum.r2, datum.c2))\"},{\"type\":\"formula\",\"as\":\"c3\",\"expr\":\"length(datum.r3) <= datum.n ? length(datum.r3) : (lastindexof(substring(datum.r3, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r3, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r4\",\"expr\":\"trim(substring(datum.r3, datum.c3))\"},{\"type\":\"formula\",\"as\":\"c4\",\"expr\":\"length(datum.r4) <= datum.n ? length(datum.r4) : (lastindexof(substring(datum.r4, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r4, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r5\",\"expr\":\"trim(substring(datum.r4, datum.c4))\"},{\"type\":\"formula\",\"as\":\"c5\",\"expr\":\"length(datum.r5) <= datum.n ? length(datum.r5) : (lastindexof(substring(datum.r5, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r5, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r6\",\"expr\":\"trim(substring(datum.r5, datum.c5))\"},{\"type\":\"formula\",\"as\":\"c6\",\"expr\":\"length(datum.r6) <= datum.n ? length(datum.r6) : (lastindexof(substring(datum.r6, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r6, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r7\",\"expr\":\"trim(substring(datum.r6, datum.c6))\"},{\"type\":\"formula\",\"as\":\"c7\",\"expr\":\"length(datum.r7) <= datum.n ? length(datum.r7) : (lastindexof(substring(datum.r7, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r7, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r8\",\"expr\":\"trim(substring(datum.r7, datum.c7))\"},{\"type\":\"formula\",\"as\":\"c8\",\"expr\":\"length(datum.r8) <= datum.n ? length(datum.r8) : (lastindexof(substring(datum.r8, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r8, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r9\",\"expr\":\"trim(substring(datum.r8, datum.c8))\"},{\"type\":\"formula\",\"as\":\"c9\",\"expr\":\"length(datum.r9) <= datum.n ? length(datum.r9) : (lastindexof(substring(datum.r9, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r9, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r10\",\"expr\":\"trim(substring(datum.r9, datum.c9))\"},{\"type\":\"formula\",\"as\":\"lines\",\"expr\":\"[substring(datum.r0, 0, datum.c0), substring(datum.r1, 0, datum.c1), substring(datum.r2, 0, datum.c2), substring(datum.r3, 0, datum.c3), substring(datum.r4, 0, datum.c4), substring(datum.r5, 0, datum.c5), substring(datum.r6, 0, datum.c6), substring(datum.r7, 0, datum.c7), substring(datum.r8, 0, datum.c8), datum.r9]\"},{\"type\":\"flatten\",\"fields\":[\"lines\"],\"as\":[\"text\"],\"index\":\"line\"},{\"type\":\"filter\",\"expr\":\"datum.text !== '''' || datum.line === 0\"}]},{\"name\":\"bathingLines\",\"values\":[{}],\"transform\":[{\"type\":\"formula\",\"as\":\"r0\",\"expr\":\"trim('''' + (r0.Bathing || ''''))\"},{\"type\":\"formula\",\"as\":\"n\",\"expr\":\"max(10, floor((W - 48 * u) / (9.3 * u)))\"},{\"type\":\"formula\",\"as\":\"c0\",\"expr\":\"length(datum.r0) <= datum.n ? length(datum.r0) : (lastindexof(substring(datum.r0, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r0, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r1\",\"expr\":\"trim(substring(datum.r0, datum.c0))\"},{\"type\":\"formula\",\"as\":\"c1\",\"expr\":\"length(datum.r1) <= datum.n ? length(datum.r1) : (lastindexof(substring(datum.r1, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r1, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r2\",\"expr\":\"trim(substring(datum.r1, datum.c1))\"},{\"type\":\"formula\",\"as\":\"c2\",\"expr\":\"length(datum.r2) <= datum.n ? length(datum.r2) : (lastindexof(substring(datum.r2, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r2, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r3\",\"expr\":\"trim(substring(datum.r2, datum.c2))\"},{\"type\":\"formula\",\"as\":\"c3\",\"expr\":\"length(datum.r3) <= datum.n ? length(datum.r3) : (lastindexof(substring(datum.r3, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r3, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r4\",\"expr\":\"trim(substring(datum.r3, datum.c3))\"},{\"type\":\"formula\",\"as\":\"c4\",\"expr\":\"length(datum.r4) <= datum.n ? length(datum.r4) : (lastindexof(substring(datum.r4, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r4, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r5\",\"expr\":\"trim(substring(datum.r4, datum.c4))\"},{\"type\":\"formula\",\"as\":\"c5\",\"expr\":\"length(datum.r5) <= datum.n ? length(datum.r5) : (lastindexof(substring(datum.r5, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r5, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r6\",\"expr\":\"trim(substring(datum.r5, datum.c5))\"},{\"type\":\"formula\",\"as\":\"c6\",\"expr\":\"length(datum.r6) <= datum.n ? length(datum.r6) : (lastindexof(substring(datum.r6, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r6, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r7\",\"expr\":\"trim(substring(datum.r6, datum.c6))\"},{\"type\":\"formula\",\"as\":\"c7\",\"expr\":\"length(datum.r7) <= datum.n ? length(datum.r7) : (lastindexof(substring(datum.r7, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r7, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r8\",\"expr\":\"trim(substring(datum.r7, datum.c7))\"},{\"type\":\"formula\",\"as\":\"c8\",\"expr\":\"length(datum.r8) <= datum.n ? length(datum.r8) : (lastindexof(substring(datum.r8, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r8, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r9\",\"expr\":\"trim(substring(datum.r8, datum.c8))\"},{\"type\":\"formula\",\"as\":\"c9\",\"expr\":\"length(datum.r9) <= datum.n ? length(datum.r9) : (lastindexof(substring(datum.r9, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r9, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r10\",\"expr\":\"trim(substring(datum.r9, datum.c9))\"},{\"type\":\"formula\",\"as\":\"lines\",\"expr\":\"[substring(datum.r0, 0, datum.c0), substring(datum.r1, 0, datum.c1), substring(datum.r2, 0, datum.c2), substring(datum.r3, 0, datum.c3), substring(datum.r4, 0, datum.c4), substring(datum.r5, 0, datum.c5), substring(datum.r6, 0, datum.c6), substring(datum.r7, 0, datum.c7), substring(datum.r8, 0, datum.c8), datum.r9]\"},{\"type\":\"flatten\",\"fields\":[\"lines\"],\"as\":[\"text\"],\"index\":\"line\"},{\"type\":\"filter\",\"expr\":\"datum.text !== '''' || datum.line === 0\"}]},{\"name\":\"licenceLines\",\"values\":[{}],\"transform\":[{\"type\":\"formula\",\"as\":\"r0\",\"expr\":\"trim('''' + (r0.Licence || ''''))\"},{\"type\":\"formula\",\"as\":\"n\",\"expr\":\"max(10, floor((W - 48 * u) / (9.3 * u)))\"},{\"type\":\"formula\",\"as\":\"c0\",\"expr\":\"length(datum.r0) <= datum.n ? length(datum.r0) : (lastindexof(substring(datum.r0, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r0, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r1\",\"expr\":\"trim(substring(datum.r0, datum.c0))\"},{\"type\":\"formula\",\"as\":\"c1\",\"expr\":\"length(datum.r1) <= datum.n ? length(datum.r1) : (lastindexof(substring(datum.r1, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r1, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r2\",\"expr\":\"trim(substring(datum.r1, datum.c1))\"},{\"type\":\"formula\",\"as\":\"c2\",\"expr\":\"length(datum.r2) <= datum.n ? length(datum.r2) : (lastindexof(substring(datum.r2, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r2, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r3\",\"expr\":\"trim(substring(datum.r2, datum.c2))\"},{\"type\":\"formula\",\"as\":\"c3\",\"expr\":\"length(datum.r3) <= datum.n ? length(datum.r3) : (lastindexof(substring(datum.r3, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r3, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r4\",\"expr\":\"trim(substring(datum.r3, datum.c3))\"},{\"type\":\"formula\",\"as\":\"c4\",\"expr\":\"length(datum.r4) <= datum.n ? length(datum.r4) : (lastindexof(substring(datum.r4, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r4, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r5\",\"expr\":\"trim(substring(datum.r4, datum.c4))\"},{\"type\":\"formula\",\"as\":\"c5\",\"expr\":\"length(datum.r5) <= datum.n ? length(datum.r5) : (lastindexof(substring(datum.r5, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r5, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r6\",\"expr\":\"trim(substring(datum.r5, datum.c5))\"},{\"type\":\"formula\",\"as\":\"c6\",\"expr\":\"length(datum.r6) <= datum.n ? length(datum.r6) : (lastindexof(substring(datum.r6, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r6, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r7\",\"expr\":\"trim(substring(datum.r6, datum.c6))\"},{\"type\":\"formula\",\"as\":\"c7\",\"expr\":\"length(datum.r7) <= datum.n ? length(datum.r7) : (lastindexof(substring(datum.r7, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r7, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r8\",\"expr\":\"trim(substring(datum.r7, datum.c7))\"},{\"type\":\"formula\",\"as\":\"c8\",\"expr\":\"length(datum.r8) <= datum.n ? length(datum.r8) : (lastindexof(substring(datum.r8, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r8, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r9\",\"expr\":\"trim(substring(datum.r8, datum.c8))\"},{\"type\":\"formula\",\"as\":\"c9\",\"expr\":\"length(datum.r9) <= datum.n ? length(datum.r9) : (lastindexof(substring(datum.r9, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r9, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r10\",\"expr\":\"trim(substring(datum.r9, datum.c9))\"},{\"type\":\"formula\",\"as\":\"lines\",\"expr\":\"[substring(datum.r0, 0, datum.c0), substring(datum.r1, 0, datum.c1), substring(datum.r2, 0, datum.c2), substring(datum.r3, 0, datum.c3), substring(datum.r4, 0, datum.c4), substring(datum.r5, 0, datum.c5), substring(datum.r6, 0, datum.c6), substring(datum.r7, 0, datum.c7), substring(datum.r8, 0, datum.c8), datum.r9]\"},{\"type\":\"flatten\",\"fields\":[\"lines\"],\"as\":[\"text\"],\"index\":\"line\"},{\"type\":\"filter\",\"expr\":\"datum.text !== '''' || datum.line === 0\"}]}],\"marks\":[{\"type\":\"rect\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"0\"},\"y\":{\"signal\":\"0\"},\"width\":{\"signal\":\"W\"},\"height\":{\"signal\":\"H\"},\"cornerRadius\":{\"signal\":\"16 * u\"},\"fill\":{\"value\":\"#121B2C\"},\"stroke\":{\"value\":\"#2B3A55\"},\"strokeWidth\":{\"value\":1}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"38 * u\"},\"text\":{\"signal\":\"length(data(''src'')) > 0 ? ''What the last check recorded'' : ''''\"},\"fontSize\":{\"signal\":\"24 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"(58 * u) + 22 * u\"},\"text\":{\"signal\":\"length(data(''src'')) > 0 ? \\\"Do the rules still work?\\\" : ''''\"},\"fontSize\":{\"signal\":\"17 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 40 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"plantedLines\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"(58 * u) + (48 + datum.line * 25) * u\"},\"text\":{\"signal\":\"datum.text\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 40 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"(58 * u + (30 + 25 * length(data(''plantedLines'')) + 16) * u) + 22 * u\"},\"text\":{\"signal\":\"length(data(''src'')) > 0 ? \\\"Has anything changed after publication?\\\" : ''''\"},\"fontSize\":{\"signal\":\"17 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 40 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"ledgerLines\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"(58 * u + (30 + 25 * length(data(''plantedLines'')) + 16) * u) + (48 + datum.line * 25) * u\"},\"text\":{\"signal\":\"datum.text\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 40 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"(58 * u + (30 + 25 * length(data(''plantedLines'')) + 16) * u + (30 + 25 * length(data(''ledgerLines'')) + 16) * u) + 22 * u\"},\"text\":{\"signal\":\"length(data(''src'')) > 0 ? \\\"Is any source running on a copy?\\\" : ''''\"},\"fontSize\":{\"signal\":\"17 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 40 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"bathingLines\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"(58 * u + (30 + 25 * length(data(''plantedLines'')) + 16) * u + (30 + 25 * length(data(''ledgerLines'')) + 16) * u) + (48 + datum.line * 25) * u\"},\"text\":{\"signal\":\"datum.text\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 40 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"(58 * u + (30 + 25 * length(data(''plantedLines'')) + 16) * u + (30 + 25 * length(data(''ledgerLines'')) + 16) * u + (30 + 25 * length(data(''bathingLines'')) + 16) * u) + 22 * u\"},\"text\":{\"signal\":\"length(data(''src'')) > 0 ? \\\"What do the licence statements say?\\\" : ''''\"},\"fontSize\":{\"signal\":\"17 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 40 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"licenceLines\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"(58 * u + (30 + 25 * length(data(''plantedLines'')) + 16) * u + (30 + 25 * length(data(''ledgerLines'')) + 16) * u + (30 + 25 * length(data(''bathingLines'')) + 16) * u) + (48 + datum.line * 25) * u\"},\"text\":{\"signal\":\"datum.text\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 40 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H / 2\"},\"text\":{\"signal\":\"(!(length(data(''src'')) > 0)) ? ''No check has been recorded yet'' : ''''\"},\"fontSize\":{\"signal\":\"24 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"middle\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 48 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H / 2 + 34 * u\"},\"text\":{\"signal\":\"(!(length(data(''src'')) > 0)) ? ''The nightly check publishes one. Try refreshing the data.'' : ''''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"middle\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 48 * u\"}}}},{\"type\":\"text\",\"name\":\"fieldMapDiagnostic\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H - 8\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"bottom\"},\"text\":{\"signal\":\"missingFields ? ''Deneb field map: not found in data -> '' + missingFields : ''''\"},\"fill\":{\"value\":\"#FF8A73\"},\"fontSize\":{\"value\":15},\"font\":{\"value\":\"Segoe UI, sans-serif\"}}}}]}'"
+                }
+              }
+            },
+            "jsonConfig": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{}'"
+                }
+              }
+            },
+            "isNewDialogOpen": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableContextMenu": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'What the last check recorded, in sentences: planted defects, the change ledger, whether a source used a copy, and the licence statements.'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

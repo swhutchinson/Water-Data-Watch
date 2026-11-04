@@ -63,3 +63,4 @@ table VerdictReasons
 				    Typed
 
 	annotation PBI_ResultType = Table
+

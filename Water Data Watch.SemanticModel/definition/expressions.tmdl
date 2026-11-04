@@ -30,3 +30,4 @@ expression fnRepoCsv =
 	queryGroup: Functions
 
 	annotation PBI_ResultType = Function
+

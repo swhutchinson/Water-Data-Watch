@@ -58,3 +58,4 @@ table MapCells
 				    Typed
 
 	annotation PBI_ResultType = Table
+

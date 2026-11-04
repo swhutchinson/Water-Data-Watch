@@ -1,0 +1,29 @@
+/// Average or median. A few very high readings pull an average up.
+table PickStatistic
+	lineageTag: 3a39f275-73cb-4838-a803-81a2edc60723
+
+	column Statistic
+		isNameInferred
+		sourceColumn: [Statistic]
+		sortByColumn: SortOrder
+
+	column StatKey
+		isNameInferred
+		sourceColumn: [StatKey]
+
+	column SortOrder
+		isNameInferred
+		sourceColumn: [SortOrder]
+
+	partition PickStatistic = calculated
+		mode: import
+		source =
+				// Average or median. A few very high readings pull an average up.
+				DATATABLE (
+				    "Statistic", STRING, "StatKey", STRING, "SortOrder", INTEGER,
+				    {
+				        { "Average", "Average", 1 },
+				        { "Median", "Median", 2 }
+				    }
+				)
+

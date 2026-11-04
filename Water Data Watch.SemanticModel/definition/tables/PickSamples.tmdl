@@ -1,0 +1,29 @@
+/// Whether pollution and investigation samples are in. Either can be right, as long as it is stated.
+table PickSamples
+	lineageTag: b1165696-d71b-4a01-be1b-362d3cc39bd7
+
+	column Samples
+		isNameInferred
+		sourceColumn: [Samples]
+		sortByColumn: SortOrder
+
+	column SampleSet
+		isNameInferred
+		sourceColumn: [SampleSet]
+
+	column SortOrder
+		isNameInferred
+		sourceColumn: [SortOrder]
+
+	partition PickSamples = calculated
+		mode: import
+		source =
+				// Whether pollution and investigation samples are in. Either can be right, as long as it's stated.
+				DATATABLE (
+				    "Samples", STRING, "SampleSet", STRING, "SortOrder", INTEGER,
+				    {
+				        { "Routine samples only", "Routine samples", 1 },
+				        { "All samples, with pollution response", "All samples", 2 }
+				    }
+				)
+

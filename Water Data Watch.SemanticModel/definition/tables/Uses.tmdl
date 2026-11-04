@@ -11,8 +11,8 @@ table Uses
 
 	column use_order
 		dataType: int64
-		formatString: #,0
 		isHidden
+		formatString: #,0
 		lineageTag: ff7305e2-e7b7-4fb0-bdae-d69afb2f6e97
 		summarizeBy: none
 		sourceColumn: use_order
@@ -22,6 +22,7 @@ table Uses
 		lineageTag: 72769365-1540-40ac-bd28-e3af09774461
 		summarizeBy: none
 		sourceColumn: use_name
+		sortByColumn: use_order
 
 	column question
 		dataType: string
@@ -49,3 +50,4 @@ table Uses
 				    Typed
 
 	annotation PBI_ResultType = Table
+

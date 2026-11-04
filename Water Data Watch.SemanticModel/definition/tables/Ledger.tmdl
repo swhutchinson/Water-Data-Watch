@@ -77,3 +77,4 @@ table Ledger
 				    Typed
 
 	annotation PBI_ResultType = Table
+

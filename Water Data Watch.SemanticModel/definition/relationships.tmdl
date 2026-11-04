@@ -17,3 +17,4 @@ relationship Issues_Rules
 relationship Decisions_Rules
 	fromColumn: Decisions.rule
 	toColumn: Rules.id
+

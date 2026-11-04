@@ -1,0 +1,31 @@
+/// How below-limit results are counted. Dropped is listed as a mistake, because these are real measurements.
+table PickMethod
+	lineageTag: d904da44-9a1d-4a30-b9d8-5be7374fe7d4
+
+	column 'Below-limit results'
+		isNameInferred
+		sourceColumn: [Below-limit results]
+		sortByColumn: SortOrder
+
+	column Method
+		isNameInferred
+		sourceColumn: [Method]
+
+	column SortOrder
+		isNameInferred
+		sourceColumn: [SortOrder]
+
+	partition PickMethod = calculated
+		mode: import
+		source =
+				// How below-limit results are counted. Dropped is listed as a mistake, because these are real measurements.
+				DATATABLE (
+				    "Below-limit results", STRING, "Method", STRING, "SortOrder", INTEGER,
+				    {
+				        { "Count at half the limit", "Half the limit", 1 },
+				        { "Count at the limit", "The limit", 2 },
+				        { "Count as zero", "Zero", 3 },
+				        { "Drop them (a mistake)", "Dropped", 4 }
+				    }
+				)
+

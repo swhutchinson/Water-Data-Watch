@@ -209,8 +209,8 @@ table RunLog
 	/// 1 for the first run.
 	column RunNo
 		dataType: int64
-		formatString: #,0
 		isHidden
+		formatString: #,0
 		lineageTag: ff89f6be-7e77-4c92-aecc-42a00027cd66
 		summarizeBy: none
 		sourceColumn: RunNo
@@ -218,8 +218,8 @@ table RunLog
 	/// 1 for the newest run.
 	column IsLatest
 		dataType: int64
-		formatString: #,0
 		isHidden
+		formatString: #,0
 		lineageTag: cf9bf2ac-bcd8-43aa-be80-0568ba0c6e4a
 		summarizeBy: none
 		sourceColumn: IsLatest
@@ -227,8 +227,8 @@ table RunLog
 	/// When the run finished, as a date and time in UTC.
 	column RunUTC
 		dataType: dateTime
-		formatString: General Date
 		isHidden
+		formatString: General Date
 		lineageTag: 8fbf4c25-b85b-4d11-8293-163eb48c9ff7
 		summarizeBy: none
 		sourceColumn: RunUTC
@@ -277,3 +277,4 @@ table RunLog
 				    Local
 
 	annotation PBI_ResultType = Table
+

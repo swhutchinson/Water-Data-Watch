@@ -5,8 +5,8 @@ table Rules
 	/// The rule's place in the register.
 	column rule_order
 		dataType: int64
-		formatString: #,0
 		isHidden
+		formatString: #,0
 		lineageTag: a5dea914-eb20-4b50-bfca-ff23cd14f0b3
 		summarizeBy: none
 		sourceColumn: rule_order
@@ -24,6 +24,7 @@ table Rules
 		lineageTag: 338b3361-2baa-487a-be00-2d4b3c804ed6
 		summarizeBy: none
 		sourceColumn: rule_label
+		sortByColumn: rule_order
 
 	column version
 		dataType: int64
@@ -181,16 +182,16 @@ table Rules
 
 	column test_failed_before
 		dataType: int64
-		formatString: #,0
 		isHidden
+		formatString: #,0
 		lineageTag: bcc56419-31d6-487a-8ccf-9c2c06895801
 		summarizeBy: none
 		sourceColumn: test_failed_before
 
 	column test_failed_after
 		dataType: int64
-		formatString: #,0
 		isHidden
+		formatString: #,0
 		lineageTag: 6a46df53-be84-4c56-ba60-ecfc3ba75f06
 		summarizeBy: none
 		sourceColumn: test_failed_after
@@ -269,3 +270,4 @@ table Rules
 				    Typed
 
 	annotation PBI_ResultType = Table
+

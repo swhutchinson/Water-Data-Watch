@@ -35,3 +35,4 @@ table ResultKinds
 				    Typed
 
 	annotation PBI_ResultType = Table
+

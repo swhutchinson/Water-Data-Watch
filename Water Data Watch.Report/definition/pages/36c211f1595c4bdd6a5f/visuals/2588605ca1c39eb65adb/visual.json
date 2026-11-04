@@ -1,0 +1,413 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "2588605ca1c39eb65adb",
+  "position": {
+    "x": 40,
+    "y": 712,
+    "z": 5,
+    "width": 1840,
+    "height": 276,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Source Rows"
+                }
+              },
+              "queryRef": "Report Measures.Source Rows",
+              "nativeQueryRef": "Source Rows"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Arrived Rows"
+                }
+              },
+              "queryRef": "Report Measures.Arrived Rows",
+              "nativeQueryRef": "Arrived Rows"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Checked Rows"
+                }
+              },
+              "queryRef": "Report Measures.Checked Rows",
+              "nativeQueryRef": "Checked Rows"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Summarised Rows"
+                }
+              },
+              "queryRef": "Report Measures.Summarised Rows",
+              "nativeQueryRef": "Summarised Rows"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Totals Agree"
+                }
+              },
+              "queryRef": "Report Measures.Totals Agree",
+              "nativeQueryRef": "Totals Agree"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Rules Pass"
+                }
+              },
+              "queryRef": "Report Measures.Rules Pass",
+              "nativeQueryRef": "Rules Pass"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Rules Fail"
+                }
+              },
+              "queryRef": "Report Measures.Rules Fail",
+              "nativeQueryRef": "Rules Fail"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Rules Review"
+                }
+              },
+              "queryRef": "Report Measures.Rules Review",
+              "nativeQueryRef": "Rules Review"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Rules Not Checked"
+                }
+              },
+              "queryRef": "Report Measures.Rules Not Checked",
+              "nativeQueryRef": "Rules Not Checked"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Rules No Data"
+                }
+              },
+              "queryRef": "Report Measures.Rules No Data",
+              "nativeQueryRef": "Rules No Data"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Rules Total"
+                }
+              },
+              "queryRef": "Report Measures.Rules Total",
+              "nativeQueryRef": "Rules Total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Planted Caught"
+                }
+              },
+              "queryRef": "Report Measures.Planted Caught",
+              "nativeQueryRef": "Planted Caught"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Planted Tested"
+                }
+              },
+              "queryRef": "Report Measures.Planted Tested",
+              "nativeQueryRef": "Planted Tested"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Run Seconds"
+                }
+              },
+              "queryRef": "Report Measures.Run Seconds",
+              "nativeQueryRef": "Run Seconds"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Issues Open"
+                }
+              },
+              "queryRef": "Report Measures.Issues Open",
+              "nativeQueryRef": "Issues Open"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Changes Text"
+                }
+              },
+              "queryRef": "Report Measures.Changes Text",
+              "nativeQueryRef": "Changes Text"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Ledger Text"
+                }
+              },
+              "queryRef": "Report Measures.Ledger Text",
+              "nativeQueryRef": "Ledger Text"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "vega": [
+        {
+          "properties": {
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vega'"
+                }
+              }
+            },
+            "jsonSpec": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"$schema\":\"https://vega.github.io/schema/vega/v6.json\",\"description\":\"The last check: rows in and out, rule outcomes, planted defects and what changed\",\"width\":{\"signal\":\"pbiContainerWidth\"},\"height\":{\"signal\":\"pbiContainerHeight\"},\"padding\":0,\"autosize\":{\"type\":\"none\"},\"background\":\"#0A111E\",\"config\":{\"text\":{\"font\":\"Segoe UI, sans-serif\",\"fill\":\"#FFFFFF\"},\"tooltip\":{\"offset\":12}},\"usermeta\":{\"denebFields\":{\"Source\":\"Source Rows\",\"Arrived\":\"Arrived Rows\",\"Checked\":\"Checked Rows\",\"Summarised\":\"Summarised Rows\",\"Agree\":\"Totals Agree\",\"Pass\":\"Rules Pass\",\"Fail\":\"Rules Fail\",\"Review\":\"Rules Review\",\"NotChecked\":\"Rules Not Checked\",\"NoData\":\"Rules No Data\",\"Total\":\"Rules Total\",\"Caught\":\"Planted Caught\",\"Tested\":\"Planted Tested\",\"Seconds\":\"Run Seconds\",\"Issues\":\"Issues Open\",\"ChangesText\":\"Changes Text\",\"LedgerText\":\"Ledger Text\"}},\"signals\":[{\"name\":\"fieldMap\",\"value\":{\"Source\":\"Source Rows\",\"Arrived\":\"Arrived Rows\",\"Checked\":\"Checked Rows\",\"Summarised\":\"Summarised Rows\",\"Agree\":\"Totals Agree\",\"Pass\":\"Rules Pass\",\"Fail\":\"Rules Fail\",\"Review\":\"Rules Review\",\"NotChecked\":\"Rules Not Checked\",\"NoData\":\"Rules No Data\",\"Total\":\"Rules Total\",\"Caught\":\"Planted Caught\",\"Tested\":\"Planted Tested\",\"Seconds\":\"Run Seconds\",\"Issues\":\"Issues Open\",\"ChangesText\":\"Changes Text\",\"LedgerText\":\"Ledger Text\"},\"description\":\"EDIT HERE if a field arrives under a different name: set the right-hand value to the name Power BI delivers (Deneb editor > Data tab).\"},{\"name\":\"missingFields\",\"update\":\"length(data(''dataset'')) ? ((isDefined(data(''dataset'')[0][fieldMap[''Source'']]) ? '''' : ''Source  '') + (isDefined(data(''dataset'')[0][fieldMap[''Arrived'']]) ? '''' : ''Arrived  '') + (isDefined(data(''dataset'')[0][fieldMap[''Checked'']]) ? '''' : ''Checked  '') + (isDefined(data(''dataset'')[0][fieldMap[''Summarised'']]) ? '''' : ''Summarised  '') + (isDefined(data(''dataset'')[0][fieldMap[''Agree'']]) ? '''' : ''Agree  '') + (isDefined(data(''dataset'')[0][fieldMap[''Pass'']]) ? '''' : ''Pass  '') + (isDefined(data(''dataset'')[0][fieldMap[''Fail'']]) ? '''' : ''Fail  '') + (isDefined(data(''dataset'')[0][fieldMap[''Review'']]) ? '''' : ''Review  '') + (isDefined(data(''dataset'')[0][fieldMap[''NotChecked'']]) ? '''' : ''NotChecked  '') + (isDefined(data(''dataset'')[0][fieldMap[''NoData'']]) ? '''' : ''NoData  '') + (isDefined(data(''dataset'')[0][fieldMap[''Total'']]) ? '''' : ''Total  '') + (isDefined(data(''dataset'')[0][fieldMap[''Caught'']]) ? '''' : ''Caught  '') + (isDefined(data(''dataset'')[0][fieldMap[''Tested'']]) ? '''' : ''Tested  '') + (isDefined(data(''dataset'')[0][fieldMap[''Seconds'']]) ? '''' : ''Seconds  '') + (isDefined(data(''dataset'')[0][fieldMap[''Issues'']]) ? '''' : ''Issues  '') + (isDefined(data(''dataset'')[0][fieldMap[''ChangesText'']]) ? '''' : ''ChangesText  '') + (isDefined(data(''dataset'')[0][fieldMap[''LedgerText'']]) ? '''' : ''LedgerText  '')) : ''''\"},{\"name\":\"W\",\"update\":\"max(pbiContainerWidth, 10)\"},{\"name\":\"H\",\"update\":\"max(pbiContainerHeight, 10)\"},{\"name\":\"u\",\"update\":\"max(0.35, min(W / 1840, H / 276))\"},{\"name\":\"r0\",\"update\":\"length(data(''src'')) ? data(''src'')[0] : {}\"}],\"data\":[{\"name\":\"dataset\"},{\"name\":\"src\",\"source\":\"dataset\",\"transform\":[{\"type\":\"formula\",\"as\":\"Source\",\"expr\":\"toNumber(datum[fieldMap[''Source'']])\"},{\"type\":\"formula\",\"as\":\"Arrived\",\"expr\":\"toNumber(datum[fieldMap[''Arrived'']])\"},{\"type\":\"formula\",\"as\":\"Checked\",\"expr\":\"toNumber(datum[fieldMap[''Checked'']])\"},{\"type\":\"formula\",\"as\":\"Summarised\",\"expr\":\"toNumber(datum[fieldMap[''Summarised'']])\"},{\"type\":\"formula\",\"as\":\"Agree\",\"expr\":\"toNumber(datum[fieldMap[''Agree'']])\"},{\"type\":\"formula\",\"as\":\"Pass\",\"expr\":\"toNumber(datum[fieldMap[''Pass'']])\"},{\"type\":\"formula\",\"as\":\"Fail\",\"expr\":\"toNumber(datum[fieldMap[''Fail'']])\"},{\"type\":\"formula\",\"as\":\"Review\",\"expr\":\"toNumber(datum[fieldMap[''Review'']])\"},{\"type\":\"formula\",\"as\":\"NotChecked\",\"expr\":\"toNumber(datum[fieldMap[''NotChecked'']])\"},{\"type\":\"formula\",\"as\":\"NoData\",\"expr\":\"toNumber(datum[fieldMap[''NoData'']])\"},{\"type\":\"formula\",\"as\":\"Total\",\"expr\":\"toNumber(datum[fieldMap[''Total'']])\"},{\"type\":\"formula\",\"as\":\"Caught\",\"expr\":\"toNumber(datum[fieldMap[''Caught'']])\"},{\"type\":\"formula\",\"as\":\"Tested\",\"expr\":\"toNumber(datum[fieldMap[''Tested'']])\"},{\"type\":\"formula\",\"as\":\"Seconds\",\"expr\":\"toNumber(datum[fieldMap[''Seconds'']])\"},{\"type\":\"formula\",\"as\":\"Issues\",\"expr\":\"toNumber(datum[fieldMap[''Issues'']])\"},{\"type\":\"formula\",\"as\":\"ChangesText\",\"expr\":\"datum[fieldMap[''ChangesText'']]\"},{\"type\":\"formula\",\"as\":\"LedgerText\",\"expr\":\"datum[fieldMap[''LedgerText'']]\"}]},{\"name\":\"outcomes\",\"values\":[{\"s\":\"Pass\",\"i\":0},{\"s\":\"Fail\",\"i\":1},{\"s\":\"For review\",\"i\":2},{\"s\":\"Not checked\",\"i\":3},{\"s\":\"No data\",\"i\":4}],\"transform\":[{\"type\":\"formula\",\"as\":\"n\",\"expr\":\"[r0.Pass, r0.Fail, r0.Review, r0.NotChecked, r0.NoData][datum.i] || 0\"},{\"type\":\"stack\",\"field\":\"n\",\"sort\":{\"field\":\"i\"},\"as\":[\"b0\",\"b1\"]},{\"type\":\"formula\",\"as\":\"tip\",\"expr\":\"{''Outcome'': datum.s, ''Rules'': datum.n, ''All rules'': r0.Total}\"}]},{\"name\":\"changeLines\",\"values\":[{}],\"transform\":[{\"type\":\"formula\",\"as\":\"r0\",\"expr\":\"trim('''' + (r0.ChangesText || ''''))\"},{\"type\":\"formula\",\"as\":\"n\",\"expr\":\"max(10, floor((446 * u) / (9.4 * u)))\"},{\"type\":\"formula\",\"as\":\"c0\",\"expr\":\"length(datum.r0) <= datum.n ? length(datum.r0) : (lastindexof(substring(datum.r0, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r0, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r1\",\"expr\":\"trim(substring(datum.r0, datum.c0))\"},{\"type\":\"formula\",\"as\":\"c1\",\"expr\":\"length(datum.r1) <= datum.n ? length(datum.r1) : (lastindexof(substring(datum.r1, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r1, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r2\",\"expr\":\"trim(substring(datum.r1, datum.c1))\"},{\"type\":\"formula\",\"as\":\"c2\",\"expr\":\"length(datum.r2) <= datum.n ? length(datum.r2) : (lastindexof(substring(datum.r2, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r2, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r3\",\"expr\":\"trim(substring(datum.r2, datum.c2))\"},{\"type\":\"formula\",\"as\":\"c3\",\"expr\":\"length(datum.r3) <= datum.n ? length(datum.r3) : (lastindexof(substring(datum.r3, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r3, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r4\",\"expr\":\"trim(substring(datum.r3, datum.c3))\"},{\"type\":\"formula\",\"as\":\"c4\",\"expr\":\"length(datum.r4) <= datum.n ? length(datum.r4) : (lastindexof(substring(datum.r4, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r4, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r5\",\"expr\":\"trim(substring(datum.r4, datum.c4))\"},{\"type\":\"formula\",\"as\":\"c5\",\"expr\":\"length(datum.r5) <= datum.n ? length(datum.r5) : (lastindexof(substring(datum.r5, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r5, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r6\",\"expr\":\"trim(substring(datum.r5, datum.c5))\"},{\"type\":\"formula\",\"as\":\"c6\",\"expr\":\"length(datum.r6) <= datum.n ? length(datum.r6) : (lastindexof(substring(datum.r6, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r6, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r7\",\"expr\":\"trim(substring(datum.r6, datum.c6))\"},{\"type\":\"formula\",\"as\":\"c7\",\"expr\":\"length(datum.r7) <= datum.n ? length(datum.r7) : (lastindexof(substring(datum.r7, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r7, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r8\",\"expr\":\"trim(substring(datum.r7, datum.c7))\"},{\"type\":\"formula\",\"as\":\"c8\",\"expr\":\"length(datum.r8) <= datum.n ? length(datum.r8) : (lastindexof(substring(datum.r8, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r8, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r9\",\"expr\":\"trim(substring(datum.r8, datum.c8))\"},{\"type\":\"formula\",\"as\":\"c9\",\"expr\":\"length(datum.r9) <= datum.n ? length(datum.r9) : (lastindexof(substring(datum.r9, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r9, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r10\",\"expr\":\"trim(substring(datum.r9, datum.c9))\"},{\"type\":\"formula\",\"as\":\"lines\",\"expr\":\"[substring(datum.r0, 0, datum.c0), substring(datum.r1, 0, datum.c1), substring(datum.r2, 0, datum.c2), substring(datum.r3, 0, datum.c3), substring(datum.r4, 0, datum.c4), substring(datum.r5, 0, datum.c5), substring(datum.r6, 0, datum.c6), substring(datum.r7, 0, datum.c7), substring(datum.r8, 0, datum.c8), datum.r9]\"},{\"type\":\"flatten\",\"fields\":[\"lines\"],\"as\":[\"text\"],\"index\":\"line\"},{\"type\":\"filter\",\"expr\":\"datum.text !== '''' || datum.line === 0\"}]},{\"name\":\"ledgerLines\",\"values\":[{}],\"transform\":[{\"type\":\"formula\",\"as\":\"r0\",\"expr\":\"trim('''' + (r0.LedgerText || ''''))\"},{\"type\":\"formula\",\"as\":\"n\",\"expr\":\"max(10, floor((446 * u) / (8.9 * u)))\"},{\"type\":\"formula\",\"as\":\"c0\",\"expr\":\"length(datum.r0) <= datum.n ? length(datum.r0) : (lastindexof(substring(datum.r0, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r0, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r1\",\"expr\":\"trim(substring(datum.r0, datum.c0))\"},{\"type\":\"formula\",\"as\":\"c1\",\"expr\":\"length(datum.r1) <= datum.n ? length(datum.r1) : (lastindexof(substring(datum.r1, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r1, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r2\",\"expr\":\"trim(substring(datum.r1, datum.c1))\"},{\"type\":\"formula\",\"as\":\"c2\",\"expr\":\"length(datum.r2) <= datum.n ? length(datum.r2) : (lastindexof(substring(datum.r2, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r2, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r3\",\"expr\":\"trim(substring(datum.r2, datum.c2))\"},{\"type\":\"formula\",\"as\":\"c3\",\"expr\":\"length(datum.r3) <= datum.n ? length(datum.r3) : (lastindexof(substring(datum.r3, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r3, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r4\",\"expr\":\"trim(substring(datum.r3, datum.c3))\"},{\"type\":\"formula\",\"as\":\"c4\",\"expr\":\"length(datum.r4) <= datum.n ? length(datum.r4) : (lastindexof(substring(datum.r4, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r4, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r5\",\"expr\":\"trim(substring(datum.r4, datum.c4))\"},{\"type\":\"formula\",\"as\":\"c5\",\"expr\":\"length(datum.r5) <= datum.n ? length(datum.r5) : (lastindexof(substring(datum.r5, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r5, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r6\",\"expr\":\"trim(substring(datum.r5, datum.c5))\"},{\"type\":\"formula\",\"as\":\"c6\",\"expr\":\"length(datum.r6) <= datum.n ? length(datum.r6) : (lastindexof(substring(datum.r6, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r6, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r7\",\"expr\":\"trim(substring(datum.r6, datum.c6))\"},{\"type\":\"formula\",\"as\":\"c7\",\"expr\":\"length(datum.r7) <= datum.n ? length(datum.r7) : (lastindexof(substring(datum.r7, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r7, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r8\",\"expr\":\"trim(substring(datum.r7, datum.c7))\"},{\"type\":\"formula\",\"as\":\"c8\",\"expr\":\"length(datum.r8) <= datum.n ? length(datum.r8) : (lastindexof(substring(datum.r8, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r8, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r9\",\"expr\":\"trim(substring(datum.r8, datum.c8))\"},{\"type\":\"formula\",\"as\":\"c9\",\"expr\":\"length(datum.r9) <= datum.n ? length(datum.r9) : (lastindexof(substring(datum.r9, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r9, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r10\",\"expr\":\"trim(substring(datum.r9, datum.c9))\"},{\"type\":\"formula\",\"as\":\"lines\",\"expr\":\"[substring(datum.r0, 0, datum.c0), substring(datum.r1, 0, datum.c1), substring(datum.r2, 0, datum.c2), substring(datum.r3, 0, datum.c3), substring(datum.r4, 0, datum.c4), substring(datum.r5, 0, datum.c5), substring(datum.r6, 0, datum.c6), substring(datum.r7, 0, datum.c7), substring(datum.r8, 0, datum.c8), datum.r9]\"},{\"type\":\"flatten\",\"fields\":[\"lines\"],\"as\":[\"text\"],\"index\":\"line\"},{\"type\":\"filter\",\"expr\":\"datum.text !== '''' || datum.line === 0\"}]}],\"marks\":[{\"type\":\"rect\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"0\"},\"y\":{\"signal\":\"0\"},\"width\":{\"signal\":\"W\"},\"height\":{\"signal\":\"H\"},\"cornerRadius\":{\"signal\":\"16 * u\"},\"fill\":{\"value\":\"#121B2C\"},\"stroke\":{\"value\":\"#2B3A55\"},\"strokeWidth\":{\"value\":1}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"38 * u\"},\"text\":{\"signal\":\"length(data(''src'')) > 0 ? ''Rows in, rows out'' : ''''\"},\"fontSize\":{\"signal\":\"22 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"}}}},{\"type\":\"rect\",\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"52 * u\"},\"width\":{\"signal\":\"420 * u\"},\"height\":{\"signal\":\"200 * u\"},\"fill\":{\"value\":\"transparent\"},\"tooltip\":{\"signal\":\"length(data(''src'')) > 0 ? {''The source says it holds'': format(r0.Source, '',''), ''Arrived'': format(r0.Arrived, '',''), ''Checked by the rules'': format(r0.Checked, '',''), ''Summarised for this report'': format(r0.Summarised, '','')} : null\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"108 * u\"},\"text\":{\"signal\":\"r0.Agree === 1 ? format(r0.Source, '','') : ''''\"},\"fontSize\":{\"signal\":\"54 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"142 * u\"},\"text\":{\"signal\":\"r0.Agree === 1 ? ''the same number at all four stages:'' : ''''\"},\"fontSize\":{\"signal\":\"20 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"170 * u\"},\"text\":{\"signal\":\"r0.Agree === 1 ? ''what the source says it holds, what arrived,'' : ''''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"420 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"194 * u\"},\"text\":{\"signal\":\"r0.Agree === 1 ? ''what was checked and what was summarised.'' : ''''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"420 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"76 * u\"},\"text\":{\"signal\":\"r0.Agree === 0 ? ''The source says '' + format(r0.Source, '','') : ''''\"},\"fontSize\":{\"signal\":\"20 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"104 * u\"},\"text\":{\"signal\":\"r0.Agree === 0 ? ''Arrived '' + format(r0.Arrived, '','') : ''''\"},\"fontSize\":{\"signal\":\"20 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"132 * u\"},\"text\":{\"signal\":\"r0.Agree === 0 ? ''Checked '' + format(r0.Checked, '','') : ''''\"},\"fontSize\":{\"signal\":\"20 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"160 * u\"},\"text\":{\"signal\":\"r0.Agree === 0 ? ''Summarised '' + format(r0.Summarised, '','') : ''''\"},\"fontSize\":{\"signal\":\"20 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"52 * u\"},\"y\":{\"signal\":\"194 * u\"},\"text\":{\"signal\":\"r0.Agree === 0 ? ''The counts differ, so look before using the latest figures.'' : ''''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#FF8A73\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"394 * u\"}}}},{\"type\":\"symbol\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"34 * u\"},\"y\":{\"signal\":\"188 * u\"},\"shape\":{\"signal\":\"(r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Pass'' || r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Fit'' || r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Caught'') ? ''M-0.75,0.05 L-0.25,0.55 L0.8,-0.6'' : (r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Fail'' || r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Not fit'' || r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Missed'') ? ''M-0.6,-0.6 L0.6,0.6 M0.6,-0.6 L-0.6,0.6'' : (r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''For review'' || r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Fit with conditions'') ? ''M0,-0.85 L0,0.2 M0,0.66 L0,0.8'' : ''M-0.6,0 L0.6,0''\"},\"size\":{\"signal\":\"pow((22) * u / 1.6, 2)\"},\"stroke\":{\"signal\":\"(r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Pass'' || r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Fit'' || r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Caught'') ? ''#4CD8B0'' : (r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Fail'' || r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Not fit'' || r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Missed'') ? ''#FF8A73'' : (r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''For review'' || r0.Agree === 1 ? ''Pass'' : ''Fail'' === ''Fit with conditions'') ? ''#F2CE6B'' : ''#CAD4E3''\"},\"strokeWidth\":{\"signal\":\"4 * u\"},\"strokeCap\":{\"value\":\"round\"},\"strokeJoin\":{\"value\":\"round\"},\"fill\":{\"value\":\"transparent\"},\"opacity\":{\"signal\":\"r0.Agree === 0 ? 1 : 0\"}}}},{\"type\":\"symbol\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"286 * u\"},\"y\":{\"signal\":\"88 * u\"},\"shape\":{\"signal\":\"(''Pass'' === ''Pass'' || ''Pass'' === ''Fit'' || ''Pass'' === ''Caught'') ? ''M-0.75,0.05 L-0.25,0.55 L0.8,-0.6'' : (''Pass'' === ''Fail'' || ''Pass'' === ''Not fit'' || ''Pass'' === ''Missed'') ? ''M-0.6,-0.6 L0.6,0.6 M0.6,-0.6 L-0.6,0.6'' : (''Pass'' === ''For review'' || ''Pass'' === ''Fit with conditions'') ? ''M0,-0.85 L0,0.2 M0,0.66 L0,0.8'' : ''M-0.6,0 L0.6,0''\"},\"size\":{\"signal\":\"pow((30) * u / 1.6, 2)\"},\"stroke\":{\"signal\":\"(''Pass'' === ''Pass'' || ''Pass'' === ''Fit'' || ''Pass'' === ''Caught'') ? ''#4CD8B0'' : (''Pass'' === ''Fail'' || ''Pass'' === ''Not fit'' || ''Pass'' === ''Missed'') ? ''#FF8A73'' : (''Pass'' === ''For review'' || ''Pass'' === ''Fit with conditions'') ? ''#F2CE6B'' : ''#CAD4E3''\"},\"strokeWidth\":{\"signal\":\"5 * u\"},\"strokeCap\":{\"value\":\"round\"},\"strokeJoin\":{\"value\":\"round\"},\"fill\":{\"value\":\"transparent\"},\"opacity\":{\"signal\":\"r0.Agree === 1 ? 1 : 0\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"240 * u\"},\"text\":{\"signal\":\"length(data(''src'')) > 0 ? ''The check took '' + format(r0.Seconds / 60, ''.0f'') + '' minutes  ·  '' + r0.Issues + '' issues open'' : ''''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"420 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"470 * u\"},\"y\":{\"signal\":\"38 * u\"},\"text\":{\"signal\":\"length(data(''src'')) > 0 ? ''What '' + r0.Total + '' rules found'' : ''''\"},\"fontSize\":{\"signal\":\"22 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"}}}},{\"type\":\"rect\",\"from\":{\"data\":\"outcomes\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"470 * u + 490 * u * datum.b0 / max(1, r0.Total)\"},\"width\":{\"signal\":\"max(0, 490 * u * datum.n / max(1, r0.Total) - 2 * u)\"},\"y\":{\"signal\":\"56 * u\"},\"height\":{\"signal\":\"34 * u\"},\"cornerRadius\":{\"signal\":\"4 * u\"},\"fill\":{\"signal\":\"(datum.s === ''Pass'' || datum.s === ''Fit'' || datum.s === ''Caught'') ? ''#1F9E74'' : (datum.s === ''Fail'' || datum.s === ''Not fit'' || datum.s === ''Missed'') ? ''#D9542C'' : (datum.s === ''For review'' || datum.s === ''Fit with conditions'') ? ''#D9A21B'' : ''#9AA3B2''\"},\"fillOpacity\":{\"signal\":\"!((datum.s === ''Pass'' || datum.s === ''Fit'' || datum.s === ''Caught'') || (datum.s === ''Fail'' || datum.s === ''Not fit'' || datum.s === ''Missed'') || (datum.s === ''For review'' || datum.s === ''Fit with conditions'')) ? 0 : 1\"},\"stroke\":{\"signal\":\"(datum.s === ''Pass'' || datum.s === ''Fit'' || datum.s === ''Caught'') ? ''#1F9E74'' : (datum.s === ''Fail'' || datum.s === ''Not fit'' || datum.s === ''Missed'') ? ''#D9542C'' : (datum.s === ''For review'' || datum.s === ''Fit with conditions'') ? ''#D9A21B'' : ''#9AA3B2''\"},\"strokeWidth\":{\"signal\":\"datum.n > 0 ? 1.5 * u : 0\"},\"strokeDash\":{\"signal\":\"!((datum.s === ''Pass'' || datum.s === ''Fit'' || datum.s === ''Caught'') || (datum.s === ''Fail'' || datum.s === ''Not fit'' || datum.s === ''Missed'') || (datum.s === ''For review'' || datum.s === ''Fit with conditions'')) ? [4 * u, 3 * u] : []\"},\"tooltip\":{\"signal\":\"datum.tip\"}}}},{\"type\":\"symbol\",\"interactive\":false,\"from\":{\"data\":\"outcomes\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"(470 + 12 + (datum.i % 3) * 166) * u\"},\"y\":{\"signal\":\"(datum.i < 3 ? 122 : 170) * u\"},\"shape\":{\"signal\":\"(datum.s === ''Pass'' || datum.s === ''Fit'' || datum.s === ''Caught'') ? ''M-0.75,0.05 L-0.25,0.55 L0.8,-0.6'' : (datum.s === ''Fail'' || datum.s === ''Not fit'' || datum.s === ''Missed'') ? ''M-0.6,-0.6 L0.6,0.6 M0.6,-0.6 L-0.6,0.6'' : (datum.s === ''For review'' || datum.s === ''Fit with conditions'') ? ''M0,-0.85 L0,0.2 M0,0.66 L0,0.8'' : ''M-0.6,0 L0.6,0''\"},\"size\":{\"signal\":\"pow((19) * u / 1.6, 2)\"},\"stroke\":{\"signal\":\"(datum.s === ''Pass'' || datum.s === ''Fit'' || datum.s === ''Caught'') ? ''#4CD8B0'' : (datum.s === ''Fail'' || datum.s === ''Not fit'' || datum.s === ''Missed'') ? ''#FF8A73'' : (datum.s === ''For review'' || datum.s === ''Fit with conditions'') ? ''#F2CE6B'' : ''#CAD4E3''\"},\"strokeWidth\":{\"signal\":\"3.4 * u\"},\"strokeCap\":{\"value\":\"round\"},\"strokeJoin\":{\"value\":\"round\"},\"fill\":{\"value\":\"transparent\"},\"opacity\":{\"signal\":\"length(data(''src'')) > 0 ? 1 : 0\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"outcomes\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"(470 + 30 + (datum.i % 3) * 166) * u\"},\"y\":{\"signal\":\"(datum.i < 3 ? 133 : 181) * u\"},\"text\":{\"signal\":\"length(data(''src'')) > 0 ? datum.n : ''''\"},\"fontSize\":{\"signal\":\"32 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"signal\":\"(datum.s === ''Pass'' || datum.s === ''Fit'' || datum.s === ''Caught'') ? ''#4CD8B0'' : (datum.s === ''Fail'' || datum.s === ''Not fit'' || datum.s === ''Missed'') ? ''#FF8A73'' : (datum.s === ''For review'' || datum.s === ''Fit with conditions'') ? ''#F2CE6B'' : ''#CAD4E3''\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"outcomes\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"(470 + 30 + (datum.i % 3) * 166 + (datum.n > 9 ? 42 : 24)) * u\"},\"y\":{\"signal\":\"(datum.i < 3 ? 132 : 180) * u\"},\"text\":{\"signal\":\"length(data(''src'')) > 0 ? datum.s : ''''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"110 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"470 * u\"},\"y\":{\"signal\":\"240 * u\"},\"text\":{\"signal\":\"length(data(''src'')) > 0 ? ''Grey means nobody knows yet. It never counts as a pass.'' : ''''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"510 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"1000 * u\"},\"y\":{\"signal\":\"38 * u\"},\"text\":{\"signal\":\"length(data(''src'')) > 0 ? ''Do the rules still work?'' : ''''\"},\"fontSize\":{\"signal\":\"22 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"1000 * u\"},\"y\":{\"signal\":\"108 * u\"},\"text\":{\"signal\":\"length(data(''src'')) > 0 ? r0.Caught + '' of '' + r0.Tested : ''''\"},\"fontSize\":{\"signal\":\"54 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"}}}},{\"type\":\"symbol\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"1248 * u\"},\"y\":{\"signal\":\"88 * u\"},\"shape\":{\"signal\":\"(r0.Tested > 0 && r0.Caught === r0.Tested ? ''Pass'' : ''Fail'' === ''Pass'' || r0.Tested > 0 && r0.Caught === r0.Tested ? ''Pass'' : ''Fail'' === ''Fit'' || r0.Tested > 0 && r0.Caught === r0.Tested ? ''Pass'' : ''Fail'' === ''Caught'') ? ''M-0.75,0.05 L-0.25,0.55 L0.8,-0.6'' : (r0.Tested > 0 && r0.Caught === r0.Tested ? ''Pass'' : ''Fail'' === ''Fail'' || r0.Tested > 0 && r0.Caught === r0.Tested ? ''Pass'' : ''Fail'' === ''Not fit'' || r0.Tested > 0 && r0.Caught === r0.Tested ? ''Pass'' : ''Fail'' === ''Missed'') ? ''M-0.6,-0.6 L0.6,0.6 M0.6,-0.6 L-0.6,0.6'' : (r0.Tested > 0 && r0.Caught === r0.Tested ? ''Pass'' : ''Fail'' === ''For review'' || r0.Tested > 0 && r0.Caught === r0.Tested ? ''Pass'' : ''Fail'' === ''Fit with conditions'') ? ''M0,-0.85 L0,0.2 M0,0.66 L0,0.8'' : ''M-0.6,0 L0.6,0''\"},\"size\":{\"signal\":\"pow((30) * u / 1.6, 2)\"},\"stroke\":{\"signal\":\"(r0.Tested > 0 && r0.Caught === r0.Tested ? ''Pass'' : ''Fail'' === ''Pass'' || r0.Tested > 0 && r0.Caught === r0.Tested ? ''Pass'' : ''Fail'' === ''Fit'' || r0.Tested > 0 && r0.Caught === r0.Tested ? ''Pass'' : ''Fail'' === ''Caught'') ? ''#4CD8B0'' : (r0.Tested > 0 && r0.Caught === r0.Tested ? ''Pass'' : ''Fail'' === ''Fail'' || r0.Tested > 0 && r0.Caught === r0.Tested ? ''Pass'' : ''Fail'' === ''Not fit'' || r0.Tested > 0 && r0.Caught === r0.Tested ? ''Pass'' : ''Fail'' === ''Missed'') ? ''#FF8A73'' : (r0.Tested > 0 && r0.Caught === r0.Tested ? ''Pass'' : ''Fail'' === ''For review'' || r0.Tested > 0 && r0.Caught === r0.Tested ? ''Pass'' : ''Fail'' === ''Fit with conditions'') ? ''#F2CE6B'' : ''#CAD4E3''\"},\"strokeWidth\":{\"signal\":\"5 * u\"},\"strokeCap\":{\"value\":\"round\"},\"strokeJoin\":{\"value\":\"round\"},\"fill\":{\"value\":\"transparent\"},\"opacity\":{\"signal\":\"length(data(''src'')) > 0 ? 1 : 0\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"1000 * u\"},\"y\":{\"signal\":\"142 * u\"},\"text\":{\"signal\":\"length(data(''src'')) > 0 ? ''planted defects caught.'' : ''''\"},\"fontSize\":{\"signal\":\"20 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"1000 * u\"},\"y\":{\"signal\":\"170 * u\"},\"text\":{\"signal\":\"length(data(''src'')) > 0 ? ''Each rule\\\\''s own defect goes into a'' : ''''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"340 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"1000 * u\"},\"y\":{\"signal\":\"194 * u\"},\"text\":{\"signal\":\"length(data(''src'')) > 0 ? ''private copy, which is then thrown'' : ''''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"340 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"1000 * u\"},\"y\":{\"signal\":\"218 * u\"},\"text\":{\"signal\":\"length(data(''src'')) > 0 ? ''away. The source is never changed.'' : ''''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"340 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"1370 * u\"},\"y\":{\"signal\":\"38 * u\"},\"text\":{\"signal\":\"length(data(''src'')) > 0 ? ''What changed since the last check'' : ''''\"},\"fontSize\":{\"signal\":\"22 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"446 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"changeLines\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"1370 * u\"},\"y\":{\"signal\":\"74 * u + datum.line * 26 * u\"},\"text\":{\"signal\":\"datum.text\"},\"fontSize\":{\"signal\":\"19 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"446 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"ledgerLines\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"1370 * u\"},\"y\":{\"signal\":\"(74 + 26 * length(data(''changeLines'')) + 10) * u + datum.line * 24 * u\"},\"text\":{\"signal\":\"datum.text\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"446 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H / 2\"},\"text\":{\"signal\":\"(!(length(data(''src'')) > 0)) ? ''No check has been recorded yet'' : ''''\"},\"fontSize\":{\"signal\":\"24 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"middle\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 48 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H / 2 + 34 * u\"},\"text\":{\"signal\":\"(!(length(data(''src'')) > 0)) ? ''The nightly check publishes one. Try refreshing the data.'' : ''''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"middle\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 48 * u\"}}}},{\"type\":\"text\",\"name\":\"fieldMapDiagnostic\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H - 8\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"bottom\"},\"text\":{\"signal\":\"missingFields ? ''Deneb field map: not found in data -> '' + missingFields : ''''\"},\"fill\":{\"value\":\"#FF8A73\"},\"fontSize\":{\"value\":15},\"font\":{\"value\":\"Segoe UI, sans-serif\"}}}}]}'"
+                }
+              }
+            },
+            "jsonConfig": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{}'"
+                }
+              }
+            },
+            "isNewDialogOpen": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableContextMenu": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'The last check, as four instruments: rows in and out at each stage, how many rules passed, failed, need review or could not run, how many planted defects were caught, and what changed since the last check.'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

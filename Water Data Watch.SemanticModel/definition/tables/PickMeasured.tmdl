@@ -1,0 +1,33 @@
+/// What was measured, for the picker on the Same data page.
+table PickMeasured
+	lineageTag: fbaee897-703f-411d-9d3b-e00ce27a80a0
+
+	column det_code
+		isNameInferred
+		sourceColumn: SameData[det_code]
+
+	column det_name
+		isNameInferred
+		sourceColumn: SameData[det_name]
+
+	column plain_name
+		isNameInferred
+		sourceColumn: SameData[plain_name]
+
+	column unit_label
+		isNameInferred
+		sourceColumn: SameData[unit_label]
+
+	column 'What was measured'
+		isNameInferred
+		sourceColumn: [What was measured]
+
+	partition PickMeasured = calculated
+		mode: import
+		source =
+				// What was measured, for the picker on "Same data, different answer".
+				ADDCOLUMNS (
+				    SUMMARIZE ( SameData, SameData[det_code], SameData[det_name], SameData[plain_name], SameData[unit_label] ),
+				    "What was measured", SameData[det_name]
+				)
+

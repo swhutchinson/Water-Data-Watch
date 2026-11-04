@@ -1,0 +1,371 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "abf603154c459a4f3046",
+  "position": {
+    "x": 40,
+    "y": 122,
+    "z": 2,
+    "width": 960,
+    "height": 578,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Verdicts"
+                    }
+                  },
+                  "Property": "use_id"
+                }
+              },
+              "queryRef": "Verdicts.use_id",
+              "nativeQueryRef": "use_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Verdicts"
+                    }
+                  },
+                  "Property": "use_name"
+                }
+              },
+              "queryRef": "Verdicts.use_name",
+              "nativeQueryRef": "use_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Verdicts"
+                    }
+                  },
+                  "Property": "use_order"
+                }
+              },
+              "queryRef": "Verdicts.use_order",
+              "nativeQueryRef": "use_order"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Verdicts"
+                    }
+                  },
+                  "Property": "dataset_id"
+                }
+              },
+              "queryRef": "Verdicts.dataset_id",
+              "nativeQueryRef": "dataset_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Verdicts"
+                    }
+                  },
+                  "Property": "dataset_name"
+                }
+              },
+              "queryRef": "Verdicts.dataset_name",
+              "nativeQueryRef": "dataset_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Verdicts"
+                    }
+                  },
+                  "Property": "dataset_order"
+                }
+              },
+              "queryRef": "Verdicts.dataset_order",
+              "nativeQueryRef": "dataset_order"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Verdicts"
+                    }
+                  },
+                  "Property": "verdict"
+                }
+              },
+              "queryRef": "Verdicts.verdict",
+              "nativeQueryRef": "verdict"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Verdicts"
+                    }
+                  },
+                  "Property": "gates_failed"
+                }
+              },
+              "queryRef": "Verdicts.gates_failed",
+              "nativeQueryRef": "gates_failed"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Verdicts"
+                    }
+                  },
+                  "Property": "gates_unchecked"
+                }
+              },
+              "queryRef": "Verdicts.gates_unchecked",
+              "nativeQueryRef": "gates_unchecked"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Verdicts"
+                    }
+                  },
+                  "Property": "conditions_open"
+                }
+              },
+              "queryRef": "Verdicts.conditions_open",
+              "nativeQueryRef": "conditions_open"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Verdicts"
+                    }
+                  },
+                  "Property": "in_scope"
+                }
+              },
+              "queryRef": "Verdicts.in_scope",
+              "nativeQueryRef": "in_scope"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Verdicts"
+                    }
+                  },
+                  "Property": "note"
+                }
+              },
+              "queryRef": "Verdicts.note",
+              "nativeQueryRef": "note"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Selected Use Id"
+                }
+              },
+              "queryRef": "Report Measures.Selected Use Id",
+              "nativeQueryRef": "Selected Use Id"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Headline"
+                }
+              },
+              "queryRef": "Report Measures.Headline",
+              "nativeQueryRef": "Headline"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "vega": [
+        {
+          "properties": {
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vega'"
+                }
+              }
+            },
+            "jsonSpec": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"$schema\":\"https://vega.github.io/schema/vega/v6.json\",\"description\":\"Verdict board: every decision against every dataset\",\"width\":{\"signal\":\"pbiContainerWidth\"},\"height\":{\"signal\":\"pbiContainerHeight\"},\"padding\":0,\"autosize\":{\"type\":\"none\"},\"background\":\"#0A111E\",\"config\":{\"text\":{\"font\":\"Segoe UI, sans-serif\",\"fill\":\"#FFFFFF\"},\"tooltip\":{\"offset\":12}},\"usermeta\":{\"denebFields\":{\"use_id\":\"use_id\",\"use_name\":\"use_name\",\"use_order\":\"use_order\",\"dataset_id\":\"dataset_id\",\"dataset_name\":\"dataset_name\",\"dataset_order\":\"dataset_order\",\"verdict\":\"verdict\",\"gates_failed\":\"gates_failed\",\"gates_unchecked\":\"gates_unchecked\",\"conditions_open\":\"conditions_open\",\"in_scope\":\"in_scope\",\"note\":\"note\",\"Picked\":\"Selected Use Id\",\"Headline\":\"Headline\"}},\"signals\":[{\"name\":\"fieldMap\",\"value\":{\"use_id\":\"use_id\",\"use_name\":\"use_name\",\"use_order\":\"use_order\",\"dataset_id\":\"dataset_id\",\"dataset_name\":\"dataset_name\",\"dataset_order\":\"dataset_order\",\"verdict\":\"verdict\",\"gates_failed\":\"gates_failed\",\"gates_unchecked\":\"gates_unchecked\",\"conditions_open\":\"conditions_open\",\"in_scope\":\"in_scope\",\"note\":\"note\",\"Picked\":\"Selected Use Id\",\"Headline\":\"Headline\"},\"description\":\"EDIT HERE if a field arrives under a different name: set the right-hand value to the name Power BI delivers (Deneb editor > Data tab).\"},{\"name\":\"missingFields\",\"update\":\"length(data(''dataset'')) ? ((isDefined(data(''dataset'')[0][fieldMap[''use_id'']]) ? '''' : ''use_id  '') + (isDefined(data(''dataset'')[0][fieldMap[''use_name'']]) ? '''' : ''use_name  '') + (isDefined(data(''dataset'')[0][fieldMap[''use_order'']]) ? '''' : ''use_order  '') + (isDefined(data(''dataset'')[0][fieldMap[''dataset_id'']]) ? '''' : ''dataset_id  '') + (isDefined(data(''dataset'')[0][fieldMap[''dataset_name'']]) ? '''' : ''dataset_name  '') + (isDefined(data(''dataset'')[0][fieldMap[''dataset_order'']]) ? '''' : ''dataset_order  '') + (isDefined(data(''dataset'')[0][fieldMap[''verdict'']]) ? '''' : ''verdict  '') + (isDefined(data(''dataset'')[0][fieldMap[''gates_failed'']]) ? '''' : ''gates_failed  '') + (isDefined(data(''dataset'')[0][fieldMap[''gates_unchecked'']]) ? '''' : ''gates_unchecked  '') + (isDefined(data(''dataset'')[0][fieldMap[''conditions_open'']]) ? '''' : ''conditions_open  '') + (isDefined(data(''dataset'')[0][fieldMap[''in_scope'']]) ? '''' : ''in_scope  '') + (isDefined(data(''dataset'')[0][fieldMap[''note'']]) ? '''' : ''note  '') + (isDefined(data(''dataset'')[0][fieldMap[''Picked'']]) ? '''' : ''Picked  '') + (isDefined(data(''dataset'')[0][fieldMap[''Headline'']]) ? '''' : ''Headline  '')) : ''''\"},{\"name\":\"W\",\"update\":\"max(pbiContainerWidth, 10)\"},{\"name\":\"H\",\"update\":\"max(pbiContainerHeight, 10)\"},{\"name\":\"u\",\"update\":\"max(0.35, min(W / 960, H / 578))\"},{\"name\":\"r0\",\"update\":\"length(data(''src'')) ? data(''src'')[0] : {}\"},{\"name\":\"rowH\",\"update\":\"(H - (184 + 16) * u) / max(1, length(data(''uses'')))\"},{\"name\":\"colW\",\"update\":\"(W - (554) * u) / max(1, length(data(''sets'')))\"}],\"data\":[{\"name\":\"dataset\"},{\"name\":\"src\",\"source\":\"dataset\",\"transform\":[{\"type\":\"formula\",\"as\":\"use_id\",\"expr\":\"datum[fieldMap[''use_id'']]\"},{\"type\":\"formula\",\"as\":\"use_name\",\"expr\":\"datum[fieldMap[''use_name'']]\"},{\"type\":\"formula\",\"as\":\"use_order\",\"expr\":\"toNumber(datum[fieldMap[''use_order'']])\"},{\"type\":\"formula\",\"as\":\"dataset_id\",\"expr\":\"datum[fieldMap[''dataset_id'']]\"},{\"type\":\"formula\",\"as\":\"dataset_name\",\"expr\":\"datum[fieldMap[''dataset_name'']]\"},{\"type\":\"formula\",\"as\":\"dataset_order\",\"expr\":\"toNumber(datum[fieldMap[''dataset_order'']])\"},{\"type\":\"formula\",\"as\":\"verdict\",\"expr\":\"datum[fieldMap[''verdict'']]\"},{\"type\":\"formula\",\"as\":\"gates_failed\",\"expr\":\"toNumber(datum[fieldMap[''gates_failed'']])\"},{\"type\":\"formula\",\"as\":\"gates_unchecked\",\"expr\":\"toNumber(datum[fieldMap[''gates_unchecked'']])\"},{\"type\":\"formula\",\"as\":\"conditions_open\",\"expr\":\"toNumber(datum[fieldMap[''conditions_open'']])\"},{\"type\":\"formula\",\"as\":\"in_scope\",\"expr\":\"datum[fieldMap[''in_scope'']]\"},{\"type\":\"formula\",\"as\":\"note\",\"expr\":\"datum[fieldMap[''note'']]\"},{\"type\":\"formula\",\"as\":\"Picked\",\"expr\":\"datum[fieldMap[''Picked'']]\"},{\"type\":\"formula\",\"as\":\"Headline\",\"expr\":\"datum[fieldMap[''Headline'']]\"}]},{\"name\":\"headLines\",\"values\":[{}],\"transform\":[{\"type\":\"formula\",\"as\":\"r0\",\"expr\":\"trim('''' + (r0.Headline || ''''))\"},{\"type\":\"formula\",\"as\":\"n\",\"expr\":\"max(10, floor((W - 48 * u) / (13.4 * u)))\"},{\"type\":\"formula\",\"as\":\"c0\",\"expr\":\"length(datum.r0) <= datum.n ? length(datum.r0) : (lastindexof(substring(datum.r0, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r0, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r1\",\"expr\":\"trim(substring(datum.r0, datum.c0))\"},{\"type\":\"formula\",\"as\":\"c1\",\"expr\":\"length(datum.r1) <= datum.n ? length(datum.r1) : (lastindexof(substring(datum.r1, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r1, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r2\",\"expr\":\"trim(substring(datum.r1, datum.c1))\"},{\"type\":\"formula\",\"as\":\"c2\",\"expr\":\"length(datum.r2) <= datum.n ? length(datum.r2) : (lastindexof(substring(datum.r2, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r2, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r3\",\"expr\":\"trim(substring(datum.r2, datum.c2))\"},{\"type\":\"formula\",\"as\":\"c3\",\"expr\":\"length(datum.r3) <= datum.n ? length(datum.r3) : (lastindexof(substring(datum.r3, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r3, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r4\",\"expr\":\"trim(substring(datum.r3, datum.c3))\"},{\"type\":\"formula\",\"as\":\"c4\",\"expr\":\"length(datum.r4) <= datum.n ? length(datum.r4) : (lastindexof(substring(datum.r4, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r4, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r5\",\"expr\":\"trim(substring(datum.r4, datum.c4))\"},{\"type\":\"formula\",\"as\":\"c5\",\"expr\":\"length(datum.r5) <= datum.n ? length(datum.r5) : (lastindexof(substring(datum.r5, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r5, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r6\",\"expr\":\"trim(substring(datum.r5, datum.c5))\"},{\"type\":\"formula\",\"as\":\"c6\",\"expr\":\"length(datum.r6) <= datum.n ? length(datum.r6) : (lastindexof(substring(datum.r6, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r6, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r7\",\"expr\":\"trim(substring(datum.r6, datum.c6))\"},{\"type\":\"formula\",\"as\":\"c7\",\"expr\":\"length(datum.r7) <= datum.n ? length(datum.r7) : (lastindexof(substring(datum.r7, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r7, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r8\",\"expr\":\"trim(substring(datum.r7, datum.c7))\"},{\"type\":\"formula\",\"as\":\"c8\",\"expr\":\"length(datum.r8) <= datum.n ? length(datum.r8) : (lastindexof(substring(datum.r8, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r8, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r9\",\"expr\":\"trim(substring(datum.r8, datum.c8))\"},{\"type\":\"formula\",\"as\":\"c9\",\"expr\":\"length(datum.r9) <= datum.n ? length(datum.r9) : (lastindexof(substring(datum.r9, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r9, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r10\",\"expr\":\"trim(substring(datum.r9, datum.c9))\"},{\"type\":\"formula\",\"as\":\"lines\",\"expr\":\"[substring(datum.r0, 0, datum.c0), substring(datum.r1, 0, datum.c1), substring(datum.r2, 0, datum.c2), substring(datum.r3, 0, datum.c3), substring(datum.r4, 0, datum.c4), substring(datum.r5, 0, datum.c5), substring(datum.r6, 0, datum.c6), substring(datum.r7, 0, datum.c7), substring(datum.r8, 0, datum.c8), datum.r9]\"},{\"type\":\"flatten\",\"fields\":[\"lines\"],\"as\":[\"text\"],\"index\":\"line\"},{\"type\":\"filter\",\"expr\":\"datum.text !== '''' || datum.line === 0\"}]},{\"name\":\"uses\",\"source\":\"src\",\"transform\":[{\"type\":\"aggregate\",\"groupby\":[\"use_id\",\"use_name\",\"use_order\"]},{\"type\":\"collect\",\"sort\":{\"field\":\"use_order\"}},{\"type\":\"window\",\"ops\":[\"row_number\"],\"as\":[\"rowNo\"]}]},{\"name\":\"sets\",\"source\":\"src\",\"transform\":[{\"type\":\"filter\",\"expr\":\"datum.dataset_id !== ''overall''\"},{\"type\":\"aggregate\",\"groupby\":[\"dataset_id\",\"dataset_name\",\"dataset_order\"]},{\"type\":\"collect\",\"sort\":{\"field\":\"dataset_order\"}},{\"type\":\"window\",\"ops\":[\"row_number\"],\"as\":[\"colNo\"]}]},{\"name\":\"cells\",\"source\":\"src\",\"transform\":[{\"type\":\"lookup\",\"from\":\"uses\",\"key\":\"use_id\",\"fields\":[\"use_id\"],\"values\":[\"rowNo\"],\"as\":[\"rowNo\"]},{\"type\":\"lookup\",\"from\":\"sets\",\"key\":\"dataset_id\",\"fields\":[\"dataset_id\"],\"values\":[\"colNo\"],\"as\":[\"colNo\"]},{\"type\":\"formula\",\"as\":\"isOverall\",\"expr\":\"datum.dataset_id === ''overall''\"},{\"type\":\"formula\",\"as\":\"cx\",\"expr\":\"datum.isOverall ? 306 * u : (542) * u + (datum.colNo - 1) * colW\"},{\"type\":\"formula\",\"as\":\"cy\",\"expr\":\"184 * u + (datum.rowNo - 1) * rowH + 5 * u\"},{\"type\":\"formula\",\"as\":\"cw\",\"expr\":\"datum.isOverall ? 214 * u : colW - 10 * u\"},{\"type\":\"formula\",\"as\":\"ch\",\"expr\":\"rowH - 10 * u\"},{\"type\":\"formula\",\"as\":\"inUse\",\"expr\":\"!(datum.in_scope === false || datum.in_scope === ''False'')\"},{\"type\":\"formula\",\"as\":\"word\",\"expr\":\"!datum.inUse ? ''Not used'' : datum.isOverall ? datum.verdict : datum.verdict === ''Fit with conditions'' ? ''Conditions'' : datum.verdict\"},{\"type\":\"formula\",\"as\":\"tip\",\"expr\":\"datum.inUse ? {''Decision'': datum.use_name, ''Dataset'': datum.dataset_name, ''Verdict'': datum.verdict, ''Must-pass checks failing'': datum.gates_failed, ''Must-pass checks not run'': datum.gates_unchecked, ''Conditions open'': datum.conditions_open, ''How it is worked out'': datum.isOverall ? ''The worst across the datasets this decision uses. Nothing is averaged'' : ''From the rules that apply to this dataset''} : {''Decision'': datum.use_name, ''Dataset'': datum.dataset_name, ''Verdict'': ''Not used'', ''Why'': ''This decision does not use this dataset''}\"}]}],\"marks\":[{\"type\":\"rect\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"0\"},\"y\":{\"signal\":\"0\"},\"width\":{\"signal\":\"W\"},\"height\":{\"signal\":\"H\"},\"cornerRadius\":{\"signal\":\"16 * u\"},\"fill\":{\"value\":\"#121B2C\"},\"stroke\":{\"value\":\"#2B3A55\"},\"strokeWidth\":{\"value\":1}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"headLines\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"42 * u + datum.line * 37 * u\"},\"text\":{\"signal\":\"datum.text\"},\"fontSize\":{\"signal\":\"28 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"310 * u\"},\"y\":{\"signal\":\"172 * u\"},\"text\":{\"signal\":\"''Overall''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"sets\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"(546) * u + (datum.colNo - 1) * colW\"},\"y\":{\"signal\":\"152 * u\"},\"text\":{\"signal\":\"join(slice(split(datum.dataset_name, '' ''), 0, 2), '' '')\"},\"fontSize\":{\"signal\":\"16 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"colW - 8 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"sets\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"(546) * u + (datum.colNo - 1) * colW\"},\"y\":{\"signal\":\"172 * u\"},\"text\":{\"signal\":\"join(slice(split(datum.dataset_name, '' ''), 2), '' '')\"},\"fontSize\":{\"signal\":\"16 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"colW - 8 * u\"}}}},{\"type\":\"rect\",\"from\":{\"data\":\"uses\"},\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"10 * u\"},\"x2\":{\"signal\":\"W - 10 * u\"},\"y\":{\"signal\":\"184 * u + (datum.rowNo - 1) * rowH\"},\"height\":{\"signal\":\"rowH\"},\"cornerRadius\":{\"signal\":\"10 * u\"},\"fill\":{\"value\":\"#1A263C\"},\"stroke\":{\"value\":\"#CAD4E3\"},\"strokeWidth\":{\"signal\":\"1.5 * u\"},\"opacity\":{\"signal\":\"datum.use_id === r0.Picked ? 1 : 0\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"uses\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"184 * u + (datum.rowNo - 0.5) * rowH + 1 * u\"},\"text\":{\"signal\":\"datum.use_name\"},\"fontSize\":{\"signal\":\"21 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"middle\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"276 * u\"}}}},{\"type\":\"rect\",\"from\":{\"data\":\"cells\"},\"interactive\":true,\"encode\":{\"update\":{\"x\":{\"signal\":\"datum.cx\"},\"y\":{\"signal\":\"datum.cy\"},\"width\":{\"signal\":\"datum.cw\"},\"height\":{\"signal\":\"datum.ch\"},\"cornerRadius\":{\"signal\":\"9 * u\"},\"fill\":{\"signal\":\"(datum.verdict === ''Pass'' || datum.verdict === ''Fit'' || datum.verdict === ''Caught'') ? ''#1F9E74'' : (datum.verdict === ''Fail'' || datum.verdict === ''Not fit'' || datum.verdict === ''Missed'') ? ''#D9542C'' : (datum.verdict === ''For review'' || datum.verdict === ''Fit with conditions'') ? ''#D9A21B'' : ''#9AA3B2''\"},\"fillOpacity\":{\"signal\":\"!((datum.verdict === ''Pass'' || datum.verdict === ''Fit'' || datum.verdict === ''Caught'') || (datum.verdict === ''Fail'' || datum.verdict === ''Not fit'' || datum.verdict === ''Missed'') || (datum.verdict === ''For review'' || datum.verdict === ''Fit with conditions'')) ? 0 : 0.22\"},\"stroke\":{\"signal\":\"(datum.verdict === ''Pass'' || datum.verdict === ''Fit'' || datum.verdict === ''Caught'') ? ''#1F9E74'' : (datum.verdict === ''Fail'' || datum.verdict === ''Not fit'' || datum.verdict === ''Missed'') ? ''#D9542C'' : (datum.verdict === ''For review'' || datum.verdict === ''Fit with conditions'') ? ''#D9A21B'' : ''#9AA3B2''\"},\"strokeWidth\":{\"signal\":\"1.5 * u\"},\"strokeDash\":{\"signal\":\"!((datum.verdict === ''Pass'' || datum.verdict === ''Fit'' || datum.verdict === ''Caught'') || (datum.verdict === ''Fail'' || datum.verdict === ''Not fit'' || datum.verdict === ''Missed'') || (datum.verdict === ''For review'' || datum.verdict === ''Fit with conditions'')) ? [5 * u, 4 * u] : []\"},\"tooltip\":{\"signal\":\"datum.tip\"}}}},{\"type\":\"symbol\",\"interactive\":false,\"from\":{\"data\":\"cells\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"datum.cx + (15) * u\"},\"y\":{\"signal\":\"datum.cy + (datum.ch) / 2\"},\"shape\":{\"signal\":\"(datum.verdict === ''Pass'' || datum.verdict === ''Fit'' || datum.verdict === ''Caught'') ? ''M-0.75,0.05 L-0.25,0.55 L0.8,-0.6'' : (datum.verdict === ''Fail'' || datum.verdict === ''Not fit'' || datum.verdict === ''Missed'') ? ''M-0.6,-0.6 L0.6,0.6 M0.6,-0.6 L-0.6,0.6'' : (datum.verdict === ''For review'' || datum.verdict === ''Fit with conditions'') ? ''M0,-0.85 L0,0.2 M0,0.66 L0,0.8'' : ''M-0.6,0 L0.6,0''\"},\"size\":{\"signal\":\"pow((16) * u / 1.6, 2)\"},\"stroke\":{\"signal\":\"(datum.verdict === ''Pass'' || datum.verdict === ''Fit'' || datum.verdict === ''Caught'') ? ''#4CD8B0'' : (datum.verdict === ''Fail'' || datum.verdict === ''Not fit'' || datum.verdict === ''Missed'') ? ''#FF8A73'' : (datum.verdict === ''For review'' || datum.verdict === ''Fit with conditions'') ? ''#F2CE6B'' : ''#CAD4E3''\"},\"strokeWidth\":{\"signal\":\"3.5 * u\"},\"strokeCap\":{\"value\":\"round\"},\"strokeJoin\":{\"value\":\"round\"},\"fill\":{\"value\":\"transparent\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"cells\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"datum.cx + (28) * u\"},\"y\":{\"signal\":\"datum.cy + (datum.ch) / 2 + 1 * u\"},\"text\":{\"signal\":\"datum.word\"},\"fontSize\":{\"signal\":\"16 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"signal\":\"(datum.verdict === ''Pass'' || datum.verdict === ''Fit'' || datum.verdict === ''Caught'') ? ''#4CD8B0'' : (datum.verdict === ''Fail'' || datum.verdict === ''Not fit'' || datum.verdict === ''Missed'') ? ''#FF8A73'' : (datum.verdict === ''For review'' || datum.verdict === ''Fit with conditions'') ? ''#F2CE6B'' : ''#CAD4E3''\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"middle\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"(datum.cw) - (28 + 8) * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H / 2\"},\"text\":{\"signal\":\"(!length(data(''src''))) ? ''No verdict is available yet'' : ''''\"},\"fontSize\":{\"signal\":\"24 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"middle\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 48 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H / 2 + 34 * u\"},\"text\":{\"signal\":\"(!length(data(''src''))) ? ''The nightly check publishes one. Try refreshing the data.'' : ''''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"middle\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 48 * u\"}}}},{\"type\":\"text\",\"name\":\"fieldMapDiagnostic\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H - 8\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"bottom\"},\"text\":{\"signal\":\"missingFields ? ''Deneb field map: not found in data -> '' + missingFields : ''''\"},\"fill\":{\"value\":\"#FF8A73\"},\"fontSize\":{\"value\":15},\"font\":{\"value\":\"Segoe UI, sans-serif\"}}}}]}'"
+                }
+              }
+            },
+            "jsonConfig": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{}'"
+                }
+              }
+            },
+            "isNewDialogOpen": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableContextMenu": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Verdict board: one row per decision and one column per dataset, each cell showing a sign and a word: fit, fit with conditions, not fit or not checked. Nothing is averaged.'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -48,3 +48,4 @@ table Months
 				    Typed
 
 	annotation PBI_ResultType = Table
+

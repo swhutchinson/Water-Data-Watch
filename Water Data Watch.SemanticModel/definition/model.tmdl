@@ -28,3 +28,35 @@ annotation PBI_ProTooling = ["MCP-PBIModeling","DevMode"]
 
 annotation PBI_QueryOrder = ["DataRepoPath","fnRepoCsv","RunLog","Rules","RuleGrid","Exceptions","Verdicts","VerdictReasons","Uses","Datasets","SameData","Months","Freshness","ControlTotals","Manifest","Ledger","SourceWatch","Changes","Issues","Decisions","Coverage","MapCells","AiSurvival","ResultKinds","RefreshInfo"]
 
+ref table AiSurvival
+ref table Changes
+ref table ControlTotals
+ref table Coverage
+ref table Datasets
+ref table Decisions
+ref table Exceptions
+ref table Freshness
+ref table Issues
+ref table Ledger
+ref table Manifest
+ref table MapCells
+ref table Months
+ref table RefreshInfo
+ref table ResultKinds
+ref table RuleGrid
+ref table Rules
+ref table RunLog
+ref table SameData
+ref table SourceWatch
+ref table Uses
+ref table VerdictReasons
+ref table Verdicts
+ref table 'Report Measures'
+ref table PickMeasured
+ref table PickMethod
+ref table PickSamples
+ref table PickMonths
+ref table PickStatistic
+ref table SwitchEffects
+ref table RankedAreas
+

@@ -4,8 +4,8 @@ table RefreshInfo
 
 	column RefreshedUTC
 		dataType: dateTime
-		formatString: General Date
 		isHidden
+		formatString: General Date
 		lineageTag: ee370712-2c47-44a4-8b73-2eaeb44aed76
 		summarizeBy: none
 		sourceColumn: RefreshedUTC
@@ -13,8 +13,8 @@ table RefreshInfo
 	/// UK local date of the refresh.
 	column RefreshedUKDate
 		dataType: dateTime
-		formatString: yyyy-mm-dd
 		isHidden
+		formatString: yyyy-mm-dd
 		lineageTag: 866e6f3a-1471-47ca-b62b-23cd7954cea2
 		summarizeBy: none
 		sourceColumn: RefreshedUKDate
@@ -52,3 +52,4 @@ table RefreshInfo
 				    Result
 
 	annotation PBI_ResultType = Table
+

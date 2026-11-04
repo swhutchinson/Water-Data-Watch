@@ -1,0 +1,14 @@
+/// The sub-areas that get a rank, for the slope chart. Unknown and the region's own total are never ranked.
+table RankedAreas
+	lineageTag: 53d0bd04-5695-4e64-8622-3950594af860
+
+	column area_name
+		isNameInferred
+		sourceColumn: SameData[area_name]
+
+	partition RankedAreas = calculated
+		mode: import
+		source =
+				// The sub-areas that get a rank in any scenario, for the slope chart. Unknown and the region's own total are never ranked.
+				CALCULATETABLE ( DISTINCT ( SameData[area_name] ), SameData[is_ranked_area] = TRUE () )
+

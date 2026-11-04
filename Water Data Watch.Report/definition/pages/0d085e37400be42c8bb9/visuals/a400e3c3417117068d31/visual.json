@@ -1,0 +1,273 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "a400e3c3417117068d31",
+  "position": {
+    "x": 40,
+    "y": 226,
+    "z": 7,
+    "width": 1180,
+    "height": 680,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RankedAreas"
+                    }
+                  },
+                  "Property": "area_name"
+                }
+              },
+              "queryRef": "RankedAreas.area_name",
+              "nativeQueryRef": "area_name"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Quick Figure"
+                }
+              },
+              "queryRef": "Report Measures.Quick Figure",
+              "nativeQueryRef": "Quick Figure"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Quick Rank"
+                }
+              },
+              "queryRef": "Report Measures.Quick Rank",
+              "nativeQueryRef": "Quick Rank"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Your Figure"
+                }
+              },
+              "queryRef": "Report Measures.Your Figure",
+              "nativeQueryRef": "Your Figure"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Your Rank"
+                }
+              },
+              "queryRef": "Report Measures.Your Rank",
+              "nativeQueryRef": "Your Rank"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Selected Unit"
+                }
+              },
+              "queryRef": "Report Measures.Selected Unit",
+              "nativeQueryRef": "Selected Unit"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Report Measures"
+                    }
+                  },
+                  "Property": "Same Data Headline"
+                }
+              },
+              "queryRef": "Report Measures.Same Data Headline",
+              "nativeQueryRef": "Same Data Headline"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "vega": [
+        {
+          "properties": {
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vega'"
+                }
+              }
+            },
+            "jsonSpec": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"$schema\":\"https://vega.github.io/schema/vega/v6.json\",\"description\":\"Slope chart: the same sub-areas ranked the quick way and the chosen way\",\"width\":{\"signal\":\"pbiContainerWidth\"},\"height\":{\"signal\":\"pbiContainerHeight\"},\"padding\":0,\"autosize\":{\"type\":\"none\"},\"background\":\"#0A111E\",\"config\":{\"text\":{\"font\":\"Segoe UI, sans-serif\",\"fill\":\"#FFFFFF\"},\"tooltip\":{\"offset\":12}},\"usermeta\":{\"denebFields\":{\"area_name\":\"area_name\",\"QuickFig\":\"Quick Figure\",\"QuickRank\":\"Quick Rank\",\"YourFig\":\"Your Figure\",\"YourRank\":\"Your Rank\",\"Unit\":\"Selected Unit\",\"Head\":\"Same Data Headline\"}},\"signals\":[{\"name\":\"fieldMap\",\"value\":{\"area_name\":\"area_name\",\"QuickFig\":\"Quick Figure\",\"QuickRank\":\"Quick Rank\",\"YourFig\":\"Your Figure\",\"YourRank\":\"Your Rank\",\"Unit\":\"Selected Unit\",\"Head\":\"Same Data Headline\"},\"description\":\"EDIT HERE if a field arrives under a different name: set the right-hand value to the name Power BI delivers (Deneb editor > Data tab).\"},{\"name\":\"missingFields\",\"update\":\"length(data(''dataset'')) ? ((isDefined(data(''dataset'')[0][fieldMap[''area_name'']]) ? '''' : ''area_name  '') + (isDefined(data(''dataset'')[0][fieldMap[''QuickFig'']]) ? '''' : ''QuickFig  '') + (isDefined(data(''dataset'')[0][fieldMap[''QuickRank'']]) ? '''' : ''QuickRank  '') + (isDefined(data(''dataset'')[0][fieldMap[''YourFig'']]) ? '''' : ''YourFig  '') + (isDefined(data(''dataset'')[0][fieldMap[''YourRank'']]) ? '''' : ''YourRank  '') + (isDefined(data(''dataset'')[0][fieldMap[''Unit'']]) ? '''' : ''Unit  '') + (isDefined(data(''dataset'')[0][fieldMap[''Head'']]) ? '''' : ''Head  '')) : ''''\"},{\"name\":\"W\",\"update\":\"max(pbiContainerWidth, 10)\"},{\"name\":\"H\",\"update\":\"max(pbiContainerHeight, 10)\"},{\"name\":\"u\",\"update\":\"max(0.35, min(W / 1180, H / 680))\"},{\"name\":\"r0\",\"update\":\"length(data(''rows'')) ? data(''rows'')[0] : {}\"},{\"name\":\"leftX\",\"update\":\"330 * u\"},{\"name\":\"rightX\",\"update\":\"W - 330 * u\"},{\"name\":\"topY\",\"update\":\"216 * u\"},{\"name\":\"bottomY\",\"update\":\"H - 76 * u\"},{\"name\":\"hoverArea\",\"value\":null,\"on\":[{\"events\":\"@hit:mouseover\",\"update\":\"datum.area_name\"},{\"events\":\"@hit:mouseout\",\"update\":\"null\"}]}],\"data\":[{\"name\":\"dataset\"},{\"name\":\"src\",\"source\":\"dataset\",\"transform\":[{\"type\":\"formula\",\"as\":\"area_name\",\"expr\":\"datum[fieldMap[''area_name'']]\"},{\"type\":\"formula\",\"as\":\"QuickFig\",\"expr\":\"toNumber(datum[fieldMap[''QuickFig'']])\"},{\"type\":\"formula\",\"as\":\"QuickRank\",\"expr\":\"toNumber(datum[fieldMap[''QuickRank'']])\"},{\"type\":\"formula\",\"as\":\"YourFig\",\"expr\":\"toNumber(datum[fieldMap[''YourFig'']])\"},{\"type\":\"formula\",\"as\":\"YourRank\",\"expr\":\"toNumber(datum[fieldMap[''YourRank'']])\"},{\"type\":\"formula\",\"as\":\"Unit\",\"expr\":\"datum[fieldMap[''Unit'']]\"},{\"type\":\"formula\",\"as\":\"Head\",\"expr\":\"datum[fieldMap[''Head'']]\"}]},{\"name\":\"rows\",\"source\":\"src\",\"transform\":[{\"type\":\"filter\",\"expr\":\"isValid(datum.QuickRank) && isValid(datum.YourRank)\"},{\"type\":\"formula\",\"as\":\"moved\",\"expr\":\"datum.QuickRank - datum.YourRank\"},{\"type\":\"window\",\"sort\":{\"field\":[\"QuickRank\",\"area_name\"]},\"ops\":[\"row_number\"],\"as\":[\"quickPos\"]},{\"type\":\"window\",\"sort\":{\"field\":[\"YourRank\",\"area_name\"]},\"ops\":[\"row_number\"],\"as\":[\"yourPos\"]},{\"type\":\"joinaggregate\",\"groupby\":[\"QuickRank\"],\"ops\":[\"count\"],\"as\":[\"quickTies\"]},{\"type\":\"joinaggregate\",\"groupby\":[\"YourRank\"],\"ops\":[\"count\"],\"as\":[\"yourTies\"]},{\"type\":\"formula\",\"as\":\"quickLabel\",\"expr\":\"(datum.quickTies > 1 ? ''='' : '''') + datum.QuickRank + ''. '' + datum.area_name + ''  '' + format(datum.QuickFig, ''.2f'')\"},{\"type\":\"formula\",\"as\":\"yourLabel\",\"expr\":\"(datum.yourTies > 1 ? ''='' : '''') + datum.YourRank + ''. '' + datum.area_name + ''  '' + format(datum.YourFig, ''.2f'')\"},{\"type\":\"formula\",\"as\":\"tip\",\"expr\":\"{''Sub-area'': datum.area_name, ''The quick way'': format(datum.QuickFig, ''.2f'') + '' '' + datum.Unit + '', ranked '' + datum.QuickRank, ''Your way'': format(datum.YourFig, ''.2f'') + '' '' + datum.Unit + '', ranked '' + datum.YourRank, ''Note'': ''A rank describes the calculation, not the water''}\"}]},{\"name\":\"headLines\",\"values\":[{}],\"transform\":[{\"type\":\"formula\",\"as\":\"r0\",\"expr\":\"trim('''' + (r0.Head || ''''))\"},{\"type\":\"formula\",\"as\":\"n\",\"expr\":\"max(10, floor((W - 48 * u) / (12.6 * u)))\"},{\"type\":\"formula\",\"as\":\"c0\",\"expr\":\"length(datum.r0) <= datum.n ? length(datum.r0) : (lastindexof(substring(datum.r0, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r0, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r1\",\"expr\":\"trim(substring(datum.r0, datum.c0))\"},{\"type\":\"formula\",\"as\":\"c1\",\"expr\":\"length(datum.r1) <= datum.n ? length(datum.r1) : (lastindexof(substring(datum.r1, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r1, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r2\",\"expr\":\"trim(substring(datum.r1, datum.c1))\"},{\"type\":\"formula\",\"as\":\"c2\",\"expr\":\"length(datum.r2) <= datum.n ? length(datum.r2) : (lastindexof(substring(datum.r2, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r2, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r3\",\"expr\":\"trim(substring(datum.r2, datum.c2))\"},{\"type\":\"formula\",\"as\":\"c3\",\"expr\":\"length(datum.r3) <= datum.n ? length(datum.r3) : (lastindexof(substring(datum.r3, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r3, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r4\",\"expr\":\"trim(substring(datum.r3, datum.c3))\"},{\"type\":\"formula\",\"as\":\"c4\",\"expr\":\"length(datum.r4) <= datum.n ? length(datum.r4) : (lastindexof(substring(datum.r4, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r4, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r5\",\"expr\":\"trim(substring(datum.r4, datum.c4))\"},{\"type\":\"formula\",\"as\":\"c5\",\"expr\":\"length(datum.r5) <= datum.n ? length(datum.r5) : (lastindexof(substring(datum.r5, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r5, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r6\",\"expr\":\"trim(substring(datum.r5, datum.c5))\"},{\"type\":\"formula\",\"as\":\"c6\",\"expr\":\"length(datum.r6) <= datum.n ? length(datum.r6) : (lastindexof(substring(datum.r6, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r6, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r7\",\"expr\":\"trim(substring(datum.r6, datum.c6))\"},{\"type\":\"formula\",\"as\":\"c7\",\"expr\":\"length(datum.r7) <= datum.n ? length(datum.r7) : (lastindexof(substring(datum.r7, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r7, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r8\",\"expr\":\"trim(substring(datum.r7, datum.c7))\"},{\"type\":\"formula\",\"as\":\"c8\",\"expr\":\"length(datum.r8) <= datum.n ? length(datum.r8) : (lastindexof(substring(datum.r8, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r8, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r9\",\"expr\":\"trim(substring(datum.r8, datum.c8))\"},{\"type\":\"formula\",\"as\":\"c9\",\"expr\":\"length(datum.r9) <= datum.n ? length(datum.r9) : (lastindexof(substring(datum.r9, 0, datum.n + 1), '' '') > 0 ? lastindexof(substring(datum.r9, 0, datum.n + 1), '' '') : datum.n)\"},{\"type\":\"formula\",\"as\":\"r10\",\"expr\":\"trim(substring(datum.r9, datum.c9))\"},{\"type\":\"formula\",\"as\":\"lines\",\"expr\":\"[substring(datum.r0, 0, datum.c0), substring(datum.r1, 0, datum.c1), substring(datum.r2, 0, datum.c2), substring(datum.r3, 0, datum.c3), substring(datum.r4, 0, datum.c4), substring(datum.r5, 0, datum.c5), substring(datum.r6, 0, datum.c6), substring(datum.r7, 0, datum.c7), substring(datum.r8, 0, datum.c8), datum.r9]\"},{\"type\":\"flatten\",\"fields\":[\"lines\"],\"as\":[\"text\"],\"index\":\"line\"},{\"type\":\"filter\",\"expr\":\"datum.text !== '''' || datum.line === 0\"}]}],\"scales\":[{\"name\":\"y\",\"type\":\"point\",\"domain\":{\"data\":\"rows\",\"field\":\"quickPos\",\"sort\":true},\"range\":[{\"signal\":\"topY\"},{\"signal\":\"bottomY\"}],\"padding\":0.3}],\"marks\":[{\"type\":\"rect\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"0\"},\"y\":{\"signal\":\"0\"},\"width\":{\"signal\":\"W\"},\"height\":{\"signal\":\"H\"},\"cornerRadius\":{\"signal\":\"16 * u\"},\"fill\":{\"value\":\"#121B2C\"},\"stroke\":{\"value\":\"#2B3A55\"},\"strokeWidth\":{\"value\":1}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"headLines\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"24 * u\"},\"y\":{\"signal\":\"42 * u + datum.line * 32 * u\"},\"text\":{\"signal\":\"datum.text\"},\"fontSize\":{\"signal\":\"25 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"leftX\"},\"y\":{\"signal\":\"150 * u\"},\"text\":{\"signal\":\"''The quick way''\"},\"fontSize\":{\"signal\":\"22 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"leftX\"},\"y\":{\"signal\":\"176 * u\"},\"text\":{\"signal\":\"''Drop below-limit results, use everything, average''\"},\"fontSize\":{\"signal\":\"16 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"420 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"rightX\"},\"y\":{\"signal\":\"150 * u\"},\"text\":{\"signal\":\"''Your way''\"},\"fontSize\":{\"signal\":\"22 * u\"},\"fontWeight\":{\"value\":700},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"rightX\"},\"y\":{\"signal\":\"176 * u\"},\"text\":{\"signal\":\"''As chosen with the pickers above''\"},\"fontSize\":{\"signal\":\"16 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"420 * u\"}}}},{\"type\":\"rule\",\"from\":{\"data\":\"rows\"},\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"leftX\"},\"x2\":{\"signal\":\"rightX\"},\"y\":{\"signal\":\"scale(''y'', datum.quickPos)\"},\"y2\":{\"signal\":\"scale(''y'', datum.yourPos)\"},\"stroke\":{\"signal\":\"datum.moved !== 0 ? ''#3D8FD9'' : ''#9AA3B2''\"},\"strokeWidth\":{\"signal\":\"(hoverArea === datum.area_name ? 5 : datum.moved !== 0 ? 3.5 : 2) * u\"},\"opacity\":{\"signal\":\"hoverArea && hoverArea !== datum.area_name ? 0.3 : 1\"},\"strokeCap\":{\"value\":\"round\"}}}},{\"type\":\"symbol\",\"from\":{\"data\":\"rows\"},\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"leftX\"},\"y\":{\"signal\":\"scale(''y'', datum.quickPos)\"},\"size\":{\"signal\":\"150 * u * u\"},\"fill\":{\"signal\":\"datum.moved !== 0 ? ''#3D8FD9'' : ''#9AA3B2''\"},\"stroke\":{\"value\":\"#121B2C\"},\"strokeWidth\":{\"signal\":\"2 * u\"}}}},{\"type\":\"symbol\",\"from\":{\"data\":\"rows\"},\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"rightX\"},\"y\":{\"signal\":\"scale(''y'', datum.yourPos)\"},\"size\":{\"signal\":\"150 * u * u\"},\"fill\":{\"signal\":\"datum.moved !== 0 ? ''#3D8FD9'' : ''#9AA3B2''\"},\"stroke\":{\"value\":\"#121B2C\"},\"strokeWidth\":{\"signal\":\"2 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"rows\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"leftX - 18 * u\"},\"y\":{\"signal\":\"scale(''y'', datum.quickPos) + 1 * u\"},\"text\":{\"signal\":\"datum.quickLabel\"},\"fontSize\":{\"signal\":\"20 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"right\"},\"baseline\":{\"value\":\"middle\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"300 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"from\":{\"data\":\"rows\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"rightX + 18 * u\"},\"y\":{\"signal\":\"scale(''y'', datum.yourPos) + 1 * u\"},\"text\":{\"signal\":\"datum.yourLabel\"},\"fontSize\":{\"signal\":\"20 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"left\"},\"baseline\":{\"value\":\"middle\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"300 * u\"}}}},{\"type\":\"rule\",\"name\":\"hit\",\"from\":{\"data\":\"rows\"},\"encode\":{\"update\":{\"x\":{\"signal\":\"leftX\"},\"x2\":{\"signal\":\"rightX\"},\"y\":{\"signal\":\"scale(''y'', datum.quickPos)\"},\"y2\":{\"signal\":\"scale(''y'', datum.yourPos)\"},\"stroke\":{\"value\":\"transparent\"},\"strokeWidth\":{\"signal\":\"26 * u\"},\"tooltip\":{\"signal\":\"datum.tip\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H - 26 * u\"},\"text\":{\"signal\":\"''1 is the highest figure. A rank describes the calculation, and says nothing about whose water is better. Figures in '' + (r0.Unit || '''') + ''.''\"},\"fontSize\":{\"signal\":\"17 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"alphabetic\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 48 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H / 2\"},\"text\":{\"signal\":\"(!length(data(''rows''))) ? ''No sub-area has a figure for this combination'' : ''''\"},\"fontSize\":{\"signal\":\"24 * u\"},\"fontWeight\":{\"value\":600},\"fill\":{\"value\":\"#FFFFFF\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"middle\"},\"font\":{\"value\":\"Bahnschrift, Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 48 * u\"}}}},{\"type\":\"text\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H / 2 + 34 * u\"},\"text\":{\"signal\":\"(!length(data(''rows''))) ? ''Try a different choice with the pickers above.'' : ''''\"},\"fontSize\":{\"signal\":\"18 * u\"},\"fontWeight\":{\"value\":400},\"fill\":{\"value\":\"#CAD4E3\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"middle\"},\"font\":{\"value\":\"Segoe UI, sans-serif\"},\"limit\":{\"signal\":\"W - 48 * u\"}}}},{\"type\":\"text\",\"name\":\"fieldMapDiagnostic\",\"interactive\":false,\"encode\":{\"update\":{\"x\":{\"signal\":\"W / 2\"},\"y\":{\"signal\":\"H - 8\"},\"align\":{\"value\":\"center\"},\"baseline\":{\"value\":\"bottom\"},\"text\":{\"signal\":\"missingFields ? ''Deneb field map: not found in data -> '' + missingFields : ''''\"},\"fill\":{\"value\":\"#FF8A73\"},\"fontSize\":{\"value\":15},\"font\":{\"value\":\"Segoe UI, sans-serif\"}}}}]}'"
+                }
+              }
+            },
+            "jsonConfig": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{}'"
+                }
+              }
+            },
+            "isNewDialogOpen": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableContextMenu": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Slope chart: each sub-area ranked the quick way on the left and the chosen way on the right, with figures, showing how the order changes. A rank describes the calculation, not the water.'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
