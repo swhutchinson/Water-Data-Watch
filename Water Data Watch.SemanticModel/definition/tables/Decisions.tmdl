@@ -1,0 +1,57 @@
+/// Illustrative decisions recorded by people. The engine never writes these.
+table Decisions
+	lineageTag: 743def96-5588-4106-a68d-9d6f9157e8b5
+
+	column rule
+		dataType: string
+		isHidden
+		lineageTag: 26e21cbb-8e4e-406d-ab26-e45c1ff32ccf
+		summarizeBy: none
+		sourceColumn: rule
+
+	column decided_on
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: dc70102a-8bb6-4cc9-8745-112909cd4b35
+		summarizeBy: none
+		sourceColumn: decided_on
+
+	column decision
+		dataType: string
+		lineageTag: 74c6859b-e6c2-44fb-9029-9d3644e054f8
+		summarizeBy: none
+		sourceColumn: decision
+
+	column decided_by
+		dataType: string
+		lineageTag: 422916dc-df53-4794-a07f-e1162460ada4
+		summarizeBy: none
+		sourceColumn: decided_by
+
+	column accepted
+		dataType: string
+		lineageTag: c837378d-f94d-417f-935a-504f21134771
+		summarizeBy: none
+		sourceColumn: accepted
+
+	column review_on
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 369d6f70-95d5-434b-ac10-7777a2e209f1
+		summarizeBy: none
+		sourceColumn: review_on
+
+	partition Decisions = m
+		mode: import
+		queryGroup: Model
+		source =
+				// Illustrative decisions recorded by people. The engine never writes these.
+				let
+				    // Read the file from the data branch
+				    Source = fnRepoCsv("decisions.csv"),
+				    // Give every column its type. en-US means numbers use a dot, and dates are read as written, year first
+				    Typed = Table.TransformColumnTypes(Source, {{"rule", type text}, {"decided_on", type date}, {"decision", type text}, {"decided_by", type text}, {"accepted", type text}, {"review_on", type date}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

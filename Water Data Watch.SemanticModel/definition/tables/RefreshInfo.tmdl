@@ -1,0 +1,54 @@
+/// When the data was last refreshed (UTC), captured once per refresh. The report's only "now".
+table RefreshInfo
+	lineageTag: fc88cba4-7cce-4caa-8ee0-c1751bdf7e70
+
+	column RefreshedUTC
+		dataType: dateTime
+		formatString: General Date
+		isHidden
+		lineageTag: ee370712-2c47-44a4-8b73-2eaeb44aed76
+		summarizeBy: none
+		sourceColumn: RefreshedUTC
+
+	/// UK local date of the refresh.
+	column RefreshedUKDate
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		isHidden
+		lineageTag: 866e6f3a-1471-47ca-b62b-23cd7954cea2
+		summarizeBy: none
+		sourceColumn: RefreshedUKDate
+
+	/// UK local time of the refresh, e.g. 26 Oct 18:42.
+	column RefreshedUKText
+		dataType: string
+		isHidden
+		lineageTag: 70187c76-7965-44eb-b7d3-fc95169b8bcc
+		summarizeBy: none
+		sourceColumn: RefreshedUKText
+
+	partition RefreshInfo = m
+		mode: import
+		queryGroup: Model
+		source =
+				// When the data was last refreshed, captured once per refresh: in UTC, and as UK local date and text (the Power BI Service runs in UTC, so the BST rule is written out here). Every "latest" or "updated" label counts from this, never from NOW().
+				let
+				    // The refresh time in UTC
+				    Now = DateTimeZone.RemoveZone(DateTimeZone.UtcNow()),
+				    // This year
+				    Y = Date.Year(Now),
+				    // Last Sunday in March and in October (start and end of British Summer Time)
+				    MarchSunday = Date.StartOfWeek(#date(Y, 3, 31), Day.Sunday),
+				    // Last Sunday in October
+				    OctoberSunday = Date.StartOfWeek(#date(Y, 10, 31), Day.Sunday),
+				    // BST runs from 01:00 UTC on the last Sunday in March to 01:00 UTC on the last Sunday in October
+				    IsBst = Now >= (MarchSunday & #time(1, 0, 0)) and Now < (OctoberSunday & #time(1, 0, 0)),
+				    // UK local time
+				    Local = Now + #duration(0, if IsBst then 1 else 0, 0, 0),
+				    // A one-row table: UTC, UK local date, and UK local text such as "26 Oct 18:42"
+				    Result = #table(type table [RefreshedUTC = datetime, RefreshedUKDate = date, RefreshedUKText = text],
+				        {{Now, DateTime.Date(Local), Text.From(Date.Day(Local)) & " " & Date.ToText(DateTime.Date(Local), "MMM", "en-GB") & " " & DateTime.ToText(Local, "HH:mm")}})
+				in
+				    Result
+
+	annotation PBI_ResultType = Table

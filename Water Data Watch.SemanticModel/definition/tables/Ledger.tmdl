@@ -1,0 +1,79 @@
+/// How many records were new, changed or removed at each run. The first run sets the baseline.
+table Ledger
+	lineageTag: 5317101e-299e-478d-848b-266f7031283f
+
+	column run_id
+		dataType: string
+		isHidden
+		lineageTag: 52c9d3f5-6827-483a-bd9a-fe96ce685d5a
+		summarizeBy: none
+		sourceColumn: run_id
+
+	column as_of
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: f301c8fc-cf06-430f-8142-ef6480e0897c
+		summarizeBy: none
+		sourceColumn: as_of
+
+	column is_baseline
+		dataType: boolean
+		lineageTag: 6ae81a2f-cb0f-4a19-93ff-abf0cabcd5c2
+		summarizeBy: none
+		sourceColumn: is_baseline
+
+	column compared
+		dataType: boolean
+		lineageTag: b024656c-9574-4d90-84f4-b37413537bbc
+		summarizeBy: none
+		sourceColumn: compared
+
+	column records_now
+		dataType: int64
+		formatString: #,0
+		lineageTag: 8a4dfa3d-aec9-4b76-9500-a8d10d1cc3a5
+		summarizeBy: none
+		sourceColumn: records_now
+
+	column records_new
+		dataType: int64
+		formatString: #,0
+		lineageTag: c21ef6ee-9def-48f2-a7b6-3b21feca4173
+		summarizeBy: none
+		sourceColumn: records_new
+
+	column records_changed
+		dataType: int64
+		formatString: #,0
+		lineageTag: e7fbb1da-c839-4505-80a6-2deddc3dd204
+		summarizeBy: none
+		sourceColumn: records_changed
+
+	column records_removed
+		dataType: int64
+		formatString: #,0
+		lineageTag: bf8aa8b3-04cc-4f86-b1e6-7861f5663f52
+		summarizeBy: none
+		sourceColumn: records_removed
+
+	column lab_status_replaced
+		dataType: int64
+		formatString: #,0
+		lineageTag: 6ba83dad-a19b-4a52-8605-675491bfbab1
+		summarizeBy: none
+		sourceColumn: lab_status_replaced
+
+	partition Ledger = m
+		mode: import
+		queryGroup: Model
+		source =
+				// How many records were new, changed or removed at each run. The first run sets the baseline.
+				let
+				    // Read the file from the data branch
+				    Source = fnRepoCsv("history/ledger.csv"),
+				    // Give every column its type. en-US means numbers use a dot, and dates are read as written, year first
+				    Typed = Table.TransformColumnTypes(Source, {{"run_id", type text}, {"as_of", type date}, {"is_baseline", type logical}, {"compared", type logical}, {"records_now", Int64.Type}, {"records_new", Int64.Type}, {"records_changed", Int64.Type}, {"records_removed", Int64.Type}, {"lab_status_replaced", Int64.Type}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

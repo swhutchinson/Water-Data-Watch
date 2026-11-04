@@ -1,0 +1,32 @@
+/// Path inside raw.githubusercontent.com to this project's powerbi-data branch, where the nightly engine publishes its CSV files.
+expression DataRepoPath = "swhutchinson/Water-Data-Watch/powerbi-data" meta [IsParameterQuery = true, Type = "Text", IsParameterQueryRequired = true]
+	lineageTag: 1b7b2de0-ad6a-47ae-8306-d9acae8eaffe
+	queryGroup: Parameters
+
+	annotation PBI_ResultType = Text
+
+/// Reads one CSV from this project's powerbi-data branch on raw.githubusercontent.com (empty fields become null).
+expression fnRepoCsv =
+		// Reads one CSV file from this project's published data branch on GitHub, with headers promoted and empty fields as null (all columns still text).
+		// Fixed base address + RelativePath, so the Power BI Service refreshes it with no gateway and no "dynamic data source" error.
+		(path as text) as table =>
+		let
+		    // Download the file; we check the status ourselves so a failure gives a plain-English message.
+		    // IsRetry = true ignores any copy Power Query cached earlier, so every refresh gets the pipeline's latest files.
+		    Reply = Web.Contents("https://raw.githubusercontent.com", [RelativePath = DataRepoPath & "/" & path, Timeout = #duration(0, 0, 5, 0), ManualStatusHandling = {404, 429, 500, 502, 503, 504}, IsRetry = true]),
+		    // The reply's status code (200 = success)
+		    Status = Value.Metadata(Reply)[Response.Status],
+		    // Stop the refresh with a clear message if GitHub did not return the file (a failed refresh keeps the last good data in the Service)
+		    Checked = if Status = 200 then Binary.Buffer(Reply) else error Error.Record("GitHub returned HTTP " & Text.From(Status), "GitHub returned HTTP " & Text.From(Status) & " for " & path & ". Check that the repository is public and the nightly run has published."),
+		    // Parse the CSV (UTF-8, quoted fields)
+		    Csv = Csv.Document(Checked, [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+		    // First row holds the column names
+		    Promoted = Table.PromoteHeaders(Csv, [PromoteAllScalars = true]),
+		    // An empty field means "no value": make it null so typing never turns it into 0 or an error
+		    Nulls = Table.ReplaceValue(Promoted, "", null, Replacer.ReplaceValue, Table.ColumnNames(Promoted))
+		in
+		    Nulls
+	lineageTag: 432bee10-f0c0-449d-8e66-3afa3147d183
+	queryGroup: Functions
+
+	annotation PBI_ResultType = Function

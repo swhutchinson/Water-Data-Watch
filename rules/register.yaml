@@ -16,7 +16,7 @@
   review_above: 0
   owner_role: Data Owner (Results)
   steward_role: Data Steward (Pipeline)
-  action: Stop using tonight's figures, re-run the load and compare again.
+  action: Stop using the latest figures, re-run the load and compare again.
   root_cause: In transit
   condition: Reload until the row counts match.
 
@@ -98,7 +98,7 @@
   review_above: 0
   owner_role: Data Owner (Results)
   steward_role: Data Steward (Pipeline)
-  action: Compare with the source before using tonight's figures.
+  action: Compare with the source before using the latest figures.
   root_cause: At source
   condition: Explain the fall in row counts before using the figures.
 

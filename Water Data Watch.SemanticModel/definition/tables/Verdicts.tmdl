@@ -1,0 +1,109 @@
+/// Tonight's verdict for each decision and dataset, plus each decision overall. Deliberately unrelated to Uses, so the board shows every decision whatever is picked.
+table Verdicts
+	lineageTag: d81ce4e8-7d00-4bd8-859f-afb683ca2907
+
+	column run_id
+		dataType: string
+		isHidden
+		lineageTag: 026ccfbb-a3bc-4a36-aa63-b0c6f8e07673
+		summarizeBy: none
+		sourceColumn: run_id
+
+	column use_id
+		dataType: string
+		lineageTag: b31a5ad7-3810-455e-aaed-3ec758e2d0b4
+		summarizeBy: none
+		sourceColumn: use_id
+
+	column use_name
+		dataType: string
+		lineageTag: f57dadff-ba42-4174-9406-d9ad2f9644d1
+		summarizeBy: none
+		sourceColumn: use_name
+
+	/// The decision, as worded inside a sentence.
+	column use_phrase
+		dataType: string
+		lineageTag: 3cad4e62-3ba7-43b1-8ec0-751202e9ff6f
+		summarizeBy: none
+		sourceColumn: use_phrase
+
+	column use_order
+		dataType: int64
+		formatString: #,0
+		lineageTag: 2ef0ae30-79af-408d-b8dc-45002f33c0c9
+		summarizeBy: none
+		sourceColumn: use_order
+
+	column dataset_id
+		dataType: string
+		lineageTag: 54aae1b3-2b6b-42b6-9900-4e36ab7deeb7
+		summarizeBy: none
+		sourceColumn: dataset_id
+
+	column dataset_name
+		dataType: string
+		lineageTag: b4680ec2-1cd1-466e-ab7c-cc40c94200c3
+		summarizeBy: none
+		sourceColumn: dataset_name
+
+	column dataset_order
+		dataType: int64
+		formatString: #,0
+		lineageTag: a2c4375e-3e0f-4ff1-b6f5-762e54f0e255
+		summarizeBy: none
+		sourceColumn: dataset_order
+
+	column verdict
+		dataType: string
+		lineageTag: 01964c54-c75c-40b4-bf42-6634874c809c
+		summarizeBy: none
+		sourceColumn: verdict
+
+	column gates_failed
+		dataType: int64
+		formatString: #,0
+		lineageTag: 40efd346-97e5-4857-8d19-d2e4225c2692
+		summarizeBy: none
+		sourceColumn: gates_failed
+
+	column gates_unchecked
+		dataType: int64
+		formatString: #,0
+		lineageTag: adace61e-7e43-47be-9ea5-a392884fd33b
+		summarizeBy: none
+		sourceColumn: gates_unchecked
+
+	column conditions_open
+		dataType: int64
+		formatString: #,0
+		lineageTag: a5bd7292-6782-4d15-b0d4-d41932254f9e
+		summarizeBy: none
+		sourceColumn: conditions_open
+
+	column in_scope
+		dataType: boolean
+		lineageTag: 26dd6e5b-9e73-475f-91e2-50239809cfbb
+		summarizeBy: none
+		sourceColumn: in_scope
+
+	column note
+		dataType: string
+		lineageTag: 325cd785-2e88-4b2f-a804-901c27644241
+		summarizeBy: none
+		sourceColumn: note
+
+	partition Verdicts = m
+		mode: import
+		queryGroup: Model
+		source =
+				// Tonight's verdict for each decision and dataset, plus each decision overall. Deliberately unrelated to Uses, so the board shows every decision whatever is picked.
+				let
+				    // Read the file from the data branch
+				    Source = fnRepoCsv("verdicts_tonight.csv"),
+				    // Give every column its type. en-US means numbers use a dot, and dates are read as written, year first
+				    Typed = Table.TransformColumnTypes(Source, {{"run_id", type text}, {"use_id", type text}, {"use_name", type text}, {"use_phrase", type text}, {"use_order", Int64.Type}, {"dataset_id", type text}, {"dataset_name", type text}, {"dataset_order", Int64.Type}, {"verdict", type text}, {"gates_failed", Int64.Type}, {"gates_unchecked", Int64.Type}, {"conditions_open", Int64.Type}, {"in_scope", type logical}, {"note", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

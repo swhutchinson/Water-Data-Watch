@@ -1,0 +1,44 @@
+/// How many results stay usable at each step for a model of river conditions.
+table AiSurvival
+	lineageTag: ac06abf9-4b93-4820-a281-42890c1bc749
+
+	column step_no
+		dataType: int64
+		formatString: #,0
+		lineageTag: 9c0600f2-a64f-4ecd-bb6b-cad0a5890476
+		summarizeBy: none
+		sourceColumn: step_no
+
+	column step_name
+		dataType: string
+		lineageTag: dacbbb8f-f8d8-4ad2-b258-003a12472765
+		summarizeBy: none
+		sourceColumn: step_name
+
+	column rows_left
+		dataType: int64
+		formatString: #,0
+		lineageTag: 7f5b7329-7f98-40b1-9b68-9eb8f2ef524d
+		summarizeBy: none
+		sourceColumn: rows_left
+
+	column step_note
+		dataType: string
+		lineageTag: 7d1b1a79-8be2-4a6a-b5b9-466027d28504
+		summarizeBy: none
+		sourceColumn: step_note
+
+	partition AiSurvival = m
+		mode: import
+		queryGroup: Model
+		source =
+				// How many results stay usable at each step for a model of river conditions.
+				let
+				    // Read the file from the data branch
+				    Source = fnRepoCsv("ai_survival.csv"),
+				    // Give every column its type. en-US means numbers use a dot, and dates are read as written, year first
+				    Typed = Table.TransformColumnTypes(Source, {{"step_no", Int64.Type}, {"step_name", type text}, {"rows_left", Int64.Type}, {"step_note", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

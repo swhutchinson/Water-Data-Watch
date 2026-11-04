@@ -1,0 +1,105 @@
+/// A passport for each dataset. Owner and steward roles are illustrative.
+table Datasets
+	lineageTag: 0eaae51a-3b30-44fd-9c5b-9583a6bb4e2a
+
+	column dataset_id
+		dataType: string
+		isHidden
+		lineageTag: d4b62e1b-5c7b-4c2e-b4f0-e3c86582da99
+		summarizeBy: none
+		sourceColumn: dataset_id
+
+	column dataset_order
+		dataType: int64
+		formatString: #,0
+		isHidden
+		lineageTag: 97b3aee7-96db-4a11-9dab-9a26ae58aeee
+		summarizeBy: none
+		sourceColumn: dataset_order
+
+	column dataset_name
+		dataType: string
+		lineageTag: b96a4aec-2e91-4681-9256-467e0304d1eb
+		summarizeBy: none
+		sourceColumn: dataset_name
+
+	column source
+		dataType: string
+		lineageTag: a06b99ef-4a58-43a3-9781-1b62c65a237c
+		summarizeBy: none
+		sourceColumn: source
+
+	column address
+		dataType: string
+		lineageTag: 0f3793fc-4f68-4bc5-8534-93c23d09bcc4
+		summarizeBy: none
+		sourceColumn: address
+
+	column licence
+		dataType: string
+		lineageTag: 1097da3b-111d-452a-bc91-9629a2db2fad
+		summarizeBy: none
+		sourceColumn: licence
+
+	column attribution
+		dataType: string
+		lineageTag: 05f47908-7c54-47f4-ab87-29cff4036b12
+		summarizeBy: none
+		sourceColumn: attribution
+
+	column owner_role
+		dataType: string
+		lineageTag: 3cb7341b-3f0b-44e4-8c01-a5f4061c5783
+		summarizeBy: none
+		sourceColumn: owner_role
+
+	column steward_role
+		dataType: string
+		lineageTag: 1cc11ff2-eaa2-4a85-821f-f1d77a5ae1e4
+		summarizeBy: none
+		sourceColumn: steward_role
+
+	column refresh
+		dataType: string
+		lineageTag: bb5ff1a9-80d6-4a62-bf11-53ee29fae147
+		summarizeBy: none
+		sourceColumn: refresh
+
+	column coverage
+		dataType: string
+		lineageTag: 6dab95d8-2262-4c4c-ba8d-d633a3e3f917
+		summarizeBy: none
+		sourceColumn: coverage
+
+	column safe_for
+		dataType: string
+		lineageTag: 002dfeec-4c5c-4ef6-a7a9-818216bf8b6b
+		summarizeBy: none
+		sourceColumn: safe_for
+
+	column how_to_use
+		dataType: string
+		lineageTag: 197c3c40-82e2-48e0-9738-2498290535b3
+		summarizeBy: none
+		sourceColumn: how_to_use
+
+	column known_issues
+		dataType: string
+		lineageTag: a4d17b3e-2680-4cf3-a3cd-33315c756905
+		summarizeBy: none
+		sourceColumn: known_issues
+
+	partition Datasets = m
+		mode: import
+		queryGroup: Model
+		source =
+				// A passport for each dataset. Owner and steward roles are illustrative.
+				let
+				    // Read the file from the data branch
+				    Source = fnRepoCsv("datasets.csv"),
+				    // Give every column its type. en-US means numbers use a dot, and dates are read as written, year first
+				    Typed = Table.TransformColumnTypes(Source, {{"dataset_id", type text}, {"dataset_order", Int64.Type}, {"dataset_name", type text}, {"source", type text}, {"address", type text}, {"licence", type text}, {"attribution", type text}, {"owner_role", type text}, {"steward_role", type text}, {"refresh", type text}, {"coverage", type text}, {"safe_for", type text}, {"how_to_use", type text}, {"known_issues", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

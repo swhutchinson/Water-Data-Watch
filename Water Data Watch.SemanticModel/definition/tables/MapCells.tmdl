@@ -1,0 +1,60 @@
+/// Sampling points counted into 5 km squares. Stand-in locations stay out.
+table MapCells
+	lineageTag: d3953bc1-597a-4756-9ea5-632659cf4268
+
+	column cell_e
+		dataType: int64
+		formatString: #,0
+		lineageTag: 3fa50cc6-524a-430a-acec-6016a3338609
+		summarizeBy: none
+		sourceColumn: cell_e
+
+	column cell_n
+		dataType: int64
+		formatString: #,0
+		lineageTag: b14e882b-40a0-40d6-b60c-f744df5cfcde
+		summarizeBy: none
+		sourceColumn: cell_n
+
+	column points_total
+		dataType: int64
+		formatString: #,0
+		lineageTag: 3288669a-b3b8-4539-ac70-30c3e2ede1b4
+		summarizeBy: none
+		sourceColumn: points_total
+
+	column points_open
+		dataType: int64
+		formatString: #,0
+		lineageTag: 6cba01ba-e3d5-48a1-b261-fac37e529f0a
+		summarizeBy: none
+		sourceColumn: points_open
+
+	column points_open_silent
+		dataType: int64
+		formatString: #,0
+		lineageTag: 546e3340-2e61-4af6-bfae-d255a441d024
+		summarizeBy: none
+		sourceColumn: points_open_silent
+
+	column results_in_window
+		dataType: int64
+		formatString: #,0
+		lineageTag: fe56fe93-450e-4d39-a896-6e18107bc809
+		summarizeBy: none
+		sourceColumn: results_in_window
+
+	partition MapCells = m
+		mode: import
+		queryGroup: Model
+		source =
+				// Sampling points counted into 5 km squares. Stand-in locations stay out.
+				let
+				    // Read the file from the data branch
+				    Source = fnRepoCsv("map_cells.csv"),
+				    // Give every column its type. en-US means numbers use a dot, and dates are read as written, year first
+				    Typed = Table.TransformColumnTypes(Source, {{"cell_e", Int64.Type}, {"cell_n", Int64.Type}, {"points_total", Int64.Type}, {"points_open", Int64.Type}, {"points_open_silent", Int64.Type}, {"results_in_window", Int64.Type}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

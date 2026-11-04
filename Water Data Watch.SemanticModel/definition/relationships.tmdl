@@ -1,0 +1,19 @@
+relationship Exceptions_Rules
+	fromColumn: Exceptions.rule_id
+	toColumn: Rules.id
+
+relationship VerdictReasons_Rules
+	fromColumn: VerdictReasons.rule_id
+	toColumn: Rules.id
+
+relationship VerdictReasons_Uses
+	fromColumn: VerdictReasons.use_id
+	toColumn: Uses.use_id
+
+relationship Issues_Rules
+	fromColumn: Issues.rule_id
+	toColumn: Rules.id
+
+relationship Decisions_Rules
+	fromColumn: Decisions.rule
+	toColumn: Rules.id

@@ -1,0 +1,37 @@
+/// How the result column splits by kind.
+table ResultKinds
+	lineageTag: 4fb502ab-7fae-4d41-a2fb-ccc75f82963a
+
+	column result_kind
+		dataType: string
+		lineageTag: e2af800f-cac1-4953-9209-957b9c2f1bdf
+		summarizeBy: none
+		sourceColumn: result_kind
+
+	column row_count
+		dataType: int64
+		formatString: #,0
+		lineageTag: 280e54da-2faf-4368-bbbb-e7d2fa4aa6bf
+		summarizeBy: none
+		sourceColumn: row_count
+
+	column share_pct
+		dataType: double
+		lineageTag: 0db8d08f-1ff2-467c-a423-4c000c17096a
+		summarizeBy: none
+		sourceColumn: share_pct
+
+	partition ResultKinds = m
+		mode: import
+		queryGroup: Model
+		source =
+				// How the result column splits by kind.
+				let
+				    // Read the file from the data branch
+				    Source = fnRepoCsv("result_kinds.csv"),
+				    // Give every column its type. en-US means numbers use a dot, and dates are read as written, year first
+				    Typed = Table.TransformColumnTypes(Source, {{"result_kind", type text}, {"row_count", Int64.Type}, {"share_pct", type number}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

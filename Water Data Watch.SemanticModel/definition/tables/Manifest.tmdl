@@ -1,0 +1,83 @@
+/// What was asked of each source, and what came back.
+table Manifest
+	lineageTag: 4c05d957-e6cd-4b8d-9439-3ec73d550376
+
+	column source
+		dataType: string
+		lineageTag: d2285e5a-ce7e-4c66-aad3-b0b19366606b
+		summarizeBy: none
+		sourceColumn: source
+
+	column window_start
+		dataType: string
+		lineageTag: d4e5d12e-b865-4fb8-8a5d-f8a5322c899a
+		summarizeBy: none
+		sourceColumn: window_start
+
+	column window_end
+		dataType: string
+		lineageTag: 8ea6fb83-15dd-4b54-96cf-c07a5ea04f56
+		summarizeBy: none
+		sourceColumn: window_end
+
+	column api_total
+		dataType: int64
+		formatString: #,0
+		lineageTag: e34a4ddb-d2c3-49c1-b33c-f348b7597678
+		summarizeBy: none
+		sourceColumn: api_total
+
+	column rows_received
+		dataType: int64
+		formatString: #,0
+		lineageTag: bf30aaba-d1e4-4321-8ceb-9bfbdc19b7dc
+		summarizeBy: none
+		sourceColumn: rows_received
+
+	column calls
+		dataType: int64
+		formatString: #,0
+		lineageTag: 235ef888-c47e-42ce-856a-9beda47c42f7
+		summarizeBy: none
+		sourceColumn: calls
+
+	column seconds
+		dataType: double
+		lineageTag: fd4507d8-9c6f-41c3-8100-5441d56b28d0
+		summarizeBy: none
+		sourceColumn: seconds
+
+	column status
+		dataType: string
+		lineageTag: 5b0e0763-f0cf-4022-98da-5a232fcda3e1
+		summarizeBy: none
+		sourceColumn: status
+
+	column error
+		dataType: string
+		lineageTag: 70596afd-e799-452f-8a72-8f94fb61f0c0
+		summarizeBy: none
+		sourceColumn: error
+
+	/// When a saved copy was taken.
+	column taken_on
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 060cb555-6950-4468-bc1d-ef340a00c1fd
+		summarizeBy: none
+		sourceColumn: taken_on
+
+	partition Manifest = m
+		mode: import
+		queryGroup: Model
+		source =
+				// What was asked of each source, and what came back.
+				let
+				    // Read the file from the data branch
+				    Source = fnRepoCsv("manifest.csv"),
+				    // Give every column its type. en-US means numbers use a dot, and dates are read as written, year first
+				    Typed = Table.TransformColumnTypes(Source, {{"source", type text}, {"window_start", type text}, {"window_end", type text}, {"api_total", Int64.Type}, {"rows_received", Int64.Type}, {"calls", Int64.Type}, {"seconds", type number}, {"status", type text}, {"error", type text}, {"taken_on", type date}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

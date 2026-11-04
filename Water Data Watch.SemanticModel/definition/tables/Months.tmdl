@@ -1,0 +1,50 @@
+/// Samples in each month, against the same month a year earlier.
+table Months
+	lineageTag: 77a5c4e1-39af-4355-aea8-f4347e39e854
+
+	column sample_month
+		dataType: string
+		lineageTag: e0b73423-634c-4f18-b87f-a7e98bf966c3
+		summarizeBy: none
+		sourceColumn: sample_month
+
+	column samples
+		dataType: int64
+		formatString: #,0
+		lineageTag: 286622c3-fb41-4c7d-ada2-de0161bcc59d
+		summarizeBy: none
+		sourceColumn: samples
+
+	column samples_year_before
+		dataType: int64
+		formatString: #,0
+		lineageTag: ba98f9bf-4d7f-4b83-a5a2-2e992ab56e64
+		summarizeBy: none
+		sourceColumn: samples_year_before
+
+	column is_current_month
+		dataType: boolean
+		lineageTag: ea1cc51d-d9fb-434e-b2ac-f6736fb88c7c
+		summarizeBy: none
+		sourceColumn: is_current_month
+
+	column is_part_complete
+		dataType: boolean
+		lineageTag: 2f49aa71-10ba-4311-bebb-e02cf18f0de9
+		summarizeBy: none
+		sourceColumn: is_part_complete
+
+	partition Months = m
+		mode: import
+		queryGroup: Model
+		source =
+				// Samples in each month, against the same month a year earlier.
+				let
+				    // Read the file from the data branch
+				    Source = fnRepoCsv("months.csv"),
+				    // Give every column its type. en-US means numbers use a dot, and dates are read as written, year first
+				    Typed = Table.TransformColumnTypes(Source, {{"sample_month", type text}, {"samples", Int64.Type}, {"samples_year_before", Int64.Type}, {"is_current_month", type logical}, {"is_part_complete", type logical}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

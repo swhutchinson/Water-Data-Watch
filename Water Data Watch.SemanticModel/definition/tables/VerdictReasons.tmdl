@@ -1,0 +1,65 @@
+/// Every rule behind each verdict, as a gate or a condition, so anyone can reproduce it.
+table VerdictReasons
+	lineageTag: 9b5467e2-61e2-4797-b818-625337feb947
+
+	column use_id
+		dataType: string
+		isHidden
+		lineageTag: 22e4023d-4739-415b-9049-07ae521d2b59
+		summarizeBy: none
+		sourceColumn: use_id
+
+	column dataset_id
+		dataType: string
+		isHidden
+		lineageTag: 1364b19e-d86f-4282-9c47-7942f458830f
+		summarizeBy: none
+		sourceColumn: dataset_id
+
+	column rule_id
+		dataType: string
+		isHidden
+		lineageTag: f6da21ab-66df-47e7-ab51-7b4e18b4fa32
+		summarizeBy: none
+		sourceColumn: rule_id
+
+	/// Gate or Condition.
+	column role
+		dataType: string
+		lineageTag: ac1e0476-498d-4014-ba93-dc1912988e03
+		summarizeBy: none
+		sourceColumn: role
+
+	column status
+		dataType: string
+		lineageTag: bc5b5e28-a949-42a3-b720-5cf919c7c97d
+		summarizeBy: none
+		sourceColumn: status
+
+	/// True when this rule is holding the decision back.
+	column matters
+		dataType: boolean
+		lineageTag: 2ca9f829-4302-4b4c-8f99-50fc71394e0e
+		summarizeBy: none
+		sourceColumn: matters
+
+	column condition
+		dataType: string
+		lineageTag: e211f469-d3df-4551-b7b9-a14032ea240e
+		summarizeBy: none
+		sourceColumn: condition
+
+	partition VerdictReasons = m
+		mode: import
+		queryGroup: Model
+		source =
+				// Every rule behind each verdict, as a gate or a condition, so anyone can reproduce it.
+				let
+				    // Read the file from the data branch
+				    Source = fnRepoCsv("verdict_reasons.csv"),
+				    // Give every column its type. en-US means numbers use a dot, and dates are read as written, year first
+				    Typed = Table.TransformColumnTypes(Source, {{"use_id", type text}, {"dataset_id", type text}, {"rule_id", type text}, {"role", type text}, {"status", type text}, {"matters", type logical}, {"condition", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

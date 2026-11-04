@@ -1,0 +1,77 @@
+/// The failed records, up to 500 per rule. The true total is on Rules. Withheld labels show the point's type and code.
+table Exceptions
+	lineageTag: afa9983f-e98f-4000-be3a-2d69415a22e9
+
+	column rule_id
+		dataType: string
+		isHidden
+		lineageTag: f2eb9b8a-9892-40a8-a1e5-efd9de464dfc
+		summarizeBy: none
+		sourceColumn: rule_id
+
+	column record_ref
+		dataType: string
+		lineageTag: a2475940-ca63-4446-9e91-8479ddde80c3
+		summarizeBy: none
+		sourceColumn: record_ref
+
+	column point_id
+		dataType: string
+		lineageTag: cacf2668-6b53-45d0-876b-6dde1571df0c
+		summarizeBy: none
+		sourceColumn: point_id
+
+	column point_name
+		dataType: string
+		lineageTag: 6ed0918d-5ac4-4639-8914-82e81a0deb18
+		summarizeBy: none
+		sourceColumn: point_name
+
+	/// The point's published name, or the rule's own reference.
+	column where_label
+		dataType: string
+		lineageTag: 31dc3f4b-4326-41f4-ba9e-924e081b19b7
+		summarizeBy: none
+		sourceColumn: where_label
+
+	column sample_month
+		dataType: string
+		lineageTag: e33f8695-1b89-49c6-b9af-5a7b95ab312f
+		summarizeBy: none
+		sourceColumn: sample_month
+
+	/// The sample month, or Whole list for a rule that has no months.
+	column month_label
+		dataType: string
+		lineageTag: 64c25f0c-3ec2-4d33-af28-06f0763ff17f
+		summarizeBy: none
+		sourceColumn: month_label
+
+	column detail
+		dataType: string
+		lineageTag: 4be3e737-1bec-481f-b6b2-c98f2509ebd6
+		summarizeBy: none
+		sourceColumn: detail
+
+	/// A link to the source record, where there is one.
+	column source_url
+		dataType: string
+		lineageTag: 8ad479ad-fc1b-4904-bfbb-8de502181be9
+		summarizeBy: none
+		sourceColumn: source_url
+		dataCategory: WebUrl
+
+	partition Exceptions = m
+		mode: import
+		queryGroup: Model
+		source =
+				// The failed records, up to 500 per rule. The true total is on Rules. Withheld labels show the point's type and code.
+				let
+				    // Read the file from the data branch
+				    Source = fnRepoCsv("exceptions.csv"),
+				    // Give every column its type. en-US means numbers use a dot, and dates are read as written, year first
+				    Typed = Table.TransformColumnTypes(Source, {{"rule_id", type text}, {"record_ref", type text}, {"point_id", type text}, {"point_name", type text}, {"where_label", type text}, {"sample_month", type text}, {"month_label", type text}, {"detail", type text}, {"source_url", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

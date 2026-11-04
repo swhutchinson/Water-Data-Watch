@@ -1,15 +1,18 @@
 {
   "project": "Water Data Watch (working title; folder: Water Data Quality)",
-  "phase": "engine and nightly run",
+  "phase": "model",
   "completed": [
     "Skills loaded, brief read",
     "Re-probed the sources",
     "Rule register (39 rules), uses, datasets, decisions",
     "Engine: fetch, bronze, silver, checks, planted defects, effect tests, verdicts, issues, change ledger, gold, publish",
     "Tests: 54 with made-up data",
-    "docs/SOURCES.md, docs/DATA_CONTRACT.md, docs/DATA_QUALITY_FRAMEWORK.md, README.md"
+    "docs/SOURCES.md, docs/DATA_CONTRACT.md, docs/DATA_QUALITY_FRAMEWORK.md, README.md",
+    "Nightly run live, second run clean with the bathing copy (40 rules, 39 of 39 planted defects caught)",
+    "Deneb specs drawn and checked offline against real output",
+    "Report generator written; schema and binding checks clean on a copy"
   ],
-  "nextAction": "Push to main so the nightly run starts. Check the powerbi-data branch. Then build the model.",
+  "nextAction": "Sam opens Water Data Watch.pbip in Desktop. Connect the MCP, refresh, create build/calc_tables.dax and build/new_measures.dax (via build/measures_json.py), test and time them. Then Sam saves and closes, run node build/report.mjs, and Sam reopens.",
   "decisions": [
     "Scope by region, with no storm overflow data",
     "Rely on the service's own licence statement, and record the difference as AUD-02",

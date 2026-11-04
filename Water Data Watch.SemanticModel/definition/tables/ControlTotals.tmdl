@@ -1,0 +1,38 @@
+/// The row count at each stage, so a loss anywhere shows up.
+table ControlTotals
+	lineageTag: c52aeee5-e0ef-4255-947b-388860e9e685
+
+	column stage_no
+		dataType: int64
+		formatString: #,0
+		lineageTag: f6274408-29eb-49d1-b243-8e5824112e8f
+		summarizeBy: none
+		sourceColumn: stage_no
+
+	column stage_name
+		dataType: string
+		lineageTag: 32fd56b4-7f55-452c-9a30-c150d1547969
+		summarizeBy: none
+		sourceColumn: stage_name
+
+	column row_count
+		dataType: int64
+		formatString: #,0
+		lineageTag: c30de033-f229-466a-90e6-4064b11bb5f3
+		summarizeBy: none
+		sourceColumn: row_count
+
+	partition ControlTotals = m
+		mode: import
+		queryGroup: Model
+		source =
+				// The row count at each stage, so a loss anywhere shows up.
+				let
+				    // Read the file from the data branch
+				    Source = fnRepoCsv("control_totals.csv"),
+				    // Give every column its type. en-US means numbers use a dot, and dates are read as written, year first
+				    Typed = Table.TransformColumnTypes(Source, {{"stage_no", Int64.Type}, {"stage_name", type text}, {"row_count", Int64.Type}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

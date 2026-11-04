@@ -74,7 +74,7 @@ These only ever grow. If any of them loses rows, or goes missing, the run stops 
 | `changes.csv` | thing that moved since the last run | `change_order, kind, item, before, after, previous_run` |
 | `rule_register.csv` | rule | `id, version, title, why, dataset, fields, dimension, severity, fail_above, review_above, owner_role, steward_role, action, root_cause, condition` |
 | `rule_month.csv` | rule, sample month | `rule_id, sample_month, eligible, failed, status` |
-| `exceptions.csv` | failed record, up to 500 per rule | `rule_id, record_ref, point_id, point_name, where_label, sample_month, detail, source_url` |
+| `exceptions.csv` | failed record, up to 500 per rule | `rule_id, record_ref, point_id, point_name, where_label, sample_month, month_label, detail, source_url` |
 | `rule_tests.csv` | planted defect | `rule_id, failed_before, failed_after, caught, outcome, note` |
 | `impact.csv` | rule with an effect test | `rule_id, figure, careful, careless, unit, effect_pct, measured` |
 | `fix_order.csv` | open rule | `rule_id, fix_rank` |

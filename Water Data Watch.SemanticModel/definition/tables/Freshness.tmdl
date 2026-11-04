@@ -1,0 +1,71 @@
+/// Each stream's newest result, against its own normal silence.
+table Freshness
+	lineageTag: 58368753-4ba3-4a59-b179-e4e3fa29b062
+
+	column stream
+		dataType: string
+		lineageTag: de0ca241-3e67-4190-badb-d00751de8d54
+		summarizeBy: none
+		sourceColumn: stream
+
+	column is_seasonal
+		dataType: boolean
+		lineageTag: 535678da-c143-44b4-a817-9e4fe80987be
+		summarizeBy: none
+		sourceColumn: is_seasonal
+
+	column sample_dates
+		dataType: int64
+		formatString: #,0
+		lineageTag: bc71d01d-033a-4d1f-bc13-4b9361977bde
+		summarizeBy: none
+		sourceColumn: sample_dates
+
+	column newest_date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: c260f61c-a096-426a-a0de-ef49412b52ae
+		summarizeBy: none
+		sourceColumn: newest_date
+
+	column days_silent
+		dataType: int64
+		formatString: #,0
+		lineageTag: 32881558-1999-407b-a120-5569a9d733de
+		summarizeBy: none
+		sourceColumn: days_silent
+
+	column longest_normal_silence
+		dataType: int64
+		formatString: #,0
+		lineageTag: 039f7555-bf9b-4a35-ad9b-2f8b696dd7df
+		summarizeBy: none
+		sourceColumn: longest_normal_silence
+
+	column allowed_silence
+		dataType: int64
+		formatString: #,0
+		lineageTag: 2f27c087-090d-44ff-83d0-dd821cc97039
+		summarizeBy: none
+		sourceColumn: allowed_silence
+
+	column freshness_status
+		dataType: string
+		lineageTag: ddc62231-3d09-430e-9ff9-da2a05d5425f
+		summarizeBy: none
+		sourceColumn: freshness_status
+
+	partition Freshness = m
+		mode: import
+		queryGroup: Model
+		source =
+				// Each stream's newest result, against its own normal silence.
+				let
+				    // Read the file from the data branch
+				    Source = fnRepoCsv("freshness.csv"),
+				    // Give every column its type. en-US means numbers use a dot, and dates are read as written, year first
+				    Typed = Table.TransformColumnTypes(Source, {{"stream", type text}, {"is_seasonal", type logical}, {"sample_dates", Int64.Type}, {"newest_date", type date}, {"days_silent", Int64.Type}, {"longest_normal_silence", Int64.Type}, {"allowed_silence", Int64.Type}, {"freshness_status", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

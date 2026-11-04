@@ -1,0 +1,74 @@
+-- Water Data Watch: the calculated tables, created through the Power BI modeling MCP (readable source of truth;
+-- Desktop writes the same DAX into the TMDL when Sam saves). Format: "TABLE Name =", then the DAX.
+-- Sort-by columns set through the MCP: Uses[use_name] by use_order, Rules[rule_label] by rule_order,
+-- PickMethod[Below-limit results] by SortOrder,
+-- PickSamples[Samples] by SortOrder, PickMonths[Months] by SortOrder, PickStatistic[Statistic] by SortOrder.
+
+TABLE 'Report Measures' =
+// Holds every measure. It has one hidden placeholder column, because a table must have a column.
+ROW ( "Placeholder", 0 )
+
+TABLE PickMeasured =
+// What was measured, for the picker on "Same data, different answer".
+ADDCOLUMNS (
+    SUMMARIZE ( SameData, SameData[det_code], SameData[det_name], SameData[plain_name], SameData[unit_label] ),
+    "What was measured", SameData[det_name]
+)
+
+TABLE PickMethod =
+// How below-limit results are counted. Dropped is listed as a mistake, because these are real measurements.
+DATATABLE (
+    "Below-limit results", STRING, "Method", STRING, "SortOrder", INTEGER,
+    {
+        { "Count at half the limit", "Half the limit", 1 },
+        { "Count at the limit", "The limit", 2 },
+        { "Count as zero", "Zero", 3 },
+        { "Drop them (a mistake)", "Dropped", 4 }
+    }
+)
+
+TABLE PickSamples =
+// Whether pollution and investigation samples are in. Either can be right, as long as it's stated.
+DATATABLE (
+    "Samples", STRING, "SampleSet", STRING, "SortOrder", INTEGER,
+    {
+        { "Routine samples only", "Routine samples", 1 },
+        { "All samples, with pollution response", "All samples", 2 }
+    }
+)
+
+TABLE PickMonths =
+// Whether months still filling in are in.
+DATATABLE (
+    "Months", STRING, "MonthSet", STRING, "SortOrder", INTEGER,
+    {
+        { "Complete months only", "Complete months", 1 },
+        { "All months, including part-complete", "All months", 2 }
+    }
+)
+
+TABLE PickStatistic =
+// Average or median. A few very high readings pull an average up.
+DATATABLE (
+    "Statistic", STRING, "StatKey", STRING, "SortOrder", INTEGER,
+    {
+        { "Average", "Average", 1 },
+        { "Median", "Median", 2 }
+    }
+)
+
+TABLE SwitchEffects =
+// The rows of "what each switch does alone": each changes one thing from the quick way. Kind separates a mistake from a choice.
+DATATABLE (
+    "SwitchOrder", INTEGER, "SwitchLabel", STRING, "SwitchKind", STRING, "Method", STRING, "SampleSet", STRING, "MonthSet", STRING, "StatKey", STRING,
+    {
+        { 1, "Keep below-limit results, at half the limit", "Fixes a mistake", "Half the limit", "All samples", "All months", "Average" },
+        { 2, "Leave out pollution samples", "A choice", "Dropped", "Routine samples", "All months", "Average" },
+        { 3, "Leave out part-complete months", "A choice", "Dropped", "All samples", "Complete months", "Average" },
+        { 4, "Use the median, not the average", "A choice", "Dropped", "All samples", "All months", "Median" }
+    }
+)
+
+TABLE RankedAreas =
+// The sub-areas that get a rank in any scenario, for the slope chart. Unknown and the region's own total are never ranked.
+CALCULATETABLE ( DISTINCT ( SameData[area_name] ), SameData[is_ranked_area] = TRUE () )

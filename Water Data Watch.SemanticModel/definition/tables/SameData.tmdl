@@ -1,0 +1,126 @@
+/// River figures worked out every way a person might, so the report can switch between them. Medians can't be added up, so each row is one finished figure.
+table SameData
+	lineageTag: 3d2983f2-91f7-4a3b-8228-c69bb842f1c2
+
+	column det_code
+		dataType: string
+		isHidden
+		lineageTag: 14c4cb61-88cf-430d-83ec-32ceae581662
+		summarizeBy: none
+		sourceColumn: det_code
+
+	column det_name
+		dataType: string
+		lineageTag: b0270099-e2ca-444a-a4e4-8240d45c9f16
+		summarizeBy: none
+		sourceColumn: det_name
+
+	/// What was measured, in plain words.
+	column plain_name
+		dataType: string
+		lineageTag: 0addb8bb-fa8d-4025-8a7c-06f16937c94e
+		summarizeBy: none
+		sourceColumn: plain_name
+
+	column sub_area
+		dataType: string
+		isHidden
+		lineageTag: 8ab07b5b-3bb6-444e-9368-6c62e5482f7e
+		summarizeBy: none
+		sourceColumn: sub_area
+
+	/// The sub-area, in normal capitals.
+	column area_name
+		dataType: string
+		lineageTag: 4052e541-bbd2-4ba9-bb4d-612e99ef3df8
+		summarizeBy: none
+		sourceColumn: area_name
+
+	/// How below-limit results are counted.
+	column method
+		dataType: string
+		lineageTag: 1d0ee7b3-1b92-4436-b32b-c7497dbb833c
+		summarizeBy: none
+		sourceColumn: method
+
+	column sample_set
+		dataType: string
+		lineageTag: 43d403e3-f1dd-48b3-8c1f-4b573cd5804c
+		summarizeBy: none
+		sourceColumn: sample_set
+
+	column month_set
+		dataType: string
+		lineageTag: 17af46b2-475e-4f0d-93de-d0b9f030d1b5
+		summarizeBy: none
+		sourceColumn: month_set
+
+	column statistic
+		dataType: string
+		lineageTag: 9aacd7ce-ba8b-4a10-8d12-5e3dee256be4
+		summarizeBy: none
+		sourceColumn: statistic
+
+	column figure
+		dataType: double
+		lineageTag: 8c4c07f5-9f9c-47a1-bb9d-9cebd1523150
+		summarizeBy: none
+		sourceColumn: figure
+
+	column rows_used
+		dataType: int64
+		formatString: #,0
+		lineageTag: d36c285d-ddbe-4bbb-af0c-54715bbaabfa
+		summarizeBy: none
+		sourceColumn: rows_used
+
+	column rows_in_scope
+		dataType: int64
+		formatString: #,0
+		lineageTag: 0da9b201-9c8b-4893-9830-9c9bdb841302
+		summarizeBy: none
+		sourceColumn: rows_in_scope
+
+	column is_ranked_area
+		dataType: boolean
+		lineageTag: dbd9ce42-7361-45fd-9d2d-7865e4c02202
+		summarizeBy: none
+		sourceColumn: is_ranked_area
+
+	/// 1 is the highest figure. It describes the calculation, and says nothing about whose water is better.
+	column area_rank
+		dataType: int64
+		formatString: #,0
+		lineageTag: 7f956fcf-4cac-4b1e-b971-18a69a7653b9
+		summarizeBy: none
+		sourceColumn: area_rank
+
+	column scenario_key
+		dataType: string
+		isHidden
+		lineageTag: 2f357c5a-5110-44b0-b4ee-7d20959509f6
+		summarizeBy: none
+		sourceColumn: scenario_key
+
+	column unit_label
+		dataType: string
+		lineageTag: f4cf9133-3440-4003-a2aa-7a48b8e0390f
+		summarizeBy: none
+		sourceColumn: unit_label
+
+	partition SameData = m
+		mode: import
+		queryGroup: Model
+		source =
+				// River figures worked out every way a person might. Each row is one finished figure, because medians can't be added up. Adds the sub-area's name in normal capitals.
+				let
+				    // Read the file from the data branch
+				    Source = fnRepoCsv("same_data.csv"),
+				    // Give every column its type. en-US means numbers use a dot
+				    Typed = Table.TransformColumnTypes(Source, {{"det_code", type text}, {"det_name", type text}, {"plain_name", type text}, {"sub_area", type text}, {"method", type text}, {"sample_set", type text}, {"month_set", type text}, {"statistic", type text}, {"figure", type number}, {"rows_used", Int64.Type}, {"rows_in_scope", Int64.Type}, {"is_ranked_area", type logical}, {"area_rank", Int64.Type}, {"scenario_key", type text}, {"unit_label", type text}}, "en-US"),
+				    // The sub-area's name in normal capitals, because the source holds it in capitals
+				    Named = Table.AddColumn(Typed, "area_name", each Text.Proper([sub_area]), type text)
+				in
+				    Named
+
+	annotation PBI_ResultType = Table

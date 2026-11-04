@@ -1,0 +1,120 @@
+/// The rule-by-month chart's data, deliberately unrelated to any table, so picking a rule highlights its row instead of removing the others.
+table RuleGrid
+	lineageTag: 5aa990d9-8867-407e-b823-d8e0c7d18431
+
+	column rule_order
+		dataType: int64
+		formatString: #,0
+		lineageTag: 51fa1255-8bb0-47a6-a311-0f10d91ef579
+		summarizeBy: none
+		sourceColumn: rule_order
+
+	column id
+		dataType: string
+		lineageTag: c3dfb0c4-e32c-4860-a804-fdc9909d4b50
+		summarizeBy: none
+		sourceColumn: id
+
+	column title
+		dataType: string
+		lineageTag: af45db58-3532-4d4c-8c40-077c66425a85
+		summarizeBy: none
+		sourceColumn: title
+
+	column dimension
+		dataType: string
+		lineageTag: 1b83edf8-f05e-4d9a-b312-8f606be42884
+		summarizeBy: none
+		sourceColumn: dimension
+
+	column severity
+		dataType: string
+		lineageTag: 8cea0ce8-2807-40b4-92a5-d007bb3361b2
+		summarizeBy: none
+		sourceColumn: severity
+
+	column status
+		dataType: string
+		lineageTag: 2b978487-14b1-4001-8b6e-fb6205ff5021
+		summarizeBy: none
+		sourceColumn: status
+
+	column failed
+		dataType: int64
+		formatString: #,0
+		lineageTag: a8303eb1-7073-4956-9294-e825fdc311fe
+		summarizeBy: none
+		sourceColumn: failed
+
+	column eligible
+		dataType: int64
+		formatString: #,0
+		lineageTag: d99c5b93-4088-4341-b0ee-0e65ff39dc44
+		summarizeBy: none
+		sourceColumn: eligible
+
+	column failed_pct
+		dataType: double
+		lineageTag: 0b46d089-62f0-4fa7-a1da-eda8745aa3ea
+		summarizeBy: none
+		sourceColumn: failed_pct
+
+	column test_outcome
+		dataType: string
+		lineageTag: 1dca4275-c2ba-45bd-aaa2-d0d317b229d1
+		summarizeBy: none
+		sourceColumn: test_outcome
+
+	column effect_pct
+		dataType: double
+		lineageTag: 519ee873-49a5-484b-99d8-cd204a355641
+		summarizeBy: none
+		sourceColumn: effect_pct
+
+	column fix_rank
+		dataType: int64
+		formatString: #,0
+		lineageTag: 78dbacbc-cc60-483c-bcc3-a6c442b4d338
+		summarizeBy: none
+		sourceColumn: fix_rank
+
+	column owner_role
+		dataType: string
+		lineageTag: 29bdfb66-b0b9-4fae-af5c-a01f67f1a898
+		summarizeBy: none
+		sourceColumn: owner_role
+
+	column why
+		dataType: string
+		lineageTag: d5697bfd-92bc-448a-9eab-bafb070a090c
+		summarizeBy: none
+		sourceColumn: why
+
+	column months_packed
+		dataType: string
+		lineageTag: b3d930df-16e6-4d4f-8981-eff56bdd7012
+		summarizeBy: none
+		sourceColumn: months_packed
+
+	column runs_packed
+		dataType: string
+		lineageTag: b7b958e6-2cd1-4c32-b7d6-866812a4c83f
+		summarizeBy: none
+		sourceColumn: runs_packed
+
+	partition RuleGrid = m
+		mode: import
+		queryGroup: Model
+		source =
+				// The rule-by-month chart's data: one row per rule, with its history packed into text. Unrelated to any table, so picking a rule highlights its row instead of removing the others.
+				let
+				    // Read the file from the data branch
+				    Source = fnRepoCsv("rules_tonight.csv"),
+				    // Keep only what the chart draws
+				    Kept = Table.SelectColumns(Source, {"rule_order", "id", "title", "dimension", "severity", "status", "failed", "eligible", "failed_pct", "test_outcome", "effect_pct", "fix_rank", "owner_role", "why", "months_packed", "runs_packed"}),
+				    // Give every column its type. en-US means numbers use a dot
+				    Typed = Table.TransformColumnTypes(Kept, {{"rule_order", Int64.Type}, {"id", type text}, {"title", type text}, {"dimension", type text}, {"severity", type text}, {"status", type text}, {"failed", Int64.Type}, {"eligible", Int64.Type}, {"failed_pct", type number}, {"test_outcome", type text}, {"effect_pct", type number}, {"fix_rank", Int64.Type}, {"owner_role", type text}, {"why", type text}, {"months_packed", type text}, {"runs_packed", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,271 @@
+/// One row per rule: the register's entry with tonight's result, the planted defect result and the measured effect. Filters the exceptions and reasons.
+table Rules
+	lineageTag: dc8a8709-f46e-4398-90ff-e760514886cf
+
+	/// The rule's place in the register.
+	column rule_order
+		dataType: int64
+		formatString: #,0
+		isHidden
+		lineageTag: a5dea914-eb20-4b50-bfca-ff23cd14f0b3
+		summarizeBy: none
+		sourceColumn: rule_order
+
+	/// The rule's reference.
+	column id
+		dataType: string
+		lineageTag: b6cdcde2-ff8c-489b-a7fb-b8a2c416c45f
+		summarizeBy: none
+		sourceColumn: id
+
+	/// Reference and title, for the picker.
+	column rule_label
+		dataType: string
+		lineageTag: 338b3361-2baa-487a-be00-2d4b3c804ed6
+		summarizeBy: none
+		sourceColumn: rule_label
+
+	column version
+		dataType: int64
+		formatString: #,0
+		lineageTag: d2a231bc-b2b2-41b1-9fc5-c7562dde9dac
+		summarizeBy: none
+		sourceColumn: version
+
+	column title
+		dataType: string
+		lineageTag: c6c79573-e098-4b3c-84f8-d8fb5e3a5367
+		summarizeBy: none
+		sourceColumn: title
+
+	column why
+		dataType: string
+		lineageTag: 2a514cdf-d3c2-4ce5-aa23-d81e0b63d32c
+		summarizeBy: none
+		sourceColumn: why
+
+	column dataset
+		dataType: string
+		lineageTag: 8e99aaaf-2e52-433d-a880-9ba5c6e66725
+		summarizeBy: none
+		sourceColumn: dataset
+
+	column fields
+		dataType: string
+		lineageTag: 3d4923ed-fb14-49f9-80a3-ba41682ae0af
+		summarizeBy: none
+		sourceColumn: fields
+
+	column dimension
+		dataType: string
+		lineageTag: 2a7b04da-97f0-4ac8-852d-5e01231af256
+		summarizeBy: none
+		sourceColumn: dimension
+
+	column severity
+		dataType: string
+		lineageTag: aabebf61-5701-4c01-8aa5-94a85d46ef7b
+		summarizeBy: none
+		sourceColumn: severity
+
+	/// Fails above this percentage. Illustrative.
+	column fail_above
+		dataType: double
+		lineageTag: 4f179bb8-7ec2-4248-8f8b-72f168313e88
+		summarizeBy: none
+		sourceColumn: fail_above
+
+	/// Needs review above this percentage. Illustrative.
+	column review_above
+		dataType: double
+		lineageTag: c6c0ad0c-9457-47e5-800c-9ea943ef6267
+		summarizeBy: none
+		sourceColumn: review_above
+
+	/// Illustrative role.
+	column owner_role
+		dataType: string
+		lineageTag: 0e767c7e-e4eb-4dba-9a24-f8f6c36c9f70
+		summarizeBy: none
+		sourceColumn: owner_role
+
+	/// Illustrative role.
+	column steward_role
+		dataType: string
+		lineageTag: da5ecbb6-34bc-403f-9f94-3a3ee19df142
+		summarizeBy: none
+		sourceColumn: steward_role
+
+	column action
+		dataType: string
+		lineageTag: 4dbce76a-2dc9-4824-a094-a3ad987e57ac
+		summarizeBy: none
+		sourceColumn: action
+
+	column root_cause
+		dataType: string
+		lineageTag: c25449f3-7307-4ff3-8b6c-bc433a42daf8
+		summarizeBy: none
+		sourceColumn: root_cause
+
+	column condition
+		dataType: string
+		lineageTag: 0a5d607e-96b9-48b2-ab9c-fe9d34fdec53
+		summarizeBy: none
+		sourceColumn: condition
+
+	/// Records the rule could check.
+	column eligible
+		dataType: int64
+		formatString: #,0
+		lineageTag: 60a418a2-f644-4fc6-a049-fcb98b78652f
+		summarizeBy: none
+		sourceColumn: eligible
+
+	/// True number of failed records.
+	column failed
+		dataType: int64
+		formatString: #,0
+		lineageTag: 546d034d-f5c6-47cd-9da6-c2e8797ba698
+		summarizeBy: none
+		sourceColumn: failed
+
+	/// Records the rule doesn't apply to.
+	column excluded
+		dataType: int64
+		formatString: #,0
+		lineageTag: 6d591964-d98b-431b-917b-75b079d1a383
+		summarizeBy: none
+		sourceColumn: excluded
+
+	column failed_pct
+		dataType: double
+		lineageTag: 494bc780-6b6d-4e3c-bd00-020680732da2
+		summarizeBy: none
+		sourceColumn: failed_pct
+
+	/// Pass, Fail, For review, Not checked or No data.
+	column status
+		dataType: string
+		lineageTag: b0cb2daa-c51e-4985-8d7d-067221adf134
+		summarizeBy: none
+		sourceColumn: status
+
+	column note
+		dataType: string
+		lineageTag: f42c2707-8444-4111-a1f9-dcdcfe939452
+		summarizeBy: none
+		sourceColumn: note
+
+	column exceptions_shown
+		dataType: int64
+		formatString: #,0
+		lineageTag: afa4e340-bc91-407d-80f4-ef546e92d798
+		summarizeBy: none
+		sourceColumn: exceptions_shown
+
+	/// Failed records beyond the listing cap.
+	column exceptions_hidden
+		dataType: int64
+		formatString: #,0
+		lineageTag: e1c4d528-639d-4abb-9dc0-65de8300f642
+		summarizeBy: none
+		sourceColumn: exceptions_hidden
+
+	/// Whether the rule caught its planted defect.
+	column test_outcome
+		dataType: string
+		lineageTag: 97a3f6e2-7607-4ef1-8436-31bcf0c3fc4f
+		summarizeBy: none
+		sourceColumn: test_outcome
+
+	column test_failed_before
+		dataType: int64
+		formatString: #,0
+		isHidden
+		lineageTag: bcc56419-31d6-487a-8ccf-9c2c06895801
+		summarizeBy: none
+		sourceColumn: test_failed_before
+
+	column test_failed_after
+		dataType: int64
+		formatString: #,0
+		isHidden
+		lineageTag: 6a46df53-be84-4c56-ba60-ecfc3ba75f06
+		summarizeBy: none
+		sourceColumn: test_failed_after
+
+	/// What the effect test measures.
+	column figure
+		dataType: string
+		lineageTag: 55a37dc2-56fd-4c17-b7f8-4dc035fbb61b
+		summarizeBy: none
+		sourceColumn: figure
+
+	column careful
+		dataType: double
+		lineageTag: 7e7f20a1-e1d8-448b-aa6e-656dff3b990d
+		summarizeBy: none
+		sourceColumn: careful
+
+	column careless
+		dataType: double
+		lineageTag: 7e4c5095-7e24-4b69-8f30-f8119fd941dd
+		summarizeBy: none
+		sourceColumn: careless
+
+	column unit
+		dataType: string
+		lineageTag: c677f823-503d-496e-b632-5b6d3dab6717
+		summarizeBy: none
+		sourceColumn: unit
+
+	/// How far the careless figure sits from the careful one.
+	column effect_pct
+		dataType: double
+		lineageTag: 12f0263b-0194-44da-8f0b-cf0e56b6ef6d
+		summarizeBy: none
+		sourceColumn: effect_pct
+
+	column measured
+		dataType: boolean
+		lineageTag: 4f580333-8e9f-432f-9fd5-4fe3af70df6d
+		summarizeBy: none
+		sourceColumn: measured
+
+	/// Order to fix things in.
+	column fix_rank
+		dataType: int64
+		formatString: #,0
+		lineageTag: d16253cb-843e-4bca-97c6-3da11f9941d1
+		summarizeBy: none
+		sourceColumn: fix_rank
+
+	column months_packed
+		dataType: string
+		isHidden
+		lineageTag: 8fc55cef-5e41-4363-908f-3108a76f2bd7
+		summarizeBy: none
+		sourceColumn: months_packed
+
+	column runs_packed
+		dataType: string
+		isHidden
+		lineageTag: cc6f858e-a653-4345-8462-c1e6039c803a
+		summarizeBy: none
+		sourceColumn: runs_packed
+
+	partition Rules = m
+		mode: import
+		queryGroup: Model
+		source =
+				// One row per rule: the register's entry with tonight's result, the planted defect result and the measured effect. Filters the exceptions and reasons.
+				let
+				    // Read the file from the data branch
+				    Source = fnRepoCsv("rules_tonight.csv"),
+				    // Give every column its type. en-US means numbers use a dot, and dates are read as written, year first
+				    Typed = Table.TransformColumnTypes(Source, {{"rule_order", Int64.Type}, {"id", type text}, {"rule_label", type text}, {"version", Int64.Type}, {"title", type text}, {"why", type text}, {"dataset", type text}, {"fields", type text}, {"dimension", type text}, {"severity", type text}, {"fail_above", type number}, {"review_above", type number}, {"owner_role", type text}, {"steward_role", type text}, {"action", type text}, {"root_cause", type text}, {"condition", type text}, {"eligible", Int64.Type}, {"failed", Int64.Type}, {"excluded", Int64.Type}, {"failed_pct", type number}, {"status", type text}, {"note", type text}, {"exceptions_shown", Int64.Type}, {"exceptions_hidden", Int64.Type}, {"test_outcome", type text}, {"test_failed_before", Int64.Type}, {"test_failed_after", Int64.Type}, {"figure", type text}, {"careful", type number}, {"careless", type number}, {"unit", type text}, {"effect_pct", type number}, {"measured", type logical}, {"fix_rank", Int64.Type}, {"months_packed", type text}, {"runs_packed", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

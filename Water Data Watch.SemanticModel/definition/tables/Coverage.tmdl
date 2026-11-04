@@ -1,0 +1,46 @@
+/// Samples in each hour of the week.
+table Coverage
+	lineageTag: fbbe12a5-57da-4ac1-ac08-51b75f43518a
+
+	column scope
+		dataType: string
+		lineageTag: 0d945825-d59b-4e75-a53b-7561e4bbefd7
+		summarizeBy: none
+		sourceColumn: scope
+
+	/// 1 is Monday.
+	column weekday_no
+		dataType: int64
+		formatString: #,0
+		lineageTag: f459675e-0fce-4a37-b95a-8de75f1f353c
+		summarizeBy: none
+		sourceColumn: weekday_no
+
+	column hour_of_day
+		dataType: int64
+		formatString: #,0
+		lineageTag: d85e41fe-fbb7-4bc8-b2c9-7e1d82e45f85
+		summarizeBy: none
+		sourceColumn: hour_of_day
+
+	column samples
+		dataType: int64
+		formatString: #,0
+		lineageTag: 0165d8e2-6929-4797-83bd-a985b6f733c8
+		summarizeBy: none
+		sourceColumn: samples
+
+	partition Coverage = m
+		mode: import
+		queryGroup: Model
+		source =
+				// Samples in each hour of the week.
+				let
+				    // Read the file from the data branch
+				    Source = fnRepoCsv("coverage.csv"),
+				    // Give every column its type. en-US means numbers use a dot, and dates are read as written, year first
+				    Typed = Table.TransformColumnTypes(Source, {{"scope", type text}, {"weekday_no", Int64.Type}, {"hour_of_day", Int64.Type}, {"samples", Int64.Type}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

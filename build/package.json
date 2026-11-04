@@ -1,0 +1,17 @@
+{
+  "name": "uk-population-watch-build",
+  "private": true,
+  "type": "module",
+  "description": "Source for UK Population Watch: Deneb/Vega specs, theme, PBIR pages, offline renders",
+  "scripts": {
+    "geo": "node geo.mjs",
+    "report": "node report.mjs",
+    "render": "node render.mjs"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "canvas": "^3.2.3",
+    "mapshaper": "^0.7.93",
+    "vega": "^6.4.0"
+  }
+}

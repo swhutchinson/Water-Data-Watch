@@ -1,0 +1,76 @@
+/// What the publisher says about itself tonight, and whether that changed.
+table SourceWatch
+	lineageTag: c10fce1a-cb08-4b33-9e44-1c1897e19c54
+
+	column run_id
+		dataType: string
+		isHidden
+		lineageTag: b73930d3-6441-4413-a3b1-8776f250b436
+		summarizeBy: none
+		sourceColumn: run_id
+
+	column item
+		dataType: string
+		lineageTag: 951a51f4-7a4a-467d-8c74-073423a1bc18
+		summarizeBy: none
+		sourceColumn: item
+
+	column kind
+		dataType: string
+		lineageTag: d265edb5-2172-44cb-920d-2cead6e806b2
+		summarizeBy: none
+		sourceColumn: kind
+
+	column value
+		dataType: string
+		lineageTag: cb5e585d-10c4-469f-ad67-0b9470bff6e1
+		summarizeBy: none
+		sourceColumn: value
+
+	column fingerprint
+		dataType: string
+		isHidden
+		lineageTag: d6a63d06-dad7-4859-af4a-08435969575b
+		summarizeBy: none
+		sourceColumn: fingerprint
+
+	column previous_fingerprint
+		dataType: string
+		isHidden
+		lineageTag: 7198075b-9108-4d0f-b021-a8b21f7840e3
+		summarizeBy: none
+		sourceColumn: previous_fingerprint
+
+	column changed
+		dataType: boolean
+		lineageTag: 974d7d9d-4490-4220-85f8-884e624283a2
+		summarizeBy: none
+		sourceColumn: changed
+
+	column status
+		dataType: string
+		lineageTag: b8ecbfce-117d-499e-9f66-43bd9f3e8bca
+		summarizeBy: none
+		sourceColumn: status
+
+	column checked_on
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 356bc7dd-0911-444b-bfc6-12bbae14db6b
+		summarizeBy: none
+		sourceColumn: checked_on
+
+	partition SourceWatch = m
+		mode: import
+		queryGroup: Model
+		source =
+				// What the publisher says about itself tonight, and whether that changed.
+				let
+				    // Read the file from the data branch
+				    Source = fnRepoCsv("watch_tonight.csv"),
+				    // Give every column its type. en-US means numbers use a dot, and dates are read as written, year first
+				    Typed = Table.TransformColumnTypes(Source, {{"run_id", type text}, {"item", type text}, {"kind", type text}, {"value", type text}, {"fingerprint", type text}, {"previous_fingerprint", type text}, {"changed", type logical}, {"status", type text}, {"checked_on", type date}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

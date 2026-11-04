@@ -1,0 +1,279 @@
+/// One row per nightly run: what it read, what it found, and the verdict for each decision. It can't be recreated later.
+table RunLog
+	lineageTag: 4fb5464f-7f6d-4e83-8229-803702ea203f
+
+	/// The run's name: its start time in UTC.
+	column run_id
+		dataType: string
+		isHidden
+		lineageTag: d16ac070-f478-4822-a11f-66bda78afc4e
+		summarizeBy: none
+		sourceColumn: run_id
+
+	/// The run's date.
+	column as_of
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: c85e2c64-a67a-4873-bdfe-7400239f4f73
+		summarizeBy: none
+		sourceColumn: as_of
+
+	column started_utc
+		dataType: string
+		isHidden
+		lineageTag: 1a3a4a35-5430-44ff-9f76-0e740ac669c6
+		summarizeBy: none
+		sourceColumn: started_utc
+
+	column finished_utc
+		dataType: string
+		isHidden
+		lineageTag: 74173d5e-d69d-4966-b704-c433be0a585e
+		summarizeBy: none
+		sourceColumn: finished_utc
+
+	/// How long the run took.
+	column seconds
+		dataType: int64
+		formatString: #,0
+		lineageTag: 99cb1622-3118-40fd-b031-eb2d83cb2289
+		summarizeBy: none
+		sourceColumn: seconds
+
+	column engine_version
+		dataType: string
+		isHidden
+		lineageTag: 8aee9609-5c20-4eed-96d1-4d45963214f9
+		summarizeBy: none
+		sourceColumn: engine_version
+
+	/// Rules in the register.
+	column register_rules
+		dataType: int64
+		formatString: #,0
+		lineageTag: 30c5587b-8e88-46fc-add6-10dedb261cb0
+		summarizeBy: none
+		sourceColumn: register_rules
+
+	/// What started it: schedule, push or a manual run.
+	column trigger
+		dataType: string
+		isHidden
+		lineageTag: 0407db94-81cb-4cca-934c-408b18baf38d
+		summarizeBy: none
+		sourceColumn: trigger
+
+	column results_status
+		dataType: string
+		lineageTag: 577c81b0-23e4-413f-8369-8d0ce56bac23
+		summarizeBy: none
+		sourceColumn: results_status
+
+	column points_status
+		dataType: string
+		lineageTag: a4f3212f-7c96-4373-aa7c-7d21b307cde7
+		summarizeBy: none
+		sourceColumn: points_status
+
+	column bathing_status
+		dataType: string
+		lineageTag: 0824862e-de00-4348-ab61-92bc68ac613d
+		summarizeBy: none
+		sourceColumn: bathing_status
+
+	column codes_status
+		dataType: string
+		lineageTag: aea63094-e746-4320-af82-fa1b8d31415f
+		summarizeBy: none
+		sourceColumn: codes_status
+
+	column watch_status
+		dataType: string
+		lineageTag: d169c955-7883-459c-b271-544bc291bf88
+		summarizeBy: none
+		sourceColumn: watch_status
+
+	/// What the source said it held.
+	column source_rows
+		dataType: int64
+		formatString: #,0
+		lineageTag: 0dfcd3e0-1c51-4824-af8a-de78c30d59ca
+		summarizeBy: none
+		sourceColumn: source_rows
+
+	/// What was checked.
+	column loaded_rows
+		dataType: int64
+		formatString: #,0
+		lineageTag: 3429123e-61c6-4248-b757-05483e17e837
+		summarizeBy: none
+		sourceColumn: loaded_rows
+
+	column api_calls
+		dataType: int64
+		formatString: #,0
+		lineageTag: 78735588-c720-4395-b6c3-252c0868fa23
+		summarizeBy: none
+		sourceColumn: api_calls
+
+	column rules_pass
+		dataType: int64
+		formatString: #,0
+		lineageTag: 37ba0edc-0f8a-4f1f-8a95-ea010be4ba61
+		summarizeBy: none
+		sourceColumn: rules_pass
+
+	column rules_fail
+		dataType: int64
+		formatString: #,0
+		lineageTag: 81d323fd-5fd5-4637-9561-47f320041905
+		summarizeBy: none
+		sourceColumn: rules_fail
+
+	column rules_review
+		dataType: int64
+		formatString: #,0
+		lineageTag: 4dcf3853-f03e-4e3a-b369-b2613a8e7b13
+		summarizeBy: none
+		sourceColumn: rules_review
+
+	column rules_not_checked
+		dataType: int64
+		formatString: #,0
+		lineageTag: e66bd152-e5e1-429e-aaa9-35b6a03f6c4e
+		summarizeBy: none
+		sourceColumn: rules_not_checked
+
+	column rules_no_data
+		dataType: int64
+		formatString: #,0
+		lineageTag: df510833-8789-467b-9948-4b67345ff1ef
+		summarizeBy: none
+		sourceColumn: rules_no_data
+
+	/// Planted defects the rules caught.
+	column planted_caught
+		dataType: int64
+		formatString: #,0
+		lineageTag: ad3e1cda-d97a-4d79-97c4-2d6711f9447f
+		summarizeBy: none
+		sourceColumn: planted_caught
+
+	/// Planted defects tried.
+	column planted_tested
+		dataType: int64
+		formatString: #,0
+		lineageTag: c40f7933-e82d-4942-9d00-514ae59c59e6
+		summarizeBy: none
+		sourceColumn: planted_tested
+
+	column verdict_monthly
+		dataType: string
+		lineageTag: 7fd3bccd-1ea2-49fb-b547-eeee57490800
+		summarizeBy: none
+		sourceColumn: verdict_monthly
+
+	column verdict_trend
+		dataType: string
+		lineageTag: 021179ea-bd93-485f-991e-093fe8e16bcf
+		summarizeBy: none
+		sourceColumn: verdict_trend
+
+	column verdict_signoff
+		dataType: string
+		lineageTag: 19f1715e-f299-4f51-b758-c586c133321d
+		summarizeBy: none
+		sourceColumn: verdict_signoff
+
+	column verdict_ai
+		dataType: string
+		lineageTag: 3fe68e6d-7a82-416f-b1cf-f854f1b966d1
+		summarizeBy: none
+		sourceColumn: verdict_ai
+
+	/// The first run's date. Anything the engine measures goes back no further than this.
+	column tracking_since
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 8c696be1-6a9b-46b8-85e5-c9b4ed33dbbb
+		summarizeBy: none
+		sourceColumn: tracking_since
+
+	column github_run
+		dataType: string
+		isHidden
+		lineageTag: bb7bba4b-32c7-495a-87e9-a7182bdc2738
+		summarizeBy: none
+		sourceColumn: github_run
+
+	/// 1 for the first run.
+	column RunNo
+		dataType: int64
+		formatString: #,0
+		isHidden
+		lineageTag: ff89f6be-7e77-4c92-aecc-42a00027cd66
+		summarizeBy: none
+		sourceColumn: RunNo
+
+	/// 1 for the newest run.
+	column IsLatest
+		dataType: int64
+		formatString: #,0
+		isHidden
+		lineageTag: cf9bf2ac-bcd8-43aa-be80-0568ba0c6e4a
+		summarizeBy: none
+		sourceColumn: IsLatest
+
+	/// When the run finished, as a date and time in UTC.
+	column RunUTC
+		dataType: dateTime
+		formatString: General Date
+		isHidden
+		lineageTag: 8fbf4c25-b85b-4d11-8293-163eb48c9ff7
+		summarizeBy: none
+		sourceColumn: RunUTC
+
+	/// When the run finished in UK time, e.g. 4 Nov 02:40.
+	column RunUKText
+		dataType: string
+		isHidden
+		lineageTag: 80beee68-4c03-45c2-95a0-176ca1169bde
+		summarizeBy: none
+		sourceColumn: RunUKText
+
+	partition RunLog = m
+		mode: import
+		queryGroup: Model
+		source =
+				// One row per nightly run. Adds the run's number, marks the newest run, and turns its finish time into a real date and time.
+				let
+				    // Read the file from the data branch
+				    Source = fnRepoCsv("history/run_log.csv"),
+				    // Give every column its type. en-US means numbers use a dot, and dates are read as written, year first
+				    Typed = Table.TransformColumnTypes(Source, {{"run_id", type text}, {"as_of", type date}, {"started_utc", type text}, {"finished_utc", type text}, {"seconds", Int64.Type}, {"engine_version", type text}, {"register_rules", Int64.Type}, {"trigger", type text}, {"results_status", type text}, {"points_status", type text}, {"bathing_status", type text}, {"codes_status", type text}, {"watch_status", type text}, {"source_rows", Int64.Type}, {"loaded_rows", Int64.Type}, {"api_calls", Int64.Type}, {"rules_pass", Int64.Type}, {"rules_fail", Int64.Type}, {"rules_review", Int64.Type}, {"rules_not_checked", Int64.Type}, {"rules_no_data", Int64.Type}, {"planted_caught", Int64.Type}, {"planted_tested", Int64.Type}, {"verdict_monthly", type text}, {"verdict_trend", type text}, {"verdict_signoff", type text}, {"verdict_ai", type text}, {"tracking_since", type date}, {"github_run", type text}}, "en-US"),
+				    // Number the runs from 1, in the order they were written
+				    Numbered = Table.AddIndexColumn(Typed, "RunNo", 1, 1, Int64.Type),
+				    // How many runs there are
+				    Newest = Table.RowCount(Numbered),
+				    // Mark the newest run with a 1
+				    Marked = Table.AddColumn(Numbered, "IsLatest", each if [RunNo] = Newest then 1 else 0, Int64.Type),
+				    // The finish time as a date and time, leaving off the Z that marks it as UTC
+				    Timed = Table.AddColumn(Marked, "RunUTC", each DateTime.FromText(Text.Start([finished_utc], 19), "en-GB"), type datetime),
+				    // The same time in UK local time, as text such as "4 Nov 02:40". British Summer Time runs between the last Sundays of March and October, changing at 01:00 UTC
+				    Local = Table.AddColumn(Timed, "RunUKText", each
+				        let
+				            // The run's finish time
+				            U = [RunUTC],
+				            // That year's last Sunday in March
+				            Mar = Date.StartOfWeek(#date(Date.Year(U), 3, 31), Day.Sunday),
+				            // That year's last Sunday in October
+				            Oct = Date.StartOfWeek(#date(Date.Year(U), 10, 31), Day.Sunday),
+				            // Add an hour during British Summer Time
+				            L = U + #duration(0, if U >= (Mar & #time(1, 0, 0)) and U < (Oct & #time(1, 0, 0)) then 1 else 0, 0, 0)
+				        in
+				            // The day, short month and time
+				            Text.From(Date.Day(L)) & " " & Date.ToText(DateTime.Date(L), "MMM", "en-GB") & " " & DateTime.ToText(L, "HH:mm"), type text)
+				in
+				    Local
+
+	annotation PBI_ResultType = Table

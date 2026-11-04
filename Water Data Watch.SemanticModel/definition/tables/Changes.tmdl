@@ -1,0 +1,56 @@
+/// What moved since the last run: verdicts, rules and the publisher's statements.
+table Changes
+	lineageTag: 92b6abc9-0e0a-4475-8479-72e8b8dc94dc
+
+	column change_order
+		dataType: int64
+		formatString: #,0
+		lineageTag: 9a0eceb6-7873-4c9f-9182-ead5c5a236ab
+		summarizeBy: none
+		sourceColumn: change_order
+
+	column kind
+		dataType: string
+		lineageTag: da27c0ad-2c24-40e1-b8fe-f8cb10673003
+		summarizeBy: none
+		sourceColumn: kind
+
+	column item
+		dataType: string
+		lineageTag: 6a3aa98f-8773-4c8e-9112-e24374e60340
+		summarizeBy: none
+		sourceColumn: item
+
+	column before
+		dataType: string
+		lineageTag: 9b7e50d4-11ec-4017-9fc0-bfa495267b48
+		summarizeBy: none
+		sourceColumn: before
+
+	column after
+		dataType: string
+		lineageTag: a248b3f3-6c5d-47c3-afe2-cdd553b1edea
+		summarizeBy: none
+		sourceColumn: after
+
+	column previous_run
+		dataType: string
+		isHidden
+		lineageTag: 2353ad51-ab87-44f2-b687-71cadbe3db02
+		summarizeBy: none
+		sourceColumn: previous_run
+
+	partition Changes = m
+		mode: import
+		queryGroup: Model
+		source =
+				// What moved since the last run: verdicts, rules and the publisher's statements.
+				let
+				    // Read the file from the data branch
+				    Source = fnRepoCsv("changes.csv"),
+				    // Give every column its type. en-US means numbers use a dot, and dates are read as written, year first
+				    Typed = Table.TransformColumnTypes(Source, {{"change_order", Int64.Type}, {"kind", type text}, {"item", type text}, {"before", type text}, {"after", type text}, {"previous_run", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

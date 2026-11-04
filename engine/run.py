@@ -213,8 +213,10 @@ def run(no_fetch=False, as_of=None, raw_dir=settings.RAW, pub_dir=settings.PUB, 
         row["point_name"] = names.get(row["point_id"], "")
         # What the table shows as the record: the point's name, or the rule's own reference unless that is only a web address.
         row["where_label"] = row["point_name"] or ("" if str(row["record_ref"]).startswith("http") else row["record_ref"])
+        # The month as the table shows it. A rule about a whole list has no month, and says so.
+        row["month_label"] = row["sample_month"] or "Whole list"
     # Write them.
-    publish.write_rows(pub_dir / "exceptions.csv", exceptions, ["rule_id", "record_ref", "point_id", "point_name", "where_label", "sample_month", "detail", "source_url"])
+    publish.write_rows(pub_dir / "exceptions.csv", exceptions, ["rule_id", "record_ref", "point_id", "point_name", "where_label", "sample_month", "month_label", "detail", "source_url"])
     # The planted defect results.
     publish.write_rows(pub_dir / "rule_tests.csv", tests, ["rule_id", "failed_before", "failed_after", "caught", "outcome", "note"])
     # The "does it change the answer?" results.
