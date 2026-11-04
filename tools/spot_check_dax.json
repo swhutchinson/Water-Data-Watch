@@ -1,0 +1,20 @@
+{
+  "ranked_areas": [
+    "MERSEYSIDE",
+    "RIBBLE / DOUGLAS",
+    "CHESHIRE",
+    "MANCHESTER",
+    "NORTH CUMBRIA",
+    "MORECAMBE BAY"
+  ],
+  "source_rows": 561028,
+  "checked_rows": 561028,
+  "below": 194406,
+  "above": 483,
+  "text": 19790,
+  "val07_failed": 214679,
+  "quick_figure": 1.7522905437044736,
+  "stated_figure": 0.1529659043262782,
+  "quick_top": "Cheshire",
+  "stated_top": "Merseyside"
+}

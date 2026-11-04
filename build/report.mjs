@@ -167,9 +167,9 @@ const exceptions = { name: P4, displayName: 'Exceptions', visuals: [
   rulePicker(P4, [40, 122, 1000, 96], 2),
   picker(vid(P4, 'month'), [1056, 122, 360, 96], 3, 'Exceptions', 'month_label', undefined, 'Sample month', 'Narrow the list to one sample month'),
   widths(titleFromMeasure(tableEx(vid(P4, 'list'), [40, 226, 1840, 764], 4,
-    [named(col('Exceptions', 'where_label'), 'Where'), named(col('Exceptions', 'month_label'), 'Sample month'), named(col('Exceptions', 'detail'), 'What was found'), named(col('Exceptions', 'source_url'), 'Check at source')],
+    [named(msr('Exception Rule'), 'Rule'), named(col('Exceptions', 'where_label'), 'Where'), named(col('Exceptions', 'month_label'), 'Sample month'), named(col('Exceptions', 'detail'), 'What was found'), named(col('Exceptions', 'source_url'), 'Check at source')],
     '', 'The records that broke the chosen rule, newest first, with a link to each one at its source, and the true total stated in the title.',
-    { sort: [{ field: colExpr('Exceptions', 'month_label'), direction: 'Descending' }] }), 'Exceptions Text'), [560, 170, 900, 170]),
+    { sort: [{ field: colExpr('Exceptions', 'month_label'), direction: 'Descending' }] }), 'Exceptions Text'), [110, 500, 170, 860, 170]),
   footer(P4),
 ] };
 

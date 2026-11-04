@@ -1,0 +1,3502 @@
+[
+    {
+        "where_label":  "BRADLEY BROOK AT HOUGH BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-1135/sample/5416925/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-8291",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-8291/sample/5416899/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5416750/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c10",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5416751/observation/0092",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5416751/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5416751/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5416816/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5416889/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5416890/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5416891/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c6",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5416891/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5416891/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5416893/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5416893/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5416894/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5416894/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5416895/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00038",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5416895/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5416895/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5417095/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00032",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5417096/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5417096/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00034",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5417097/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5417097/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000026",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c10",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000026/sample/5416815/observation/0172",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000026",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000026/sample/5416815/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000026",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c6",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000026/sample/5416944/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000026",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000026/sample/5416944/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000026",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c10",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000026/sample/5416945/observation/0172",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000026",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000026/sample/5416945/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000026",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000026/sample/5417163/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417039/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417039/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417039/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417040/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417040/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417041/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417041/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417042/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417042/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417042/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417043/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417043/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417043/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417044/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417044/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417044/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417462/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417462/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417462/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417463/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417463/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417463/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417464/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417464/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417464/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417465/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417465/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417465/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC LAKE SAMPLES SOUTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000032/sample/5417288/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLES SOUTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Present",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000034/sample/5416617/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SPT FOR MISCELLANEOUS RIVER SAMPLES (DOES NOT INCLUDE CONTAMINATED SW) IN MERSEYSIDE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.2",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000064/sample/5417093/observation/0116",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SPT FOR MISCELLANEOUS RIVER SAMPLES (DOES NOT INCLUDE CONTAMINATED SW) IN MERSEYSIDE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.196",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000064/sample/5417093/observation/0117",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SPT FOR MISCELLANEOUS RIVER SAMPLES (DOES NOT INCLUDE CONTAMINATED SW) IN MERSEYSIDE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00064",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000064/sample/5417093/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SPT FOR MISCELLANEOUS RIVER SAMPLES (DOES NOT INCLUDE CONTAMINATED SW) IN MERSEYSIDE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000064/sample/5417094/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SPT FOR MISCELLANEOUS RIVER SAMPLES (DOES NOT INCLUDE CONTAMINATED SW) IN CHESHIRE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c50",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000073/sample/5416752/observation/0116",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SPT FOR MISCELLANEOUS RIVER SAMPLES (DOES NOT INCLUDE CONTAMINATED SW) IN CHESHIRE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c45",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000073/sample/5416752/observation/0117",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SPT FOR MISCELLANEOUS RIVER SAMPLES (DOES NOT INCLUDE CONTAMINATED SW) IN CHESHIRE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000073/sample/5416752/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SPT FOR MISCELLANEOUS RIVER SAMPLES (DOES NOT INCLUDE CONTAMINATED SW) IN CHESHIRE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c10",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000073/sample/5416753/observation/0116",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SPT FOR MISCELLANEOUS RIVER SAMPLES (DOES NOT INCLUDE CONTAMINATED SW) IN CHESHIRE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c9",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000073/sample/5416753/observation/0117",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SPT FOR MISCELLANEOUS RIVER SAMPLES (DOES NOT INCLUDE CONTAMINATED SW) IN CHESHIRE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c1",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000073/sample/5416753/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SPT FOR MISCELLANEOUS RIVER SAMPLES (DOES NOT INCLUDE CONTAMINATED SW) IN CHESHIRE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c1",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000073/sample/5416754/observation/0116",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SPT FOR MISCELLANEOUS RIVER SAMPLES (DOES NOT INCLUDE CONTAMINATED SW) IN CHESHIRE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.9",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000073/sample/5416754/observation/0117",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SPT FOR MISCELLANEOUS RIVER SAMPLES (DOES NOT INCLUDE CONTAMINATED SW) IN CHESHIRE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.1",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000073/sample/5416754/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000434",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: No flow/discharge at sampling point",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000434/sample/5416769/observation/7668",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000559",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: No flow/discharge at sampling point",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000559/sample/5416898/observation/7668",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000560",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: No flow/discharge at sampling point",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000560/sample/5416913/observation/7668",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUCKOW AT SHAVINGTON PARK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: No flow/discharge at sampling point",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000636/sample/5416631/observation/7668",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUCKOW ABOVE CONFLUENCE WITH RIVER WEAVER",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c1",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000637/sample/5416630/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUCKOW ABOVE CONFLUENCE WITH RIVER WEAVER",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00071",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000637/sample/5416630/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WISTASTON BROOK U/S VALLEY BROOK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c1",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000696/sample/5416960/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER WEAVER AT HUNTS LOCK NORTHWICH",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000737/sample/5416768/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "FOWLE BROOK ABOVE CONFLUENCE WITH RIVER WHEELOCK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003e2.5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000787/sample/5416533/observation/0114",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "FOWLE BROOK ABOVE CONFLUENCE WITH RIVER WHEELOCK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.2",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000787/sample/5416533/observation/0116",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "FOWLE BROOK ABOVE CONFLUENCE WITH RIVER WHEELOCK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.196",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000787/sample/5416533/observation/0117",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "FOWLE BROOK ABOVE CONFLUENCE WITH RIVER WHEELOCK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003e2.5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000787/sample/5416657/observation/0114",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "FOWLE BROOK ABOVE CONFLUENCE WITH RIVER WHEELOCK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.2",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000787/sample/5416657/observation/0116",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "FOWLE BROOK ABOVE CONFLUENCE WITH RIVER WHEELOCK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.196",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000787/sample/5416657/observation/0117",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER WHEELOCK ABOVE CONFLUENCE WITH RIVER DANE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000812/sample/5417331/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DANE AT DANE BRIDGE NORTHWICH",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000822/sample/5416772/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DANE AT DANE BRIDGE NORTHWICH",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00039",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000822/sample/5416772/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "PEOVER EYE AT A556 ROAD BRIDGE ABOVE CONFLUENCE WITH SMOKER BROOK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000835/sample/5416911/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "CROWTON BROOK NEAR MILL",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c1",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000873/sample/5416771/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "CLIFF BROOK ABOVE CONFLUENCE WITH WEAVER AT ICI PUMP INTAKE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.0004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000875/sample/5416770/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "TRENT AND MERSEY CANAL AT CROWS NEST BRIDGE STUD GREEN",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000944/sample/5416635/observation/0103",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88001295",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001295/sample/5416562/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88001369",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: No flow/discharge at sampling point",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001369/sample/5417103/observation/7668",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER ETHEROW AT RAILWAY VIADUCT AT BROADBOTTOM",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001841/sample/5417102/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER GOYT U/S RANDALL CARR BROOK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.002",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001850/sample/5416709/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER GOYT U/S RANDALL CARR BROOK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.002",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001850/sample/5416709/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER GOYT U/S RANDALL CARR BROOK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00001",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001850/sample/5416709/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER GOYT AT MARPLE BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00079",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001910/sample/5416708/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "CHEW BROOK AT STABLE BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.002",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001946/sample/5417533/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "CHEW BROOK ABOVE CONFLUENCE WITH RIVER TAME",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.002",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001948/sample/5416512/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "CHEW BROOK ABOVE CONFLUENCE WITH RIVER TAME",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.002",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001948/sample/5417532/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER TAME AT ROYAL GEORGE PUMPING STATION",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00018",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001951/sample/5416511/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER TAME D/S OF MOSSLEY E.T.W",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001961/sample/5417108/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SWINESHAW BROOK U/S OF THE RIVER TAME",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001962/sample/5417109/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SWINESHAW BROOK U/S OF THE RIVER TAME",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00052",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001962/sample/5417109/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER TAME BELOW DUKINFIELD BRIDGE AT WHITELANDS",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001972/sample/5417107/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER TAME AT PORTWOOD",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002001/sample/5416857/observation/0103",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER TAME AT PORTWOOD",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002001/sample/5416857/observation/3409",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER TAME AT PORTWOOD",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c100",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002001/sample/5416857/observation/9447",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER IRWELL AT EWOOD BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00071",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002094/sample/5416634/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER IRWELL AT EWOOD BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.0003",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002094/sample/5417486/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "PIETHORN BROOK U/S OGDEN RESERVOIR",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.1",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002172/sample/5416510/observation/0052",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "EAGLEY BROOK ABOVE CONFLUENCE WITH ASTLEY BROOK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00034",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002263/sample/5416581/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRADSHAW BROOK ABOVE CONFLUENCE WITH RIVER TONGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00068",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002279/sample/5416580/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRADSHAW BROOK ABOVE CONFLUENCE WITH RIVER TONGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00021",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002279/sample/5417487/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "UNITY BROOK AT A666 ROADBRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002330/sample/5417145/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "UNITY BROOK AT A666 ROADBRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00024",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002330/sample/5417145/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER MEDLOCK AT PINMILL BROW",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002413/sample/5417435/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "HALL LEE BROOK ABOVE CONFLUENCE WITH MARSH BROOK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002461/sample/5417229/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER GLAZE AT LITTLE WOOLDEN HALL",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002509/sample/5416775/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER GLAZE ABOVE CONFLUENCE WITH MANCHESTER SHIP CANAL",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002513/sample/5416633/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER GLAZE ABOVE CONFLUENCE WITH MANCHESTER SHIP CANAL",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00045",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002513/sample/5416633/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "TIMPERLEY BROOK NEAR OLDHOUSE FARM",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002514/sample/5417434/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MOBBERLEY BROOK D/S MOBBERLEY ETW",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c1",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002588/sample/5416656/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BIRKIN BROOK ABOVE CONFLUENCE WITH RIVER BOLLIN",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.0004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002600/sample/5416632/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER BOLLIN WARBURTON BRIDGE HEATLEY",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002605/sample/5416773/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER MERSEY AT WOOLSTON WEIR AT SLUICES",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002631/sample/5416628/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RAINFORD BROOK AT PARK ROAD WEIR ST HELENS",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002670/sample/5417225/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SANKEY BROOK BOARDMANS LANE ST HELENS",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002672/sample/5417201/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SANKEY BROOK AT WOOD HOUSE FARM BRIDGE DOWNSTREAM OF ST HELENS ETW",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c6",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002678/sample/5417200/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MERSEY ESTUARY AT STANLOW POINT HELICOPTER POINT 12",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Sample sent to sub contract lab",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002769/sample/5416968/observation/4574",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MERSEY ESTUARY AT MOUNT MANISTY HELICOPTER POINT 11",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Sample sent to sub contract lab",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002770/sample/5416967/observation/4574",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MANCHESTER SHIP CANAL   RUNCORN   DOCKS(NO635) 12 MILES ABOVE EASTHAM",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002782/sample/5417214/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88003029",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: No flow/discharge at sampling point",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003029/sample/5416637/observation/7668",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88003393",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003393/sample/5417168/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88003393",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003393/sample/5417168/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER RIBBLE AT HORTON IN RIBBLESDALE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003412/sample/5416494/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER RIBBLE AT CLEATOP BARNS",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00063",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003416/sample/5416916/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88003725",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c6",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003725/sample/5416665/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER CALDER AT OAKENCLOUGH BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003834/sample/5416601/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER CALDER PTC RIVER WYRE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00055",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003838/sample/5416714/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WYRE ESTUARY AT SHARD BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Sample sent to sub contract lab",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003886/sample/5416790/observation/4574",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WYRE AT POWER STATION",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Sample sent to sub contract lab",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003930/sample/5416788/observation/4574",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RAIS BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003944/sample/5417197/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RAIS BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003944/sample/5417197/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRETHERDALE BECK PTC BIRKBECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003952/sample/5416499/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRETHERDALE BECK PTC BIRKBECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003952/sample/5416624/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRETHERDALE BECK PTC BIRKBECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003952/sample/5416624/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRETHERDALE BECK PTC BIRKBECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003952/sample/5417004/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRETHERDALE BECK PTC BIRKBECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003952/sample/5417196/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRETHERDALE BECK PTC BIRKBECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003952/sample/5417196/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER LUNE AT KILLINGTON BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.002",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003957/sample/5417429/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER LUNE AT KILLINGTON BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.002",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003957/sample/5417429/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER LUNE AT KILLINGTON BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00001",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003957/sample/5417429/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER RAWTHEY AT RAWTHEY BR BLUECASTER",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c4",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003958/sample/5417426/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER RAWTHEY AT RAWTHEY BR BLUECASTER",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.002",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003958/sample/5417426/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER RAWTHEY PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.002",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003969/sample/5417427/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER RAWTHEY PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.002",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003969/sample/5417427/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER RAWTHEY PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00001",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003969/sample/5417427/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00001",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5416498/observation/0114",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5416498/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5416498/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5416623/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5416623/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5416623/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5417003/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5417003/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5417195/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5417195/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5417195/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER LUNE AT RIGMADEN",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.002",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003972/sample/5417428/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER LUNE AT RIGMADEN",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00001",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003972/sample/5417428/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER LUNE AT RIGMADEN",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.002",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003972/sample/5417428/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5416497/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5416497/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5416497/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5416622/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5416622/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5416622/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5417002/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5417002/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5417002/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5417194/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5417194/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5417194/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LECK BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003978/sample/5416496/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LECK BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003978/sample/5416496/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LECK BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003978/sample/5416621/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LECK BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003978/sample/5416621/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LECK BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003978/sample/5417001/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LECK BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003978/sample/5417193/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LECK BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003978/sample/5417193/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER LUNE AT FORGE BANK WEIRKEY POINT ON LUNE FROM 01/01/1981 IS 017287475",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00034",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004023/sample/5417018/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88004266",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: No flow/discharge at sampling point",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004266/sample/5416583/observation/7668",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88004287",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003e53",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004287/sample/5416640/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88004346",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: No flow/discharge at sampling point",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004346/sample/5416997/observation/7668",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88004349",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: No flow/discharge at sampling point",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004349/sample/5416990/observation/7668",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88004357",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: Not found",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004357/sample/5416986/observation/0664",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88004358",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: No flow/discharge at sampling point",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004358/sample/5416987/observation/7668",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER GOWAN PTC RIVER KENT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.002",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004369/sample/5417344/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER SPRINT PTC RIVER KENT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004374/sample/5416564/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER SPRINT PTC RIVER KENT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004374/sample/5416564/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER SPRINT PTC RIVER KENT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004374/sample/5416564/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER SPRINT PTC RIVER KENT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004374/sample/5416626/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER SPRINT PTC RIVER KENT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004374/sample/5416626/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER SPRINT PTC RIVER KENT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004374/sample/5417057/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER SPRINT PTC RIVER KENT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004374/sample/5417057/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER SPRINT PTC RIVER KENT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004374/sample/5417057/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RYDAL BECK PTC RIVER ROTHAY",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00065",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004513/sample/5416556/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RYDAL BECK PTC RIVER ROTHAY",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004513/sample/5416556/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER ROTHAY D/S OF AMBLESIDE STW, U/S OF RIVER BRATHAY",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00013",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004520/sample/5416716/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER ROTHAY D/S OF AMBLESIDE STW, U/S OF RIVER BRATHAY",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004520/sample/5416716/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER ROTHAY D/S OF AMBLESIDE STW, U/S OF RIVER BRATHAY",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004520/sample/5416716/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "GREAT LANGDALE BECK AT ELTERWATER",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00003",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004526/sample/5416641/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "GREAT LANGDALE BECK AT ELTERWATER",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c8",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004526/sample/5416641/observation/0162",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "GREAT LANGDALE BECK AT ELTERWATER",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004526/sample/5416641/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRATHAY AT COLWITH ROAD BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00008",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004529/sample/5416642/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRATHAY AT COLWITH ROAD BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004529/sample/5416642/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRATHAY AT COLWITH ROAD BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004529/sample/5416642/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER BRATHAY AT CLAPPERSGATE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00023",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004530/sample/5416584/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER BRATHAY AT CLAPPERSGATE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004530/sample/5416584/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER BRATHAY AT CLAPPERSGATE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00011",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004530/sample/5417347/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER BRATHAY AT CLAPPERSGATE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004530/sample/5417347/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER BRATHAY AT CLAPPERSGATE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004530/sample/5417347/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "TROUT BECK AT WINDERMERE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00065",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004537/sample/5416519/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "TROUT BECK AT WINDERMERE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004537/sample/5416519/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WINDERMERE AT COATLAP POINT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.0003",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004541/sample/5416516/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WINDERMERE AT COATLAP POINT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004541/sample/5416516/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WINDERMERE AT COATLAP POINT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c10",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004541/sample/5416516/observation/2348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WINDERMERE AT COATLAP POINT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c10",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004541/sample/5416516/observation/3722",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WINDERMERE AT COATLAP POINT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c10",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004541/sample/5416516/observation/3723",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WILFIN BECK AT HIGH CUNSEY",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00027",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004544/sample/5416552/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WILFIN BECK AT HIGH CUNSEY",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004544/sample/5416552/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MILL BECK AT A592(STEAM BOAT MUSEUM)",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00071",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004545/sample/5416518/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BLACK BECK AT B5285",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00007",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004549/sample/5416732/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "CUNSEY BECK PTC WINDERMERE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00043",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004552/sample/5417202/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "CUNSEY BECK PTC WINDERMERE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004552/sample/5417202/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER LEVEN AT NEWBY BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00044",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004560/sample/5416582/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER LEVEN AT NEWBY BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004560/sample/5416582/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "CHURCH BECK AS ENTERING CONISTON WATER",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c30",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004582/sample/5416639/observation/6460",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER CRAKE AT WATER YEAT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00015",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004590/sample/5416658/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER CRAKE AT WATER YEAT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004590/sample/5416658/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER CRAKE AT WATER YEAT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c1",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004590/sample/5416658/observation/6396",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUDDON DOWNSTREAM OF TARN BECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00001",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004949/sample/5416585/observation/0113",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUDDON DOWNSTREAM OF TARN BECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004949/sample/5416585/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUDDON DOWNSTREAM OF TARN BECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004949/sample/5416585/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUDDON DOWNSTREAM OF TARN BECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004949/sample/5416585/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUDDON DOWNSTREAM OF TARN BECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004949/sample/5416643/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUDDON DOWNSTREAM OF TARN BECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004949/sample/5416643/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUDDON DOWNSTREAM OF TARN BECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004949/sample/5416643/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUDDON DOWNSTREAM OF TARN BECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004949/sample/5416961/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUDDON DOWNSTREAM OF TARN BECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004949/sample/5416961/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUDDON DOWNSTREAM OF TARN BECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004949/sample/5416961/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER ESK AT CROPPLE HOW GAUGING STATIONS",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00002",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005046/sample/5416962/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER ESK AT CROPPLE HOW GAUGING STATIONS",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c8",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005046/sample/5416962/observation/0162",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER ESK AT CROPPLE HOW GAUGING STATIONS",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005046/sample/5416962/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER ESK AT CROPPLE HOW GAUGING STATIONS",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c1",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005046/sample/5416962/observation/6396",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER CALDER AT CALDER BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00002",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005120/sample/5417439/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER CALDER AT CALDER BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c1",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005120/sample/5417439/observation/6396",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WORM GILL NEAR SHEEPFOLD",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00013",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005121/sample/5416594/observation/0119",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WORM GILL NEAR SHEEPFOLD",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005121/sample/5416594/observation/0180",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WORM GILL NEAR SHEEPFOLD",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.02",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005121/sample/5416594/observation/0192",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WORM GILL NEAR SHEEPFOLD",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.01",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005121/sample/5416594/observation/0348",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WORM GILL NEAR SHEEPFOLD",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c1",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005121/sample/5416594/observation/6396",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WORM GILL NEAR SHEEPFOLD",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.5",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005121/sample/5416594/observation/7887",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WORM GILL NEAR SHEEPFOLD",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.00001",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005121/sample/5416725/observation/0113",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-8291",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-8291/sample/5416899/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-8291",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-8291/sample/5416899/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5416751/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5416891/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5417096/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5417097/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417040/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88000027",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000027/sample/5417041/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "KIDSGROVE STREAM AT MALKINS BANK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000795/sample/5417332/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SNAPE BROOK PTC BAG BROOK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000825/sample/5417020/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "CLIFF BROOK ABOVE CONFLUENCE WITH WEAVER AT ICI PUMP INTAKE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000875/sample/5416770/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "Discharges and sites point NW-88001517",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001517/sample/5416686/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER ETHEROW AT COMPSTALL ABOVE CONFLUENCE WITH RIVER GOYT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001847/sample/5416705/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER GOYT ABOVE CONFLUENCE WITH RIVER SETT AT NEW MILLS",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001890/sample/5417131/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER GOYT ABOVE CONFLUENCE WITH RIVER SETT AT NEW MILLS",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001890/sample/5417131/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER GOYT AT MARPLE BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001910/sample/5416708/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "POISE BROOK ABOVE CONFLUENCE WITH RIVER GOYT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001918/sample/5416858/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER GOYT ABOVE CONFLUENCE WITH RIVER TAME",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001923/sample/5416854/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER TAME AT ROYAL GEORGE PUMPING STATION",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001951/sample/5416511/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER TAME D/S OF MOSSLEY E.T.W",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001961/sample/5417108/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER TAME BELOW DUKINFIELD BRIDGE AT WHITELANDS",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001972/sample/5417107/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER ROCH AT BLACKFORD BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002241/sample/5416856/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER ROCH AT BLACKFORD BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002241/sample/5416856/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BIRKIN BROOK ABOVE CONFLUENCE WITH RIVER BOLLIN",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002600/sample/5416632/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER WYRE PTC RIVER BROCK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003840/sample/5416575/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER BROCK AT A6 ROAD  BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003843/sample/5416574/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RAIS BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003944/sample/5417197/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRETHERDALE BECK PTC BIRKBECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003952/sample/5416499/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRETHERDALE BECK PTC BIRKBECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003952/sample/5416624/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRETHERDALE BECK PTC BIRKBECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003952/sample/5417196/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER LUNE AT KILLINGTON BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003957/sample/5417429/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER RAWTHEY PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003969/sample/5417427/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5416498/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5416623/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5417195/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER LUNE AT RIGMADEN",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003972/sample/5417428/observation/0085",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5416497/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5416622/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5417002/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5417194/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LECK BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003978/sample/5416496/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LECK BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003978/sample/5416621/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LECK BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003978/sample/5417001/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LECK BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003978/sample/5417193/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "CANT BECK PTC RIVER GRETA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003985/sample/5416620/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "CANT BECK PTC RIVER GRETA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003985/sample/5417192/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER SPRINT PTC RIVER KENT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004374/sample/5416564/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER SPRINT PTC RIVER KENT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004374/sample/5416626/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER SPRINT PTC RIVER KENT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004374/sample/5417057/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RYDAL BECK PTC RIVER ROTHAY",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004513/sample/5416556/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER ROTHAY D/S OF AMBLESIDE STW, U/S OF RIVER BRATHAY",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004520/sample/5416716/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "GREAT LANGDALE BECK AT ELTERWATER",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004526/sample/5416641/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRATHAY AT COLWITH ROAD BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004529/sample/5416642/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER BRATHAY AT CLAPPERSGATE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004530/sample/5416584/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER BRATHAY AT CLAPPERSGATE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004530/sample/5417347/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "TROUT BECK AT WINDERMERE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004537/sample/5416519/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WINDERMERE AT COATLAP POINT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004541/sample/5416516/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BLACK BECK AT B5285",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004549/sample/5416732/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "CUNSEY BECK PTC WINDERMERE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004552/sample/5417202/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER LEVEN AT NEWBY BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004560/sample/5416582/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER CRAKE AT WATER YEAT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004590/sample/5416658/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUDDON DOWNSTREAM OF TARN BECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004949/sample/5416585/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUDDON DOWNSTREAM OF TARN BECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004949/sample/5416643/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUDDON DOWNSTREAM OF TARN BECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004949/sample/5416961/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER ESK AT CROPPLE HOW GAUGING STATIONS",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005046/sample/5416962/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WORM GILL NEAR SHEEPFOLD",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c3",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005121/sample/5416594/observation/0135",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SPT FOR MISCELLANEOUS RIVER SAMPLES (DOES NOT INCLUDE CONTAMINATED SW) IN MERSEYSIDE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000064/sample/5417093/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BICKLEY BROOK NEAR BICKLEY HALL FARM",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000627/sample/5417011/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "FOWLE BROOK ABOVE CONFLUENCE WITH RIVER WHEELOCK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000787/sample/5416533/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "FOWLE BROOK ABOVE CONFLUENCE WITH RIVER WHEELOCK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000787/sample/5416657/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SWINESHAW BROOK U/S OF THE RIVER TAME",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001962/sample/5417109/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER IRWELL AT EWOOD BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002094/sample/5416634/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER IRWELL AT EWOOD BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002094/sample/5417486/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "KIRKLEES BROOK D/S OF SSO",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002133/sample/5417106/observation/6485",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "EAGLEY BROOK UPSTREAM OF BELMONT ETW",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002254/sample/5417233/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "EAGLEY BROOK ABOVE CONFLUENCE WITH ASTLEY BROOK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002263/sample/5416581/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRADSHAW BROOK ABOVE CONFLUENCE WITH RIVER TONGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002279/sample/5416580/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRADSHAW BROOK ABOVE CONFLUENCE WITH RIVER TONGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002279/sample/5417487/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "UNITY BROOK AT A666 ROADBRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002330/sample/5417145/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER RIBBLE AT HORTON IN RIBBLESDALE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003412/sample/5416494/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER RIBBLE AT HORTON IN RIBBLESDALE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003412/sample/5416904/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER RIBBLE AT CLEATOP BARNS",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003416/sample/5416916/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RATHMELL BROOK AT RATHMELL ROAD BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003417/sample/5416493/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RATHMELL BROOK AT RATHMELL ROAD BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003417/sample/5416903/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WIGGLESWORTH BECK NEAR RIVER RIBBLE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003418/sample/5416492/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WIGGLESWORTH BECK NEAR RIVER RIBBLE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003418/sample/5416902/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRENNAND RIVER PTC RIVER DUNSOP",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003449/sample/5416490/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRENNAND RIVER PTC RIVER DUNSOP",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003449/sample/5416900/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LANGDEN BROOK PTC RIVER HODDER",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003452/sample/5416491/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LANGDEN BROOK PTC RIVER HODDER",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003452/sample/5416901/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER CALDER AT OAKENCLOUGH BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003834/sample/5416601/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER CALDER AT OAKENCLOUGH BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003834/sample/5416926/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER CALDER PTC RIVER WYRE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003838/sample/5416714/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER BROCK AT A6 ROAD  BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003843/sample/5416574/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER BROCK AT A6 ROAD  BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003843/sample/5417008/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RAIS BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003944/sample/5417197/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRETHERDALE BECK PTC BIRKBECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003952/sample/5416499/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRETHERDALE BECK PTC BIRKBECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003952/sample/5416624/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRETHERDALE BECK PTC BIRKBECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003952/sample/5417004/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRETHERDALE BECK PTC BIRKBECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003952/sample/5417196/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5416498/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5416623/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5417003/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5417195/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5416497/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5416622/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5417002/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5417194/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LECK BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003978/sample/5416496/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LECK BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003978/sample/5416621/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LECK BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003978/sample/5417001/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LECK BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003978/sample/5417193/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER LUNE AT FORGE BANK WEIRKEY POINT ON LUNE FROM 01/01/1981 IS 017287475",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004023/sample/5417018/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER SPRINT PTC RIVER KENT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004374/sample/5416564/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER SPRINT PTC RIVER KENT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004374/sample/5416626/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER SPRINT PTC RIVER KENT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004374/sample/5417057/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RYDAL BECK PTC RIVER ROTHAY",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004513/sample/5416556/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER ROTHAY D/S OF AMBLESIDE STW, U/S OF RIVER BRATHAY",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004520/sample/5416716/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "GREAT LANGDALE BECK AT ELTERWATER",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004526/sample/5416641/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRATHAY AT COLWITH ROAD BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004529/sample/5416642/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER BRATHAY AT CLAPPERSGATE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004530/sample/5416584/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER BRATHAY AT CLAPPERSGATE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004530/sample/5417347/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "TROUT BECK AT WINDERMERE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004537/sample/5416519/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WINDERMERE AT COATLAP POINT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004541/sample/5416516/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WILFIN BECK AT HIGH CUNSEY",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004544/sample/5416552/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MILL BECK AT A592(STEAM BOAT MUSEUM)",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004545/sample/5416518/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BLACK BECK AT B5285",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004549/sample/5416732/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "CUNSEY BECK PTC WINDERMERE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004552/sample/5417202/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER LEVEN AT NEWBY BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004560/sample/5416582/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER CRAKE AT WATER YEAT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004590/sample/5416658/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUDDON DOWNSTREAM OF TARN BECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004949/sample/5416585/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUDDON DOWNSTREAM OF TARN BECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004949/sample/5416643/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUDDON DOWNSTREAM OF TARN BECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004949/sample/5416961/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER ESK AT CROPPLE HOW GAUGING STATIONS",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005046/sample/5416962/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER CALDER AT CALDER BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005120/sample/5417439/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WORM GILL NEAR SHEEPFOLD",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.004",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005121/sample/5416594/observation/0118",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5416895/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5417096/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MISC RIVER SAMPLE NORTH CUMBRIA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000024/sample/5417097/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SPT FOR MISCELLANEOUS RIVER SAMPLES (DOES NOT INCLUDE CONTAMINATED SW) IN MERSEYSIDE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000064/sample/5417093/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BICKLEY BROOK NEAR BICKLEY HALL FARM",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000627/sample/5416577/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BICKLEY BROOK NEAR BICKLEY HALL FARM",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000627/sample/5416914/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BICKLEY BROOK NEAR BICKLEY HALL FARM",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000627/sample/5417011/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SALES BROOK AT SALESBROOK LANE (FORMERLY SAMPLED NEAR BRIDGE FARM @ NGR SJ62176 44375)",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000633/sample/5416597/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUCKOW ABOVE CONFLUENCE WITH RIVER WEAVER",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000637/sample/5416630/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "FOWLE BROOK ABOVE CONFLUENCE WITH RIVER WHEELOCK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000787/sample/5416533/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "FOWLE BROOK ABOVE CONFLUENCE WITH RIVER WHEELOCK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000787/sample/5416657/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DANE AT DANE BRIDGE NORTHWICH",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000822/sample/5416772/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "CLIFF BROOK ABOVE CONFLUENCE WITH WEAVER AT ICI PUMP INTAKE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88000875/sample/5416770/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER GOYT ABOVE CONFLUENCE WITH RIVER SETT AT NEW MILLS",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001890/sample/5417131/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER GOYT AT MARPLE BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001910/sample/5416708/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER TAME AT ROYAL GEORGE PUMPING STATION",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001951/sample/5416511/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SWINESHAW BROOK U/S OF THE RIVER TAME",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88001962/sample/5417109/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER IRWELL AT EWOOD BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002094/sample/5416634/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER IRWELL AT EWOOD BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002094/sample/5417486/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "KIRKLEES BROOK D/S OF SSO",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002133/sample/5417106/observation/9993",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "KIRKLEES BROOK D/S OF SSO",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002133/sample/5417489/observation/9993",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "EAGLEY BROOK ABOVE CONFLUENCE WITH ASTLEY BROOK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002263/sample/5416581/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRADSHAW BROOK ABOVE CONFLUENCE WITH RIVER TONGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002279/sample/5416580/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRADSHAW BROOK ABOVE CONFLUENCE WITH RIVER TONGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002279/sample/5417487/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "UNITY BROOK AT A666 ROADBRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002330/sample/5417145/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER GLAZE ABOVE CONFLUENCE WITH MANCHESTER SHIP CANAL",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002513/sample/5416633/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BIRKIN BROOK ABOVE CONFLUENCE WITH RIVER BOLLIN",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88002600/sample/5416632/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER RIBBLE AT HORTON IN RIBBLESDALE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003412/sample/5416494/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER RIBBLE AT HORTON IN RIBBLESDALE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003412/sample/5416904/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER RIBBLE AT CLEATOP BARNS",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003416/sample/5416916/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RATHMELL BROOK AT RATHMELL ROAD BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003417/sample/5416493/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WIGGLESWORTH BECK NEAR RIVER RIBBLE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003418/sample/5416492/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRENNAND RIVER PTC RIVER DUNSOP",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003449/sample/5416490/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRENNAND RIVER PTC RIVER DUNSOP",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003449/sample/5416900/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LANGDEN BROOK PTC RIVER HODDER",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003452/sample/5416901/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER CALDER AT OAKENCLOUGH BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003834/sample/5416601/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER CALDER AT OAKENCLOUGH BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003834/sample/5416926/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER CALDER PTC RIVER WYRE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003838/sample/5416714/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER WYRE PTC RIVER BROCK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003840/sample/5417009/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER BROCK AT A6 ROAD  BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003843/sample/5416574/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER BROCK AT A6 ROAD  BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003843/sample/5417008/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RAIS BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003944/sample/5417197/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRETHERDALE BECK PTC BIRKBECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003952/sample/5416499/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRETHERDALE BECK PTC BIRKBECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003952/sample/5416624/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRETHERDALE BECK PTC BIRKBECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003952/sample/5417004/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRETHERDALE BECK PTC BIRKBECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003952/sample/5417196/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5416498/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5416623/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5417003/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LUGE GILL PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003971/sample/5417195/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5416497/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5416622/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5417002/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BARBON BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003973/sample/5417194/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LECK BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003978/sample/5416496/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LECK BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003978/sample/5416621/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LECK BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003978/sample/5417001/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LECK BECK PTC RIVER LUNE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003978/sample/5417193/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "CANT BECK PTC RIVER GRETA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003985/sample/5416495/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "CANT BECK PTC RIVER GRETA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003985/sample/5416620/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "CANT BECK PTC RIVER GRETA",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003985/sample/5417192/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER LUNE AT FORGE BANK WEIRKEY POINT ON LUNE FROM 01/01/1981 IS 017287475",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004023/sample/5417018/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER SPRINT PTC RIVER KENT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004374/sample/5416564/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER SPRINT PTC RIVER KENT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004374/sample/5416626/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER SPRINT PTC RIVER KENT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004374/sample/5417057/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RYDAL BECK PTC RIVER ROTHAY",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004513/sample/5416556/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER ROTHAY D/S OF AMBLESIDE STW, U/S OF RIVER BRATHAY",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004520/sample/5416716/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "GREAT LANGDALE BECK AT ELTERWATER",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004526/sample/5416641/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BRATHAY AT COLWITH ROAD BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004529/sample/5416642/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER BRATHAY AT CLAPPERSGATE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004530/sample/5416584/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER BRATHAY AT CLAPPERSGATE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004530/sample/5417347/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "TROUT BECK AT WINDERMERE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004537/sample/5416519/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WINDERMERE AT COATLAP POINT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004541/sample/5416516/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WILFIN BECK AT HIGH CUNSEY",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004544/sample/5416552/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "MILL BECK AT A592(STEAM BOAT MUSEUM)",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004545/sample/5416518/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "BLACK BECK AT B5285",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004549/sample/5416732/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "CUNSEY BECK PTC WINDERMERE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004552/sample/5417202/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER LEVEN AT NEWBY BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004560/sample/5416582/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER CRAKE AT WATER YEAT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004590/sample/5416658/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUDDON DOWNSTREAM OF TARN BECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004949/sample/5416585/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUDDON DOWNSTREAM OF TARN BECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004949/sample/5416643/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER DUDDON DOWNSTREAM OF TARN BECK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004949/sample/5416961/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER ESK AT CROPPLE HOW GAUGING STATIONS",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005046/sample/5416962/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER CALDER AT CALDER BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005120/sample/5417439/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WORM GILL NEAR SHEEPFOLD",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005121/sample/5416594/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WORM GILL NEAR SHEEPFOLD",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: \u003c0.03",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88005121/sample/5416725/observation/0111",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "TARRA CARR GUTTER AT HALL CARR LANE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: DNA Stored",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003076/sample/5416859/observation/4926",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SAVICK BROOK PTC EAVES BROOK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: DNA Stored",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003571/sample/5417227/observation/4926",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SHAROE BROOK PTC SAVICK BROOK",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: DNA Stored",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003574/sample/5416596/observation/4926",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "LORDS BROOK PTC RIVER WYRE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: DNA Stored",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003876/sample/5416713/observation/4926",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "THISTLETON BROOK AT WALLPOOL BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: DNA Stored",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88003881/sample/5416731/observation/4926",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "SWARTH BECK PTC RIVER KEER",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: DNA Stored",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004480/sample/5416862/observation/4926",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "RIVER KEER AT A6 ROAD BRIDGE",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: DNA Stored",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004481/sample/5416861/observation/4926",
+        "Exception Rule":  "VAL-07"
+    },
+    {
+        "where_label":  "WINDERMERE AT COATLAP POINT",
+        "month_label":  "2026-10",
+        "detail":  "Result reads: DNA Stored",
+        "source_url":  "https://environment.data.gov.uk/water-quality/sampling-point/NW-88004541/sample/5416516/observation/4926",
+        "Exception Rule":  "VAL-07"
+    }
+]

@@ -1,1 +1,10 @@
-[{"Source Rows": 561028, "Arrived Rows": 561028, "Checked Rows": 561028, "Summarised Rows": 561028, "Lineage Lost Rows": 0, "Totals Agree": 1}]
+[
+    {
+        "Source Rows":  561028,
+        "Arrived Rows":  561028,
+        "Checked Rows":  561028,
+        "Summarised Rows":  561028,
+        "Lineage Lost Rows":  0,
+        "Totals Agree":  1
+    }
+]

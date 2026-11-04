@@ -100,7 +100,7 @@ CALCULATE ( COUNTROWS ( Rules ), REMOVEFILTERS ( Rules ), Rules[status] = "Fail"
 
 MEASURE 'Report Measures'[Rules Review] =
 -- folder: Latest run
--- desc: Rules that need a person to look at the last check.
+-- desc: Rules that need a person to look, after the last check.
 CALCULATE ( COUNTROWS ( Rules ), REMOVEFILTERS ( Rules ), Rules[status] = "For review" ) + 0
 
 MEASURE 'Report Measures'[Rules Not Checked] =
@@ -110,7 +110,7 @@ CALCULATE ( COUNTROWS ( Rules ), REMOVEFILTERS ( Rules ), Rules[status] = "Not c
 
 MEASURE 'Report Measures'[Rules No Data] =
 -- folder: Latest run
--- desc: Rules with nothing to check at the last check. Never counted as a pass.
+-- desc: Rules that found nothing to check at the last check. Never counted as a pass.
 CALCULATE ( COUNTROWS ( Rules ), REMOVEFILTERS ( Rules ), Rules[status] = "No data" ) + 0
 
 MEASURE 'Report Measures'[Rules Total] =
@@ -132,7 +132,7 @@ RETURN CALCULATE ( MAX ( RunLog[planted_tested] ), REMOVEFILTERS ( RunLog ), Run
 
 MEASURE 'Report Measures'[Run Seconds] =
 -- folder: Latest run
--- desc: How long at the last check's run took.
+-- desc: How long the last check took.
 VAR Latest = [Latest Run No]
 RETURN CALCULATE ( MAX ( RunLog[seconds] ), REMOVEFILTERS ( RunLog ), RunLog[RunNo] = Latest )
 
@@ -239,7 +239,7 @@ MEASURE 'Report Measures'[Selected Verdict Text] =
 -- desc: One sentence that follows the verdict, so nobody has to work it out from counts.
 VAR Failed = [Gates Failed]
 VAR Unchecked = [Gates Unchecked]
-VAR Open = [Conditions Open]
+VAR OpenCount = [Conditions Open]
 VAR Picked = [Selected Use Name]
 VAR Verdict = [Selected Verdict]
 RETURN
@@ -247,15 +247,15 @@ RETURN
         Verdict,
         "Not fit", Picked & ": not fit. " & Failed & IF ( Failed = 1, " must-pass check fails", " must-pass checks fail" ) & ", and passing the others can't outvote that.",
         "Not checked", Picked & ": not checked. " & Unchecked & IF ( Unchecked = 1, " must-pass check", " must-pass checks" ) & " couldn't be run, so nobody knows yet.",
-        "Fit with conditions", Picked & ": fit, if " & Open & IF ( Open = 1, " condition is", " conditions are" ) & " met. Every must-pass check passes.",
+        "Fit with conditions", Picked & ": fit, if " & OpenCount & IF ( OpenCount = 1, " condition is", " conditions are" ) & " met. Every must-pass check passes.",
         "Fit", Picked & ": fit. Everything it depends on passed.",
         "There's no verdict yet."
     )
 
 MEASURE 'Report Measures'[Headline] =
 -- folder: Trust
--- desc: The page's answer in one sentence, built from at the last check's verdicts. No figure is hard-coded.
-VAR Overall = FILTER ( Verdicts, Verdicts[dataset_id] = "overall" )
+-- desc: The page's answer in one sentence, built from the verdicts at the last check. No figure is hard-coded.
+VAR Overall = CALCULATETABLE ( Verdicts, REMOVEFILTERS ( Verdicts ), Verdicts[dataset_id] = "overall" )
 VAR FitList = CONCATENATEX ( FILTER ( Overall, Verdicts[verdict] = "Fit" ), Verdicts[use_phrase], " and ", Verdicts[use_order], ASC )
 VAR CondList = CONCATENATEX ( FILTER ( Overall, Verdicts[verdict] = "Fit with conditions" ), Verdicts[use_phrase], " and ", Verdicts[use_order], ASC )
 VAR NotFitList = CONCATENATEX ( FILTER ( Overall, Verdicts[verdict] = "Not fit" ), Verdicts[use_phrase], " and ", Verdicts[use_order], ASC )
@@ -426,14 +426,14 @@ MEASURE 'Report Measures'[Rule Card Text] =
 VAR Outcome = SELECTEDVALUE ( Rules[status] )
 VAR Failed = SUM ( Rules[failed] )
 VAR Checked = SUM ( Rules[eligible] )
-VAR Share = SUM ( Rules[failed_pct] )
+VAR ShareFailed = SUM ( Rules[failed_pct] )
 RETURN
     SWITCH (
         Outcome,
         "Not checked", "This rule couldn't run at the last check. " & SELECTEDVALUE ( Rules[note] ),
         "No data", "There was nothing for this rule to check.",
         BLANK (), "Pick a rule to see its result.",
-        FORMAT ( Failed, "#,0" ) & " of " & FORMAT ( Checked, "#,0" ) & " records (" & FORMAT ( Share, "0.0##" ) & "%) break this rule."
+        FORMAT ( Failed, "#,0" ) & " of " & FORMAT ( Checked, "#,0" ) & " records (" & FORMAT ( ShareFailed, IF ( ShareFailed >= 1, "0.0", "0.0##" ) ) & "%) break this rule."
     )
 
 MEASURE 'Report Measures'[Rule Threshold Text] =
@@ -442,8 +442,8 @@ MEASURE 'Report Measures'[Rule Threshold Text] =
 VAR FailAbove = SELECTEDVALUE ( Rules[fail_above] )
 VAR ReviewAbove = SELECTEDVALUE ( Rules[review_above] )
 RETURN
-    IF ( NOT ISBLANK ( FailAbove ), "Fails above " & FORMAT ( FailAbove, "0.###" ) & "%", "Never fails outright" )
-        & IF ( NOT ISBLANK ( ReviewAbove ), ". Needs review above " & FORMAT ( ReviewAbove, "0.###" ) & "%" )
+    IF ( NOT ISBLANK ( FailAbove ), "Fails above " & FailAbove & "%", "Never fails outright" )
+        & IF ( NOT ISBLANK ( ReviewAbove ), ". Needs review above " & ReviewAbove & "%" )
         & ". Illustrative."
 
 MEASURE 'Report Measures'[Rule Effect Text] =
@@ -467,12 +467,12 @@ MEASURE 'Report Measures'[Rule Test Text] =
 -- folder: Rules
 -- desc: Whether the rule caught its planted defect at the last check.
 VAR Outcome = SELECTEDVALUE ( Rules[test_outcome] )
-VAR Before = SUM ( Rules[test_failed_before] )
-VAR After = SUM ( Rules[test_failed_after] )
+VAR CountBefore = SUM ( Rules[test_failed_before] )
+VAR CountAfter = SUM ( Rules[test_failed_after] )
 RETURN
     SWITCH (
         Outcome,
-        "Caught", "Caught at the last check: its count rose from " & FORMAT ( Before, "#,0" ) & " to " & FORMAT ( After, "#,0" ) & " when its own defect was planted in a private copy.",
+        "Caught", "Caught at the last check: its count rose from " & FORMAT ( CountBefore, "#,0" ) & " to " & FORMAT ( CountAfter, "#,0" ) & " when its own defect was planted in a private copy.",
         "Missed", "Missed at the last check: this rule didn't notice its own planted defect.",
         "Proved by its own test", "This rule checks the others. A separate test proves it fails when a rule misses.",
         "Not checked", "Not tested at the last check, because the rule couldn't run.",
@@ -498,6 +498,11 @@ MEASURE 'Report Measures'[Exceptions Shown] =
 -- folder: Rules
 -- desc: Failed records listed for what is picked.
 COUNTROWS ( Exceptions ) + 0
+
+MEASURE 'Report Measures'[Exception Rule] =
+-- folder: Rules
+-- desc: The rule a listed record broke, shown on each row. It's blank for records of other rules, which keeps the list to the rule picked.
+IF ( COUNTROWS ( Exceptions ) > 0, SELECTEDVALUE ( Rules[id] ) )
 
 MEASURE 'Report Measures'[Exceptions Text] =
 -- folder: Rules
@@ -540,14 +545,14 @@ MEASURE 'Report Measures'[Watch Sign] =
 -- folder: How it works
 -- desc: Each publisher statement at the last check, with a sign and a word. A change is a prompt to look, not a fault.
 VAR Outcome = SELECTEDVALUE ( SourceWatch[status] )
-VAR Was = SELECTEDVALUE ( SourceWatch[previous_fingerprint] )
-VAR Now = SELECTEDVALUE ( SourceWatch[fingerprint] )
+VAR PrintBefore = SELECTEDVALUE ( SourceWatch[previous_fingerprint] )
+VAR PrintLatest = SELECTEDVALUE ( SourceWatch[fingerprint] )
 RETURN
     SWITCH (
         TRUE (),
         Outcome <> "ok", "– Couldn't be read",
-        Was = "", "✓ Read, first look",
-        Was <> Now, "! Changed: please look",
+        PrintBefore = "", "✓ Read, first look",
+        PrintBefore <> PrintLatest, "! Changed: please look",
         "✓ Read, unchanged"
     )
 

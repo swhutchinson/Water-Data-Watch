@@ -1,0 +1,128 @@
+[
+    {
+        "title":  "Each stream has its usual volume each month",
+        "owner_role":  "Data Owner (Results)",
+        "Reason Part":  "Condition",
+        "Reason Sign":  "✗ Fail",
+        "Reason Needed":  "Compare months only once each stream has reached its usual volume."
+    },
+    {
+        "title":  "Recent months are flagged until they are complete",
+        "owner_role":  "Data Owner (Results)",
+        "Reason Part":  "Condition",
+        "Reason Sign":  "! For review",
+        "Reason Needed":  "Mark recent months as part-complete."
+    },
+    {
+        "title":  "One value per point, time and thing measured",
+        "owner_role":  "Data Owner (Results)",
+        "Reason Part":  "Condition",
+        "Reason Sign":  "! For review",
+        "Reason Needed":  "State how repeated values are handled."
+    },
+    {
+        "title":  "Result holds a measurement, not a lab status",
+        "owner_role":  "Data Owner (Results)",
+        "Reason Part":  "Condition",
+        "Reason Sign":  "! For review",
+        "Reason Needed":  "Leave lab status rows out of calculations."
+    },
+    {
+        "title":  "Results can go straight into a calculation",
+        "owner_role":  "Data Owner (Results)",
+        "Reason Part":  "Condition",
+        "Reason Sign":  "! For review",
+        "Reason Needed":  "Count below-limit results with a stated method. Never drop them."
+    },
+    {
+        "title":  "Each name means one thing",
+        "owner_role":  "Data Owner (Results)",
+        "Reason Part":  "Condition",
+        "Reason Sign":  "✗ Fail",
+        "Reason Needed":  "Join on the code, never the name."
+    },
+    {
+        "title":  "Detection limits are stable within what was measured",
+        "owner_role":  "Data Owner (Results)",
+        "Reason Part":  "Condition",
+        "Reason Sign":  "! For review",
+        "Reason Needed":  "Keep trends to one stable limit."
+    },
+    {
+        "title":  "pH is usually between 4 and 11",
+        "owner_role":  "Data Owner (Results)",
+        "Reason Part":  "Condition",
+        "Reason Sign":  "! For review",
+        "Reason Needed":  "Review extreme values before relying on them."
+    },
+    {
+        "title":  "Water temperature is between -2 and 40 degrees",
+        "owner_role":  "Data Owner (Results)",
+        "Reason Part":  "Condition",
+        "Reason Sign":  "! For review",
+        "Reason Needed":  "Review extreme values before relying on them."
+    },
+    {
+        "title":  "No result is over 1,000 times the usual level",
+        "owner_role":  "Data Owner (Results)",
+        "Reason Part":  "Condition",
+        "Reason Sign":  "! For review",
+        "Reason Needed":  "Show a median beside any average."
+    },
+    {
+        "title":  "Above-range results are treated as ceilings",
+        "owner_role":  "Data Owner (Results)",
+        "Reason Part":  "Condition",
+        "Reason Sign":  "! For review",
+        "Reason Needed":  "Treat above-range results as minimums."
+    },
+    {
+        "title":  "Open sampling points have a result in the window",
+        "owner_role":  "Data Owner (Sampling Points)",
+        "Reason Part":  "Condition",
+        "Reason Sign":  "! For review",
+        "Reason Needed":  "Don\u0027t read \"open\" as \"currently sampled\"."
+    },
+    {
+        "title":  "Each sampling point has its own label",
+        "owner_role":  "Data Owner (Sampling Points)",
+        "Reason Part":  "Condition",
+        "Reason Sign":  "! For review",
+        "Reason Needed":  "Join on the point\u0027s code, never its label."
+    },
+    {
+        "title":  "Coordinates are inside the North West",
+        "owner_role":  "Data Owner (Sampling Points)",
+        "Reason Part":  "Condition",
+        "Reason Sign":  "✗ Fail",
+        "Reason Needed":  "Show stand-in locations separately, never on a map."
+    },
+    {
+        "title":  "Below-limit share is within what a model can handle",
+        "owner_role":  "Analytics Lead",
+        "Reason Part":  "Must pass",
+        "Reason Sign":  "✗ Fail",
+        "Reason Needed":  "Use a method built for censored targets."
+    },
+    {
+        "title":  "Samples cover the whole week",
+        "owner_role":  "Analytics Lead",
+        "Reason Part":  "Must pass",
+        "Reason Sign":  "✗ Fail",
+        "Reason Needed":  "Limit predictions to the hours the data covers."
+    },
+    {
+        "title":  "Enough repeat samples per point",
+        "owner_role":  "Analytics Lead",
+        "Reason Part":  "Must pass",
+        "Reason Sign":  "✗ Fail",
+        "Reason Needed":  "Train only on points with regular history."
+    },
+    {
+        "title":  "Clock times are real times, not defaults",
+        "owner_role":  "Analytics Lead",
+        "Reason Part":  "Must pass",
+        "Reason Sign":  "✗ Fail",
+        "Reason Needed":  "Leave time of day out for affected streams."
+    }
+]

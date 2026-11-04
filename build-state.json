@@ -12,7 +12,7 @@
     "Deneb specs drawn and checked offline against real output",
     "Report generator written; schema and binding checks clean on a copy"
   ],
-  "nextAction": "Sam opens Water Data Watch.pbip in Desktop. Connect the MCP, refresh, create build/calc_tables.dax and build/new_measures.dax (via build/measures_json.py), test and time them. Then Sam saves and closes, run node build/report.mjs, and Sam reopens.",
+  "nextAction": "Sam presses Ctrl+S in Desktop and closes it. Check the live model's measures reached the TMDL. Rerun tools/spot_check.py (a first run was still going, and it read the area names in the wrong capitals, so its two top-area lines will differ). Run node build/report.mjs and the validators, Sam reopens, activate the theme, render against build/fixtures, check every page in Desktop, then publish.",
   "decisions": [
     "Scope by region, with no storm overflow data",
     "Rely on the service's own licence statement, and record the difference as AUD-02",

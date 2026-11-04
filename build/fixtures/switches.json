@@ -1,1 +1,50 @@
-[{"SwitchOrder": 1, "SwitchLabel": "Keep below-limit results, at half the limit", "SwitchKind": "Fixes a mistake", "Switch Figure": 1.0826318573480076, "Switch Base": 1.752290543704475, "Selected Unit": "mg/l"}, {"SwitchOrder": 2, "SwitchLabel": "Leave out pollution samples", "SwitchKind": "A choice", "Switch Figure": 0.240876854239345, "Switch Base": 1.752290543704475, "Selected Unit": "mg/l"}, {"SwitchOrder": 3, "SwitchLabel": "Leave out part-complete months", "SwitchKind": "A choice", "Switch Figure": 1.5481309003729355, "Switch Base": 1.752290543704475, "Selected Unit": "mg/l"}, {"SwitchOrder": 4, "SwitchLabel": "Use the median, not the average", "SwitchKind": "A choice", "Switch Figure": 0.074, "Switch Base": 1.752290543704475, "Selected Unit": "mg/l"}]
+[
+    {
+        "SwitchOrder":  4,
+        "SwitchLabel":  "Use the median, not the average",
+        "SwitchKind":  "A choice",
+        "Method":  "Dropped",
+        "SampleSet":  "All samples",
+        "MonthSet":  "All months",
+        "StatKey":  "Median",
+        "Switch Figure":  0.074,
+        "Switch Base":  1.7522905437044736,
+        "Selected Unit":  "mg/l"
+    },
+    {
+        "SwitchOrder":  3,
+        "SwitchLabel":  "Leave out part-complete months",
+        "SwitchKind":  "A choice",
+        "Method":  "Dropped",
+        "SampleSet":  "All samples",
+        "MonthSet":  "Complete months",
+        "StatKey":  "Average",
+        "Switch Figure":  1.5481309003729355,
+        "Switch Base":  1.7522905437044736,
+        "Selected Unit":  "mg/l"
+    },
+    {
+        "SwitchOrder":  1,
+        "SwitchLabel":  "Keep below-limit results, at half the limit",
+        "SwitchKind":  "Fixes a mistake",
+        "Method":  "Half the limit",
+        "SampleSet":  "All samples",
+        "MonthSet":  "All months",
+        "StatKey":  "Average",
+        "Switch Figure":  1.0826318573480047,
+        "Switch Base":  1.7522905437044736,
+        "Selected Unit":  "mg/l"
+    },
+    {
+        "SwitchOrder":  2,
+        "SwitchLabel":  "Leave out pollution samples",
+        "SwitchKind":  "A choice",
+        "Method":  "Dropped",
+        "SampleSet":  "Routine samples",
+        "MonthSet":  "All months",
+        "StatKey":  "Average",
+        "Switch Figure":  0.24087685423934488,
+        "Switch Base":  1.7522905437044736,
+        "Selected Unit":  "mg/l"
+    }
+]
