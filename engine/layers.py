@@ -43,11 +43,11 @@ def create_bronze(con, manifest, watch, previous_watch):
     # The official code lists.
     con.execute("CREATE OR REPLACE TABLE bronze.codes (code_list VARCHAR, code VARCHAR, label VARCHAR)")
     # The record of what was asked for and what came back.
-    con.execute("CREATE OR REPLACE TABLE bronze.manifest (source VARCHAR, window_start VARCHAR, window_end VARCHAR, api_total BIGINT, rows_received BIGINT, calls BIGINT, seconds DOUBLE, status VARCHAR, error VARCHAR)")
+    con.execute("CREATE OR REPLACE TABLE bronze.manifest (source VARCHAR, window_start VARCHAR, window_end VARCHAR, api_total BIGINT, rows_received BIGINT, calls BIGINT, seconds DOUBLE, status VARCHAR, error VARCHAR, taken_on VARCHAR)")
     # The database refuses an empty list, and a night when nothing could be fetched has an empty record.
     if manifest:
         # Fill it from the fetch step's record. Rows received are counted from the files in load_files.
-        con.executemany("INSERT INTO bronze.manifest VALUES (?, ?, ?, ?, 0, ?, ?, ?, ?)", [[m["source"], m["window_start"], m["window_end"], m["api_total"], m["calls"], m["seconds"], m["status"], m["error"]] for m in manifest])
+        con.executemany("INSERT INTO bronze.manifest VALUES (?, ?, ?, ?, 0, ?, ?, ?, ?, ?)", [[m["source"], m["window_start"], m["window_end"], m["api_total"], m["calls"], m["seconds"], m["status"], m["error"], m.get("taken_on")] for m in manifest])
     # What the publisher says about itself tonight, beside what it said last time.
     con.execute("CREATE OR REPLACE TABLE bronze.source_watch (item VARCHAR, kind VARCHAR, value VARCHAR, fingerprint VARCHAR, status VARCHAR, checked_on VARCHAR, previous_fingerprint VARCHAR)")
     # The same applies to the publisher's statements.
@@ -61,7 +61,7 @@ def create_bronze(con, manifest, watch, previous_watch):
 # Load the saved files into bronze, and say which sources are usable.
 def load_files(con, raw_dir, manifest):
     # Every source that reported a failed download is unavailable from the start.
-    available = {name: not any(m["status"] != "ok" for m in manifest if m["source"] == name) for name in ("results", "points", "bathing", "codes")}
+    available = {name: not any(m["status"] not in ("ok", "copy") for m in manifest if m["source"] == name) for name in ("results", "points", "bathing", "codes")}
     # Results come first.
     files = sorted(raw_dir.glob("results_*.csv.gz"))
     # A source with no files at all is unavailable too.

@@ -68,17 +68,21 @@ These only ever grow. If any of them loses rows, or goes missing, the run stops 
 
 | File | One row per | Columns |
 |---|---|---|
+| `rules_tonight.csv` | rule | Every register column, tonight's result, the planted result, the measured effect, `fix_rank`, and two packed fields: `months_packed` (`month:status:failed:checked`) and `runs_packed` (`day:status:failed`), so a chart reads one row per rule. Status letters: P, F, R, N, D |
+| `verdicts_tonight.csv` | use, dataset | `run_id, use_id, use_name, use_phrase, use_order, dataset_id, dataset_name, dataset_order, verdict, gates_failed, gates_unchecked, conditions_open, in_scope, note` |
+| `watch_tonight.csv` | statement | The same columns as `history/source_watch.csv`, tonight only |
+| `changes.csv` | thing that moved since the last run | `change_order, kind, item, before, after, previous_run` |
 | `rule_register.csv` | rule | `id, version, title, why, dataset, fields, dimension, severity, fail_above, review_above, owner_role, steward_role, action, root_cause, condition` |
 | `rule_month.csv` | rule, sample month | `rule_id, sample_month, eligible, failed, status` |
-| `exceptions.csv` | failed record, up to 500 per rule | `rule_id, record_ref, point_id, point_name, sample_month, detail, source_url` |
+| `exceptions.csv` | failed record, up to 500 per rule | `rule_id, record_ref, point_id, point_name, where_label, sample_month, detail, source_url` |
 | `rule_tests.csv` | planted defect | `rule_id, failed_before, failed_after, caught, outcome, note` |
 | `impact.csv` | rule with an effect test | `rule_id, figure, careful, careless, unit, effect_pct, measured` |
 | `fix_order.csv` | open rule | `rule_id, fix_rank` |
 | `verdict_reasons.csv` | rule, use, dataset | `use_id, dataset_id, rule_id, role, status, matters, condition` |
-| `uses.csv` | decision | `id, order, name, question, needs` |
-| `datasets.csv` | dataset | `id, order, name, source, address, licence, attribution, owner_role, steward_role, refresh, coverage, safe_for, how_to_use, known_issues` |
+| `uses.csv` | decision | `use_id, use_order, use_name, question, needs` |
+| `datasets.csv` | dataset | `dataset_id, dataset_order, dataset_name, source, address, licence, attribution, owner_role, steward_role, refresh, coverage, safe_for, how_to_use, known_issues` |
 | `decisions.csv` | recorded decision (illustrative) | `rule, decided_on, decision, decided_by, accepted, review_on` |
-| `manifest.csv` | request window | `source, window_start, window_end, api_total, rows_received, calls, seconds, status, error` |
+| `manifest.csv` | request window | `source, window_start, window_end, api_total, rows_received, calls, seconds, status, error, taken_on`. Status is `ok`, `copy` or `failed` |
 
 ### Summaries of the data
 
@@ -91,7 +95,7 @@ When a source is down, these keep their last good contents, and the run log show
 | `months.csv` | month | `sample_month, samples, samples_year_before, is_current_month, is_part_complete` |
 | `freshness.csv` | stream | `stream, is_seasonal, sample_dates, newest_date, days_silent, longest_normal_silence, allowed_silence, freshness_status` |
 | `coverage.csv` | scope, weekday, hour | `scope, weekday_no, hour_of_day, samples` |
-| `same_data.csv` | scenario, area | `det_code, det_name, plain_name, sub_area, method, sample_set, month_set, statistic, figure, rows_used, rows_in_scope, is_ranked_area, area_rank, scenario_key` |
+| `same_data.csv` | scenario, area | `det_code, det_name, plain_name, sub_area, method, sample_set, month_set, statistic, figure, rows_used, rows_in_scope, is_ranked_area, area_rank, scenario_key, unit_label` |
 | `ai_survival.csv` | step | `step_no, step_name, rows_left, step_note` |
 | `points.csv` | sampling point | `point_id, display_name, label_withheld, point_status, point_group, area, sub_area, location_kind, easting, northing, results_in_window, samples_in_window, newest_date` |
 | `map_cells.csv` | 5 km square | `cell_e, cell_n, points_total, points_open, points_open_silent, results_in_window` |

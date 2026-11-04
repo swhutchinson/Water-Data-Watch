@@ -41,6 +41,8 @@ This is an independent project, not affiliated with or endorsed by the Environme
 | Volume | 7,578 samples in the 2026 season |
 | Use here | An independent check on the results service (rules REC-01 and REC-02). Nothing else |
 
+**This service refuses the nightly runner.** From GitHub's servers it returns HTTP 403, while the same request from a home connection succeeds. That refusal is respected: nothing hides where a request comes from. Instead, `python -m engine.bathing_copy` is run by hand from a home connection and saves the North West's samples to `rules/reference/bathing_copy.csv`. The engine still tries the live service each night. If that fails, it uses the copy and records `copy` in the manifest, and rule SRC-06 fails once the copy goes out of date. Samples only arrive in season, so one copy taken after September lasts until the next May.
+
 The only link between the two services is a five-digit code inside a free-text label. Some points can't be linked, and rule REC-02 counts them. The comparison covers E. coli counts at linked points. It doesn't compare the sign on a below-limit or above-limit value.
 
 ## 3. Licence position

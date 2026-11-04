@@ -2,6 +2,8 @@
 # A source that can't be reached never stops the run. It is recorded as failed, so its rules show "Not checked" rather than a pass.
 
 # Packs files as they are written.
+# Reads the saved copy of the bathing season.
+import csv
 import gzip
 # Fingerprints the publisher's specification and pages.
 import hashlib
@@ -191,8 +193,32 @@ def bathing_season(today):
     return f"{year}-05-01", f"{year}-10-01"
 
 
+# Use the saved copy of the latest season, and say so in the record. Returns nothing if there is no copy.
+def read_bathing_copy(raw_dir, error, calls, began):
+    # No copy means the source is simply down tonight.
+    if not settings.BATHING_COPY.exists():
+        # Nothing to hand back.
+        return None
+    # Read the copy.
+    with open(settings.BATHING_COPY, newline="", encoding="utf-8") as handle:
+        # Every row.
+        rows = list(csv.DictReader(handle))
+    # An empty copy is no use.
+    if not rows:
+        # Nothing to hand back.
+        return None
+    # Write it where the night's raw files go.
+    with gzip.open(raw_dir / "bathing.jsonl.gz", "wt", encoding="utf-8") as out:
+        # One sample per line, with the same fields the live read writes.
+        for row in rows:
+            # Only the four fields the layers read.
+            out.write(json.dumps({key: row[key] for key in ("bathing_code", "sampled_at", "ecoli", "ecoli_qualifier")}) + "\n")
+    # The record says it is a copy, which season it covers and when it was taken.
+    return [{"source": "bathing", "window_start": rows[0]["season_start"], "window_end": rows[0]["season_end"], "api_total": len(rows), "calls": calls, "seconds": round(time.time() - began, 1), "status": "copy", "error": f"The live service couldn't be read from here ({str(error)[-40:]}), so this uses the copy taken on {rows[0]['taken_on']}", "taken_on": rows[0]["taken_on"]}]
+
+
 # Download the latest season of bathing water samples, keeping only the fields the reconciliation needs.
-def fetch_bathing(raw_dir, today, base=settings.BW_BASE):
+def fetch_bathing(raw_dir, today, base=settings.BW_BASE, allow_copy=True):
     # The clock for this source.
     began = time.time()
     # The season to read.
@@ -233,6 +259,12 @@ def fetch_bathing(raw_dir, today, base=settings.BW_BASE):
         return [{"source": "bathing", "window_start": start, "window_end": end, "api_total": written, "calls": calls, "seconds": round(time.time() - began, 1), "status": "ok", "error": ""}]
     # The source failed after its retries.
     except SourceDown as error:
+        # The saved copy stands in if there is one, and the manifest says that it did.
+        copied = read_bathing_copy(raw_dir, error, calls, began) if allow_copy else None
+        # Use it.
+        if copied:
+            # A one-row record, as for any other night.
+            return copied
         # Record the failure, so its rules show "Not checked".
         return [{"source": "bathing", "window_start": start, "window_end": end, "api_total": None, "calls": calls, "seconds": round(time.time() - began, 1), "status": "failed", "error": str(error)[:300]}]
 

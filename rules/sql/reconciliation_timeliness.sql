@@ -12,8 +12,11 @@
 -- @rule SRC-01
 -- @check
 SELECT source || ' ' || window_start AS record_ref, NULL AS point_id, nullif(substr(window_start, 1, 7), '') AS sample_month,
-       rows_received IS DISTINCT FROM api_total AS failed,
-       'The source says ' || coalesce(CAST(api_total AS VARCHAR), 'nothing') || '; ' || rows_received || ' rows loaded' AS detail,
+       -- A source that couldn't be read has nothing to compare, and a saved copy can only be compared with itself. Neither counts as a pass.
+       CASE WHEN status = 'ok' THEN rows_received IS DISTINCT FROM api_total END AS failed,
+       CASE WHEN status = 'ok' THEN 'The source says ' || coalesce(CAST(api_total AS VARCHAR), 'nothing') || '; ' || rows_received || ' rows loaded'
+            WHEN status = 'copy' THEN 'Not compared: this used a saved copy, with ' || rows_received || ' rows'
+            ELSE 'Not compared: this source could not be read tonight' END AS detail,
        NULL AS source_url
 FROM bronze.manifest WHERE source IN ('results', 'points', 'bathing', 'codes');
 -- @plant
@@ -62,9 +65,36 @@ SELECT item AS record_ref, NULL AS point_id, NULL AS sample_month,
             WHEN fingerprint <> previous_fingerprint THEN 'Changed since the last run: now ' || value
             ELSE 'Unchanged: ' || value END AS detail,
        NULL AS source_url
-FROM bronze.source_watch WHERE kind = 'spec';
+FROM bronze.source_watch WHERE kind = 'spec' AND status = 'ok';
 -- @plant
 UPDATE bronze.source_watch SET previous_fingerprint = 'planted', fingerprint = 'changed' WHERE kind = 'spec';
+
+-- @rule SRC-06
+-- @check
+WITH today AS (
+    -- The bathing season runs from May to September, and the latest one that has begun is the one to hold.
+    SELECT as_of, make_date(year(as_of) - CASE WHEN month(as_of) < 5 THEN 1 ELSE 0 END, 5, 1) AS season_start FROM silver.run_info
+), sources AS (
+    SELECT source, min(status) AS status, min(window_start) AS window_start, max(window_end) AS window_end, max(taken_on) AS taken_on
+    FROM bronze.manifest WHERE source <> 'results' GROUP BY 1
+)
+SELECT source AS record_ref, NULL AS point_id, NULL AS sample_month,
+       CASE WHEN status = 'failed' THEN NULL
+            WHEN status <> 'copy' THEN FALSE
+            -- A copy of a past season no longer holds what is needed.
+            WHEN CAST(window_start AS DATE) <> season_start THEN TRUE
+            -- During the season and a fortnight after it, a copy over two weeks old is out of date.
+            WHEN as_of < CAST(window_end AS DATE) + 14 AND CAST(taken_on AS DATE) < as_of - 14 THEN TRUE
+            -- After the season, a copy taken before the season ended is missing its end.
+            WHEN as_of >= CAST(window_end AS DATE) + 14 AND CAST(taken_on AS DATE) < CAST(window_end AS DATE) THEN TRUE
+            ELSE FALSE END AS failed,
+       CASE WHEN status = 'failed' THEN 'Could not be read tonight, and there is no copy'
+            WHEN status <> 'copy' THEN 'Read live tonight'
+            ELSE 'A saved copy, taken on ' || taken_on || ', of the season from ' || window_start END AS detail,
+       NULL AS source_url
+FROM sources, today;
+-- @plant
+UPDATE bronze.manifest SET status = 'copy', window_start = '2000-05-01', window_end = '2000-10-01', taken_on = '2000-10-02' WHERE source = 'bathing';
 
 -- @rule SRC-05
 -- @check

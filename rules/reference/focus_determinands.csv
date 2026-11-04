@@ -1,8 +1,8 @@
-det_code,short_name,plain_name
-0111,Ammonia,Ammoniacal nitrogen
-0192,Phosphate,Phosphate (total inorganic)
-0118,Nitrite,Nitrite
-0135,Suspended solids,Suspended solids
-0085,BOD,Biochemical oxygen demand
-0180,Orthophosphate,Orthophosphate
-0116,Oxidised nitrogen,Total oxidised nitrogen
+det_code,short_name,plain_name,unit_label
+0111,Ammonia,Ammoniacal nitrogen,mg/l
+0192,Phosphate,Phosphate (total inorganic),mg/l
+0118,Nitrite,Nitrite,mg/l
+0135,Suspended solids,Suspended solids,mg/l
+0085,BOD,Biochemical oxygen demand,mg/l
+0180,Orthophosphate,Orthophosphate,mg/l
+0116,Oxidised nitrogen,Total oxidised nitrogen,mg/l

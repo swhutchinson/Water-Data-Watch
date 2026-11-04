@@ -92,7 +92,9 @@ SELECT
     -- 1 is the highest figure among the ranked sub-areas. A rank describes this calculation, and says nothing about whose water is better.
     CASE WHEN is_ranked_area THEN rank() OVER (PARTITION BY det_code, method, sample_set, month_set, statistic, is_ranked_area ORDER BY figure DESC) END AS area_rank,
     -- A short key, so the report can find one row quickly.
-    det_code || '|' || method || '|' || sample_set || '|' || month_set || '|' || statistic AS scenario_key
+    det_code || '|' || method || '|' || sample_set || '|' || month_set || '|' || statistic AS scenario_key,
+    -- The unit, so each figure can be read on its own.
+    (SELECT any_value(f.unit_label) FROM focus f WHERE f.det_code = melted.det_code) AS unit_label
 FROM melted;
 
 -- AI SURVIVAL: how many results remain usable at each step for a model of river conditions. Each step keeps only what passed the steps before it.

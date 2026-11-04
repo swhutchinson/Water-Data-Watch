@@ -62,7 +62,7 @@ WITH samples AS (
     SELECT c.weekday_no, c.hour_of_day, count(s.sample_id) AS samples
     FROM cells c LEFT JOIN samples s ON s.weekday_no = c.weekday_no AND s.hour_of_day = c.hour_of_day GROUP BY 1, 2
 )
-SELECT 'Day ' || weekday_no || ', hour ' || hour_of_day AS record_ref, NULL AS point_id, NULL AS sample_month,
+SELECT ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][weekday_no] || ' ' || lpad(CAST(hour_of_day AS VARCHAR), 2, '0') || ':00' AS record_ref, NULL AS point_id, NULL AS sample_month,
        samples < 0.1 * (SELECT count(*) FROM samples) / 168.0 AS failed,
        samples || ' routine river samples in this hour of the week' AS detail,
        NULL AS source_url
@@ -123,10 +123,11 @@ UPDATE silver.ledger_info SET days_tracked = 0;
 -- @rule AUD-02
 -- @check
 SELECT item AS record_ref, NULL AS point_id, NULL AS sample_month,
-       value <> 'Open Government Licence' AS failed,
-       'States: ' || value AS detail,
+       -- A statement that couldn't be read is left out and counted as excluded, because nobody knows what it says.
+       CASE WHEN status = 'ok' THEN value <> 'Open Government Licence' END AS failed,
+       CASE WHEN status = 'ok' THEN 'States: ' || value ELSE 'Could not be read tonight' END AS detail,
        NULL AS source_url
-FROM bronze.source_watch WHERE kind = 'licence' AND status = 'ok';
+FROM bronze.source_watch WHERE kind = 'licence';
 -- @plant
 UPDATE bronze.source_watch SET value = 'Not stated' WHERE kind = 'licence' AND item = (SELECT min(item) FROM bronze.source_watch WHERE kind = 'licence' AND value = 'Open Government Licence');
 

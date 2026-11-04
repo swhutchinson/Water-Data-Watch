@@ -14,6 +14,10 @@ FIT, CONDITIONS, NOT_FIT, UNCHECKED = "Fit", "Fit with conditions", "Not fit", "
 WORST_FIRST = [NOT_FIT, UNCHECKED, CONDITIONS, FIT]
 
 
+# The columns of tonight's verdict file, which carries names so the report needs no lookups.
+NAMED_COLUMNS = ["run_id", "use_id", "use_name", "use_phrase", "use_order", "dataset_id", "dataset_name", "dataset_order", "verdict", "gates_failed", "gates_unchecked", "conditions_open", "in_scope", "note"]
+
+
 # Load the list of uses from the register folder.
 def load_uses():
     # The uses, in their stated order.
@@ -86,3 +90,15 @@ def compute(uses, rules, results, run_id):
         verdicts.append({"run_id": run_id, "use_id": use["id"], "dataset_id": "overall", "verdict": overall, "gates_failed": sum(v["gates_failed"] for v in verdicts if v["use_id"] == use["id"] and v["dataset_id"] != "overall"), "gates_unchecked": sum(v["gates_unchecked"] for v in verdicts if v["use_id"] == use["id"] and v["dataset_id"] != "overall"), "conditions_open": sum(v["conditions_open"] for v in verdicts if v["use_id"] == use["id"] and v["dataset_id"] != "overall"), "in_scope": True, "note": ""})
     # Hand back both.
     return verdicts, reasons
+
+
+# Add each decision's and dataset's name and order to tonight's verdicts.
+def with_names(rows, uses):
+    # The decisions, by their key.
+    use = {u["id"]: u for u in uses}
+    # The datasets on the board.
+    datasets = {d["id"]: d for d in yaml.safe_load((settings.RULES / "datasets.yaml").read_text(encoding="utf-8"))}
+    # The overall column comes first on the board.
+    datasets["overall"] = {"name": "Overall", "order": 0}
+    # A copy of each row, with the names added.
+    return [{**row, "use_name": use[row["use_id"]]["name"], "use_phrase": use[row["use_id"]]["phrase"], "use_order": use[row["use_id"]]["order"], "dataset_name": datasets[row["dataset_id"]]["name"], "dataset_order": datasets[row["dataset_id"]]["order"]} for row in rows]

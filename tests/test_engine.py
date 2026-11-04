@@ -16,7 +16,7 @@ import pytest
 # The in-process database.
 import duckdb
 # The engine's parts.
-from engine import checks, fetch, issues, layers, publish, run, settings, verdicts
+from engine import checks, fetch, issues, layers, publish, run, settings, tonight, verdicts
 # The made-up clean data.
 from tests import fixture
 
@@ -186,6 +186,113 @@ def test_source_down_keeps_last_good_summaries(clean_raw, tmp_path):
     assert good_rows > 0 and len(read_rows(tmp_path / "pub" / "same_data.csv")) == good_rows and (tmp_path / "pub" / "state" / "fingerprints.parquet").read_bytes() == good_state
     # Tonight's rule still says it wasn't checked.
     assert next(r["status"] for r in output["results"] if r["rule_id"] == "VAL-02") == checks.NOT_CHECKED
+
+
+# The changes list names a verdict and a rule that moved between two nights, and nothing on the first night.
+def test_changes_list_names_what_moved():
+    # A decision, as the list of uses holds it.
+    uses = [{"id": "monthly", "name": "Send the monthly report"}]
+    # Last night's verdict.
+    old_verdicts = [{"run_id": "r1", "use_id": "monthly", "dataset_id": "overall", "verdict": "Fit"}]
+    # Tonight's verdict.
+    new_verdicts = [{"run_id": "r2", "use_id": "monthly", "dataset_id": "overall", "verdict": "Not fit"}]
+    # Last night's rule result.
+    old_results = [{"run_id": "r1", "rule_id": "VAL-01", "status": "Pass"}, {"run_id": "r1", "rule_id": "VAL-02", "status": "Pass"}]
+    # Tonight's rule results, with one moved.
+    new_results = [{"rule_id": "VAL-01", "status": "Fail"}, {"rule_id": "VAL-02", "status": "Pass"}]
+    # Compare them.
+    rows = tonight.changes_since("r1", old_verdicts, new_verdicts, old_results, new_results, uses, [])
+    # The verdict comes first, then the rule, and the unchanged rule isn't listed.
+    assert [(r["kind"], r["item"], r["before"], r["after"]) for r in rows] == [("Verdict", "Send the monthly report", "Fit", "Not fit"), ("Rule", "VAL-01", "Pass", "Fail")]
+    # The first run has nothing to compare with.
+    assert tonight.changes_since(None, [], new_verdicts, [], new_results, uses, []) == []
+
+
+# A rule's packed history keeps one reading a day, the last of that day, and always reads oldest first.
+def test_packed_history_keeps_the_last_run_of_each_day():
+    # Two runs on one day, then one on the next, for two rules.
+    history = [{"rule_id": "A", "run_id": "2026-01-01T02:00Z", "status": "Pass", "failed": "0"}, {"rule_id": "B", "run_id": "2026-01-01T02:00Z", "status": "Fail", "failed": "9"}, {"rule_id": "A", "run_id": "2026-01-01T09:00Z", "status": "Fail", "failed": "3"}, {"rule_id": "A", "run_id": "2026-01-02T02:00Z", "status": "Pass", "failed": "0"}]
+    # Only rule A's, and the morning run is replaced by the later one.
+    assert tonight.pack_runs("A", history) == "2026-01-01:F:3;2026-01-02:P:0"
+
+
+# The flat rule file has one row per rule in the register, and every rule's outcome is one of the five.
+def test_flat_rule_file_has_every_rule(clean_run):
+    # Where the run published.
+    _, pub_dir = clean_run
+    # Every row.
+    rows = read_rows(pub_dir / "rules_tonight.csv")
+    # One row for each rule, and all the outcomes are known ones.
+    assert len(rows) == len(checks.load_rules()) and {r["status"] for r in rows} <= {checks.PASS, checks.FAIL, checks.REVIEW, checks.NOT_CHECKED, checks.NO_DATA}
+
+
+# Write a small saved copy of the bathing season, and point the settings at it.
+def use_copy(tmp_path, monkeypatch, taken_on="2026-10-20"):
+    # The copy's address.
+    path = tmp_path / "bathing_copy.csv"
+    # One sample is enough.
+    path.write_text(f"season_start,season_end,taken_on,bathing_code,sampled_at,ecoli,ecoli_qualifier\n2026-05-01,2026-10-01,{taken_on},41200,2026-06-01T10:00:00,10,actual\n", encoding="utf-8")
+    # The engine reads this one for the length of the test.
+    monkeypatch.setattr(settings, "BATHING_COPY", path)
+
+
+# When the live service refuses, the saved copy stands in, and the record says it is a copy.
+def test_bathing_copy_stands_in_when_service_refuses(tmp_path, monkeypatch):
+    # Don't wait between retries in a test.
+    monkeypatch.setattr(fetch.time, "sleep", lambda seconds: None)
+    # A saved copy.
+    use_copy(tmp_path, monkeypatch)
+    # A local address nothing is listening on.
+    record = fetch.fetch_bathing(tmp_path, fixture.AS_OF, base="http://127.0.0.1:9")[0]
+    # The record is honest about what happened.
+    assert record["status"] == "copy" and record["taken_on"] == "2026-10-20" and record["api_total"] == 1 and "copy" in record["error"]
+    # The sample is where the layers look for it.
+    with gzip.open(tmp_path / "bathing.jsonl.gz", "rt", encoding="utf-8") as lines:
+        # One sample, with the expected code.
+        assert json.loads(lines.readline())["bathing_code"] == "41200"
+
+
+# With no copy, the source is simply down.
+def test_no_bathing_copy_means_failed(tmp_path, monkeypatch):
+    # Don't wait between retries in a test.
+    monkeypatch.setattr(fetch.time, "sleep", lambda seconds: None)
+    # An address with no file.
+    monkeypatch.setattr(settings, "BATHING_COPY", tmp_path / "missing.csv")
+    # A local address nothing is listening on.
+    assert fetch.fetch_bathing(tmp_path, fixture.AS_OF, base="http://127.0.0.1:9")[0]["status"] == "failed"
+
+
+# A current copy passes the staleness rule, and a stale one fails it. Neither counts as a comparison with the live source.
+@pytest.mark.parametrize("window,taken,expected", [(("2026-05-01", "2026-10-01"), "2026-10-20", checks.PASS), (("2026-05-01", "2026-10-01"), "2026-08-01", checks.FAIL), (("2025-05-01", "2025-10-01"), "2025-10-20", checks.FAIL)])
+def test_copy_staleness_rule(clean_raw, tmp_path, window, taken, expected):
+    # The record of the clean files.
+    raw_dir, manifest = clean_raw
+    # The bathing source stood in with a copy.
+    record = [dict(m, status="copy", window_start=window[0], window_end=window[1], taken_on=taken) if m["source"] == "bathing" else m for m in manifest]
+    # Run it, into a clean folder.
+    output = run.run(as_of=fixture.AS_OF, raw_dir=raw_dir, pub_dir=tmp_path / "pub", manifest=record, watch=fixture.clean_watch())
+    # Tonight's results by rule.
+    status = {r["rule_id"]: r["status"] for r in output["results"]}
+    # The staleness rule says what's expected, and the rules comparing the two services still ran.
+    assert status["SRC-06"] == expected and status["REC-01"] != checks.NOT_CHECKED
+    # The run log says a copy was used.
+    assert output["log"]["bathing_status"] == "copy"
+
+
+# One licence page that can't be read leaves the others checked, and is counted as excluded rather than passed.
+def test_one_unread_statement_is_excluded_not_passed(clean_raw, tmp_path):
+    # The record of the clean files.
+    raw_dir, manifest = clean_raw
+    # The bathing licence page couldn't be read.
+    watch = [dict(w, value="", fingerprint="", status="failed") if w["item"] == "Licence: bathing water service" else w for w in fixture.clean_watch()]
+    # Run it, into a clean folder.
+    output = run.run(as_of=fixture.AS_OF, raw_dir=raw_dir, pub_dir=tmp_path / "pub", manifest=manifest, watch=watch)
+    # The licence rule's result.
+    found = next(r for r in output["results"] if r["rule_id"] == "AUD-02")
+    # It ran on the other two, and left this one out.
+    assert (found["status"], found["eligible"], found["excluded"]) == (checks.PASS, 2, 1)
+    # The run log says only some were read.
+    assert output["log"]["watch_status"] == "part"
 
 
 # A really unreachable address: the fetch step records a failure and doesn't crash.

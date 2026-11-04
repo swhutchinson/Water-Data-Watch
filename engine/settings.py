@@ -40,3 +40,5 @@ PASSES_TO_CLOSE = 3
 RESPONSE_DAYS = {"Critical": 7, "Major": 30, "Minor": 90}
 # Version of the engine, recorded with every run.
 ENGINE_VERSION = "1.0"
+# A saved copy of the latest bathing season, used when the live service can't be read. See engine/bathing_copy.py.
+BATHING_COPY = RULES / "reference" / "bathing_copy.csv"

@@ -7,15 +7,17 @@
 - id: monthly
   order: 1
   name: Send the monthly report
+  phrase: sending the monthly report
   question: Can this feed a monthly management report?
   needs: Fresh, consistent figures with a stated method.
   datasets: [results, points, bathing]
   gates: [SRC-01, SRC-02, SRC-03, UNI-01, VAL-02, VAL-03, CON-01, PRV-02, CHK-01, REC-01]
-  conditions: [SRC-05, TIM-01, TIM-02, COM-02, VAL-01, VAL-05, VAL-06, VAL-07, UNI-02, UNI-03, CON-02, CON-03, ACC-01, ACC-02, ACC-03, ACC-04, VAL-04, COM-01, PRV-01, REC-02, SRC-04]
+  conditions: [SRC-05, SRC-06, TIM-01, TIM-02, COM-02, VAL-01, VAL-05, VAL-06, VAL-07, UNI-02, UNI-03, CON-02, CON-03, ACC-01, ACC-02, ACC-03, ACC-04, VAL-04, COM-01, PRV-01, REC-02, SRC-04]
 
 - id: trend
   order: 2
   name: Show a long-term trend
+  phrase: showing a long-term trend
   question: Can this show how things have changed over the years?
   needs: A method that stays the same over time.
   datasets: [results, points]
@@ -25,15 +27,17 @@
 - id: signoff
   order: 3
   name: Sign off a published figure
+  phrase: signing off a published figure
   question: Could someone put their name to a figure from this?
   needs: An audit trail, reconciled sources and no unexplained changes.
   datasets: [results, points, bathing]
-  gates: [SRC-01, SRC-02, SRC-03, SRC-05, UNI-01, VAL-02, VAL-03, CON-01, CON-03, REC-01, AUD-01, AUD-03, PRV-02, CHK-01]
+  gates: [SRC-01, SRC-02, SRC-03, SRC-05, SRC-06, UNI-01, VAL-02, VAL-03, CON-01, CON-03, REC-01, AUD-01, AUD-03, PRV-02, CHK-01]
   conditions: [AUD-02, CON-02, CON-04, TIM-01, TIM-02, COM-02, VAL-01, VAL-05, VAL-06, VAL-07, UNI-02, UNI-03, ACC-01, ACC-02, ACC-03, ACC-04, VAL-04, COM-01, PRV-01, REC-02, SRC-04]
 
 - id: ai
   order: 4
   name: Train an AI model
+  phrase: training an AI model
   question: Could a model safely learn from this?
   needs: Even coverage, trustworthy targets and real clock times.
   datasets: [results, points]

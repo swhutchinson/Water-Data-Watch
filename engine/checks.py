@@ -13,7 +13,7 @@ from engine.layers import read_sql
 # The five honest outcomes a rule can have.
 PASS, FAIL, REVIEW, NOT_CHECKED, NO_DATA = "Pass", "Fail", "For review", "Not checked", "No data"
 # Which source each table in a rule's SQL depends on. A rule reading a failed source says "Not checked".
-TABLE_SOURCES = {"silver.results": ["results"], "silver.months": ["results"], "silver.points": ["points"], "silver.bathing": ["bathing"], "bronze.codes": ["codes"], "bronze.source_watch": ["watch"], "bronze.manifest": ["results", "points", "bathing", "codes"]}
+TABLE_SOURCES = {"silver.results": ["results"], "silver.months": ["results"], "silver.points": ["points"], "silver.bathing": ["bathing"], "bronze.codes": ["codes"]}
 
 
 # Load the register and attach each rule's SQL.
