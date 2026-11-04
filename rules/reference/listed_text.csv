@@ -1,0 +1,55 @@
+text_value,text_kind
+No material present,observation
+Not found,observation
+Not found in test,observation
+Trace present - 1 or 2 items,observation
+No flow/discharge at sampling point,observation
+Moderate Flow,observation
+Absent,observation
+Present,observation
+Some at intervals - 3 to 6 items,observation
+Sign present with correct information,observation
+Low Flow,observation
+High Flow,observation
+Sufficient to be objectionable >6 items,observation
+Present / 100ml,observation
+Ponded / Still,observation
+Dry,observation
+Smooth wavelets 10-50cm,observation
+Light breeze,observation
+Light - waves 0.5-1.25m,observation
+Sign absent,observation
+5/8 cloud cover,observation
+Gentle breeze,observation
+Moderate breeze,observation
+3/4 cloud cover,observation
+Absent / 100ml,observation
+Clear sky,observation
+1/8 cloud cover,observation
+Isolated Pools,observation
+Over-bank Flow,observation
+3/8 cloud cover,observation
+Light air,observation
+1/2 cloud cover,observation
+1/4 cloud cover,observation
+Frozen,observation
+8/8 cloud cover,observation
+Calm 0-10cm crest to trough,observation
+Unsure - photograph taken,observation
+DNA Stored,status
+Sample sent to sub contract lab,status
+Method used,status
+Done,status
+Sample collected,status
+EN 12457-2 1-step : L:S 10l:kg : Dry Wt,status
+Granted,status
+Not Granted,status
+Moderate - 1.25-2m white horses,observation
+Sign present without correct information,observation
+Damp / Wet Streambed,observation
+Fresh breeze,observation
+7/8 cloud cover,observation
+No sample collected,status
+Sample pnt inaccessible eg flooding etc,status
+"Inclement weather eg. frozen over",status
+"Any other reason, see comments",status

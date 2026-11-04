@@ -1,0 +1,78 @@
+# The nightly run: fetch the public data, run every rule, and publish small CSV files to the powerbi-data branch.
+# That branch is overwritten as a single commit each night, and last night's copy is the starting point for tonight.
+# Its history files can't be recreated later, so the "Starting state" step refuses to carry on if they have gone missing.
+name: Nightly data quality run
+
+on:
+  # 02:17 UTC. GitHub can run schedules hours late, which the report's freshness line shows.
+  schedule:
+    - cron: "17 2 * * *"
+  # A run on demand, from the Actions tab.
+  workflow_dispatch:
+  # A change to the rules or the engine runs straight away, so a mistake shows up the same day.
+  push:
+    branches: [main]
+    paths:
+      - "engine/**"
+      - "rules/**"
+      - "requirements.txt"
+      - ".github/workflows/nightly.yml"
+
+# Only this job's token, and only for writing to this repository.
+permissions:
+  contents: write
+
+# Two runs at once could overwrite each other's history, so the later one waits.
+concurrency:
+  group: nightly-data-run
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install the libraries
+        run: pip install --quiet -r requirements.txt
+
+      # The tests use made-up data only. If they fail, the engine isn't trusted tonight and nothing is published.
+      - name: Run the tests
+        run: python -m pytest -q
+
+      # On the very first run the branch doesn't exist. After that it must be there, or history would silently restart.
+      - name: Starting state
+        run: |
+          if git ls-remote --exit-code --heads origin powerbi-data > /dev/null; then
+            git fetch --depth=1 origin powerbi-data
+            mkdir -p data/pub
+            git archive FETCH_HEAD | tar -x -C data/pub
+            if [ ! -s data/pub/history/run_log.csv ]; then
+              echo "The powerbi-data branch exists but its run log is missing. Stopping, so history isn't overwritten."
+              exit 1
+            fi
+          else
+            echo "No powerbi-data branch yet, so this is the first run."
+          fi
+
+      - name: Run the checks
+        run: python -m engine.run
+
+      # A single commit, force-pushed, keeps the branch small. Only the files the report needs are on it.
+      - name: Publish
+        working-directory: data/pub
+        run: |
+          printf '# Water Data Watch: nightly output\n\nGenerated files read by the Power BI report. See the main branch for the code and the rules.\n\nContains Environment Agency information (c) Environment Agency and/or database right.\n' > README.md
+          git init -q -b powerbi-data
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Nightly output"
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" powerbi-data

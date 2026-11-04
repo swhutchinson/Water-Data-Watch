@@ -1,0 +1,27 @@
+{
+  "project": "Water Data Watch (working title; folder: Water Data Quality)",
+  "phase": "engine and nightly run",
+  "completed": [
+    "Skills loaded, brief read",
+    "Re-probed the sources",
+    "Rule register (39 rules), uses, datasets, decisions",
+    "Engine: fetch, bronze, silver, checks, planted defects, effect tests, verdicts, issues, change ledger, gold, publish",
+    "Tests: 54 with made-up data",
+    "docs/SOURCES.md, docs/DATA_CONTRACT.md, docs/DATA_QUALITY_FRAMEWORK.md, README.md"
+  ],
+  "nextAction": "Push to main so the nightly run starts. Check the powerbi-data branch. Then build the model.",
+  "decisions": [
+    "Scope by region, with no storm overflow data",
+    "Rely on the service's own licence statement, and record the difference as AUD-02",
+    "Uses worded as decisions",
+    "A View the code link for this report only"
+  ],
+  "validation": {},
+  "blockers": [],
+  "notes": [
+    "Keep this file at the project root during the build, where the plugin's start-up hook reads it. The finished projects moved it to docs/ at the end.",
+    "The nightly run comes before the report, because its history can't be created later. A first published version comes before the full page list.",
+    "build-state.json is committed, so keep private details out of it."
+  ],
+  "lessons": []
+}

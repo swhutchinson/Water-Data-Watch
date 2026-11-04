@@ -1,0 +1,41 @@
+# What each decision needs from the data.
+# A gate that fails makes the verdict Not fit. A gate that couldn't be checked makes it Not checked, never Fit.
+# A condition that fails or needs review makes the verdict Fit with conditions, and adds its wording to the reasons.
+# Rules not listed under a use don't affect that use's verdict.
+# These choices are illustrative: they show how such a standard could be set, and describe no real organisation.
+
+- id: monthly
+  order: 1
+  name: Send the monthly report
+  question: Can this feed a monthly management report?
+  needs: Fresh, consistent figures with a stated method.
+  datasets: [results, points, bathing]
+  gates: [SRC-01, SRC-02, SRC-03, UNI-01, VAL-02, VAL-03, CON-01, PRV-02, CHK-01, REC-01]
+  conditions: [SRC-05, TIM-01, TIM-02, COM-02, VAL-01, VAL-05, VAL-06, VAL-07, UNI-02, UNI-03, CON-02, CON-03, ACC-01, ACC-02, ACC-03, ACC-04, VAL-04, COM-01, PRV-01, REC-02, SRC-04]
+
+- id: trend
+  order: 2
+  name: Show a long-term trend
+  question: Can this show how things have changed over the years?
+  needs: A method that stays the same over time.
+  datasets: [results, points]
+  gates: [SRC-01, SRC-02, SRC-03, UNI-01, VAL-02, VAL-03, CON-01, PRV-02, CHK-01]
+  conditions: [SRC-05, CON-02, CON-04, VAL-01, VAL-05, VAL-07, ACC-03, ACC-04, TIM-02, COM-02, UNI-03, VAL-04, COM-01, SRC-04]
+
+- id: signoff
+  order: 3
+  name: Sign off a published figure
+  question: Could someone put their name to a figure from this?
+  needs: An audit trail, reconciled sources and no unexplained changes.
+  datasets: [results, points, bathing]
+  gates: [SRC-01, SRC-02, SRC-03, SRC-05, UNI-01, VAL-02, VAL-03, CON-01, CON-03, REC-01, AUD-01, AUD-03, PRV-02, CHK-01]
+  conditions: [AUD-02, CON-02, CON-04, TIM-01, TIM-02, COM-02, VAL-01, VAL-05, VAL-06, VAL-07, UNI-02, UNI-03, ACC-01, ACC-02, ACC-03, ACC-04, VAL-04, COM-01, PRV-01, REC-02, SRC-04]
+
+- id: ai
+  order: 4
+  name: Train an AI model
+  question: Could a model safely learn from this?
+  needs: Even coverage, trustworthy targets and real clock times.
+  datasets: [results, points]
+  gates: [SRC-01, SRC-02, SRC-03, UNI-01, VAL-02, VAL-03, CON-01, AI-01, AI-02, AI-03, AI-04, PRV-02, CHK-01]
+  conditions: [SRC-05, VAL-01, VAL-05, VAL-06, VAL-07, CON-02, CON-04, ACC-01, ACC-02, ACC-03, ACC-04, UNI-02, UNI-03, TIM-02, COM-02, VAL-04, COM-01, SRC-04]

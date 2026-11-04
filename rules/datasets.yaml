@@ -1,0 +1,47 @@
+# A passport for each dataset: where it comes from, who answers for it, and how to use it safely.
+# Owner and steward roles are illustrative. They show how a programme could run, and describe no real organisation.
+
+- id: results
+  order: 1
+  name: Water quality results
+  source: Environment Agency Water Quality Archive
+  address: https://environment.data.gov.uk/water-quality
+  licence: Open Government Licence v3.0, as the service's own pages state. Its catalogue record says "No Licence Provided", so this is recorded as a finding (AUD-02).
+  attribution: Contains Environment Agency information © Environment Agency and/or database right
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Results)
+  refresh: Read nightly. The publisher says it updates within two working days of a new sample, with a monthly refresh that may include corrections.
+  coverage: North West region, rolling 24 calendar months
+  safe_for: Monthly reporting and long-term trends, once the conditions shown are met.
+  how_to_use: Join on codes, never names. Count below-limit results with a stated method. Mark recent months as part-complete. State whether pollution samples are in.
+  known_issues: Below-limit results, late streams, default clock times, and one name covering two scales. Times carry no zone marker.
+
+- id: points
+  order: 2
+  name: Sampling point register
+  source: Environment Agency Water Quality Archive
+  address: https://environment.data.gov.uk/water-quality/sampling-point
+  licence: Open Government Licence v3.0, as the service's own pages state. See the note on the results dataset.
+  attribution: Contains Environment Agency information © Environment Agency and/or database right
+  owner_role: Data Owner (Sampling Points)
+  steward_role: Data Steward (Sampling Points)
+  refresh: Read nightly.
+  coverage: Every North West point, open and closed
+  safe_for: Looking up a point's type and status, and place-based reporting, once stand-in locations are set aside.
+  how_to_use: Join on the point's code. Keep stand-in locations off maps. Labels are withheld wherever they could hold personal or business details.
+  known_issues: Stand-in coordinates, open points with no recent results, and labels that run several fields together.
+
+- id: bathing
+  order: 3
+  name: Bathing water samples
+  source: Environment Agency Bathing Water Quality service
+  address: https://environment.data.gov.uk/doc/bathing-water-quality/in-season/sample
+  licence: Open Government Licence v3.0, as the service's help pages state.
+  attribution: Contains Environment Agency information © Environment Agency and/or database right
+  owner_role: Data Owner (Bathing Waters)
+  steward_role: Data Steward (Results)
+  refresh: Read nightly. Samples are taken in the bathing season only.
+  coverage: The latest bathing season, across England. Only points that can be linked to North West results are compared.
+  safe_for: An independent check on the results service. It is used here for reconciliation only.
+  how_to_use: The only link to the results service is a five-digit code inside a free-text label, so a governed lookup is needed.
+  known_issues: Some points can't be linked. The comparison covers E. coli at linked points only, and doesn't compare the below or above sign.

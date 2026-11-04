@@ -1,0 +1,26 @@
+# Power BI local state
+**/.pbi/cache.abf
+**/.pbi/localSettings.json
+**/.pbi/unappliedChanges.json
+
+# Build and tooling
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+node_modules/
+out/
+_work/
+
+# Local data: re-fetched from the public APIs. Pipeline outputs are published only on the powerbi-data branch
+data/
+*.duckdb
+*.csv.gz
+*.jsonl.gz
+
+# Private build files: brief, session prompt, first look at the data and starter kit (kept on this PC, never published)
+HANDOVER_WATER_DATA_QUALITY.md
+NEXT_SESSION_PROMPT.*
+SOURCES_STARTER.md
+starter/
+recon/

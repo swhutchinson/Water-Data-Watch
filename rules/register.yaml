@@ -1,0 +1,629 @@
+# The rule register: what each check means, who answers for it and what happens when it breaks.
+# Thresholds are percentages of the records checked. Above fail_above is a Fail; above review_above is For review.
+# Roles, thresholds and response times are illustrative. They show how a programme could run, and describe no real organisation.
+# The SQL for each rule is in rules/sql/, under its ID.
+
+- id: SRC-01
+  version: 1
+  title: Rows loaded equal the source's own total
+  why: A silent shortfall makes every later number wrong without any error appearing.
+  dataset: pipeline
+  fields: [all]
+  dimension: Reconciliation
+  severity: Critical
+  fail_above: 0
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Pipeline)
+  action: Stop using tonight's figures, re-run the load and compare again.
+  root_cause: In transit
+  condition: Reload until the row counts match.
+
+- id: SRC-02
+  version: 1
+  title: Date windows neither overlap nor drop a day
+  why: The service's end date excludes the day it names, so a plain date range quietly loses a day and overlapping windows count a day twice.
+  dataset: results
+  requires: [results]
+  fields: [phenomenonTime]
+  dimension: Reconciliation
+  severity: Critical
+  fail_above: 0
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Pipeline)
+  action: Correct the window boundaries and reload.
+  root_cause: In transit
+  condition: Correct the window boundaries.
+
+- id: SRC-03
+  version: 1
+  title: Source columns match the data contract
+  why: A renamed or missing column can pass unnoticed and quietly empty a downstream figure.
+  dataset: pipeline
+  fields: [all]
+  dimension: Reconciliation
+  severity: Critical
+  fail_above: 0
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Pipeline)
+  action: Update the contract and the engine together, then re-run.
+  root_cause: At source
+  condition: Agree the new columns.
+
+- id: SRC-04
+  version: 1
+  title: The publisher's specification hasn't changed
+  why: The previous version of this service was retired in late 2025. A changed specification is the earliest warning of the next change.
+  dataset: pipeline
+  fields: [openapi.json]
+  dimension: Reconciliation
+  severity: Minor
+  fail_above: null
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Pipeline)
+  action: Read what changed and update the data contract if needed.
+  root_cause: At source
+  condition: Read what the publisher changed.
+
+- id: SRC-05
+  version: 1
+  title: Row counts don't fall sharply between runs
+  why: Results normally only build up, and the window moves by a month at a time. A sudden fall means something has gone wrong upstream, even when each row looks fine.
+  dataset: results
+  fields: [all]
+  dimension: Reconciliation
+  severity: Major
+  fail_above: 0
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Pipeline)
+  action: Compare with the source before using tonight's figures.
+  root_cause: At source
+  condition: Explain the fall in row counts before using the figures.
+
+- id: COM-01
+  version: 1
+  title: Open sampling points have a result in the window
+  why: The register says a point is open, yet the data is silent. Some are used only on demand, so this is a question for a steward and not a fault.
+  dataset: points
+  fields: [samplingPointStatus, notation]
+  dimension: Completeness
+  severity: Major
+  fail_above: null
+  review_above: 25
+  owner_role: Data Owner (Sampling Points)
+  steward_role: Data Steward (Sampling Points)
+  action: Agree which open points are in use, and record the reason for the rest.
+  root_cause: In definitions
+  condition: Don't read "open" as "currently sampled".
+
+- id: COM-02
+  version: 1
+  title: Each stream has its usual volume each month
+  why: A stream that stops arriving makes a monthly total look like a collapse in sampling.
+  dataset: results
+  fields: [samplingPurpose, phenomenonTime]
+  dimension: Completeness
+  severity: Major
+  fail_above: 5
+  review_above: 2
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Results)
+  action: Ask the publisher whether the stream arrives in batches, and leave affected months out of comparisons meanwhile.
+  root_cause: At source
+  condition: Compare months only once each stream has reached its usual volume.
+
+- id: TIM-01
+  version: 1
+  title: Each stream's newest result is within its normal silence
+  why: One "last updated" date can look fine while whole streams have stopped. Each stream is measured against the longest silence it has shown in the window, with three weeks as the minimum.
+  dataset: results
+  fields: [samplingPurpose, phenomenonTime]
+  dimension: Timeliness
+  severity: Major
+  fail_above: 0
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Results)
+  action: Flag the stream as late, and find out whether this is normal batch arrival.
+  root_cause: At source
+  condition: State which streams are late in anything built from recent months.
+
+- id: TIM-02
+  version: 1
+  title: Recent months are flagged until they are complete
+  why: A part-complete month plotted beside full months reads as a collapse.
+  dataset: results
+  fields: [phenomenonTime]
+  dimension: Timeliness
+  severity: Major
+  fail_above: null
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Results)
+  action: Mark these months as part-complete wherever they are shown.
+  root_cause: In use
+  condition: Mark recent months as part-complete.
+
+- id: UNI-01
+  version: 1
+  title: Each observation address appears once
+  why: A repeated record is counted twice in every total.
+  dataset: results
+  fields: [id]
+  dimension: Uniqueness
+  severity: Critical
+  fail_above: 0
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Pipeline)
+  action: Keep one copy, and find out where the second came from.
+  root_cause: In transit
+  condition: Remove the duplicates.
+
+- id: UNI-02
+  version: 1
+  title: One value per point, time and thing measured
+  why: Two different values for the same moment can't both be the answer.
+  dataset: results
+  fields: [samplingPoint.notation, phenomenonTime, determinand.notation, result]
+  dimension: Uniqueness
+  severity: Minor
+  fail_above: null
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Results)
+  action: Review each pair, and agree which value to use and why.
+  root_cause: At source
+  condition: State how repeated values are handled.
+
+- id: UNI-03
+  version: 1
+  title: Each sampling point has its own label
+  why: Shared labels make a list of places look shorter than it is, and joining on the label merges different places.
+  dataset: points
+  fields: [prefLabel]
+  dimension: Uniqueness
+  severity: Minor
+  fail_above: null
+  review_above: 0
+  owner_role: Data Owner (Sampling Points)
+  steward_role: Data Steward (Sampling Points)
+  action: Join on the point's code, never its label.
+  root_cause: In definitions
+  condition: Join on the point's code, never its label.
+
+- id: VAL-01
+  version: 1
+  title: Every result is a number, a limit or a listed word
+  why: A new word appearing in the result column is the first sign of a change upstream.
+  dataset: results
+  fields: [result]
+  dimension: Validity
+  severity: Major
+  fail_above: 1
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Reference Data)
+  action: Add the new word to the list with its meaning, or raise it with the publisher.
+  root_cause: At source
+  condition: Treat unlisted words as unknown.
+
+- id: VAL-02
+  version: 1
+  title: pH is between 0 and 14
+  why: Outside this range the value isn't a pH at all.
+  dataset: results
+  fields: [result]
+  dimension: Validity
+  severity: Critical
+  fail_above: 0
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Results)
+  action: Leave the record out, and raise it with the publisher.
+  root_cause: At source
+  condition: Leave these records out.
+
+- id: VAL-03
+  version: 1
+  title: Dates are readable and not in the future
+  why: A date that can't be read or hasn't happened breaks every time-based figure.
+  dataset: results
+  fields: [phenomenonTime]
+  dimension: Validity
+  severity: Critical
+  fail_above: 0
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Results)
+  action: Leave the record out, and raise it with the publisher.
+  root_cause: At source
+  condition: Leave these records out.
+
+- id: VAL-04
+  version: 1
+  title: Coordinates are inside the North West
+  why: Catch-all points carry a stand-in location in the English Channel, so a real sample's true place is unknown.
+  dataset: points
+  fields: [geometry]
+  dimension: Validity
+  severity: Major
+  fail_above: 1
+  review_above: 0
+  owner_role: Data Owner (Sampling Points)
+  steward_role: Data Steward (Sampling Points)
+  action: Keep these points off maps and out of place-based averages, and show them separately.
+  root_cause: At source
+  condition: Show stand-in locations separately, never on a map.
+
+- id: VAL-05
+  version: 1
+  title: Codes exist in the official code lists
+  why: A code nobody can look up has no agreed meaning.
+  dataset: results
+  fields: [determinand.notation, samplingPurpose, samplingPointType]
+  dimension: Validity
+  severity: Major
+  fail_above: 1
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Reference Data)
+  action: Ask the publisher what the code means, and add it to the reference list.
+  root_cause: In definitions
+  condition: Treat unknown codes as unknown.
+
+- id: VAL-06
+  version: 1
+  title: Result holds a measurement, not a lab status
+  why: '"Sent to sub contract lab" says something happened, not what was found. A real value may follow later.'
+  dataset: results
+  fields: [result]
+  dimension: Validity
+  severity: Minor
+  fail_above: null
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Results)
+  action: Leave these out of calculations, and watch the ledger for a real value replacing them.
+  root_cause: At source
+  condition: Leave lab status rows out of calculations.
+
+- id: VAL-07
+  version: 1
+  title: Results can go straight into a calculation
+  why: A plain conversion loses or misreads every "below a limit" result, and that inflates averages. This is a normal way to report results. It needs a stated method, not a correction.
+  dataset: results
+  fields: [result]
+  dimension: Validity
+  severity: Major
+  fail_above: null
+  review_above: 10
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Results)
+  action: Publish the method for below-limit results, and use it everywhere.
+  root_cause: In use
+  condition: Count below-limit results with a stated method. Never drop them.
+
+- id: CON-01
+  version: 1
+  title: Each code has one unit
+  why: Mixed units within a code would make any sum meaningless.
+  dataset: results
+  fields: [determinand.notation, unit]
+  dimension: Consistency
+  severity: Critical
+  fail_above: 0
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Reference Data)
+  action: Hold the affected code back until its unit is confirmed.
+  root_cause: At source
+  condition: Hold the affected code back.
+
+- id: CON-02
+  version: 1
+  title: Each name means one thing
+  why: One name can cover two scales. Joining on the name then mixes results that differ by a factor of 100.
+  dataset: results
+  fields: [determinand.prefLabel, unit]
+  dimension: Consistency
+  severity: Major
+  fail_above: 0
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Reference Data)
+  action: Join on the code, never the name, and add the distinction to the glossary.
+  root_cause: In definitions
+  condition: Join on the code, never the name.
+
+- id: CON-03
+  version: 1
+  title: Results agree with the register
+  why: The two parts of one service should tell the same story about a point.
+  dataset: points
+  fields: [samplingPointStatus, prefLabel]
+  dimension: Consistency
+  severity: Major
+  fail_above: 1
+  review_above: 0
+  owner_role: Data Owner (Sampling Points)
+  steward_role: Data Steward (Sampling Points)
+  action: Raise any disagreement with the publisher.
+  root_cause: At source
+  condition: Use the register's version.
+
+- id: CON-04
+  version: 1
+  title: Detection limits are stable within what was measured
+  why: A "below 500" and a "below 0.001" under one name can't share a model column unexplained. Some of this is legitimate, because a strong sample is diluted.
+  dataset: results
+  fields: [result]
+  dimension: Consistency
+  severity: Major
+  fail_above: null
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Results)
+  action: Record which limits apply, and keep long-term figures to a stable limit.
+  root_cause: At source
+  condition: Keep trends to one stable limit.
+
+- id: ACC-01
+  version: 1
+  title: pH is usually between 4 and 11
+  why: Possible, but unusual enough for a person to look at.
+  dataset: results
+  fields: [result]
+  dimension: Accuracy (plausibility)
+  severity: Minor
+  fail_above: null
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Results)
+  action: Review each one. Most will be real.
+  root_cause: At source
+  condition: Review extreme values before relying on them.
+
+- id: ACC-02
+  version: 1
+  title: Water temperature is between -2 and 40 degrees
+  why: Above this it is more likely an effluent, a typing slip or the wrong unit than a natural water.
+  dataset: results
+  fields: [result]
+  dimension: Accuracy (plausibility)
+  severity: Minor
+  fail_above: null
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Results)
+  action: Review each one against the point's type.
+  root_cause: At source
+  condition: Review extreme values before relying on them.
+
+- id: ACC-03
+  version: 1
+  title: No result is over 1,000 times the usual level
+  why: One extreme value can dominate an average. Many will be real, and they are worth checking before they drive a headline.
+  dataset: results
+  fields: [result]
+  dimension: Accuracy (plausibility)
+  severity: Minor
+  fail_above: null
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Results)
+  action: Review each one, and consider a median beside the average.
+  root_cause: At source
+  condition: Show a median beside any average.
+
+- id: ACC-04
+  version: 1
+  title: Above-range results are treated as ceilings
+  why: '">9999999" means at least that much. Strip the sign and a ceiling becomes a measurement that swamps any average.'
+  dataset: results
+  fields: [result]
+  dimension: Accuracy
+  severity: Major
+  fail_above: null
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Results)
+  action: Keep these out of averages, or count them as minimums.
+  root_cause: In use
+  condition: Treat above-range results as minimums.
+
+- id: REC-01
+  version: 1
+  title: Bathing E. coli matches between the two services
+  why: Two independent public services agreeing is strong evidence that the data is sound.
+  dataset: bathing
+  fields: [escherichiaColiCount, result]
+  dimension: Reconciliation
+  severity: Major
+  fail_above: 1
+  review_above: 1
+  owner_role: Data Owner (Bathing Waters)
+  steward_role: Data Steward (Results)
+  action: List the differences for the publisher.
+  root_cause: At source
+  condition: Use one service, and say which.
+
+- id: REC-02
+  version: 1
+  title: Every bathing point can be linked between services
+  why: The only link is a five-digit code inside a free-text label. The data agrees, but the key that joins it isn't governed.
+  dataset: bathing
+  fields: [prefLabel, samplePointNotation]
+  dimension: Reconciliation
+  severity: Minor
+  fail_above: 10
+  review_above: 0
+  owner_role: Data Owner (Bathing Waters)
+  steward_role: Data Steward (Reference Data)
+  action: Keep a governed lookup between the two services.
+  root_cause: In definitions
+  condition: Keep the comparison to the points that can be linked.
+
+- id: PRV-01
+  version: 1
+  title: Labels hold no apparent personal data
+  why: Labels run several fields together, including addresses. The source is public, but republishing a home address has to be a deliberate decision.
+  dataset: points
+  fields: [prefLabel]
+  dimension: Privacy
+  severity: Major
+  fail_above: null
+  review_above: 0
+  owner_role: Data Owner (Sampling Points)
+  steward_role: Data Steward (Privacy)
+  action: Withhold the label on anything flagged, and link to the source record instead.
+  root_cause: At source
+  condition: Withhold flagged labels.
+
+- id: PRV-02
+  version: 1
+  title: Nothing about to be published holds personal data
+  why: The last check before anything leaves the building. If this fails, the affected field isn't published.
+  dataset: points
+  fields: [label as published]
+  dimension: Privacy
+  severity: Critical
+  fail_above: 0
+  review_above: 0
+  owner_role: Data Owner (Sampling Points)
+  steward_role: Data Steward (Privacy)
+  action: Stop publishing the field and tighten the mask.
+  root_cause: In use
+  condition: Withhold the field.
+
+- id: AI-01
+  version: 1
+  title: Below-limit share is within what a model can handle
+  why: When much of a target is only known to be "below something", a model needs special handling, or it learns the limit and not the water.
+  dataset: results
+  fields: [result]
+  dimension: AI readiness
+  severity: Major
+  fail_above: 50
+  review_above: 0
+  owner_role: Analytics Lead
+  steward_role: Data Steward (Results)
+  action: Use a method built for censored targets, or choose a target with less censoring.
+  root_cause: In use
+  condition: Use a method built for censored targets.
+
+- id: AI-02
+  version: 1
+  title: Samples cover the whole week
+  why: A model can't learn about hours it has never seen. Sampling happens in working hours, so nights and weekends are almost absent.
+  dataset: results
+  fields: [phenomenonTime]
+  dimension: AI readiness
+  severity: Major
+  fail_above: 50
+  review_above: 10
+  owner_role: Analytics Lead
+  steward_role: Data Steward (Results)
+  action: State plainly that predictions apply to weekday working hours only.
+  root_cause: In use
+  condition: Limit predictions to the hours the data covers.
+
+- id: AI-03
+  version: 1
+  title: Enough repeat samples per point
+  why: Under one sample a month, a model can't separate a place's pattern from noise.
+  dataset: results
+  fields: [samplingPoint.notation, phenomenonTime]
+  dimension: AI readiness
+  severity: Major
+  fail_above: 50
+  review_above: 10
+  owner_role: Analytics Lead
+  steward_role: Data Steward (Sampling Points)
+  action: Train only on points with regular history, and say how few that leaves.
+  root_cause: In use
+  condition: Train only on points with regular history.
+
+- id: AI-04
+  version: 1
+  title: Clock times are real times, not defaults
+  why: When one minute takes a large share of a stream's samples, it looks like a convention and not a time. Time-of-day can't then be used as an input. Why this happens is unconfirmed.
+  dataset: results
+  fields: [phenomenonTime]
+  dimension: AI readiness
+  severity: Major
+  fail_above: 5
+  review_above: 1
+  owner_role: Analytics Lead
+  steward_role: Data Steward (Results)
+  action: Ask the publisher what these stamps mean, and leave time-of-day out for the streams affected.
+  root_cause: In definitions
+  condition: Leave time of day out for affected streams.
+
+- id: AUD-01
+  version: 1
+  title: The change ledger has run long enough to trust
+  why: The publisher says records may change as quality assurance continues, and refreshes monthly. Until the ledger has covered a full cycle, nobody can say how often published figures move.
+  dataset: pipeline
+  fields: [fingerprints]
+  dimension: Audit trail
+  severity: Major
+  fail_above: 0
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Pipeline)
+  action: Keep running. This clears itself after 35 days.
+  root_cause: In use
+  condition: Wait for the ledger to cover one full monthly refresh.
+
+- id: AUD-02
+  version: 1
+  title: Licence statements agree
+  why: The service, its catalogue record and its sister service should give the same licence. A figure can't be signed off on an unclear right to reuse it.
+  dataset: pipeline
+  fields: [licence wording]
+  dimension: Audit trail
+  severity: Minor
+  fail_above: null
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Reference Data)
+  action: Record which statement is relied on, and ask the publisher to align them.
+  root_cause: In definitions
+  condition: Record which licence statement you rely on.
+
+- id: AUD-03
+  version: 1
+  title: There are no gaps in the run history
+  why: A control that didn't run looks exactly like a control that found nothing, unless the gaps are counted.
+  dataset: pipeline
+  fields: [run log]
+  dimension: Audit trail
+  severity: Minor
+  fail_above: 20
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Pipeline)
+  action: Find out why the run was missed. Scheduled jobs can be disabled without warning.
+  root_cause: In transit
+  condition: State any gaps in the run history.
+
+- id: CHK-01
+  version: 1
+  title: Every rule caught its planted defect last night
+  why: A check that can't fail proves nothing. Each night a defect is planted in a private copy to prove each rule still fires.
+  dataset: pipeline
+  fields: [all rules]
+  dimension: Checking the checker
+  severity: Critical
+  fail_above: 0
+  review_above: 0
+  owner_role: Data Owner (Results)
+  steward_role: Data Steward (Pipeline)
+  action: Treat the rule that missed its defect as broken until it is fixed.
+  root_cause: In use
+  condition: Fix the rule that missed its defect.

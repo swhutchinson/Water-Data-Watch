@@ -1,0 +1,31 @@
+# Decisions made by people about open issues. The engine never writes to this file.
+# These are illustrative decisions made by the report's author, to show how a forum could record them. They describe no real organisation.
+# accepted: true means the issue is understood and being handled. It stays open and visible until the rule passes.
+
+- rule: VAL-07
+  decided_on: 2026-11-04
+  decision: Count below-limit results at half the limit, state this on every page, and never drop them.
+  decided_by: Data Owner (Results)
+  accepted: true
+  review_on: 2027-02-01
+
+- rule: TIM-01
+  decided_on: 2026-11-04
+  decision: Treat these streams as late rather than stopped until the publisher confirms how they arrive.
+  decided_by: Data Owner (Results)
+  accepted: true
+  review_on: 2026-12-04
+
+- rule: VAL-04
+  decided_on: 2026-11-04
+  decision: Keep stand-in locations off every map, and show them in a separate labelled box.
+  decided_by: Data Owner (Sampling Points)
+  accepted: true
+  review_on: 2027-02-01
+
+- rule: PRV-01
+  decided_on: 2026-11-04
+  decision: Withhold flagged labels, and link to the public source record instead.
+  decided_by: Data Owner (Sampling Points)
+  accepted: true
+  review_on: 2027-05-01
