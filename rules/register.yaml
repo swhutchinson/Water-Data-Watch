@@ -15,7 +15,7 @@
   fail_above: 0
   review_above: 0
   owner_role: Data Owner (Results)
-  steward_role: Data Steward (Pipeline)
+  steward_role: Data Steward (Data Flow)
   action: Stop using the latest figures, re-run the load and compare again.
   root_cause: In transit
   condition: Reload until the row counts match.
@@ -32,7 +32,7 @@
   fail_above: 0
   review_above: 0
   owner_role: Data Owner (Results)
-  steward_role: Data Steward (Pipeline)
+  steward_role: Data Steward (Data Flow)
   action: Correct the window boundaries and reload.
   root_cause: In transit
   condition: Correct the window boundaries.
@@ -48,7 +48,7 @@
   fail_above: 0
   review_above: 0
   owner_role: Data Owner (Results)
-  steward_role: Data Steward (Pipeline)
+  steward_role: Data Steward (Data Flow)
   action: Update the contract and the engine together, then re-run.
   root_cause: At source
   condition: Agree the new columns.
@@ -65,26 +65,10 @@
   fail_above: null
   review_above: 0
   owner_role: Data Owner (Results)
-  steward_role: Data Steward (Pipeline)
+  steward_role: Data Steward (Data Flow)
   action: Read what changed and update the data contract if needed.
   root_cause: At source
   condition: Read what the publisher changed.
-
-- id: SRC-06
-  version: 1
-  title: No source is running on an out-of-date copy
-  why: The bathing water service refuses requests from the nightly runner, so a saved copy stands in. A copy is only as good as its date.
-  dataset: bathing
-  fields: [taken_on, window_start, window_end]
-  dimension: Reconciliation
-  severity: Major
-  fail_above: 0
-  review_above: 0
-  owner_role: Data Owner (Bathing Waters)
-  steward_role: Data Steward (Pipeline)
-  action: Take a fresh copy from a home connection with python -m engine.bathing_copy.
-  root_cause: In transit
-  condition: Take a fresh copy of the bathing water season before relying on the comparison.
 
 - id: SRC-05
   version: 1
@@ -97,10 +81,26 @@
   fail_above: 0
   review_above: 0
   owner_role: Data Owner (Results)
-  steward_role: Data Steward (Pipeline)
+  steward_role: Data Steward (Data Flow)
   action: Compare with the source before using the latest figures.
   root_cause: At source
   condition: Explain the fall in row counts before using the figures.
+
+- id: SRC-06
+  version: 1
+  title: No source is running on an out-of-date copy
+  why: The bathing water service doesn't accept requests from the server that runs the nightly check, so a saved copy stands in. A copy is only as good as its date.
+  dataset: bathing
+  fields: [taken_on, window_start, window_end]
+  dimension: Reconciliation
+  severity: Major
+  fail_above: 0
+  review_above: 0
+  owner_role: Data Owner (Bathing Waters)
+  steward_role: Data Steward (Data Flow)
+  action: Take a fresh copy of the season from an ordinary home connection.
+  root_cause: In transit
+  condition: Take a fresh copy of the bathing water season before relying on the comparison.
 
 - id: COM-01
   version: 1
@@ -177,7 +177,7 @@
   fail_above: 0
   review_above: 0
   owner_role: Data Owner (Results)
-  steward_role: Data Steward (Pipeline)
+  steward_role: Data Steward (Data Flow)
   action: Keep one copy, and find out where the second came from.
   root_cause: In transit
   condition: Remove the duplicates.
@@ -593,7 +593,7 @@
   fail_above: 0
   review_above: 0
   owner_role: Data Owner (Results)
-  steward_role: Data Steward (Pipeline)
+  steward_role: Data Steward (Data Flow)
   action: Keep running. This clears itself after 35 days.
   root_cause: In use
   condition: Wait for the ledger to cover one full monthly refresh.
@@ -626,14 +626,14 @@
   fail_above: 20
   review_above: 0
   owner_role: Data Owner (Results)
-  steward_role: Data Steward (Pipeline)
+  steward_role: Data Steward (Data Flow)
   action: Find out why the run was missed. Scheduled jobs can be disabled without warning.
   root_cause: In transit
   condition: State any gaps in the run history.
 
 - id: CHK-01
   version: 1
-  title: Every rule caught its planted defect last night
+  title: Every rule caught its planted defect at the last check
   why: A check that can't fail proves nothing. Each night a defect is planted in a private copy to prove each rule still fires.
   dataset: pipeline
   fields: [all rules]
@@ -642,7 +642,7 @@
   fail_above: 0
   review_above: 0
   owner_role: Data Owner (Results)
-  steward_role: Data Steward (Pipeline)
+  steward_role: Data Steward (Data Flow)
   action: Treat the rule that missed its defect as broken until it is fixed.
   root_cause: In use
   condition: Fix the rule that missed its defect.

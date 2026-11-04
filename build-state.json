@@ -12,7 +12,7 @@
     "Deneb specs drawn and checked offline against real output",
     "Report generator written; schema and binding checks clean on a copy"
   ],
-  "nextAction": "Sam presses Ctrl+S in Desktop and closes it. Check the live model's measures reached the TMDL. Rerun tools/spot_check.py (a first run was still going, and it read the area names in the wrong capitals, so its two top-area lines will differ). Run node build/report.mjs and the validators, Sam reopens, activate the theme, render against build/fixtures, check every page in Desktop, then publish.",
+  "nextAction": "FIRST: resolve the spot check. tools/spot_check.py got 0 of 11 agreeing: 580,775 rows from the API against 561,028 in the report, VAL-07 220,416 against 214,679, quick 1.7599 against 1.7523, stated 0.1520 against 0.1530. Cause unknown: compare the two scripts' month windows and the per-month row counts. Two of the 11 were only the capitals in the area names, now fixed. Don't publish until explained. Then: Sam saves and closes Desktop, check measures reached the TMDL, node build/report.mjs, validators, Sam reopens, theme, render, Desktop check, publish.",
   "decisions": [
     "Scope by region, with no storm overflow data",
     "Rely on the service's own licence statement, and record the difference as AUD-02",

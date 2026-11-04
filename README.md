@@ -11,7 +11,7 @@ Independent project, not affiliated with or endorsed by the Environment Agency.
 ## What it does
 
 - **A rule register:** 40 rules, each with a reason, a severity, thresholds, an owner role and an action.
-- **Checks on all the data in the window:** about 560,000 results and 8,200 sampling points, over 24 months.
+- **Checks on all the data in the window:** about 560,000 results and 8,200 sampling points, in a window of 24 calendar months that includes the current one.
 - **Planted defects:** each rule's own defect is put into a private copy of the data, to prove the rule still fires. The copy is then thrown away.
 - **Does it change the answer?** Where it can be measured, each problem's figure is worked out carefully and carelessly, which sets the order to fix things in.
 - **A verdict for each decision:** Fit, Fit with conditions, Not fit or Not checked, for sending a monthly report, showing a trend, signing off a figure and training an AI model. There is no average score, and a failed gate can't be outvoted.

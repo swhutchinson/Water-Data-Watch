@@ -1,0 +1,17 @@
+[
+ {
+  "title": "Clock times are real times, not defaults",
+  "status": "Fail",
+  "why": "When one minute takes a large share of a stream's samples, it looks like a convention and not a time. Time-of-day can't then be used as an input. Why this happens is unconfirmed.",
+  "severity": "Major",
+  "dimension": "AI readiness",
+  "owner_role": "Analytics Lead",
+  "steward_role": "Data Steward (Results)",
+  "action": "Ask the publisher what these stamps mean, and leave time-of-day out for the streams affected.",
+  "root_cause": "In definitions",
+  "Rule Card Text": "5,526 of 39,943 records (13.8%) break this rule.",
+  "Rule Threshold Text": "Fails above 5%. Needs review above 1%. Illustrative.",
+  "Rule Effect Text": "Share of all samples that look like they were taken at the stated minute, if every clock time is believed, against if stamped times are set aside: 86.17 worked out carefully, 100. carelessly (%). That moves it by +16.1%.",
+  "Rule Test Text": "Caught at the last check: its count rose from 5,526 to 10,902 when its own defect was planted in a private copy."
+ }
+]

@@ -71,7 +71,7 @@ export default frame('Every rule against every sample month, with tonight\'s out
     txt("length(data('rules')) ? 'A line means the rule checks a whole list, so it has no months.' : ''", { x: `${X.months} * u`, y: '60 * u', size: 15, color: C.muted, limit: `${X.strip - X.months - 20} * u` }),
     txt("timeFormat(datetime(toNumber(substring(datum.month, 0, 4)), toNumber(substring(datum.month, 5, 7)) - 1, 1), '%b %y')", { from: 'monthTicks', x: `(${X.months} + (datum.n - 1) * ${CELL}) * u`, y: `${TOP - 14} * u`, size: 15, color: C.muted }),
     txt("length(data('rules')) ? 'By night' : ''", { x: `${X.strip} * u`, y: '34 * u', size: 18, weight: 700, font: FONT_DISPLAY }),
-    txt("r0.Since || ''", { x: `${X.strip} * u`, y: `${TOP - 36} * u`, size: 15, color: C.muted, limit: `W - ${X.strip + 4} * u` }),
+    txt("r0.Since || ''", { x: 'W - 14 * u', y: `${TOP - 36} * u`, size: 15, color: C.muted, align: 'right' }),
     // Highlight behind the rule picked
     { type: 'rect', from: { data: 'rules' }, interactive: false, encode: { update: { x: { signal: '6 * u' }, x2: { signal: 'W - 6 * u' }, y: { signal: 'datum.y' }, height: { signal: 'rowH' }, cornerRadius: { signal: '4 * u' }, fill: { value: C.panel2 }, stroke: { value: C.muted }, strokeWidth: { signal: '1.2 * u' }, opacity: { signal: 'datum.id === r0.Picked ? 1 : 0' } } } },
     // Lines between dimensions

@@ -207,8 +207,11 @@ IF ( [Selected Use Id] = "ai", 1, 0 )
 
 MEASURE 'Report Measures'[Showing Trust] =
 -- folder: Trust
--- desc: What is selected, in large type at the top of the page.
-[Selected Use Name] & "  ·  North West England  ·  " & FORMAT ( [Source Rows], "#,0" ) & " results over 24 months"
+-- desc: What is selected, in large type at the top of the page. It names the first month with results, so it stays true as the window moves.
+VAR StartMonth = MINX ( FILTER ( Months, Months[samples] > 0 ), Months[sample_month] )
+VAR StartDay = DATE ( VALUE ( LEFT ( StartMonth, 4 ) ), VALUE ( RIGHT ( StartMonth, 2 ) ), 1 )
+RETURN
+    [Selected Use Name] & "  ·  North West England  ·  " & FORMAT ( [Source Rows], "#,0" ) & " results since " & FORMAT ( StartDay, "mmm yyyy" )
 
 MEASURE 'Report Measures'[Selected Verdict] =
 -- folder: Trust
@@ -573,7 +576,7 @@ RETURN
     SWITCH (
         State,
         "ok", "The bathing water service was read live at the last check.",
-        "copy", "The bathing water service doesn't accept requests from the nightly runner, so a copy taken on " & FORMAT ( Taken, "d mmm yyyy" ) & " stands in. A rule says when it's out of date.",
+        "copy", "The bathing water service doesn't accept requests from the server that runs the nightly check, so a copy taken on " & FORMAT ( Taken, "d mmm yyyy" ) & " stands in. A rule says when it's out of date.",
         "The bathing water service couldn't be read at the last check, and its rules show Not checked."
     )
 

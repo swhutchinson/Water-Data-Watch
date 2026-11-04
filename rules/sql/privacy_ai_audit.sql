@@ -125,7 +125,7 @@ UPDATE silver.ledger_info SET days_tracked = 0;
 SELECT item AS record_ref, NULL AS point_id, NULL AS sample_month,
        -- A statement that couldn't be read is left out and counted as excluded, because nobody knows what it says.
        CASE WHEN status = 'ok' THEN value <> 'Open Government Licence' END AS failed,
-       CASE WHEN status = 'ok' THEN 'States: ' || value ELSE 'Could not be read tonight' END AS detail,
+       CASE WHEN status = 'ok' THEN 'States: ' || value ELSE 'Could not be read at this check' END AS detail,
        NULL AS source_url
 FROM bronze.source_watch WHERE kind = 'licence';
 -- @plant

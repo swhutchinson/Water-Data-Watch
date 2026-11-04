@@ -34,8 +34,8 @@ USER_AGENT = "water-data-watch-spot-check/1.0 (independent public data quality p
 REGION = "NW"
 # Rows in each page.
 PAGE = 2500
-# How many whole months back the window starts.
-MONTHS_BACK = 24
+# How many months back the window starts. The current month counts as one of the 24, so the window starts 23 months back.
+MONTHS_BACK = 23
 # Ammonia's code in the source's list of measurements.
 AMMONIA = "0111"
 # The point type treated as a river.

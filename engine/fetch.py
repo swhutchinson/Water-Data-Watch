@@ -330,7 +330,7 @@ def licence_wording(text):
 # Read what the publisher says about the service tonight: its specification, and its licence wording in three places.
 def fetch_source_watch(today_text, base=settings.WQ_BASE):
     # Each thing being watched: its name, its address and how to read it.
-    pages = [("API specification", f"{base}/openapi.json", "spec"), ("Licence: water quality service", f"{base}/", "licence"), ("Licence: catalogue record", settings.CATALOGUE_URL, "licence"), ("Licence: bathing water service", settings.BW_HELP_URL, "licence")]
+    pages = [("Service specification", f"{base}/openapi.json", "spec"), ("Licence: water quality service", f"{base}/", "licence"), ("Licence: catalogue record", settings.CATALOGUE_URL, "licence"), ("Licence: bathing water service", settings.BW_HELP_URL, "licence")]
     # Rows so far.
     rows = []
     # Each page.

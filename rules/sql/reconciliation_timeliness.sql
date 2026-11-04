@@ -16,7 +16,7 @@ SELECT source || ' ' || window_start AS record_ref, NULL AS point_id, nullif(sub
        CASE WHEN status = 'ok' THEN rows_received IS DISTINCT FROM api_total END AS failed,
        CASE WHEN status = 'ok' THEN 'The source says ' || coalesce(CAST(api_total AS VARCHAR), 'nothing') || '; ' || rows_received || ' rows loaded'
             WHEN status = 'copy' THEN 'Not compared: this used a saved copy, with ' || rows_received || ' rows'
-            ELSE 'Not compared: this source could not be read tonight' END AS detail,
+            ELSE 'Not compared: this source could not be read at this check' END AS detail,
        NULL AS source_url
 FROM bronze.manifest WHERE source IN ('results', 'points', 'bathing', 'codes');
 -- @plant
@@ -88,8 +88,8 @@ SELECT source AS record_ref, NULL AS point_id, NULL AS sample_month,
             -- After the season, a copy taken before the season ended is missing its end.
             WHEN as_of >= CAST(window_end AS DATE) + 14 AND CAST(taken_on AS DATE) < CAST(window_end AS DATE) THEN TRUE
             ELSE FALSE END AS failed,
-       CASE WHEN status = 'failed' THEN 'Could not be read tonight, and there is no copy'
-            WHEN status <> 'copy' THEN 'Read live tonight'
+       CASE WHEN status = 'failed' THEN 'Could not be read at this check, and there is no copy'
+            WHEN status <> 'copy' THEN 'Read live at this check'
             ELSE 'A saved copy, taken on ' || taken_on || ', of the season from ' || window_start END AS detail,
        NULL AS source_url
 FROM sources, today;
@@ -98,9 +98,9 @@ UPDATE bronze.manifest SET status = 'copy', window_start = '2000-05-01', window_
 
 -- @rule SRC-05
 -- @check
-SELECT 'Rows tonight against the last run' AS record_ref, NULL AS point_id, NULL AS sample_month,
+SELECT 'Rows at this check against the last run' AS record_ref, NULL AS point_id, NULL AS sample_month,
        CASE WHEN previous_rows IS NULL THEN NULL ELSE (SELECT count(*) FROM silver.results) < 0.9 * previous_rows END AS failed,
-       (SELECT count(*) FROM silver.results) || ' rows tonight, ' || coalesce(CAST(previous_rows AS VARCHAR), 'none recorded') || ' at the last run' AS detail,
+       (SELECT count(*) FROM silver.results) || ' rows at this check, ' || coalesce(CAST(previous_rows AS VARCHAR), 'none recorded') || ' at the last run' AS detail,
        NULL AS source_url
 FROM silver.ledger_info;
 -- @plant
