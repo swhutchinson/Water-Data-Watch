@@ -12,7 +12,7 @@
     "Deneb specs drawn and checked offline against real output",
     "Report generator written; schema and binding checks clean on a copy"
   ],
-  "nextAction": "FIRST: resolve the spot check. tools/spot_check.py got 0 of 11 agreeing: 580,775 rows from the API against 561,028 in the report, VAL-07 220,416 against 214,679, quick 1.7599 against 1.7523, stated 0.1520 against 0.1530. Cause unknown: compare the two scripts' month windows and the per-month row counts. Two of the 11 were only the capitals in the area names, now fixed. Don't publish until explained. Then: Sam saves and closes Desktop, check measures reached the TMDL, node build/report.mjs, validators, Sam reopens, theme, render, Desktop check, publish.",
+  "nextAction": "Sam presses Ctrl+S in Desktop and closes it. Check the measures reached the TMDL (79 expected, none yet at last look). Run node build/report.mjs and the validators with Desktop closed. Sam reopens, activates the theme and refreshes. Then export fixtures, render, check every page in Desktop, and publish.",
   "decisions": [
     "Scope by region, with no storm overflow data",
     "Rely on the service's own licence statement, and record the difference as AUD-02",
@@ -26,5 +26,12 @@
     "The nightly run comes before the report, because its history can't be created later. A first published version comes before the full page list.",
     "build-state.json is committed, so keep private details out of it."
   ],
-  "lessons": []
+  "lessons": [],
+  "lastValidation": {
+    "spot_check": "11 of 11 agree against the API (2026-11-04), after correcting the spot check's window, which had one month too many",
+    "cold_timings": "every query under about 150 ms",
+    "tests": "63 pass",
+    "deneb_render": "all cases ok, live fixtures",
+    "scratch_report": "validate_pbir and check_deneb_bindings clean, 97 fields OK"
+  }
 }
