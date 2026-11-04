@@ -10,7 +10,7 @@
   "action": "Hold the affected code back until its unit is confirmed.",
   "root_cause": "At source",
   "Rule Card Text": "0 of 891 records (0.0%) break this rule.",
-  "Rule Threshold Text": "Fails above 0%. Needs review above 0%. Illustrative.",
+  "Rule Threshold Text": "Any break fails it. Illustrative.",
   "Rule Effect Text": "No effect on a figure was measured for this rule.",
   "Rule Test Text": "Caught at the last check: its count rose from 0 to 1 when its own defect was planted in a private copy."
  }

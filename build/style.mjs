@@ -128,21 +128,32 @@ export const message = (signalText, ySignal = 'H / 2', subSignal = "''", show = 
   txt(`(${show}) ? ${subSignal} : ''`, { x: 'W / 2', y: `${ySignal} + 34 * u`, size: 18, align: 'center', baseline: 'middle', color: C.muted, limit: 'W - 48 * u' }),
 ];
 
-// Word wrap for long sentences (Vega text does not wrap): splits the text signal into words, then starts a new line
-// whenever a word would pass `charsSignal` characters. Returns a data entry named `name` with one row per line:
-// { line, text }. Draw it with a text mark from that data, y = top + datum.line * lineHeight.
-export const wrapData = (name, textSignal, charsSignal) => ({
-  name, values: [{}], transform: [
-    { type: 'formula', as: 'words', expr: `split(${textSignal} || '', ' ')` },
-    { type: 'flatten', fields: ['words'], as: ['w'], index: 'i' },
-    { type: 'formula', as: 'len', expr: 'length(datum.w) + 1' },
-    { type: 'window', ops: ['sum'], fields: ['len'], as: ['cum'], sort: { field: 'i' } },
-    // A word goes on the line where it starts
-    { type: 'formula', as: 'line', expr: `floor((datum.cum - datum.len) / max(10, ${charsSignal}))` },
-    { type: 'aggregate', groupby: ['line'], ops: ['values'], fields: ['w'], as: ['ws'] },
-    { type: 'formula', as: 'text', expr: "join(pluck(datum.ws, 'w'), ' ')" },
-  ],
-});
+// Word wrap for long sentences (Vega text does not wrap): takes one line at a time, breaking at the last space inside
+// `charsSignal` characters, so a line can't overrun. Vega has no loops, so each line is its own step. Anything past
+// `maxLines` stays on the last line, where the text mark's limit shows an ellipsis, so a cut is never silent.
+// Returns a data entry named `name` with one row per line: { line, text }. Draw it with a text mark from that data, y = top + datum.line * lineHeight.
+export const wrapData = (name, textSignal, charsSignal, maxLines = 10) => {
+  // The steps for one line: where it ends, and what is left after it
+  const steps = [...Array(maxLines).keys()].flatMap(i => {
+    const head = `substring(datum.r${i}, 0, datum.n + 1)`;
+    return [
+      { type: 'formula', as: `c${i}`, expr: `length(datum.r${i}) <= datum.n ? length(datum.r${i}) : (lastindexof(${head}, ' ') > 0 ? lastindexof(${head}, ' ') : datum.n)` },
+      { type: 'formula', as: `r${i + 1}`, expr: `trim(substring(datum.r${i}, datum.c${i}))` },
+    ];
+  });
+  // Every line but the last ends where its step said, and the last line takes whatever is left
+  const lines = [...Array(maxLines).keys()].map(i => (i < maxLines - 1 ? `substring(datum.r${i}, 0, datum.c${i})` : `datum.r${i}`));
+  return {
+    name, values: [{}], transform: [
+      { type: 'formula', as: 'r0', expr: `trim('' + (${textSignal} || ''))` },
+      { type: 'formula', as: 'n', expr: `max(10, floor(${charsSignal}))` },
+      ...steps,
+      { type: 'formula', as: 'lines', expr: `[${lines.join(', ')}]` },
+      { type: 'flatten', fields: ['lines'], as: ['text'], index: 'line' },
+      { type: 'filter', expr: "datum.text !== '' || datum.line === 0" },
+    ],
+  };
+};
 
 // A sign drawn as a stroked symbol. e is the outcome expression; x, y and sz are signals (sz is the sign's width in design px).
 export const signMark = (e, x, y, sz, opts = {}) => ({

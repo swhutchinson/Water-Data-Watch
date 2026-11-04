@@ -13,6 +13,7 @@ What was confirmed while building Water Data Watch, so nobody has to work it out
 | Finding | What to do |
 |---|---|
 | A group's `opacity` doesn't carry down to the marks inside it. An empty-state message in a hidden group still drew on top of the chart | Blank the text itself when it isn't wanted (`message()` in `style.mjs` takes a `show` signal) |
+| A line of Vega text wrapped by counting where each word starts can overrun and be cut with an ellipsis | `wrapData` in `style.mjs` now breaks at the last space inside the limit, one step per line |
 | A signal that reads a dataset which reads that signal is a cycle, and the chart doesn't draw | Size rows from the unfiltered `src` data, not from the dataset that uses the row height |
 | Equal ranks on a slope chart draw their labels on top of each other | Give each its own place on the axis with a tie-break, and show `=5` |
 

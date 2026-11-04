@@ -445,8 +445,8 @@ MEASURE 'Report Measures'[Rule Threshold Text] =
 VAR FailAbove = SELECTEDVALUE ( Rules[fail_above] )
 VAR ReviewAbove = SELECTEDVALUE ( Rules[review_above] )
 RETURN
-    IF ( NOT ISBLANK ( FailAbove ), "Fails above " & FailAbove & "%", "Never fails outright" )
-        & IF ( NOT ISBLANK ( ReviewAbove ), ". Needs review above " & ReviewAbove & "%" )
+    IF ( NOT ISBLANK ( FailAbove ), IF ( FailAbove = 0, "Any break fails it", "Fails above " & FailAbove & "%" ), "Never fails outright" )
+        & IF ( NOT ISBLANK ( ReviewAbove ) && ( ISBLANK ( FailAbove ) || ReviewAbove < FailAbove ), ". Needs review above " & ReviewAbove & "%" )
         & ". Illustrative."
 
 MEASURE 'Report Measures'[Rule Effect Text] =

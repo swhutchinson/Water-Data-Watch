@@ -1,17 +1,17 @@
 [
- {
-  "title": "Results can go straight into a calculation",
-  "status": "For review",
-  "why": "A plain conversion loses or misreads every \"below a limit\" result, and that inflates averages. This is a normal way to report results. It needs a stated method, not a correction.",
-  "severity": "Major",
-  "dimension": "Validity",
-  "owner_role": "Data Owner (Results)",
-  "steward_role": "Data Steward (Results)",
-  "action": "Publish the method for below-limit results, and use it everywhere.",
-  "root_cause": "In use",
-  "Rule Card Text": "214,679 of 561,028 records (38.3%) break this rule.",
-  "Rule Threshold Text": "Never fails outright. Needs review above 10%. Illustrative.",
-  "Rule Effect Text": "Average river ammonia with below-limit results dropped, against counted at half the limit: 1.08 worked out carefully, 1.75 carelessly (mg/l). That moves it by +61.9%.",
-  "Rule Test Text": "Caught at the last check: its count rose from 214,679 to 214,682 when its own defect was planted in a private copy."
- }
+    {
+        "title":  "Results can go straight into a calculation",
+        "status":  "For review",
+        "why":  "A plain conversion loses or misreads every \"below a limit\" result, and that inflates averages. This is a normal way to report results. It needs a stated method, not a correction.",
+        "severity":  "Major",
+        "dimension":  "Validity",
+        "owner_role":  "Data Owner (Results)",
+        "steward_role":  "Data Steward (Results)",
+        "action":  "Publish the method for below-limit results, and use it everywhere.",
+        "root_cause":  "In use",
+        "Rule Card Text":  "214,679 of 561,028 records (38.3%) break this rule.",
+        "Rule Threshold Text":  "Never fails outright. Needs review above 10%. Illustrative.",
+        "Rule Effect Text":  "Average river ammonia with below-limit results dropped, against counted at half the limit: 1.08 worked out carefully, 1.75 carelessly (mg/l). That moves it by +61.9%.",
+        "Rule Test Text":  "Caught at the last check: its count rose from 214,679 to 214,682 when its own defect was planted in a private copy."
+    }
 ]

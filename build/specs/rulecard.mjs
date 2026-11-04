@@ -7,7 +7,7 @@ const fm = fieldMap([['title'], ['status'], ['why'], ['severity'], ['dimension']
 // True when exactly one rule is picked
 const ONE = "length(data('src')) === 1";
 // How many characters fit on a line of 18 px text
-const CHARS = '(W - 48 * u) / (9.6 * u)';
+const CHARS = '(W - 48 * u) / (8.75 * u)';
 // One block of the card: where its lines go, its heading, and the text
 const blocks = [
   ['resultLines', 'What it found', 'r0.Result'], ['whyLines', 'Why it matters', 'r0.why'], ['actionLines', 'What to do', 'r0.action'],
@@ -24,7 +24,7 @@ export default frame('The rule picked: what it found, why it matters, who answer
   signals: [...fm.signals, ...sizeSignals(504, 764), { name: 'r0', update: "length(data('src')) === 1 ? data('src')[0] : {}" }],
   data: [
     ...fm.data,
-    wrapData('titleLines', 'r0.title', '(W - 48 * u) / (11 * u)'),
+    wrapData('titleLines', 'r0.title', '(W - 48 * u) / (10.6 * u)'),
     ...blocks.map(b => wrapData(b[0], b[2], CHARS)),
   ],
   marks: [
@@ -35,7 +35,7 @@ export default frame('The rule picked: what it found, why it matters, who answer
     // The blocks
     ...blocks.flatMap((b, i) => [
       txt(`${ONE} ? ${JSON.stringify(b[1])} : ''`, { x: '24 * u', y: `${blockY(i)} + 20 * u`, size: 16, weight: 700, color: C.muted, font: FONT_DISPLAY }),
-      txt('datum.text', { from: b[0], x: '24 * u', y: `${blockY(i)} + (43 + datum.line * 24) * u`, size: 18, limit: 'W - 28 * u' }),
+      txt('datum.text', { from: b[0], x: '24 * u', y: `${blockY(i)} + (43 + datum.line * 24) * u`, size: 18, limit: 'W - 40 * u' }),
     ]),
     ...message("'Pick a rule'", 'H / 2', "'Use the picker at the top to see one rule in full.'", `!(${ONE})`),
     fieldMapDiagnostic(),

@@ -3,7 +3,7 @@
         "Planted Text":  "39 of 39 planted defects were caught. A rule that misses its own defect fails CHK-01, which every decision must pass. The defects only ever go into a private copy, and the source data is never changed.",
         "Fingerprints Text":  "561,028 records fingerprinted at the last run.",
         "Ledger Text":  "0 new, 0 changed and 0 removed since the last run.",
-        "Bathing Source Text":  "The bathing water service doesn\u0027t accept requests from the nightly runner, so a copy taken on 4 Nov 2026 stands in. A rule says when it\u0027s out of date.",
+        "Bathing Source Text":  "The bathing water service doesn\u0027t accept requests from the server that runs the nightly check, so a copy taken on 4 Nov 2026 stands in. A rule says when it\u0027s out of date.",
         "Licence Text":  "The service\u0027s own pages state the Open Government Licence v3.0, which this report relies on. Its catalogue record reads differently, so that\u0027s recorded as a question for a steward."
     }
 ]
