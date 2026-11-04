@@ -2,9 +2,13 @@
 // from the specs in build/specs and the tokens in build/style.mjs. Run only while Power BI Desktop is closed.
 // Usage: node build/report.mjs     (REPORT_DIR overrides the output folder, for validating a copy)
 import { fileURLToPath } from 'node:url';
-import { createReport, colExpr, msrExpr, lit } from './pbir.mjs';
+import { createReport, colExpr, msrExpr, lit, str, inFilter } from './pbir.mjs';
 import { C, FONT_DISPLAY, FONT_BODY } from './style.mjs';
 import { masthead } from './specs/masthead.mjs';
+import pointmap from './specs/pointmap.mjs';
+import pointtiles from './specs/pointtiles.mjs';
+import decisions from './specs/decisions.mjs';
+import pointcard from './specs/pointcard.mjs';
 import board from './specs/board.mjs';
 import tonight from './specs/tonight.mjs';
 import slope from './specs/slope.mjs';
@@ -102,8 +106,87 @@ const panelled = v => {
   return v;
 };
 
-// ---------- page 1: can I trust it? ----------
-const P1 = pid('trust');
+// A button. link holds the action's own properties, such as its type and where it goes.
+const button = (name, pos, tab, text, link, alt, fill = C.panel2) => R.container(name, pos, tab, {
+  visualType: 'actionButton',
+  objects: {
+    icon: [{ properties: { show: lit('false') } }],
+    text: [{ properties: { show: lit('true') } }, { properties: { text: str(text), fontColor: { solid: { color: str(C.text) } }, fontFamily: str('Bahnschrift'), fontSize: lit('13D'), bold: lit('true') }, selector: { id: 'default' } }],
+    fill: [{ properties: { show: lit('true') } }, { properties: { fillColor: { solid: { color: str(fill) } }, transparency: lit('0D') }, selector: { id: 'default' } }],
+  },
+  visualContainerObjects: {
+    ...R.chromeOff,
+    border: [{ properties: { show: lit('true'), color: { solid: { color: str(C.soft) } }, radius: lit('10D') } }],
+    general: [{ properties: { altText: str(alt) } }],
+    visualLink: [{ properties: { show: lit('true'), ...link } }],
+  },
+});
+// Colours one table column's words from a measure holding the colour.
+const colourFrom = (v, wordsMeasure, colourMeasure) => {
+  v.visual.objects = { ...(v.visual.objects || {}), values: [{ properties: { fontColor: { solid: { color: { expr: msrExpr(MT, colourMeasure) } } } }, selector: { data: [{ dataViewWildcard: { matchingOption: 1 } }], metadata: `${MT}.${wordsMeasure}` } }] };
+  return v;
+};
+// The three pickers that narrow the points, set out by the caller.
+const pointPickers = (p, positions, firstTab) => [
+  picker(vid(p, 'area'), positions[0], firstTab, 'PointPacks', 'area_name', undefined, 'Area', 'Narrow the sampling points to one or more areas'),
+  picker(vid(p, 'type'), positions[1], firstTab + 1, 'PointPacks', 'point_group', undefined, 'Type of point', 'Narrow the sampling points to one or more types'),
+  picker(vid(p, 'band'), positions[2], firstTab + 2, 'PointPacks', 'band', undefined, 'Record quality', 'Narrow the sampling points to one or more record quality bands'),
+];
+// The columns of a list of points, under plain headings.
+const POINT_COLS = [named(col('PointQuality', 'point_label'), 'Sampling point'), named(col('PointQuality', 'point_group'), 'Type'), named(col('PointQuality', 'area_name'), 'Area'), named(msr('Point Score'), 'Score'), named(msr('Point Quality'), 'Record quality'), named(msr('Point Flags'), 'Flags')];
+
+// ---------- the map page ----------
+const PM = pid('map'), PL = pid('points'), PD = pid('point'), P1 = pid('trust');
+const toPoint = { type: str('Drillthrough'), drillthroughSection: str(PD) };
+const map = { name: PM, displayName: 'Map', visuals: [
+  header(PM, 'How far can the records at each sampling point be trusted?', { measure: 'Showing Points' }),
+  deneb(vid(PM, 'map'), [40, 122, 720, 868], 2, pointmap, ['pack_id', 'point_group', 'area_name', 'band', 'located', 'packed'].map(c => col('PointPacks', c)),
+    'Map of North West England with a dot for every sampling point. Colour, shape and a word show the quality of its records, not of the water: no flags, a few flags, look closer or no results to check. Points with no real location sit in a labelled box.', { renderMode: 'canvas', crossFilter: true }),
+  ...pointPickers(PM, [[776, 122, 358, 96], [1149, 122, 358, 96], [1522, 122, 358, 96]], 3),
+  deneb(vid(PM, 'tiles'), [776, 226, 1104, 150], 6, pointtiles, ['Points Shown', 'Points No Flags', 'Points A Few Flags', 'Points Look Closer', 'Points No Results'].map(msr), 'How many sampling points fall in each record quality band, each with a sign and a word.'),
+  deneb(vid(PM, 'decisions'), [776, 384, 1104, 186], 7, decisions, ['use_name', 'use_order', 'dataset_id', 'verdict', 'gates_failed', 'gates_unchecked', 'conditions_open'].map(c => col('Verdicts', c)), 'The overall verdict for each decision, with a sign and a word. The pickers do not change these.'),
+  button(vid(PM, 'why'), [1668, 392, 200, 42], 8, 'See why', { type: str('PageNavigation'), navigationSection: str(P1) }, 'Go to the page explaining each verdict'),
+  widths(colourFrom(tableEx(vid(PM, 'list'), [776, 578, 1104, 352], 9, POINT_COLS, 'Points to look at first, for review', 'The sampling points with flags, lowest score first, with a sign and a word for each band. Choose a row to see that point in full.',
+    { sort: [{ field: msrExpr(MT, 'Point Score'), direction: 'Ascending' }], filters: [{ name: vid(PM, 'listfilter'), field: colExpr('PointQuality', 'band'), type: 'Categorical', filter: inFilter('PointQuality', 'band', ['A few flags', 'Look closer']) }] }), 'Point Quality', 'Point Quality Colour'), [430, 170, 170, 76, 150, 64]),
+  button(vid(PM, 'open'), [776, 938, 330, 52], 10, 'See this point\'s checks', toPoint, 'Open the page for the sampling point chosen in the list', C.blue),
+  textbox(vid(PM, 'openhint'), [1122, 938, 758, 52], 11, [para(['Choose a row in the list, then press the button. Or right-click a row and choose Drill through.', '13pt', C.muted])], 'How to open one sampling point'),
+  footer(PM),
+] };
+
+// ---------- the list of points ----------
+const list = { name: PL, displayName: 'Sampling points', visuals: [
+  header(PL, 'What does each sampling point score, and why?', { measure: 'Showing Points' }),
+  widths(colourFrom(tableEx(vid(PL, 'list'), [40, 122, 1320, 868], 2, [...POINT_COLS, named(msr('Point Results'), 'Results')], 'Every sampling point', 'Every sampling point with results or listed as open: its type, area, score, record quality band, flags and results. Choose a row to see that point in full.',
+    { sort: [{ field: msrExpr(MT, 'Point Score'), direction: 'Ascending' }] }), 'Point Quality', 'Point Quality Colour'), [520, 190, 190, 76, 170, 60, 80]),
+  R.searchBox(vid(PL, 'search'), [1376, 122, 504, 150], 3, 'PointQuality', 'point_label', 'Find a point by name or code', 'Type part of a sampling point\'s name or code to find it'),
+  ...pointPickers(PL, [[1376, 280, 504, 96], [1376, 384, 504, 96], [1376, 488, 504, 96]], 4),
+  button(vid(PL, 'open'), [1376, 592, 504, 64], 7, 'See this point\'s checks', toPoint, 'Open the page for the sampling point chosen in the list', C.blue),
+  panelled(textbox(vid(PL, 'score'), [1376, 664, 504, 326], 8, [
+    HEAD('How the score works'),
+    para(['It is the share of a point\'s records passing the 15 checks that can be tied to one point. Serious checks count more: Critical 3, Major 2, Minor 1.', '12pt']), GAP,
+    para(['Below-limit results and clock times aren\'t marked down. The first is normal reporting and the second is an open question. A point\'s page shows both.', '12pt']), GAP,
+    para(['It never overrides a must-pass check and feeds no verdict. Closed points with no results are left out. Scores and bands are illustrative.', '12pt', C.text, true]),
+  ], 'How the record quality score is worked out, what it leaves out and that it is illustrative')),
+  footer(PL),
+] };
+
+// ---------- one point, reached by drilling through ----------
+const point = { name: PD, displayName: 'Point detail', hidden: true, drillthrough: { table: 'PointQuality', column: 'point_label' }, visuals: [
+  header(PD, 'What do the checks say about this sampling point?', { measure: 'Showing Point' }),
+  deneb(vid(PD, 'card'), [40, 122, 620, 780], 2, pointcard, [...['point_label', 'point_group', 'area_name', 'point_status', 'location_kind', 'band', 'score', 'results', 'samples', 'newest_date', 'flags', 'map_e', 'map_n'].map(c => col('PointQuality', c)), ...['Checks Ran', 'Checks Flagged', 'Point Explain Text'].map(msr)],
+    'One sampling point: its record quality score, band, type, area, results, newest sample, where it is on a small map, and what the score means.'),
+  button(vid(PD, 'back'), [40, 914, 240, 76], 3, 'Go back', { type: str('Back') }, 'Go back to the page you came from'),
+  button(vid(PD, 'source'), [296, 914, 364, 76], 4, 'Check this point at source', { type: str('WebUrl'), webUrl: { expr: msrExpr(MT, 'Point Source Url') } }, 'Open this sampling point on the publisher\'s website', C.blue),
+  widths(colourFrom(titleFromMeasure(tableEx(vid(PD, 'checks'), [676, 122, 1204, 470], 5,
+    [named(col('Rules', 'id'), 'Rule'), named(col('Rules', 'title'), 'What it checks'), named(msr('Check Records'), 'Records checked'), named(msr('Check Flagged Records'), 'Flagged'), named(msr('Check Share'), 'Share'), named(msr('Check Outcome'), 'Outcome'), named(msr('Check Counted'), 'In the score?')],
+    '', 'Every check that reached this sampling point, what it found and whether it counts towards the score.', { sort: [{ field: msrExpr(MT, 'Check Flagged Records'), direction: 'Descending' }] }), 'Point Checks Title'), 'Check Outcome', 'Check Outcome Colour'), [84, 410, 100, 80, 76, 150, 240]),
+  widths(titleFromMeasure(tableEx(vid(PD, 'records'), [676, 604, 1204, 386], 6,
+    [named(msr('Exception Rule Here'), 'Rule'), named(col('Exceptions', 'month_label'), 'Sample month'), named(col('Exceptions', 'detail'), 'What was found'), named(col('Exceptions', 'source_url'), 'Check at source')],
+    '', 'The flagged records kept for this sampling point, with a link to each one at its source.', { sort: [{ field: colExpr('Exceptions', 'month_label'), direction: 'Descending' }] }), 'Point Records Title'), [90, 150, 730, 170]),
+  footer(PD),
+] };
+
+// ---------- can I trust it? ----------
 const trust = { name: P1, displayName: 'Can I trust it?', visuals: [
   header(P1, 'Can this data be trusted for the decision it is about to feed?', { measure: 'Showing Trust', defaultMeasure: 'Is Default Use', hint: 'an example to start with: change it on the right' }),
   deneb(vid(P1, 'board'), [40, 122, 960, 578], 2, board,
@@ -120,7 +203,7 @@ const trust = { name: P1, displayName: 'Can I trust it?', visuals: [
   footer(P1),
 ] };
 
-// ---------- page 2: same data, different answer ----------
+// ---------- same data, different answer ----------
 const P2 = pid('same');
 const PICK_W = 356, PICK_GAP = 15;
 const pickX = i => 40 + i * (PICK_W + PICK_GAP);
@@ -201,9 +284,10 @@ const how = { name: P5, displayName: 'How it works', visuals: [
     HEAD('Sources and licence'),
     para(['Contains Environment Agency information © Environment Agency and/or database right. Water Quality Archive and Bathing Water Quality, used under the Open Government Licence v3.0.', '12pt', C.text]), GAP,
     para(['Independent project, not affiliated with or endorsed by the Environment Agency.', '12pt', C.text]), GAP,
-    para(['View the code on GitHub', '13.5pt', C.blueLight, true, 'https://github.com/swhutchinson/Water-Data-Watch']),
-  ], 'What is illustrative, the sources and licence, independence, and a link to the code')),
+    para(['Map outline: Source: Office for National Statistics licensed under the Open Government Licence v.3.0. Contains OS data © Crown copyright and database right.', '12pt', C.text]),
+  ], 'What is illustrative, the sources and licence, and independence')),
+  button(vid(P5, 'code'), [1520, 932, 344, 46], 7, 'View the code on GitHub', { type: str('WebUrl'), webUrl: str('https://github.com/swhutchinson/Water-Data-Watch') }, 'Open this project\'s code on GitHub'),
   footer(P5),
 ] };
 
-writePages([trust, same, rules, exceptions, how]);
+writePages([map, list, point, trust, same, rules, exceptions, how]);

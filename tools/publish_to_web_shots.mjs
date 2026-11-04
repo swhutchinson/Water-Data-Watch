@@ -1,4 +1,4 @@
-// Screenshots the first five pages of the Publish to web report, waiting for each page's visuals to finish drawing.
+// Screenshots the seven visible pages of the Publish to web report, waiting for each page's visuals to finish drawing.
 export default async function run(page, ui) {
   await page.setViewportSize({ width: 1920, height: 1160 })
   const out = []
@@ -13,12 +13,12 @@ export default async function run(page, ui) {
       await page.waitForTimeout(3000)
     }
   }
-  for (let n = 1; n <= 5; n++) {
+  for (let n = 1; n <= 7; n++) {
     await settle(n === 1 ? 20000 : 12000)
     const path = `${process.env.SHOT_DIR}/page${n}.png`
     await page.screenshot({ path })
     out.push(path)
-    if (n < 5) await page.getByRole('button', { name: 'Next Page' }).click()
+    if (n < 7) await page.getByRole('button', { name: 'Next Page' }).click()
   }
   return out
 }

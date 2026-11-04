@@ -17,9 +17,16 @@ export const CASES = [
   ['rulecard', 'rulecard', 504, 764], ['rulecard', 'rulecard_longest', 504, 764], ['rulecard', 'rulecard_widest', 504, 764], ['rulecard', 'rulecard_notchecked', 504, 764], ['rulecard', 'rulecard', 380, 580], ['rulecard', 'empty', 504, 764],
   ['lineage', 'lineage', 1840, 280], ['lineage', 'lineage', 1200, 200], ['lineage', 'empty', 1840, 280],
   ['notes', 'notes', 620, 576], ['notes', 'empty', 620, 576],
+  ['pointmap', 'pointmap', 720, 868], ['pointmap', 'pointmap_area', 720, 868], ['pointmap', 'pointmap', 480, 580], ['pointmap', 'empty', 720, 868],
+  ['pointtiles', 'pointtiles', 1104, 150], ['pointtiles', 'pointtiles', 800, 110], ['pointtiles', 'empty', 1104, 150],
+  ['decisions', 'decisions', 1104, 186], ['decisions', 'decisions', 800, 140], ['decisions', 'empty', 1104, 186],
+  ['pointcard', 'pointcard', 620, 780], ['pointcard', 'pointcard_clean', 620, 780], ['pointcard', 'pointcard_grey', 620, 780], ['pointcard', 'pointcard_noplace', 620, 780], ['pointcard', 'empty', 620, 780],
 ];
 
 const filter = process.argv[2];
+// Deneb supplies these two functions; offline they do nothing, so the click handlers still parse
+vega.expressionFunction('pbiCrossFilterApply', () => null);
+vega.expressionFunction('pbiCrossFilterClear', () => null);
 const EDGE = 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe';
 fs.mkdirSync('out', { recursive: true });
 let failures = 0;

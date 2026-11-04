@@ -592,3 +592,203 @@ RETURN
         "The service's own pages state the Open Government Licence v3.0, which this report relies on. Its catalogue record reads differently, so that's recorded as a question for a steward.",
         "The statements read at the last check agree on the Open Government Licence v3.0."
     )
+
+MEASURE 'Report Measures'[Points Shown] =
+-- folder: Points
+-- desc: How many sampling points the pickers leave in view.
+COALESCE ( COUNTROWS ( PointQuality ), 0 )
+
+MEASURE 'Report Measures'[Points No Flags] =
+-- folder: Points
+-- desc: Points where every check passed. FILTER rather than a CALCULATE, so it respects a picker on the band.
+COALESCE ( COUNTROWS ( FILTER ( PointQuality, PointQuality[band] = "No flags" ) ), 0 )
+
+MEASURE 'Report Measures'[Points A Few Flags] =
+-- folder: Points
+-- desc: Points flagged but still scoring 95 or more. Illustrative.
+COALESCE ( COUNTROWS ( FILTER ( PointQuality, PointQuality[band] = "A few flags" ) ), 0 )
+
+MEASURE 'Report Measures'[Points Look Closer] =
+-- folder: Points
+-- desc: Points flagged and scoring under 95, for a person to look at. Illustrative.
+COALESCE ( COUNTROWS ( FILTER ( PointQuality, PointQuality[band] = "Look closer" ) ), 0 )
+
+MEASURE 'Report Measures'[Points No Results] =
+-- folder: Points
+-- desc: Open points with nothing in the window, so nothing to score. Not a pass and not a fail.
+COALESCE ( COUNTROWS ( FILTER ( PointQuality, PointQuality[band] = "No results to check" ) ), 0 )
+
+MEASURE 'Report Measures'[Showing Points] =
+-- folder: Points
+-- desc: What is selected, in words, for the top of the page. Lists up to two choices, then gives a number.
+VAR Shown = [Points Shown]
+VAR Areas = VALUES ( PointPacks[area_name] )
+VAR Kinds = VALUES ( PointPacks[point_group] )
+VAR Bands = VALUES ( PointPacks[band] )
+VAR AreaText =
+    IF (
+        NOT ISFILTERED ( PointPacks[area_name] ),
+        "all of North West England",
+        IF ( COUNTROWS ( Areas ) <= 2, CONCATENATEX ( Areas, PointPacks[area_name], " and " ), COUNTROWS ( Areas ) & " areas" )
+    )
+VAR KindText =
+    IF (
+        NOT ISFILTERED ( PointPacks[point_group] ),
+        "every type",
+        IF ( COUNTROWS ( Kinds ) <= 2, CONCATENATEX ( Kinds, PointPacks[point_group], " and " ), COUNTROWS ( Kinds ) & " types" )
+    )
+VAR BandText =
+    IF (
+        NOT ISFILTERED ( PointPacks[band] ),
+        "",
+        " · " & IF ( COUNTROWS ( Bands ) <= 2, CONCATENATEX ( Bands, PointPacks[band], " and " ), COUNTROWS ( Bands ) & " bands" )
+    )
+RETURN
+    FORMAT ( Shown, "#,0" ) & IF ( Shown = 1, " sampling point", " sampling points" ) & " · " & AreaText & " · " & KindText & BandText
+
+MEASURE 'Report Measures'[Point Score] =
+-- folder: Points
+-- desc: One point's score out of 100. Blank with no results, because nothing was checked. Illustrative.
+IF ( HASONEVALUE ( PointQuality[point_id] ), SELECTEDVALUE ( PointQuality[score] ) )
+
+MEASURE 'Report Measures'[Point Quality] =
+-- folder: Points
+-- desc: One point's band with a sign and a word, so colour is never the only cue. Blank outside the pickers, which also keeps the list filtered.
+SWITCH (
+    SELECTEDVALUE ( PointQuality[band] ),
+    "No flags", "✓ No flags",
+    "A few flags", "! A few flags",
+    "Look closer", "✗ Look closer",
+    "No results to check", "– No results"
+)
+
+MEASURE 'Report Measures'[Point Quality Colour] =
+-- folder: Points
+-- desc: The colour of a point's band, for the words in a table.
+SWITCH (
+    SELECTEDVALUE ( PointQuality[band] ),
+    "No flags", "#4CD8B0",
+    "A few flags", "#F2CE6B",
+    "Look closer", "#FF8A73",
+    "#CAD4E3"
+)
+
+MEASURE 'Report Measures'[Point Flags] =
+-- folder: Points
+-- desc: Records flagged at this point by the checks in the score. One record can be flagged by two checks.
+SUM ( PointQuality[flags] )
+
+MEASURE 'Report Measures'[Point Results] =
+-- folder: Points
+-- desc: Results checked at this point in the window.
+SUM ( PointQuality[results] )
+
+MEASURE 'Report Measures'[Showing Point] =
+-- folder: Points
+-- desc: The point chosen, for the top of its page.
+IF ( HASONEVALUE ( PointQuality[point_id] ), SELECTEDVALUE ( PointQuality[point_label] ), "choose a point on the Map page" )
+
+MEASURE 'Report Measures'[Point Source Url] =
+-- folder: Points
+-- desc: The chosen point's page at source, so anyone can check it.
+SELECTEDVALUE ( PointQuality[source_url] )
+
+MEASURE 'Report Measures'[Checks Ran] =
+-- folder: Points
+-- desc: How many checks reached the chosen point.
+IF ( HASONEVALUE ( PointQuality[point_id] ), COALESCE ( COUNTROWS ( PointChecks ), 0 ) )
+
+MEASURE 'Report Measures'[Checks Flagged] =
+-- folder: Points
+-- desc: How many of those checks flagged something, including those shown but not scored.
+IF ( HASONEVALUE ( PointQuality[point_id] ), COALESCE ( COUNTROWS ( FILTER ( PointChecks, PointChecks[flagged] > 0 ) ), 0 ) )
+
+MEASURE 'Report Measures'[Point Explain Text] =
+-- folder: Points
+-- desc: What the chosen point's score means, in a sentence that follows its band.
+VAR Band = SELECTEDVALUE ( PointQuality[band] )
+RETURN
+    IF (
+        HASONEVALUE ( PointQuality[point_id] ),
+        SWITCH (
+            Band,
+            "No results to check", "This point is listed as open, but no results arrived in the window. Nothing can be scored, so it stays grey rather than counting as a pass.",
+            "No flags", "Every check in the score passed here. That shows its records are complete and consistent. It doesn't show that a reading is true or the water is clean.",
+            [Checks Flagged] & " of " & [Checks Ran] & " checks flagged something here. The score is the share of records passing each check, weighted by how serious the check is. It is illustrative, and it never overrides a must-pass check."
+        )
+    )
+
+MEASURE 'Report Measures'[Point Checks Title] =
+-- folder: Points
+-- desc: The title of the chosen point's list of checks.
+IF (
+    HASONEVALUE ( PointQuality[point_id] ),
+    [Checks Ran] & " checks reached this point, and " & [Checks Flagged] & " flagged something",
+    "Choose a point to see its checks"
+)
+
+MEASURE 'Report Measures'[Check Records] =
+-- folder: Points
+-- desc: Records this check looked at, at this point.
+SUM ( PointChecks[checked] )
+
+MEASURE 'Report Measures'[Check Flagged Records] =
+-- folder: Points
+-- desc: Records this check flagged, at this point.
+SUM ( PointChecks[flagged] )
+
+MEASURE 'Report Measures'[Check Share] =
+-- folder: Points
+-- desc: The share of the records it looked at that it flagged.
+DIVIDE ( [Check Flagged Records], [Check Records] )
+
+MEASURE 'Report Measures'[Check Outcome] =
+-- folder: Points
+-- desc: What a check found at this point, with a sign and a word. Something shown but not scored is a prompt, not a failure.
+VAR Flagged = [Check Flagged Records]
+VAR Counted = SELECTEDVALUE ( PointChecks[counts_in_score] )
+RETURN
+    IF (
+        NOT ISBLANK ( COUNTROWS ( PointChecks ) ),
+        IF ( Flagged = 0, "✓ Clear", IF ( Counted = "True", "✗ Flagged", "! For information" ) )
+    )
+
+MEASURE 'Report Measures'[Check Outcome Colour] =
+-- folder: Points
+-- desc: The colour of a check's outcome, for the words in a table.
+VAR Outcome = LEFT ( [Check Outcome], 1 )
+RETURN
+    SWITCH ( Outcome, "✓", "#4CD8B0", "✗", "#FF8A73", "!", "#F2CE6B", "#CAD4E3" )
+
+MEASURE 'Report Measures'[Check Counted] =
+-- folder: Points
+-- desc: Whether this check counts towards the score, and why not if it doesn't.
+VAR Counted = SELECTEDVALUE ( PointChecks[counts_in_score] )
+VAR Rule = SELECTEDVALUE ( PointChecks[rule_id] )
+RETURN
+    IF (
+        NOT ISBLANK ( COUNTROWS ( PointChecks ) ),
+        SWITCH (
+            TRUE (),
+            Counted = "True", "Yes",
+            Rule = "VAL-07", "No: normal reporting",
+            Rule = "AI-04", "No: an open question",
+            "No: no results to score"
+        )
+    )
+
+MEASURE 'Report Measures'[Exception Rule Here] =
+-- folder: Points
+-- desc: The rule behind a flagged record. Blank for records at other points, which keeps the list to the chosen point.
+MAX ( Exceptions[rule_id] )
+
+MEASURE 'Report Measures'[Point Records Title] =
+-- folder: Points
+-- desc: The title of the chosen point's flagged records, saying that the list is capped so it can't be mistaken for the total.
+VAR Kept = COALESCE ( COUNTROWS ( Exceptions ), 0 )
+RETURN
+    IF (
+        HASONEVALUE ( PointQuality[point_id] ),
+        FORMAT ( Kept, "#,0" ) & " flagged records kept for this point. Up to 500 are kept per rule across all points, so this list can be shorter than the counts above",
+        "Choose a point to see its flagged records"
+    )

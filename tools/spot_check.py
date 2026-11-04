@@ -136,6 +136,50 @@ def average(values):
     return sum(values) / len(values) if values else None
 
 
+# Work out every point's score from the published counts, without the engine's code: the lowest score, and how many points had no flags.
+def point_scores():
+    # How much each severity counts. The report's page states these same weights.
+    weights = {"Critical": 3, "Major": 2, "Minor": 1}
+    # Reads the severities from the register's plain text, one rule at a time.
+    severity, rule = {}, None
+    # Every line of the register.
+    for line in (ROOT / "rules" / "register.yaml").read_text(encoding="utf-8").splitlines():
+        # A line naming a rule.
+        found = re.match(r"\s*-?\s*id:\s*([A-Z]+-[0-9]+)", line)
+        # Remember which rule this is.
+        rule = found.group(1) if found else rule
+        # A line stating that rule's severity.
+        found = re.match(r"\s*severity:\s*(\w+)", line)
+        # Keep it.
+        if found and rule:
+            # One severity per rule.
+            severity[rule] = found.group(1)
+    # Each point's two running totals, and whether anything was flagged.
+    top, bottom, flagged = {}, {}, {}
+    # Downloads the published counts for each check.
+    request = urllib.request.Request("https://raw.githubusercontent.com/swhutchinson/Water-Data-Watch/powerbi-data/point_checks.csv", headers={"User-Agent": USER_AGENT})
+    # Reads them.
+    with urllib.request.urlopen(request, timeout=120) as reply:
+        # Row by row.
+        for row in csv.DictReader(io.StringIO(reply.read().decode("utf-8"))):
+            # Only checks that count towards the score.
+            if row["counts_in_score"] != "True":
+                # Skip the rest.
+                continue
+            # The point and this rule's weight.
+            point, weight = row["point_id"], weights[severity[row["rule_id"]]]
+            # The share passing, multiplied by the weight.
+            top[point] = top.get(point, 0) + weight * (1 - int(row["flagged"]) / int(row["checked"]))
+            # The weight itself.
+            bottom[point] = bottom.get(point, 0) + weight
+            # Whether this check flagged anything here.
+            flagged[point] = flagged.get(point, False) or int(row["flagged"]) > 0
+    # Rounded down to one decimal place, as the report shows it.
+    low = min(int(100 * top[p] / bottom[p] * 10) / 10 for p in top)
+    # Hand back the lowest score and the count of unflagged points.
+    return low, sum(1 for p in flagged if not flagged[p])
+
+
 # The whole check.
 def main():
     # The download folder is passed in, so scripts stay out of it.
@@ -164,6 +208,8 @@ def main():
     samples = {}
     # River ammonia rows, kept for the two calculations.
     ammonia = []
+    # Results at each sampling point.
+    at_point = {}
     # One month at a time.
     for start, end in zip(starts, starts[1:]):
         # Download it.
@@ -178,6 +224,8 @@ def main():
                 rows_seen += 1
                 # Remember its address.
                 addresses.add(row["id"])
+                # Count it towards its sampling point.
+                at_point[row["samplingPoint.notation"]] = at_point.get(row["samplingPoint.notation"], 0) + 1
                 # What kind of result it is.
                 kind, number = read_result(row["result"])
                 # Count the kind.
@@ -218,8 +266,16 @@ def main():
 
     # The two sets of sub-area averages.
     quick_areas, stated_areas = by_area(quick_rows), by_area(stated_rows)
+    # Each point's score, added up here from the published counts for each check, using only the register's severities.
+    scored_low, no_flags = point_scores()
+    # The sampling point with the most results.
+    busiest = max(at_point, key=at_point.get)
     # Every check: its name, this script's number, the report's number.
     checks = [
+        ("Sampling points with results", len(at_point), model["points_with_results"]),
+        ("Results at the busiest sampling point", at_point[busiest], model["busiest_point_results"]),
+        ("Points where no check in the score flagged anything", no_flags, model["points_no_flags"]),
+        ("Lowest score of any point", scored_low, model["lowest_score"]),
         ("Rows the source says it holds", stated, model["source_rows"]),
         ("Rows downloaded", rows_seen, model["checked_rows"]),
         ("Each record appears once", len(addresses), model["checked_rows"]),

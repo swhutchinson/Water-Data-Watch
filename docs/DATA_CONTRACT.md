@@ -98,6 +98,9 @@ When a source is down, these keep their last good contents, and the run log show
 | `same_data.csv` | scenario, area | `det_code, det_name, plain_name, sub_area, method, sample_set, month_set, statistic, figure, rows_used, rows_in_scope, is_ranked_area, area_rank, scenario_key, unit_label` |
 | `ai_survival.csv` | step | `step_no, step_name, rows_left, step_note` |
 | `points.csv` | sampling point | `point_id, display_name, label_withheld, point_status, point_group, area, sub_area, location_kind, easting, northing, results_in_window, samples_in_window, newest_date` |
+| `point_quality.csv` | sampling point that is open or has results | `point_id, point_label, display_name, label_withheld, point_group, area_name, point_status, location_kind, map_e, map_n, results, samples, newest_date, score, band, band_order, flags, rules_flagged, source_url, pack_id`. The score describes the records, never the water. It is illustrative and feeds no verdict |
+| `point_checks.csv` | check reaching a point | `point_id, rule_id, checked, flagged, counts_in_score`. Below-limit results (VAL-07) and clock times (AI-04) are listed but never scored |
+| `point_packs.csv` | row of the map's data | `pack_id, point_group, area_name, band, band_order, located, points_in_pack, packed`. Each point in `packed` is `east~north~score~results~name`, separated by `\|`, on the National Grid in units of 100 m. A flagged point has a row of its own |
 | `map_cells.csv` | 5 km square | `cell_e, cell_n, points_total, points_open, points_open_silent, results_in_window` |
 | `result_kinds.csv` | kind of result | `result_kind, row_count, share_pct` |
 | `control_totals.csv` | stage | `stage_no, stage_name, row_count` |

@@ -58,7 +58,7 @@ export function createReport({ reportDir, measureTable, denebId, colors = {}, di
   const deneb = (name, pos, tab, spec, projections, alt, opts = {}) => container(name, pos, tab, {
     visualType: denebId,
     query: { queryState: { dataset: { projections } } },
-    objects: { vega: [{ properties: { provider: str('vega'), jsonSpec: str(JSON.stringify(spec)), jsonConfig: str('{}'), isNewDialogOpen: lit('false'), enableTooltips: lit('true'), enableContextMenu: lit('true'), ...(opts.renderMode ? { renderMode: str(opts.renderMode) } : {}) } }] },
+    objects: { vega: [{ properties: { provider: str('vega'), jsonSpec: str(JSON.stringify(spec)), jsonConfig: str('{}'), isNewDialogOpen: lit('false'), enableTooltips: lit('true'), enableContextMenu: lit('true'), ...(opts.renderMode ? { renderMode: str(opts.renderMode) } : {}), ...(opts.crossFilter ? { enableSelection: lit('true'), selectionMode: str('advanced') } : {}) } }] },
     visualContainerObjects: { ...chromeOff, general: [{ properties: { altText: str(alt) } }] },
     drillFilterOtherVisuals: true,
   });
@@ -74,6 +74,8 @@ export function createReport({ reportDir, measureTable, denebId, colors = {}, di
   const tableEx = (name, pos, tab, projections, titleText, alt, extra = {}) => container(name, pos, tab, {
     visualType: 'tableEx',
     query: { queryState: { Values: { projections } }, ...(extra.sort ? { sortDefinition: { sort: extra.sort, isDefaultSort: false } } : {}) },
+    // No totals row, set here as well as in the theme, so it holds before the theme is switched on
+    objects: { total: [{ properties: { totals: lit('false') } }] },
     visualContainerObjects: panelChrome(titleText, alt),
     drillFilterOtherVisuals: true,
   }, extra.filters ? { filterConfig: { filters: extra.filters } } : {});
@@ -123,6 +125,8 @@ export function createReport({ reportDir, measureTable, denebId, colors = {}, di
       const dir = `${pagesDir}/${pg.name}`;
       if (fs.existsSync(`${dir}/visuals`)) fs.rmSync(`${dir}/visuals`, { recursive: true });
       const page = { $schema: PG, name: pg.name, displayName: pg.displayName, displayOption, height, width, objects: bg };
+      // A drill-through page stays out of the page tabs, and is reached from a chosen row
+      if (pg.hidden) page.visibility = 'HiddenInViewMode';
       if (pg.drillthrough) {
         const { table, column } = pg.drillthrough;
         const filterName = id(`drill/${pg.name}/${column}`);

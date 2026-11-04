@@ -19,9 +19,9 @@ export const C = {
 // Signs, drawn as symbol marks because arrow and tick glyphs fall back to a serif font in Vega.
 export const SIGN = { tick: 'M-0.75,0.05 L-0.25,0.55 L0.8,-0.6', cross: 'M-0.6,-0.6 L0.6,0.6 M0.6,-0.6 L-0.6,0.6', bang: 'M0,-0.85 L0,0.2 M0,0.66 L0,0.8', dash: 'M-0.6,0 L0.6,0' };
 // Which group an outcome or verdict belongs to: good, bad, review or none. All the helpers below read this.
-const isGood = e => `(${e} === 'Pass' || ${e} === 'Fit' || ${e} === 'Caught')`;
-const isBad = e => `(${e} === 'Fail' || ${e} === 'Not fit' || ${e} === 'Missed')`;
-const isReview = e => `(${e} === 'For review' || ${e} === 'Fit with conditions')`;
+const isGood = e => `(${e} === 'Pass' || ${e} === 'Fit' || ${e} === 'Caught' || ${e} === 'No flags')`;
+const isBad = e => `(${e} === 'Fail' || ${e} === 'Not fit' || ${e} === 'Missed' || ${e} === 'Look closer')`;
+const isReview = e => `(${e} === 'For review' || ${e} === 'Fit with conditions' || ${e} === 'A few flags')`;
 // The sign for an outcome or a verdict, as a Vega expression.
 export const signPath = e => `${isGood(e)} ? '${SIGN.tick}' : ${isBad(e)} ? '${SIGN.cross}' : ${isReview(e)} ? '${SIGN.bang}' : '${SIGN.dash}'`;
 // The fill colour for an outcome or a verdict.

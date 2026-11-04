@@ -17,6 +17,12 @@ WHOLE = {"Latest Run No", "Run Count", "Days Tracked", "Hours Since Check", "Sou
 DATES = {"Tracking Since"}
 # Figures shown with two decimals
 FIGURES = {"Quick Figure", "Your Figure", "Region Quick", "Region Yours", "Switch Figure", "Switch Base"}
+# A point's score, to one decimal place
+SCORES = {"Point Score"}
+# Shares shown as a percentage
+SHARES = {"Check Share"}
+# Whole numbers on the point pages
+WHOLE_POINTS = {"Points Shown", "Points No Flags", "Points A Few Flags", "Points Look Closer", "Points No Results", "Point Flags", "Point Results", "Checks Ran", "Checks Flagged", "Check Records", "Check Flagged Records"}
 # Anything else returns text, so it gets no number format
 # Helpers kept out of the field list
 HIDDEN = set()
@@ -51,7 +57,13 @@ for block in blocks:
     elif name in FIGURES:
         # Figures with two decimals
         d["formatString"] = "0.00"
-    elif name in WHOLE:
+    elif name in SCORES:
+        # One decimal place
+        d["formatString"] = "0.0"
+    elif name in SHARES:
+        # A percentage
+        d["formatString"] = "0.0%"
+    elif name in WHOLE or name in WHOLE_POINTS:
         # Whole numbers
         d["formatString"] = "#,0"
     # Hide helpers

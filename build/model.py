@@ -122,6 +122,19 @@ TABLES = [
     # Result kinds
     ("ResultKinds", "result_kinds.csv", "How the result column splits by kind.", [
         ("result_kind", "text", False, None), ("row_count", "int", False, None), ("share_pct", "num", False, None)]),
+    # One row per sampling point
+    ("PointQuality", "point_quality.csv", "Each sampling point's record quality score, describing its records and never the water. Illustrative. It feeds no verdict. Withheld labels show the point's type and code.", [
+        ("point_id", "text", True, "The point's reference at source."), ("point_label", "text", False, "The name shown, always unique."), ("display_name", "text", True, None), ("label_withheld", "text", True, None),
+        ("point_group", "text", False, "A broad grouping of the source's point types."), ("area_name", "text", False, None), ("point_status", "text", False, None), ("location_kind", "text", False, None),
+        ("map_e", "int", True, "East on the National Grid, in units of 100 m. Blank with no real location."), ("map_n", "int", True, "North on the National Grid, in units of 100 m."), ("results", "int", False, None), ("samples", "int", False, None), ("newest_date", "date", False, None),
+        ("score", "num", False, "Out of 100, weighted by each check's severity. Blank with no results."), ("band", "text", False, "No flags, A few flags, Look closer or No results to check."), ("band_order", "int", True, None), ("flags", "int", False, "Records flagged by the checks in the score."), ("rules_flagged", "int", False, None),
+        ("source_url", "text", False, "The point's page at source."), ("pack_id", "int", True, "The row of PointPacks holding this point.")]),
+    # One row per check at a point
+    ("PointChecks", "point_checks.csv", "Every check that reached each sampling point, and what it found, whether or not it counts towards the score.", [
+        ("point_id", "text", True, None), ("rule_id", "text", True, None), ("checked", "int", False, "Records this check looked at here."), ("flagged", "int", False, "Records it flagged here."), ("counts_in_score", "text", False, "True if it counts towards the score.")]),
+    # The map's rows
+    ("PointPacks", "point_packs.csv", "The points packed into short text rows for the map, because a chart's cost grows with rows. The pickers filter this table, and it filters the points. A flagged point has a row of its own.", [
+        ("pack_id", "int", True, None), ("point_group", "text", False, None), ("area_name", "text", False, None), ("band", "text", False, None), ("band_order", "int", True, None), ("located", "text", True, "False if these points have no real location."), ("points_in_pack", "int", True, None), ("packed", "text", True, "Each point as east~north~score~results~name, separated by |.")]),
     # Refresh time
     ("RefreshInfo", None, "When the data was last refreshed (UTC), captured once per refresh. The report's only \"now\".", [
         ("RefreshedUTC", "dtz", True, None), ("RefreshedUKDate", "date", True, "UK local date of the refresh."), ("RefreshedUKText", "text", True, "UK local time of the refresh, e.g. 26 Oct 18:42.")]),
@@ -138,6 +151,14 @@ RELATIONSHIPS = [
     ("Issues_Rules", "Issues.rule_id", "Rules.id"),
     # A rule can have recorded decisions
     ("Decisions_Rules", "Decisions.rule", "Rules.id"),
+    # A map row holds many points, so a picker or a click on the map reaches the points
+    ("PointQuality_PointPacks", "PointQuality.pack_id", "PointPacks.pack_id"),
+    # A point has many checks
+    ("PointChecks_PointQuality", "PointChecks.point_id", "PointQuality.point_id"),
+    # A rule reaches many points
+    ("PointChecks_Rules", "PointChecks.rule_id", "Rules.id"),
+    # A point can have many flagged records
+    ("Exceptions_PointQuality", "Exceptions.point_id", "PointQuality.point_id"),
 ]
 
 

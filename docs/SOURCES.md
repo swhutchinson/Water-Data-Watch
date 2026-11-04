@@ -59,6 +59,8 @@ The sources disagree, so this is recorded rather than smoothed over.
 
 Attribution used on every page: "Contains Environment Agency information © Environment Agency and/or database right".
 
+The map's outline of North West England is the ONS regions boundary (ultra generalised), converted to the National Grid by `build/make_outline.py` and built into the report. Source: Office for National Statistics licensed under the Open Government Licence v.3.0. Contains OS data © Crown copyright and database right. It is stated in full on the "How it works" page.
+
 ## 4. Deliberately left out
 
 - **Storm overflow returns.** North West rows can only be reached by filtering on a company, and this project is scoped by region. It compares no companies.
