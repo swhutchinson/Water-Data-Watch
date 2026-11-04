@@ -14,7 +14,7 @@ export const CASES = [
   ['slope', 'slope', 1180, 680], ['slope', 'slope', 840, 480], ['slope', 'empty', 1180, 680],
   ['switches', 'switches', 644, 680], ['switches', 'switches', 480, 500], ['switches', 'empty', 644, 680],
   ['grid', 'grid', 1320, 868], ['grid', 'grid_later', 1320, 868], ['grid', 'grid', 960, 620], ['grid', 'empty', 1320, 868],
-  ['rulecard', 'rulecard', 504, 764], ['rulecard', 'rulecard_longest', 504, 764], ['rulecard', 'rulecard_notchecked', 504, 764], ['rulecard', 'rulecard', 380, 580], ['rulecard', 'empty', 504, 764],
+  ['rulecard', 'rulecard', 504, 764], ['rulecard', 'rulecard_longest', 504, 764], ['rulecard', 'rulecard_widest', 504, 764], ['rulecard', 'rulecard_notchecked', 504, 764], ['rulecard', 'rulecard', 380, 580], ['rulecard', 'empty', 504, 764],
   ['lineage', 'lineage', 1840, 280], ['lineage', 'lineage', 1200, 200], ['lineage', 'empty', 1840, 280],
   ['notes', 'notes', 620, 576], ['notes', 'empty', 620, 576],
 ];

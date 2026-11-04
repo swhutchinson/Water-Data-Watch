@@ -451,16 +451,18 @@ RETURN
 
 MEASURE 'Report Measures'[Rule Effect Text] =
 -- folder: Rules
--- desc: Whether this rule's problem changes the answer, with the two figures. Says so plainly when no effect was measured.
+-- desc: Whether this rule's problem changes the answer, with the two figures. Says so plainly when no effect was measured. Whole numbers are shown without a stray decimal point.
 VAR Measured = SELECTEDVALUE ( Rules[measured] )
 VAR Careful = SUM ( Rules[careful] )
 VAR Careless = SUM ( Rules[careless] )
 VAR Effect = SUM ( Rules[effect_pct] )
 VAR Unit = SELECTEDVALUE ( Rules[unit] )
+VAR CarefulText = FORMAT ( Careful, IF ( ROUND ( Careful, 2 ) = ROUND ( Careful, 0 ), "#,0", "#,0.00" ) )
+VAR CarelessText = FORMAT ( Careless, IF ( ROUND ( Careless, 2 ) = ROUND ( Careless, 0 ), "#,0", "#,0.00" ) )
 RETURN
     IF (
         Measured = TRUE (),
-        SELECTEDVALUE ( Rules[figure] ) & ": " & FORMAT ( Careful, "#,0.##" ) & " worked out carefully, " & FORMAT ( Careless, "#,0.##" ) & " carelessly"
+        SELECTEDVALUE ( Rules[figure] ) & ": " & CarefulText & " worked out carefully, " & CarelessText & " carelessly"
             & IF ( Unit <> "", " (" & Unit & ")" )
             & IF ( NOT ISBLANK ( Effect ), ". That moves it by " & FORMAT ( Effect, "+#,0.0;-#,0.0" ) & "%." , "." ),
         "No effect on a figure was measured for this rule."
