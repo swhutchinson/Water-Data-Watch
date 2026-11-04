@@ -42,3 +42,19 @@ RESPONSE_DAYS = {"Critical": 7, "Major": 30, "Minor": 90}
 ENGINE_VERSION = "1.0"
 # A saved copy of the latest bathing season, used when the live service can't be read. See engine/bathing_copy.py.
 BATHING_COPY = RULES / "reference" / "bathing_copy.csv"
+
+# THE POINT SCORE. These settings say what counts, so nothing about the score is hidden in the code. All of it is illustrative.
+# The rules that can be traced to a sampling point and describe a real defect in its records.
+POINT_SCORE_RULES = ["UNI-01", "UNI-02", "UNI-03", "VAL-01", "VAL-02", "VAL-03", "VAL-04", "VAL-06", "CON-03", "ACC-01", "ACC-02", "ACC-03", "ACC-04", "REC-01", "REC-02"]
+# Rules shown on a point's detail but never counted against it. Below-limit results are a normal way to report. Why clock times are stamped is an open question.
+POINT_INFO_RULES = ["VAL-07", "AI-04"]
+# How much a rule counts towards a point's score, by its severity.
+POINT_WEIGHTS = {"Critical": 3, "Major": 2, "Minor": 1}
+# The four bands, best first. The words describe records, because a map of green and red could otherwise read as clean and dirty water.
+POINT_BANDS = ["No flags", "A few flags", "Look closer", "No results to check"]
+# A flagged point scoring below this needs a person to look. Illustrative.
+POINT_LOOK_CLOSER_BELOW = 95
+# How many points go in each text row the map draws from.
+POINT_PACK_SIZE = 60
+# Sub-area names a plain conversion to title case would get wrong.
+POINT_AREA_NAMES = {"": "Unknown", "ECMAS SAMPLING (CUMBRIA AND LANCASHIRE)": "ECMAS sampling (Cumbria and Lancashire)"}

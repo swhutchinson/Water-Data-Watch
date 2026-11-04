@@ -9,6 +9,8 @@ import yaml
 from engine import settings
 # Reads SQL files with the project's paths filled in.
 from engine.layers import read_sql
+# Gathers each rule's counts by sampling point, for the point score.
+from engine import points
 
 # The five honest outcomes a rule can have.
 PASS, FAIL, REVIEW, NOT_CHECKED, NO_DATA = "Pass", "Fail", "For review", "Not checked", "No data"
@@ -86,6 +88,8 @@ def run_rules(con, rules, available, run_id):
     months = []
     # The failed records, capped per rule.
     exceptions = []
+    # Start the counts by sampling point.
+    points.start_counts(con)
     # Each rule in register order.
     for rule in rules:
         # The summary row, filled in below.
@@ -110,6 +114,8 @@ def run_rules(con, rules, available, run_id):
         try:
             # Run it.
             eligible, failed, excluded = evaluate(con, rule)
+            # Keep this rule's counts for each point it names.
+            points.keep_counts(con, rule["id"])
             # Work out the outcome.
             row.update({"eligible": eligible, "failed": failed, "passed": eligible - failed, "excluded": excluded, "failed_pct": round(100.0 * failed / eligible, 3) if eligible else None, "status": outcome(rule, eligible, failed)})
             # This rule's results by month, for the grid. Rules about a whole list have no month and don't appear in it.

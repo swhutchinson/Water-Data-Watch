@@ -20,7 +20,7 @@ import duckdb
 # Reads the register's other files.
 import yaml
 # The engine's own parts.
-from engine import checks, fetch, issues, layers, ledger, publish, settings, tonight, verdicts
+from engine import points, checks, fetch, issues, layers, ledger, publish, settings, tonight, verdicts
 
 # The columns of each history file, in a fixed order, as the data contract says.
 RUN_LOG_COLUMNS = ["run_id", "as_of", "started_utc", "finished_utc", "seconds", "engine_version", "register_rules", "trigger", "results_status", "points_status", "bathing_status", "codes_status", "watch_status", "source_rows", "loaded_rows", "api_calls", "rules_pass", "rules_fail", "rules_review", "rules_not_checked", "rules_no_data", "planted_caught", "planted_tested", "verdict_monthly", "verdict_trend", "verdict_signoff", "verdict_ai", "tracking_since", "github_run"]
@@ -243,6 +243,16 @@ def run(no_fetch=False, as_of=None, raw_dir=settings.RAW, pub_dir=settings.PUB, 
             continue
         # Copy it across.
         publish.copy_table(con, table, pub_dir / f"{name}.csv")
+    # The point score needs both the results and the point list. If either is down, last night's files stay.
+    if (available["results"] and available["points"]) or not (pub_dir / "point_quality.csv").exists():
+        # Work out each point's score, its flags and the map's packed rows.
+        point_rows, point_flags, point_packs = points.build(con, rules)
+        # One row per point.
+        publish.write_rows(pub_dir / "point_quality.csv", point_rows, points.POINT_COLUMNS)
+        # One row per rule that flagged a point.
+        publish.write_rows(pub_dir / "point_flags.csv", point_flags, points.FLAG_COLUMNS)
+        # The rows the map draws from.
+        publish.write_rows(pub_dir / "point_packs.csv", point_packs, points.PACK_COLUMNS)
     # Nothing may leave if any history file has lost rows.
     publish.check_history(history, history_before)
     # The last job before anything leaves: sweep everything for personal data. A hit stops the run.

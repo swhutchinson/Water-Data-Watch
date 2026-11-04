@@ -16,7 +16,7 @@ import pytest
 # The in-process database.
 import duckdb
 # The engine's parts.
-from engine import checks, fetch, issues, layers, publish, run, settings, tonight, verdicts
+from engine import checks, fetch, issues, layers, points, publish, run, settings, tonight, verdicts
 # The made-up clean data.
 from tests import fixture
 
@@ -625,3 +625,77 @@ def test_shrinking_issue_list_is_refused(clean_run, tmp_path, monkeypatch, clean
     with pytest.raises(publish.PublishRefused):
         # Try it.
         run.run(as_of=fixture.AS_OF + timedelta(days=1), raw_dir=raw_dir, pub_dir=pub_dir, manifest=manifest, watch=fixture.clean_watch())
+
+
+# A point's score weights each rule by severity, and a rule that didn't reach the point doesn't count either way.
+def test_point_score_weights_rules_by_severity():
+    # A critical rule passing everything and a minor rule failing half.
+    assert points.score_from([(3, 10, 0), (1, 10, 5)]) == pytest.approx(87.5)
+    # A rule with nothing to check makes no difference.
+    assert points.score_from([(3, 10, 0), (2, 0, 0)]) == 100.0
+    # No rule reaching a point means no score, never a perfect one.
+    assert points.score_from([]) is None
+
+
+# A flagged point can never read as a perfect 100, and no results is grey rather than a pass.
+def test_point_bands_stay_honest():
+    # Rounding down keeps a flagged point below 100.
+    assert points.shown_score(99.99, 1) == 99.9
+    # Nothing flagged is exactly 100.
+    assert points.shown_score(100.0, 0) == 100.0
+    # No results is its own band, whatever else is true.
+    assert points.band_for(0, 0, None) == settings.POINT_BANDS[3]
+    # Nothing flagged.
+    assert points.band_for(10, 0, 100.0) == settings.POINT_BANDS[0]
+    # A few flags, at the threshold.
+    assert points.band_for(10, 2, settings.POINT_LOOK_CLOSER_BELOW) == settings.POINT_BANDS[1]
+    # Below the threshold.
+    assert points.band_for(10, 2, settings.POINT_LOOK_CLOSER_BELOW - 0.1) == settings.POINT_BANDS[2]
+
+
+# Below-limit results and clock times are shown on a point but never counted against it.
+def test_point_score_leaves_out_normal_reporting_and_open_questions():
+    # Neither rule is in the score.
+    assert not set(settings.POINT_INFO_RULES) & set(settings.POINT_SCORE_RULES)
+    # Every rule named really exists.
+    assert set(settings.POINT_SCORE_RULES + settings.POINT_INFO_RULES) <= {r["id"] for r in checks.load_rules()}
+
+
+# Each point is published once, every drawn point is in a pack, and a point with no results has no score.
+def test_point_files_agree(clean_run):
+    # Where the run published.
+    _, pub_dir = clean_run
+    # The points.
+    rows = read_rows(pub_dir / "point_quality.csv")
+    # The packs.
+    packs = read_rows(pub_dir / "point_packs.csv")
+    # No point appears twice.
+    assert len({r["point_id"] for r in rows}) == len(rows) > 0
+    # The packs hold exactly the points with a real location.
+    assert sum(int(p["points_in_pack"]) for p in packs) == sum(1 for r in rows if r["map_e"])
+    # Points with no results have no score, and points with results have one.
+    assert all(bool(r["score"]) == (int(r["results"]) > 0) for r in rows)
+
+
+# When the results can't be read, last night's point files stay rather than turning every point grey.
+def test_source_down_keeps_last_point_files(clean_raw, tmp_path):
+    # The saved folders.
+    raw_dir, manifest = clean_raw
+    # A first good night.
+    run.run(as_of=fixture.AS_OF, raw_dir=raw_dir, pub_dir=tmp_path / "pub", manifest=manifest, watch=fixture.clean_watch())
+    # What it published.
+    before = (tmp_path / "pub" / "point_quality.csv").read_bytes()
+    # A copy of the downloads with the results removed.
+    broken = tmp_path / "raw"
+    # Copy the folder.
+    shutil.copytree(raw_dir, broken)
+    # Remove the results.
+    for path in broken.glob("results_*.csv.gz"):
+        # Gone.
+        path.unlink()
+    # The record shows the results failed.
+    failed = [m for m in manifest if m["source"] != "results"] + [{"source": "results", "window_start": "2024-12-01", "window_end": "2025-01-01", "api_total": None, "calls": 0, "seconds": 0, "status": "failed", "error": "HTTP 503"}]
+    # A second night, with the results down.
+    run.run(as_of=fixture.AS_OF, raw_dir=broken, pub_dir=tmp_path / "pub", manifest=failed, watch=fixture.clean_watch())
+    # The file is unchanged.
+    assert (tmp_path / "pub" / "point_quality.csv").read_bytes() == before
