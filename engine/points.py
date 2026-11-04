@@ -1,15 +1,15 @@
 # Gives each sampling point a record quality score, from the same rule results as everything else.
 # The score describes the point's records, never the water. It doesn't feed any verdict, and a must-pass check still can't be outvoted.
 
-# Lets the SQL below take its weights from a list.
+# The score's rules, weights and bands.
 from engine import settings
 
 # Every line of the point file, in order.
-POINT_COLUMNS = ["point_id", "point_label", "display_name", "label_withheld", "point_group", "area_name", "point_status", "location_kind", "map_e", "map_n", "results", "samples", "newest_date", "score", "band", "band_order", "flags", "rules_flagged", "source_url"]
-# Every line of the file saying which rules flagged which point.
-FLAG_COLUMNS = ["point_id", "rule_id", "eligible", "failed", "counts_in_score"]
+POINT_COLUMNS = ["point_id", "point_label", "display_name", "label_withheld", "point_group", "area_name", "point_status", "location_kind", "map_e", "map_n", "results", "samples", "newest_date", "score", "band", "band_order", "flags", "rules_flagged", "source_url", "pack_id"]
+# Every line of the file saying which checks reached which point, and what they found.
+CHECK_COLUMNS = ["point_id", "rule_id", "checked", "flagged", "counts_in_score"]
 # Every line of the file the map draws from.
-PACK_COLUMNS = ["pack_id", "point_group", "area_name", "band", "band_order", "points_in_pack", "packed"]
+PACK_COLUMNS = ["pack_id", "point_group", "area_name", "band", "band_order", "located", "points_in_pack", "packed"]
 
 
 # Make the empty table each rule's point counts go into, before any rule runs.
@@ -71,7 +71,7 @@ def build(con, rules):
         # File it under the point.
         by_point.setdefault(point_id, []).append((rule_id, eligible, failed))
     # The rows of each file.
-    points, flag_rows = [], []
+    points, check_rows = [], []
     # Open points, and any point with results, in a stable order. Closed points with no results raise no question, so they stay out.
     for row in con.execute("SELECT point_id, display_name, label_withheld, point_status, point_group, sub_area, location_kind, easting, northing, results_in_window, samples_in_window, newest_date FROM gold.points_public WHERE point_status = 'OPEN' OR results_in_window > 0 ORDER BY point_id").fetchall():
         # Name the columns.
@@ -93,7 +93,7 @@ def build(con, rules):
         # The point's row.
         points.append({
             "point_id": point_id, "point_label": label, "display_name": display_name, "label_withheld": withheld, "point_group": group,
-            # The sub-area in plain capitals, using the name list where a plain conversion would look wrong.
+            # The sub-area in title case, using the name list where a plain conversion would look wrong.
             "area_name": settings.POINT_AREA_NAMES.get(sub_area or "", (sub_area or "Unknown").title()),
             "point_status": status, "location_kind": kind,
             # The map's position in units of 100 metres, or blank for a point with no real location.
@@ -103,39 +103,43 @@ def build(con, rules):
             # The publisher's own page for this point, so anyone can check it at source.
             "source_url": f"{settings.WQ_BASE}/sampling-point/{point_id}",
         })
-        # Each rule that flagged something at this point, whether or not it counts towards the score.
+        # Each check that reached this point, including the ones it passed, so its page can show the whole picture.
         for rule_id, eligible, failed in here:
-            # Rules with nothing to say here aren't listed, and a point with no results has no records to flag.
-            if failed and results:
-                # One row, saying plainly whether it counted.
-                flag_rows.append({"point_id": point_id, "rule_id": rule_id, "eligible": eligible, "failed": failed, "counts_in_score": rule_id in weights})
-    # Hand back the points, the flags and the map's packed rows.
-    return points, flag_rows, pack_points(points)
+            # A rule with nothing to check here isn't listed.
+            if eligible:
+                # One row, saying plainly whether it counted. Nothing counts at a point with no results, as it has no score.
+                check_rows.append({"point_id": point_id, "rule_id": rule_id, "checked": eligible, "flagged": failed, "counts_in_score": bool(results) and rule_id in weights})
+    # Hand back the points, the checks and the map's packed rows.
+    return points, check_rows, pack_points(points)
 
 
-# Pack the points with a real location into short text rows, because a chart's cost grows with rows, not marks.
+# Pack the points into short text rows, because a chart's cost grows with rows, not marks. Each point records which row holds it.
 def pack_points(points):
-    # Points gathered by the three things the pickers can filter on.
+    # Points gathered by the three things the pickers can filter on, and by whether they can be drawn.
     groups = {}
     # Every point.
     for point in points:
-        # A point with no real location isn't drawn, and the page counts it separately.
-        if point["map_e"] is None:
-            # Leave it out of the map.
-            continue
-        # File it under its group, area and band.
-        groups.setdefault((point["point_group"], point["area_name"], point["band"], point["band_order"]), []).append(point)
+        # File it under its group, area, band and whether it has a real location.
+        groups.setdefault((point["point_group"], point["area_name"], point["band"], point["band_order"], point["map_e"] is not None), []).append(point)
     # The packed rows.
     packs = []
     # Each combination, in a stable order.
-    for (group, area, band, order), members in sorted(groups.items()):
-        # Split a large combination into rows of a set size.
-        for start in range(0, len(members), settings.POINT_PACK_SIZE):
+    for (group, area, band, order, located), members in sorted(groups.items()):
+        # A flagged point gets a row of its own, so clicking it on the map finds exactly that point.
+        size = 1 if band in settings.POINT_BANDS[1:3] else settings.POINT_PACK_SIZE
+        # Split a large combination into rows of that size.
+        for start in range(0, len(members), size):
             # This row's points.
-            chunk = members[start:start + settings.POINT_PACK_SIZE]
+            chunk = members[start:start + size]
+            # This row's number.
+            pack_id = len(packs) + 1
+            # Each point remembers it.
+            for point in chunk:
+                # The link from a point to its row.
+                point["pack_id"] = pack_id
             # Each point in the fixed order the chart reads: east, north, score, results, label. The separators are removed from labels first.
-            packed = "|".join(f'{p["map_e"]}~{p["map_n"]}~{"" if p["score"] is None else p["score"]}~{p["results"]}~{p["point_label"].replace("|", " ").replace("~", " ")[:70]}' for p in chunk)
+            packed = "|".join(f'{"" if p["map_e"] is None else p["map_e"]}~{"" if p["map_n"] is None else p["map_n"]}~{"" if p["score"] is None else p["score"]}~{p["results"]}~{p["point_label"].replace("|", " ").replace("~", " ")[:70]}' for p in chunk)
             # One row for the chart.
-            packs.append({"pack_id": len(packs) + 1, "point_group": group, "area_name": area, "band": band, "band_order": order, "points_in_pack": len(chunk), "packed": packed})
+            packs.append({"pack_id": pack_id, "point_group": group, "area_name": area, "band": band, "band_order": order, "located": located, "points_in_pack": len(chunk), "packed": packed})
     # Hand them back.
     return packs

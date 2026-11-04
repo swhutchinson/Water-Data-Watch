@@ -245,12 +245,12 @@ def run(no_fetch=False, as_of=None, raw_dir=settings.RAW, pub_dir=settings.PUB, 
         publish.copy_table(con, table, pub_dir / f"{name}.csv")
     # The point score needs both the results and the point list. If either is down, last night's files stay.
     if (available["results"] and available["points"]) or not (pub_dir / "point_quality.csv").exists():
-        # Work out each point's score, its flags and the map's packed rows.
-        point_rows, point_flags, point_packs = points.build(con, rules)
+        # Work out each point's score, its checks and the map's packed rows.
+        point_rows, point_checks, point_packs = points.build(con, rules)
         # One row per point.
         publish.write_rows(pub_dir / "point_quality.csv", point_rows, points.POINT_COLUMNS)
-        # One row per rule that flagged a point.
-        publish.write_rows(pub_dir / "point_flags.csv", point_flags, points.FLAG_COLUMNS)
+        # One row per check that reached a point.
+        publish.write_rows(pub_dir / "point_checks.csv", point_checks, points.CHECK_COLUMNS)
         # The rows the map draws from.
         publish.write_rows(pub_dir / "point_packs.csv", point_packs, points.PACK_COLUMNS)
     # Nothing may leave if any history file has lost rows.

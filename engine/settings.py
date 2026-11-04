@@ -57,4 +57,4 @@ POINT_LOOK_CLOSER_BELOW = 95
 # How many points go in each text row the map draws from.
 POINT_PACK_SIZE = 60
 # Sub-area names a plain conversion to title case would get wrong.
-POINT_AREA_NAMES = {"": "Unknown", "ECMAS SAMPLING (CUMBRIA AND LANCASHIRE)": "ECMAS sampling (Cumbria and Lancashire)"}
+POINT_AREA_NAMES = {"": "Unknown", "ECMAS SAMPLING (CUMBRIA AND LANCASHIRE)": "ECMAS sampling (Cumbria and Lancashire)", "ECMAS SAMPLING (GTR MANCS MERSEY AND CHES)": "ECMAS sampling (Manchester, Mersey and Cheshire)", "Multiple Values": "More than one area"}

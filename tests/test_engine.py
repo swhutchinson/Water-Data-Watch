@@ -671,8 +671,17 @@ def test_point_files_agree(clean_run):
     packs = read_rows(pub_dir / "point_packs.csv")
     # No point appears twice.
     assert len({r["point_id"] for r in rows}) == len(rows) > 0
-    # The packs hold exactly the points with a real location.
-    assert sum(int(p["points_in_pack"]) for p in packs) == sum(1 for r in rows if r["map_e"])
+    # Names are unique, because the report drills through by name, and the engine ignores case when it compares them.
+    assert len({r["point_label"].lower() for r in rows}) == len({r["point_id"].lower() for r in rows}) == len(rows)
+    # The packs hold every point exactly once.
+    assert sum(int(p["points_in_pack"]) for p in packs) == len(rows)
+    # Every point names a row that exists, and that row says the same about it.
+    by_pack = {p["pack_id"]: p for p in packs}
+    assert all(by_pack[r["pack_id"]]["band"] == r["band"] and by_pack[r["pack_id"]]["point_group"] == r["point_group"] for r in rows)
+    # A flagged point has a row of its own, so a click can find it.
+    assert all(p["points_in_pack"] == "1" for p in packs if p["band"] in settings.POINT_BANDS[1:3])
+    # A row's points are all drawn or all parked, and the ones with no location are the parked ones.
+    assert all((r["map_e"] != "") == (by_pack[r["pack_id"]]["located"] == "True") for r in rows)
     # Points with no results have no score, and points with results have one.
     assert all(bool(r["score"]) == (int(r["results"]) > 0) for r in rows)
 
