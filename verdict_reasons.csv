@@ -1,0 +1,153 @@
+use_id,dataset_id,rule_id,role,status,matters,condition
+monthly,results,SRC-01,Gate,Pass,False,Reload until the row counts match.
+monthly,results,SRC-02,Gate,Pass,False,Correct the window boundaries.
+monthly,results,SRC-03,Gate,Pass,False,Agree the new columns.
+monthly,results,UNI-01,Gate,Pass,False,Remove the duplicates.
+monthly,results,VAL-02,Gate,Pass,False,Leave these records out.
+monthly,results,VAL-03,Gate,Pass,False,Leave these records out.
+monthly,results,CON-01,Gate,Pass,False,Hold the affected code back.
+monthly,results,CHK-01,Gate,Pass,False,Fix the rule that missed its defect.
+monthly,results,SRC-05,Condition,Pass,False,Explain the fall in row counts before using the figures.
+monthly,results,TIM-01,Condition,Fail,True,State which streams are late in anything built from recent months.
+monthly,results,TIM-02,Condition,For review,True,Mark recent months as part-complete.
+monthly,results,COM-02,Condition,Fail,True,Compare months only once each stream has reached its usual volume.
+monthly,results,VAL-01,Condition,Pass,False,Treat unlisted words as unknown.
+monthly,results,VAL-05,Condition,Pass,False,Treat unknown codes as unknown.
+monthly,results,VAL-06,Condition,For review,True,Leave lab status rows out of calculations.
+monthly,results,VAL-07,Condition,For review,True,Count below-limit results with a stated method. Never drop them.
+monthly,results,UNI-02,Condition,For review,True,State how repeated values are handled.
+monthly,results,CON-02,Condition,Fail,True,"Join on the code, never the name."
+monthly,results,ACC-01,Condition,For review,True,Review extreme values before relying on them.
+monthly,results,ACC-02,Condition,For review,True,Review extreme values before relying on them.
+monthly,results,ACC-03,Condition,For review,True,Show a median beside any average.
+monthly,results,ACC-04,Condition,For review,True,Treat above-range results as minimums.
+monthly,results,SRC-04,Condition,Pass,False,Read what the publisher changed.
+monthly,points,SRC-01,Gate,Pass,False,Reload until the row counts match.
+monthly,points,SRC-03,Gate,Pass,False,Agree the new columns.
+monthly,points,PRV-02,Gate,Pass,False,Withhold the field.
+monthly,points,CHK-01,Gate,Pass,False,Fix the rule that missed its defect.
+monthly,points,UNI-03,Condition,For review,True,"Join on the point's code, never its label."
+monthly,points,CON-03,Condition,For review,True,Use the register's version.
+monthly,points,VAL-04,Condition,Fail,True,"Show stand-in locations separately, never on a map."
+monthly,points,COM-01,Condition,For review,True,"Don't read ""open"" as ""currently sampled""."
+monthly,points,PRV-01,Condition,For review,True,Withhold flagged labels.
+monthly,points,SRC-04,Condition,Pass,False,Read what the publisher changed.
+monthly,bathing,SRC-01,Gate,Pass,False,Reload until the row counts match.
+monthly,bathing,SRC-03,Gate,Pass,False,Agree the new columns.
+monthly,bathing,CHK-01,Gate,Pass,False,Fix the rule that missed its defect.
+monthly,bathing,REC-01,Gate,Pass,False,"Use one service, and say which."
+monthly,bathing,SRC-06,Condition,Pass,False,Take a fresh copy of the bathing water season before relying on the comparison.
+monthly,bathing,REC-02,Condition,Fail,True,Keep the comparison to the points that can be linked.
+monthly,bathing,SRC-04,Condition,Pass,False,Read what the publisher changed.
+trend,results,SRC-01,Gate,Pass,False,Reload until the row counts match.
+trend,results,SRC-02,Gate,Pass,False,Correct the window boundaries.
+trend,results,SRC-03,Gate,Pass,False,Agree the new columns.
+trend,results,UNI-01,Gate,Pass,False,Remove the duplicates.
+trend,results,VAL-02,Gate,Pass,False,Leave these records out.
+trend,results,VAL-03,Gate,Pass,False,Leave these records out.
+trend,results,CON-01,Gate,Pass,False,Hold the affected code back.
+trend,results,CHK-01,Gate,Pass,False,Fix the rule that missed its defect.
+trend,results,SRC-05,Condition,Pass,False,Explain the fall in row counts before using the figures.
+trend,results,CON-02,Condition,Fail,True,"Join on the code, never the name."
+trend,results,CON-04,Condition,For review,True,Keep trends to one stable limit.
+trend,results,VAL-01,Condition,Pass,False,Treat unlisted words as unknown.
+trend,results,VAL-05,Condition,Pass,False,Treat unknown codes as unknown.
+trend,results,VAL-07,Condition,For review,True,Count below-limit results with a stated method. Never drop them.
+trend,results,ACC-03,Condition,For review,True,Show a median beside any average.
+trend,results,ACC-04,Condition,For review,True,Treat above-range results as minimums.
+trend,results,TIM-02,Condition,For review,True,Mark recent months as part-complete.
+trend,results,COM-02,Condition,Fail,True,Compare months only once each stream has reached its usual volume.
+trend,results,SRC-04,Condition,Pass,False,Read what the publisher changed.
+trend,points,SRC-01,Gate,Pass,False,Reload until the row counts match.
+trend,points,SRC-03,Gate,Pass,False,Agree the new columns.
+trend,points,PRV-02,Gate,Pass,False,Withhold the field.
+trend,points,CHK-01,Gate,Pass,False,Fix the rule that missed its defect.
+trend,points,UNI-03,Condition,For review,True,"Join on the point's code, never its label."
+trend,points,VAL-04,Condition,Fail,True,"Show stand-in locations separately, never on a map."
+trend,points,COM-01,Condition,For review,True,"Don't read ""open"" as ""currently sampled""."
+trend,points,SRC-04,Condition,Pass,False,Read what the publisher changed.
+signoff,results,SRC-01,Gate,Pass,False,Reload until the row counts match.
+signoff,results,SRC-02,Gate,Pass,False,Correct the window boundaries.
+signoff,results,SRC-03,Gate,Pass,False,Agree the new columns.
+signoff,results,SRC-05,Gate,Pass,False,Explain the fall in row counts before using the figures.
+signoff,results,UNI-01,Gate,Pass,False,Remove the duplicates.
+signoff,results,VAL-02,Gate,Pass,False,Leave these records out.
+signoff,results,VAL-03,Gate,Pass,False,Leave these records out.
+signoff,results,CON-01,Gate,Pass,False,Hold the affected code back.
+signoff,results,AUD-01,Gate,Fail,True,Wait for the ledger to cover one full monthly refresh.
+signoff,results,AUD-03,Gate,Pass,False,State any gaps in the run history.
+signoff,results,CHK-01,Gate,Pass,False,Fix the rule that missed its defect.
+signoff,results,AUD-02,Condition,For review,True,Record which licence statement you rely on.
+signoff,results,CON-02,Condition,Fail,True,"Join on the code, never the name."
+signoff,results,CON-04,Condition,For review,True,Keep trends to one stable limit.
+signoff,results,TIM-01,Condition,Fail,True,State which streams are late in anything built from recent months.
+signoff,results,TIM-02,Condition,For review,True,Mark recent months as part-complete.
+signoff,results,COM-02,Condition,Fail,True,Compare months only once each stream has reached its usual volume.
+signoff,results,VAL-01,Condition,Pass,False,Treat unlisted words as unknown.
+signoff,results,VAL-05,Condition,Pass,False,Treat unknown codes as unknown.
+signoff,results,VAL-06,Condition,For review,True,Leave lab status rows out of calculations.
+signoff,results,VAL-07,Condition,For review,True,Count below-limit results with a stated method. Never drop them.
+signoff,results,UNI-02,Condition,For review,True,State how repeated values are handled.
+signoff,results,ACC-01,Condition,For review,True,Review extreme values before relying on them.
+signoff,results,ACC-02,Condition,For review,True,Review extreme values before relying on them.
+signoff,results,ACC-03,Condition,For review,True,Show a median beside any average.
+signoff,results,ACC-04,Condition,For review,True,Treat above-range results as minimums.
+signoff,results,SRC-04,Condition,Pass,False,Read what the publisher changed.
+signoff,points,SRC-01,Gate,Pass,False,Reload until the row counts match.
+signoff,points,SRC-03,Gate,Pass,False,Agree the new columns.
+signoff,points,CON-03,Gate,For review,True,Use the register's version.
+signoff,points,AUD-01,Gate,Fail,True,Wait for the ledger to cover one full monthly refresh.
+signoff,points,AUD-03,Gate,Pass,False,State any gaps in the run history.
+signoff,points,PRV-02,Gate,Pass,False,Withhold the field.
+signoff,points,CHK-01,Gate,Pass,False,Fix the rule that missed its defect.
+signoff,points,AUD-02,Condition,For review,True,Record which licence statement you rely on.
+signoff,points,UNI-03,Condition,For review,True,"Join on the point's code, never its label."
+signoff,points,VAL-04,Condition,Fail,True,"Show stand-in locations separately, never on a map."
+signoff,points,COM-01,Condition,For review,True,"Don't read ""open"" as ""currently sampled""."
+signoff,points,PRV-01,Condition,For review,True,Withhold flagged labels.
+signoff,points,SRC-04,Condition,Pass,False,Read what the publisher changed.
+signoff,bathing,SRC-01,Gate,Pass,False,Reload until the row counts match.
+signoff,bathing,SRC-03,Gate,Pass,False,Agree the new columns.
+signoff,bathing,SRC-06,Gate,Pass,False,Take a fresh copy of the bathing water season before relying on the comparison.
+signoff,bathing,REC-01,Gate,Pass,False,"Use one service, and say which."
+signoff,bathing,AUD-01,Gate,Fail,True,Wait for the ledger to cover one full monthly refresh.
+signoff,bathing,AUD-03,Gate,Pass,False,State any gaps in the run history.
+signoff,bathing,CHK-01,Gate,Pass,False,Fix the rule that missed its defect.
+signoff,bathing,AUD-02,Condition,For review,True,Record which licence statement you rely on.
+signoff,bathing,REC-02,Condition,Fail,True,Keep the comparison to the points that can be linked.
+signoff,bathing,SRC-04,Condition,Pass,False,Read what the publisher changed.
+ai,results,SRC-01,Gate,Pass,False,Reload until the row counts match.
+ai,results,SRC-02,Gate,Pass,False,Correct the window boundaries.
+ai,results,SRC-03,Gate,Pass,False,Agree the new columns.
+ai,results,UNI-01,Gate,Pass,False,Remove the duplicates.
+ai,results,VAL-02,Gate,Pass,False,Leave these records out.
+ai,results,VAL-03,Gate,Pass,False,Leave these records out.
+ai,results,CON-01,Gate,Pass,False,Hold the affected code back.
+ai,results,AI-01,Gate,Fail,True,Use a method built for censored targets.
+ai,results,AI-02,Gate,Fail,True,Limit predictions to the hours the data covers.
+ai,results,AI-03,Gate,Fail,True,Train only on points with regular history.
+ai,results,AI-04,Gate,Fail,True,Leave time of day out for affected streams.
+ai,results,CHK-01,Gate,Pass,False,Fix the rule that missed its defect.
+ai,results,SRC-05,Condition,Pass,False,Explain the fall in row counts before using the figures.
+ai,results,VAL-01,Condition,Pass,False,Treat unlisted words as unknown.
+ai,results,VAL-05,Condition,Pass,False,Treat unknown codes as unknown.
+ai,results,VAL-06,Condition,For review,True,Leave lab status rows out of calculations.
+ai,results,VAL-07,Condition,For review,True,Count below-limit results with a stated method. Never drop them.
+ai,results,CON-02,Condition,Fail,True,"Join on the code, never the name."
+ai,results,CON-04,Condition,For review,True,Keep trends to one stable limit.
+ai,results,ACC-01,Condition,For review,True,Review extreme values before relying on them.
+ai,results,ACC-02,Condition,For review,True,Review extreme values before relying on them.
+ai,results,ACC-03,Condition,For review,True,Show a median beside any average.
+ai,results,ACC-04,Condition,For review,True,Treat above-range results as minimums.
+ai,results,UNI-02,Condition,For review,True,State how repeated values are handled.
+ai,results,TIM-02,Condition,For review,True,Mark recent months as part-complete.
+ai,results,COM-02,Condition,Fail,True,Compare months only once each stream has reached its usual volume.
+ai,results,SRC-04,Condition,Pass,False,Read what the publisher changed.
+ai,points,SRC-01,Gate,Pass,False,Reload until the row counts match.
+ai,points,SRC-03,Gate,Pass,False,Agree the new columns.
+ai,points,PRV-02,Gate,Pass,False,Withhold the field.
+ai,points,CHK-01,Gate,Pass,False,Fix the rule that missed its defect.
+ai,points,UNI-03,Condition,For review,True,"Join on the point's code, never its label."
+ai,points,VAL-04,Condition,Fail,True,"Show stand-in locations separately, never on a map."
+ai,points,COM-01,Condition,For review,True,"Don't read ""open"" as ""currently sampled""."
+ai,points,SRC-04,Condition,Pass,False,Read what the publisher changed.
