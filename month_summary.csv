@@ -1,0 +1,1495 @@
+sample_month,stream,purpose_group,point_group,result_kind,row_count,samples
+2026-01,National agency monitoring,Routine,Rivers,below,1694,141
+2026-01,National agency monitoring,Routine,Rivers,above,2,2
+2026-02,Statutory monitoring,Routine,Groundwater,below,4356,100
+2026-02,UK government monitoring,Routine,Lakes and other fresh waters,below,14,1
+2026-02,Pollution response,Pollution response,Discharges and sites,above,1,1
+2026-02,Pollution response,Pollution response,Discharges and sites,below,41,13
+2026-02,Pollution response,Pollution response,Lakes and other fresh waters,below,40,11
+2026-02,Statutory monitoring,Routine,Rivers,number,1486,98
+2026-02,Planned investigation,Investigation,Rivers,number,498,47
+2026-02,UK government monitoring,Routine,Rivers,below,981,115
+2026-02,Statutory monitoring,Routine,Coast and estuaries,number,657,28
+2026-02,Statutory monitoring,Routine,Lakes and other fresh waters,below,1860,16
+2026-02,Statutory monitoring,Routine,Lakes and other fresh waters,above,1,1
+2026-03,National agency monitoring,Routine,Rivers,below,1497,159
+2026-03,Planned investigation,Investigation,Lakes and other fresh waters,number,157,13
+2026-03,UK government monitoring,Routine,Lakes and other fresh waters,number,101,5
+2026-03,Urban waste water monitoring,Routine,Discharges and sites,number,766,326
+2026-03,Pollution response,Pollution response,Rivers,number,592,69
+2026-03,Pollution response,Pollution response,Discharges and sites,number,378,18
+2026-03,National agency monitoring,Routine,Coast and estuaries,below,173,17
+2026-03,National agency monitoring,Routine,Lakes and other fresh waters,below,65,18
+2026-03,Statutory monitoring,Routine,Coast and estuaries,number,663,27
+2026-03,Permit audit,Routine,Lakes and other fresh waters,number,28,9
+2026-03,Statutory monitoring,Routine,Groundwater,below,1239,27
+2026-03,National agency monitoring,Routine,Groundwater,number,222,8
+2026-03,Planned investigation,Investigation,Bathing waters,number,11,1
+2026-03,Planned investigation,Investigation,Groundwater,below,14,3
+2026-03,National agency monitoring,Routine,Lakes and other fresh waters,above,1,1
+2026-04,National agency monitoring,Routine,Lakes and other fresh waters,number,357,27
+2026-04,Operator self-monitoring,Routine,Discharges and sites,below,196,113
+2026-04,UK government monitoring,Routine,Lakes and other fresh waters,below,19,4
+2026-04,Statutory monitoring,Routine,Groundwater,below,182,14
+2026-04,Planned investigation,Investigation,Lakes and other fresh waters,number,83,6
+2026-04,Urban waste water monitoring,Routine,Discharges and sites,below,31,31
+2026-04,Permit audit,Routine,Discharges and sites,number,129,39
+2026-04,Permit audit,Routine,Lakes and other fresh waters,number,19,4
+2026-04,Planned investigation,Investigation,Rivers,below,74,18
+2026-04,National agency monitoring,Routine,Coast and estuaries,number,260,20
+2026-04,Statutory monitoring,Routine,Coast and estuaries,number,738,28
+2026-04,Waste site monitoring,Routine,Discharges and sites,number,3275,38
+2026-04,National agency monitoring,Routine,Groundwater,below,2,2
+2026-04,Operator self-monitoring,Routine,Discharges and sites,above,1,1
+2026-04,Planned investigation,Investigation,Groundwater,number,24,1
+2026-04,National agency monitoring,Routine,Discharges and sites,below,30,2
+2026-04,Planned investigation,Investigation,Rivers,above,1,1
+2026-05,UK government monitoring,Routine,Lakes and other fresh waters,number,97,5
+2026-05,Operator self-monitoring,Routine,Discharges and sites,number,1013,332
+2026-05,Pollution response,Pollution response,Rivers,number,395,36
+2026-05,Pollution response,Pollution response,Discharges and sites,number,145,12
+2026-05,Planned investigation,Investigation,Rivers,number,704,127
+2026-05,Permit audit,Routine,Discharges and sites,below,64,28
+2026-05,UK government monitoring,Routine,Rivers,below,1947,100
+2026-05,National agency monitoring,Routine,Coast and estuaries,number,242,21
+2026-05,Statutory monitoring,Routine,Coast and estuaries,below,79,18
+2026-05,UK government monitoring,Routine,Rivers,above,10,10
+2026-05,Statutory monitoring,Routine,Coast and estuaries,text,35,23
+2026-05,Permit audit,Routine,Discharges and sites,text,69,69
+2026-05,Permit audit,Routine,Lakes and other fresh waters,text,5,5
+2026-05,Permit audit,Routine,Lakes and other fresh waters,below,8,4
+2026-05,Permit audit,Routine,Discharges and sites,above,4,4
+2026-05,Pollution response,Pollution response,Lakes and other fresh waters,below,48,20
+2026-05,National agency monitoring,Routine,Discharges and sites,below,29,2
+2026-06,Operator self-monitoring,Routine,Discharges and sites,below,203,119
+2026-06,Pollution response,Pollution response,Rivers,number,277,39
+2026-06,UK government monitoring,Routine,Rivers,number,1925,131
+2026-06,National agency monitoring,Routine,Coast and estuaries,below,36,19
+2026-06,Statutory monitoring,Routine,Coast and estuaries,number,717,28
+2026-06,Planned investigation,Investigation,Coast and estuaries,number,190,15
+2026-06,Statutory monitoring,Routine,Bathing waters,number,1143,182
+2026-06,Operator self-monitoring,Routine,Discharges and sites,text,16,16
+2026-06,Permit audit,Routine,Rivers,text,1,1
+2026-01,National agency monitoring,Routine,Rivers,text,85,81
+2026-02,Statutory monitoring,Routine,Groundwater,text,2,2
+2026-02,Pollution response,Pollution response,Discharges and sites,text,8,8
+2026-02,Pollution response,Pollution response,Lakes and other fresh waters,text,8,8
+2026-03,National agency monitoring,Routine,Rivers,text,102,101
+2026-04,Planned investigation,Investigation,Rivers,text,10,10
+2026-04,Urban waste water monitoring,Routine,Discharges and sites,text,1,1
+2026-04,Operator self-monitoring,Routine,Discharges and sites,text,26,26
+2025-09,Statutory monitoring,Routine,Lakes and other fresh waters,below,2731,19
+2025-09,National agency monitoring,Routine,Rivers,number,3376,218
+2025-09,Statutory monitoring,Routine,Groundwater,number,1891,50
+2025-09,Urban waste water monitoring,Routine,Discharges and sites,below,40,39
+2025-09,Statutory monitoring,Routine,Coast and estuaries,below,26,10
+2025-09,Planned investigation,Investigation,Lakes and other fresh waters,number,150,18
+2025-09,Statutory monitoring,Routine,Coast and estuaries,text,40,28
+2025-09,Planned investigation,Investigation,Bathing waters,number,149,17
+2025-09,Statutory monitoring,Routine,Lakes and other fresh waters,above,3,2
+2025-09,Statutory monitoring,Routine,Lakes and other fresh waters,text,24,3
+2025-09,Planned investigation,Investigation,Discharges and sites,text,1,1
+2025-10,National agency monitoring,Routine,Rivers,below,2428,191
+2025-10,Planned investigation,Investigation,Lakes and other fresh waters,number,176,19
+2025-10,UK government monitoring,Routine,Lakes and other fresh waters,number,93,6
+2025-10,Operator self-monitoring,Routine,Discharges and sites,below,242,155
+2025-10,Permit audit,Routine,Discharges and sites,number,229,77
+2025-10,Pollution response,Pollution response,Lakes and other fresh waters,number,216,20
+2025-10,National agency monitoring,Routine,Coast and estuaries,below,134,14
+2025-10,UK government monitoring,Routine,Rivers,number,2644,192
+2025-10,Operator self-monitoring,Routine,Discharges and sites,above,1,1
+2025-10,Pollution response,Pollution response,Groundwater,number,3,1
+2025-10,Statutory monitoring,Routine,Groundwater,below,86,2
+2025-10,Planned investigation,Investigation,Groundwater,below,38,7
+2025-10,National agency monitoring,Routine,Discharges and sites,below,29,2
+2025-11,National agency monitoring,Routine,Lakes and other fresh waters,below,52,17
+2025-11,National agency monitoring,Routine,Rivers,number,3991,278
+2025-11,UK government monitoring,Routine,Lakes and other fresh waters,number,94,5
+2025-11,Statutory monitoring,Routine,Lakes and other fresh waters,below,2879,15
+2025-11,Planned investigation,Investigation,Lakes and other fresh waters,below,30,10
+2025-11,Urban waste water monitoring,Routine,Discharges and sites,below,73,71
+2025-11,Permit audit,Routine,Discharges and sites,number,248,85
+2025-11,Pollution response,Pollution response,Rivers,below,92,41
+2025-11,Pollution response,Pollution response,Discharges and sites,below,28,11
+2025-11,Pollution response,Pollution response,Lakes and other fresh waters,below,19,8
+2025-11,Pollution response,Pollution response,Rivers,above,2,2
+2025-11,National agency monitoring,Routine,Coast and estuaries,number,1021,33
+2025-11,Planned investigation,Investigation,Bathing waters,below,3,1
+2025-12,Statutory monitoring,Routine,Lakes and other fresh waters,number,786,27
+2025-12,Planned investigation,Investigation,Lakes and other fresh waters,number,128,11
+2025-12,Urban waste water monitoring,Routine,Discharges and sites,number,879,386
+2025-12,Pollution response,Pollution response,Rivers,below,63,26
+2025-12,Pollution response,Pollution response,Rivers,above,4,4
+2025-12,Statutory monitoring,Routine,Rivers,below,545,46
+2025-12,Planned investigation,Investigation,Rivers,number,428,41
+2025-12,National agency monitoring,Routine,Coast and estuaries,number,1142,30
+2025-12,Permit audit,Routine,Lakes and other fresh waters,number,11,2
+2025-12,Planned investigation,Investigation,Bathing waters,number,12,1
+2026-01,Urban waste water monitoring,Routine,Discharges and sites,number,967,443
+2026-01,Permit audit,Routine,Discharges and sites,number,193,61
+2026-01,Pollution response,Pollution response,Rivers,number,558,50
+2026-01,Pollution response,Pollution response,Discharges and sites,below,19,6
+2026-01,National agency monitoring,Routine,Coast and estuaries,below,302,14
+2026-01,UK government monitoring,Routine,Rivers,below,2024,102
+2026-01,Statutory monitoring,Routine,Coast and estuaries,below,22,12
+2026-01,UK government monitoring,Routine,Rivers,above,4,3
+2026-01,Planned investigation,Investigation,Lakes and other fresh waters,below,69,10
+2026-01,Permit audit,Routine,Lakes and other fresh waters,below,5,1
+2026-01,Planned investigation,Investigation,Groundwater,below,24,5
+2026-01,Planned investigation,Investigation,Groundwater,text,1,1
+2026-01,Statutory monitoring,Routine,Coast and estuaries,text,19,19
+2025-10,National agency monitoring,Routine,Rivers,text,85,84
+2025-10,Operator self-monitoring,Routine,Discharges and sites,text,8,8
+2025-10,Planned investigation,Investigation,Groundwater,text,1,1
+2025-11,Pollution response,Pollution response,Rivers,text,9,9
+2025-11,Pollution response,Pollution response,Discharges and sites,text,6,6
+2025-12,Pollution response,Pollution response,Rivers,text,7,7
+2026-01,Permit audit,Routine,Lakes and other fresh waters,text,2,2
+2024-12,National agency monitoring,Routine,Rivers,below,1970,185
+2024-12,UK government monitoring,Routine,Lakes and other fresh waters,below,13,2
+2024-12,Urban waste water monitoring,Routine,Discharges and sites,below,37,36
+2024-12,Operator self-monitoring,Routine,Discharges and sites,number,997,346
+2024-12,Pollution response,Pollution response,Rivers,below,75,28
+2024-12,Statutory monitoring,Routine,Coast and estuaries,number,234,10
+2024-12,Statutory monitoring,Routine,Lakes and other fresh waters,below,119,7
+2024-12,Urban waste water monitoring,Routine,Discharges and sites,above,2,2
+2024-12,Pollution response,Pollution response,Lakes and other fresh waters,below,3,1
+2024-12,Planned investigation,Investigation,Bathing waters,number,11,1
+2024-12,National agency monitoring,Routine,Rivers,text,113,111
+2025-01,National agency monitoring,Routine,Rivers,below,1450,153
+2025-01,UK government monitoring,Routine,Lakes and other fresh waters,below,14,1
+2025-01,Urban waste water monitoring,Routine,Discharges and sites,number,948,436
+2025-01,Pollution response,Pollution response,Discharges and sites,number,165,19
+2025-01,National agency monitoring,Routine,Coast and estuaries,number,453,36
+2025-01,Statutory monitoring,Routine,Rivers,below,369,19
+2025-01,Statutory monitoring,Routine,Rivers,above,1,1
+2025-01,National agency monitoring,Routine,Rivers,above,1,1
+2025-01,Planned investigation,Investigation,Groundwater,number,69,3
+2025-01,National agency monitoring,Routine,Rivers,text,147,143
+2025-02,Statutory monitoring,Routine,Groundwater,number,3148,103
+2025-02,UK government monitoring,Routine,Lakes and other fresh waters,below,14,1
+2025-02,Urban waste water monitoring,Routine,Discharges and sites,number,630,263
+2025-02,Pollution response,Pollution response,Discharges and sites,below,128,21
+2025-02,Permit audit,Routine,Discharges and sites,below,30,13
+2025-02,Statutory monitoring,Routine,Rivers,below,184,19
+2025-02,Statutory monitoring,Routine,Coast and estuaries,number,549,24
+2025-02,Permit audit,Routine,Lakes and other fresh waters,number,13,3
+2025-02,Planned investigation,Investigation,Coast and estuaries,below,22,5
+2025-02,Planned investigation,Investigation,Discharges and sites,number,4,1
+2025-02,Planned investigation,Investigation,Bathing waters,below,4,1
+2025-02,Permit audit,Routine,Discharges and sites,above,2,2
+2025-02,National agency monitoring,Routine,Discharges and sites,number,24,1
+2025-03,National agency monitoring,Routine,Lakes and other fresh waters,below,499,24
+2025-03,Operator self-monitoring,Routine,Discharges and sites,below,194,126
+2025-03,Statutory monitoring,Routine,Lakes and other fresh waters,below,103,9
+2025-03,Urban waste water monitoring,Routine,Discharges and sites,below,24,24
+2025-03,Permit audit,Routine,Discharges and sites,below,51,26
+2025-03,Pollution response,Pollution response,Rivers,below,80,29
+2025-03,Pollution response,Pollution response,Discharges and sites,number,249,21
+2025-03,Planned investigation,Investigation,Rivers,number,350,33
+2025-03,National agency monitoring,Routine,Coast and estuaries,below,101,16
+2025-03,UK government monitoring,Routine,Rivers,below,1758,128
+2025-03,Statutory monitoring,Routine,Rivers,number,734,51
+2025-03,Permit audit,Routine,Discharges and sites,above,2,2
+2025-03,UK government monitoring,Routine,Rivers,above,10,10
+2025-03,Statutory monitoring,Routine,Groundwater,below,696,23
+2025-03,Permit audit,Routine,Lakes and other fresh waters,number,16,5
+2025-03,Planned investigation,Investigation,Bathing waters,number,11,1
+2025-03,National agency monitoring,Routine,Groundwater,below,3,2
+2025-04,Statutory monitoring,Routine,Lakes and other fresh waters,below,3546,19
+2025-04,National agency monitoring,Routine,Lakes and other fresh waters,number,371,28
+2025-04,UK government monitoring,Routine,Lakes and other fresh waters,below,15,2
+2025-04,Urban waste water monitoring,Routine,Discharges and sites,below,18,18
+2025-04,National agency monitoring,Routine,Coast and estuaries,number,537,44
+2025-04,UK government monitoring,Routine,Rivers,number,2236,170
+2025-04,Urban waste water monitoring,Routine,Discharges and sites,above,1,1
+2025-04,Planned investigation,Investigation,Groundwater,number,231,10
+2025-05,UK government monitoring,Routine,Lakes and other fresh waters,below,15,2
+2025-05,Urban waste water monitoring,Routine,Discharges and sites,below,11,11
+2025-05,Pollution response,Pollution response,Lakes and other fresh waters,below,58,21
+2025-05,Pollution response,Pollution response,Discharges and sites,below,22,9
+2025-05,Pollution response,Pollution response,Discharges and sites,above,4,4
+2025-05,Statutory monitoring,Routine,Rivers,below,398,56
+2025-05,Statutory monitoring,Routine,Rivers,above,4,3
+2025-05,Statutory monitoring,Routine,Coast and estuaries,number,577,28
+2025-05,Planned investigation,Investigation,Lakes and other fresh waters,below,39,12
+2025-05,Planned investigation,Investigation,Bathing waters,below,70,14
+2025-05,Permit audit,Routine,Lakes and other fresh waters,number,20,6
+2025-05,Bathing water events,Routine,Bathing waters,number,22,3
+2024-12,Planned investigation,Investigation,Coast and estuaries,text,7,3
+2024-12,Pollution response,Pollution response,Lakes and other fresh waters,text,1,1
+2025-02,Permit audit,Routine,Discharges and sites,text,47,47
+2025-02,Planned investigation,Investigation,Coast and estuaries,text,11,7
+2025-03,Permit audit,Routine,Discharges and sites,text,57,57
+2025-03,Pollution response,Pollution response,Rivers,text,8,8
+2025-03,Urban waste water monitoring,Routine,Discharges and sites,text,1,1
+2025-03,Operator self-monitoring,Routine,Discharges and sites,text,28,28
+2025-05,Pollution response,Pollution response,Lakes and other fresh waters,text,13,12
+2025-05,Pollution response,Pollution response,Discharges and sites,text,1,1
+2025-05,Bathing water events,Routine,Rivers,text,3,3
+2025-05,Planned investigation,Investigation,Bathing waters,text,8,1
+2025-05,Pollution response,Pollution response,Lakes and other fresh waters,above,1,1
+2025-05,National agency monitoring,Routine,Discharges and sites,number,53,2
+2025-05,Planned investigation,Investigation,Lakes and other fresh waters,text,6,6
+2025-06,Operator self-monitoring,Routine,Discharges and sites,below,189,132
+2025-06,Pollution response,Pollution response,Lakes and other fresh waters,number,130,11
+2025-06,Pollution response,Pollution response,Rivers,number,591,57
+2025-06,Statutory monitoring,Routine,Rivers,number,1337,96
+2025-06,UK government monitoring,Routine,Rivers,number,1878,152
+2025-06,Operator self-monitoring,Routine,Discharges and sites,text,14,14
+2025-06,Statutory monitoring,Routine,Lakes and other fresh waters,below,3159,20
+2025-06,Bathing water events,Routine,Bathing waters,text,56,7
+2025-06,Statutory monitoring,Routine,Lakes and other fresh waters,text,52,5
+2025-07,National agency monitoring,Routine,Lakes and other fresh waters,number,422,30
+2025-07,Planned investigation,Investigation,Lakes and other fresh waters,number,196,24
+2025-07,Urban waste water monitoring,Routine,Discharges and sites,number,760,338
+2025-07,Permit audit,Routine,Discharges and sites,below,56,29
+2025-07,National agency monitoring,Routine,Coast and estuaries,number,312,25
+2025-07,Permit audit,Routine,Discharges and sites,above,3,3
+2025-07,Statutory monitoring,Routine,Bathing waters,text,1319,155
+2025-07,Permit audit,Routine,Discharges and sites,text,108,108
+2025-07,Statutory monitoring,Routine,Bathing waters,below,251,88
+2025-07,Planned investigation,Investigation,Bathing waters,below,114,22
+2025-07,Bathing water events,Routine,Rivers,number,13,4
+2025-07,Statutory monitoring,Routine,Lakes and other fresh waters,below,3135,21
+2025-07,Permit audit,Routine,Lakes and other fresh waters,text,6,6
+2025-07,Planned investigation,Investigation,Bathing waters,text,76,10
+2025-07,Permit audit,Routine,Lakes and other fresh waters,below,10,3
+2025-07,Statutory monitoring,Routine,Lakes and other fresh waters,text,40,5
+2025-07,Pollution response,Pollution response,Unspecified,text,1,1
+2025-07,Statutory monitoring,Routine,Lakes and other fresh waters,above,1,1
+2025-07,Pollution response,Pollution response,Unspecified,below,15,1
+2025-08,National agency monitoring,Routine,Rivers,number,3137,213
+2025-08,Planned investigation,Investigation,Lakes and other fresh waters,number,130,18
+2025-08,Operator self-monitoring,Routine,Discharges and sites,below,265,163
+2025-08,Permit audit,Routine,Discharges and sites,number,145,51
+2025-08,Planned investigation,Investigation,Rivers,below,167,52
+2025-08,Pollution response,Pollution response,Discharges and sites,below,41,18
+2025-08,Pollution response,Pollution response,Discharges and sites,above,3,3
+2025-08,Statutory monitoring,Routine,Rivers,below,585,66
+2025-08,National agency monitoring,Routine,Coast and estuaries,number,196,17
+2025-08,UK government monitoring,Routine,Rivers,number,1737,151
+2025-08,Planned investigation,Investigation,Rivers,text,165,93
+2025-08,Operator self-monitoring,Routine,Discharges and sites,text,19,19
+2025-08,Planned investigation,Investigation,Bathing waters,number,162,18
+2025-08,Bathing water events,Routine,Rivers,number,16,4
+2025-08,Bathing water events,Routine,Bathing waters,text,172,20
+2025-08,Bathing water events,Routine,Bathing waters,below,14,4
+2025-08,Planned investigation,Investigation,Discharges and sites,text,18,6
+2025-08,Planned investigation,Investigation,Discharges and sites,below,185,6
+2025-08,Planned investigation,Investigation,Groundwater,number,113,5
+2025-08,Pollution response,Pollution response,Discharges and sites,text,11,11
+2026-06,National agency monitoring,Routine,Discharges and sites,below,33,2
+2026-07,National agency monitoring,Routine,Rivers,below,2196,120
+2026-07,Statutory monitoring,Routine,Lakes and other fresh waters,below,2953,26
+2026-07,UK government monitoring,Routine,Lakes and other fresh waters,below,22,6
+2026-07,Permit audit,Routine,Discharges and sites,number,208,71
+2026-07,Pollution response,Pollution response,Rivers,below,94,36
+2026-07,Pollution response,Pollution response,Discharges and sites,number,75,9
+2026-07,Pollution response,Pollution response,Lakes and other fresh waters,number,300,26
+2026-07,National agency monitoring,Routine,Coast and estuaries,number,293,26
+2026-07,Planned investigation,Investigation,Coast and estuaries,number,189,17
+2026-07,Statutory monitoring,Routine,Bathing waters,text,1357,176
+2026-07,Statutory monitoring,Routine,Bathing waters,below,246,105
+2026-07,National agency monitoring,Routine,Rivers,text,103,97
+2026-07,Statutory monitoring,Routine,Groundwater,text,6,6
+2026-07,Statutory monitoring,Routine,Groundwater,below,2944,45
+2026-07,Statutory monitoring,Routine,Groundwater,above,1,1
+2026-07,Statutory monitoring,Routine,Lakes and other fresh waters,text,41,6
+2026-07,Pollution response,Pollution response,Rivers,text,12,12
+2026-07,Pollution response,Pollution response,Rivers,above,3,3
+2026-07,National agency monitoring,Routine,Discharges and sites,below,31,2
+2026-08,Statutory monitoring,Routine,Groundwater,number,2318,68
+2026-08,Operator self-monitoring,Routine,Discharges and sites,number,751,260
+2026-08,UK government monitoring,Routine,Lakes and other fresh waters,number,76,5
+2026-08,Planned investigation,Investigation,Lakes and other fresh waters,below,34,15
+2026-08,Permit audit,Routine,Discharges and sites,number,208,66
+2026-08,Statutory monitoring,Routine,Rivers,below,1126,57
+2026-08,UK government monitoring,Routine,Rivers,number,1775,147
+2026-08,Statutory monitoring,Routine,Rivers,above,3,2
+2026-08,Statutory monitoring,Routine,Coast and estuaries,text,38,26
+2026-08,Statutory monitoring,Routine,Bathing waters,text,1142,148
+2026-08,Statutory monitoring,Routine,Coast and estuaries,below,76,23
+2026-08,Statutory monitoring,Routine,Coast and estuaries,above,1,1
+2026-08,Permit audit,Routine,Lakes and other fresh waters,number,19,5
+2026-08,Statutory monitoring,Routine,Bathing waters,below,165,68
+2026-08,Planned investigation,Investigation,Coast and estuaries,below,24,7
+2026-08,Pollution response,Pollution response,Groundwater,below,5,1
+2026-08,Statutory monitoring,Routine,Rivers,text,3,3
+2026-08,Planned investigation,Investigation,Lakes and other fresh waters,text,18,18
+2026-08,Planned investigation,Investigation,Coast and estuaries,text,13,9
+2026-09,Planned investigation,Investigation,Rivers,number,785,153
+2026-09,Statutory monitoring,Routine,Groundwater,below,923,18
+2026-09,Planned investigation,Investigation,Lakes and other fresh waters,number,135,19
+2026-09,Pollution response,Pollution response,Lakes and other fresh waters,number,101,9
+2026-09,Pollution response,Pollution response,Rivers,number,310,31
+2026-09,Statutory monitoring,Routine,Bathing waters,number,752,110
+2026-09,Planned investigation,Investigation,Coast and estuaries,below,20,4
+2026-09,Planned investigation,Investigation,Coast and estuaries,text,12,8
+2026-09,UK government monitoring,Routine,Lakes and other fresh waters,below,3,2
+2026-10,Pollution response,Pollution response,Discharges and sites,text,3,3
+2026-10,National agency monitoring,Routine,Rivers,number,571,51
+2026-10,Pollution response,Pollution response,Discharges and sites,above,2,2
+2026-10,Pollution response,Pollution response,Discharges and sites,below,15,4
+2026-10,Planned investigation,Investigation,Rivers,below,62,14
+2026-10,National agency monitoring,Routine,Coast and estuaries,below,7,3
+2026-10,Planned investigation,Investigation,Rivers,text,12,12
+2026-10,Permit audit,Routine,Lakes and other fresh waters,text,3,3
+2026-10,Permit audit,Routine,Lakes and other fresh waters,below,6,2
+2026-10,National agency monitoring,Routine,Lakes and other fresh waters,below,7,3
+2026-11,Planned investigation,Investigation,Bathing waters,number,17,3
+2026-11,National agency monitoring,Routine,Lakes and other fresh waters,number,8,1
+2026-07,National agency monitoring,Routine,Groundwater,text,1,1
+2026-01,National agency monitoring,Routine,Lakes and other fresh waters,number,344,25
+2026-02,National agency monitoring,Routine,Lakes and other fresh waters,number,458,33
+2026-02,National agency monitoring,Routine,Rivers,number,4563,301
+2026-02,Operator self-monitoring,Routine,Discharges and sites,below,197,119
+2026-02,Urban waste water monitoring,Routine,Discharges and sites,below,31,31
+2026-02,Pollution response,Pollution response,Rivers,below,69,29
+2026-02,Permit audit,Routine,Discharges and sites,number,202,67
+2026-02,Catchment permit monitoring,Routine,Discharges and sites,number,28,14
+2026-02,National agency monitoring,Routine,Coast and estuaries,number,694,30
+2026-02,Permit audit,Routine,Lakes and other fresh waters,number,30,8
+2026-02,Planned investigation,Investigation,Lakes and other fresh waters,below,30,7
+2026-02,Planned investigation,Investigation,Bathing waters,below,3,1
+2026-02,Planned investigation,Investigation,Groundwater,below,7,1
+2026-02,Pollution response,Pollution response,Rivers,above,2,2
+2026-03,Operator self-monitoring,Routine,Discharges and sites,below,210,137
+2026-03,Pollution response,Pollution response,Lakes and other fresh waters,below,32,16
+2026-03,Permit audit,Routine,Discharges and sites,number,207,73
+2026-03,Statutory monitoring,Routine,Rivers,number,1615,104
+2026-03,UK government monitoring,Routine,Rivers,number,2175,150
+2026-03,Planned investigation,Investigation,Rivers,below,86,18
+2026-03,Statutory monitoring,Routine,Lakes and other fresh waters,below,1864,17
+2026-03,Statutory monitoring,Routine,Lakes and other fresh waters,above,3,2
+2026-04,National agency monitoring,Routine,Rivers,number,4589,302
+2026-04,Statutory monitoring,Routine,Lakes and other fresh waters,number,558,17
+2026-04,Pollution response,Pollution response,Lakes and other fresh waters,number,151,20
+2026-04,Pollution response,Pollution response,Rivers,number,436,48
+2026-04,Pollution response,Pollution response,Discharges and sites,number,110,10
+2026-04,Statutory monitoring,Routine,Rivers,number,1463,97
+2026-04,UK government monitoring,Routine,Rivers,number,1840,119
+2026-04,Catchment permit monitoring,Routine,Discharges and sites,number,28,14
+2026-04,Planned investigation,Investigation,Coast and estuaries,number,158,8
+2026-04,Waste site monitoring,Routine,Lakes and other fresh waters,below,18,1
+2026-05,National agency monitoring,Routine,Lakes and other fresh waters,number,340,26
+2026-05,Statutory monitoring,Routine,Lakes and other fresh waters,number,787,27
+2026-05,National agency monitoring,Routine,Rivers,below,2225,183
+2026-05,Planned investigation,Investigation,Lakes and other fresh waters,number,143,20
+2026-05,Urban waste water monitoring,Routine,Discharges and sites,number,740,316
+2026-05,Statutory monitoring,Routine,Rivers,number,1630,100
+2026-05,Catchment permit monitoring,Routine,Discharges and sites,number,32,16
+2026-05,Statutory monitoring,Routine,Bathing waters,below,139,58
+2026-05,National agency monitoring,Routine,Rivers,text,76,75
+2026-05,Statutory monitoring,Routine,Bathing waters,text,622,81
+2026-05,Planned investigation,Investigation,Coast and estuaries,text,13,9
+2026-05,Planned investigation,Investigation,Coast and estuaries,below,45,6
+2026-05,Pollution response,Pollution response,Groundwater,below,310,3
+2026-05,Pollution response,Pollution response,Groundwater,above,1,1
+2026-05,Statutory monitoring,Routine,Groundwater,below,327,3
+2026-06,National agency monitoring,Routine,Rivers,number,2993,161
+2026-06,Statutory monitoring,Routine,Lakes and other fresh waters,number,601,24
+2026-06,Planned investigation,Investigation,Rivers,below,129,32
+2026-06,UK government monitoring,Routine,Lakes and other fresh waters,number,81,5
+2026-06,Statutory monitoring,Routine,Groundwater,number,298,12
+2026-06,Planned investigation,Investigation,Lakes and other fresh waters,number,137,27
+2026-06,Urban waste water monitoring,Routine,Discharges and sites,below,31,30
+2026-06,Permit audit,Routine,Discharges and sites,number,239,76
+2026-06,Pollution response,Pollution response,Discharges and sites,below,8,4
+2026-06,Pollution response,Pollution response,Lakes and other fresh waters,below,11,7
+2026-06,Statutory monitoring,Routine,Rivers,below,714,40
+2026-06,Planned investigation,Investigation,Rivers,text,187,187
+2026-06,Statutory monitoring,Routine,Rivers,text,3,3
+2026-06,Planned investigation,Investigation,Bathing waters,text,16,2
+2026-06,Permit audit,Routine,Lakes and other fresh waters,text,3,3
+2026-06,Permit audit,Routine,Lakes and other fresh waters,below,5,1
+2026-06,Pollution response,Pollution response,Lakes and other fresh waters,above,1,1
+2026-06,National agency monitoring,Routine,Lakes and other fresh waters,number,295,22
+2026-06,Planned investigation,Investigation,Bathing waters,below,1,1
+2026-06,National agency monitoring,Routine,Groundwater,number,2,2
+2026-02,Pollution response,Pollution response,Rivers,text,17,14
+2026-02,Operator self-monitoring,Routine,Discharges and sites,text,19,19
+2026-03,Pollution response,Pollution response,Lakes and other fresh waters,text,7,7
+2026-03,Operator self-monitoring,Routine,Discharges and sites,text,22,22
+2026-03,Planned investigation,Investigation,Rivers,text,13,13
+2026-04,Waste site monitoring,Routine,Lakes and other fresh waters,text,9,1
+2026-06,Pollution response,Pollution response,Discharges and sites,text,10,10
+2026-06,Pollution response,Pollution response,Lakes and other fresh waters,text,1,1
+2025-09,Operator self-monitoring,Routine,Discharges and sites,below,290,173
+2025-09,National agency monitoring,Routine,Lakes and other fresh waters,below,447,20
+2025-09,Pollution response,Pollution response,Lakes and other fresh waters,number,98,14
+2025-09,Pollution response,Pollution response,Rivers,below,147,53
+2025-09,Pollution response,Pollution response,Discharges and sites,number,193,19
+2025-09,Pollution response,Pollution response,Rivers,above,6,6
+2025-09,Permit audit,Routine,Discharges and sites,below,29,19
+2025-09,Statutory monitoring,Routine,Rivers,number,1431,100
+2025-09,Planned investigation,Investigation,Rivers,below,124,41
+2025-09,UK government monitoring,Routine,Rivers,number,1939,179
+2025-09,National agency monitoring,Routine,Coast and estuaries,below,23,13
+2025-09,Statutory monitoring,Routine,Bathing waters,number,527,75
+2025-09,Operator self-monitoring,Routine,Discharges and sites,text,16,16
+2025-09,Planned investigation,Investigation,Rivers,text,57,57
+2025-09,Bathing water events,Routine,Rivers,number,8,2
+2025-09,Permit audit,Routine,Discharges and sites,text,66,66
+2025-09,Permit audit,Routine,Lakes and other fresh waters,number,24,6
+2025-09,Bathing water events,Routine,Bathing waters,number,404,47
+2025-09,Permit audit,Routine,Discharges and sites,above,2,2
+2025-09,Pollution response,Pollution response,Rivers,text,16,16
+2025-09,National agency monitoring,Routine,Groundwater,number,95,4
+2025-09,Pollution response,Pollution response,Unspecified,text,4,4
+2025-09,National agency monitoring,Routine,Lakes and other fresh waters,text,22,22
+2025-09,Planned investigation,Investigation,Rivers,above,1,1
+2025-09,Pollution response,Pollution response,Unspecified,below,87,4
+2025-09,UK government monitoring,Routine,Lakes and other fresh waters,number,31,3
+2025-10,National agency monitoring,Routine,Lakes and other fresh waters,number,451,32
+2025-10,Statutory monitoring,Routine,Lakes and other fresh waters,number,720,28
+2025-10,Urban waste water monitoring,Routine,Discharges and sites,number,1063,464
+2025-10,Pollution response,Pollution response,Rivers,below,94,32
+2025-10,Pollution response,Pollution response,Discharges and sites,below,55,17
+2025-10,Pollution response,Pollution response,Discharges and sites,above,1,1
+2025-10,Pollution response,Pollution response,Rivers,above,2,2
+2025-10,Statutory monitoring,Routine,Rivers,below,1111,81
+2025-10,Planned investigation,Investigation,Rivers,below,98,23
+2025-10,Statutory monitoring,Routine,Coast and estuaries,below,12,5
+2025-10,Statutory monitoring,Routine,Bathing waters,below,2,1
+2025-10,Permit audit,Routine,Lakes and other fresh waters,below,10,4
+2025-10,Planned investigation,Investigation,Bathing waters,below,4,1
+2025-10,Bathing water events,Routine,Bathing waters,number,6,1
+2025-11,Operator self-monitoring,Routine,Discharges and sites,number,1092,369
+2025-11,Statutory monitoring,Routine,Rivers,below,768,63
+2025-11,Planned investigation,Investigation,Rivers,below,85,19
+2025-11,UK government monitoring,Routine,Rivers,number,2276,159
+2025-11,Catchment permit monitoring,Routine,Discharges and sites,number,56,28
+2025-11,Statutory monitoring,Routine,Coast and estuaries,below,23,10
+2025-11,Permit audit,Routine,Lakes and other fresh waters,number,30,8
+2025-12,National agency monitoring,Routine,Lakes and other fresh waters,number,448,32
+2025-12,National agency monitoring,Routine,Rivers,number,4067,279
+2025-12,UK government monitoring,Routine,Lakes and other fresh waters,below,20,4
+2025-12,Operator self-monitoring,Routine,Discharges and sites,number,1134,401
+2025-12,Pollution response,Pollution response,Discharges and sites,number,276,40
+2025-12,Pollution response,Pollution response,Lakes and other fresh waters,below,8,5
+2025-12,Permit audit,Routine,Discharges and sites,below,30,18
+2025-12,UK government monitoring,Routine,Rivers,below,941,108
+2025-12,Statutory monitoring,Routine,Coast and estuaries,number,331,14
+2025-12,UK government monitoring,Routine,Rivers,above,2,2
+2026-01,UK government monitoring,Routine,Lakes and other fresh waters,below,14,1
+2026-01,Operator self-monitoring,Routine,Discharges and sites,number,1183,371
+2026-01,Pollution response,Pollution response,Lakes and other fresh waters,number,189,16
+2026-01,Planned investigation,Investigation,Rivers,number,395,37
+2026-01,Statutory monitoring,Routine,Rivers,below,842,48
+2026-01,Statutory monitoring,Routine,Lakes and other fresh waters,below,2788,18
+2026-01,Statutory monitoring,Routine,Groundwater,number,2051,60
+2026-01,Planned investigation,Investigation,Bathing waters,below,5,1
+2025-10,Pollution response,Pollution response,Rivers,text,6,6
+2025-10,Pollution response,Pollution response,Discharges and sites,text,5,5
+2025-10,Statutory monitoring,Routine,Coast and estuaries,text,19,19
+2025-10,Planned investigation,Investigation,Rivers,text,12,12
+2025-10,Statutory monitoring,Routine,Bathing waters,text,8,1
+2025-10,Permit audit,Routine,Lakes and other fresh waters,text,5,5
+2025-11,Statutory monitoring,Routine,Coast and estuaries,text,40,28
+2025-11,Planned investigation,Investigation,Rivers,text,12,12
+2025-12,Pollution response,Pollution response,Lakes and other fresh waters,text,9,9
+2025-12,Permit audit,Routine,Discharges and sites,text,34,34
+2024-12,National agency monitoring,Routine,Lakes and other fresh waters,number,463,35
+2024-12,Flow passed forward,Routine,Discharges and sites,number,896,112
+2024-12,Pollution response,Pollution response,Discharges and sites,below,6,2
+2024-12,Pollution response,Pollution response,Discharges and sites,above,1,1
+2024-12,Planned investigation,Investigation,Rivers,below,205,23
+2024-12,National agency monitoring,Routine,Coast and estuaries,below,119,10
+2024-12,National agency monitoring,Routine,Coast and estuaries,above,1,1
+2024-12,UK government monitoring,Routine,Rivers,number,1907,131
+2024-12,Statutory monitoring,Routine,Rivers,below,242,26
+2024-12,Permit audit,Routine,Discharges and sites,below,21,11
+2024-12,Permit audit,Routine,Discharges and sites,above,1,1
+2024-12,Permit audit,Routine,Lakes and other fresh waters,number,11,3
+2024-12,Planned investigation,Investigation,Lakes and other fresh waters,below,11,3
+2025-01,National agency monitoring,Routine,Lakes and other fresh waters,number,727,40
+2025-01,Operator self-monitoring,Routine,Discharges and sites,below,194,130
+2025-01,Statutory monitoring,Routine,Lakes and other fresh waters,number,230,9
+2025-01,Planned investigation,Investigation,Lakes and other fresh waters,number,67,6
+2025-01,Permit audit,Routine,Discharges and sites,number,195,80
+2025-01,Pollution response,Pollution response,Rivers,number,486,38
+2025-01,Pollution response,Pollution response,Lakes and other fresh waters,below,9,6
+2025-01,Planned investigation,Investigation,Rivers,number,358,32
+2025-01,UK government monitoring,Routine,Rivers,number,2566,168
+2025-01,Statutory monitoring,Routine,Coast and estuaries,below,32,12
+2025-01,Statutory monitoring,Routine,Coast and estuaries,above,6,1
+2025-01,Operator self-monitoring,Routine,Discharges and sites,above,2,2
+2025-01,Permit audit,Routine,Lakes and other fresh waters,number,28,8
+2025-01,Statutory monitoring,Routine,Groundwater,below,1139,57
+2025-01,Planned investigation,Investigation,Coast and estuaries,number,147,7
+2025-01,Planned investigation,Investigation,Bathing waters,below,4,1
+2025-01,Planned investigation,Investigation,Discharges and sites,below,4,1
+2025-02,National agency monitoring,Routine,Lakes and other fresh waters,number,501,35
+2025-02,National agency monitoring,Routine,Rivers,number,5032,359
+2025-02,Statutory monitoring,Routine,Lakes and other fresh waters,number,198,9
+2025-02,Operator self-monitoring,Routine,Discharges and sites,below,161,106
+2025-02,Pollution response,Pollution response,Lakes and other fresh waters,below,19,12
+2025-02,Pollution response,Pollution response,Rivers,below,62,25
+2025-02,Pollution response,Pollution response,Rivers,above,3,3
+2025-02,Planned investigation,Investigation,Rivers,below,191,25
+2025-02,National agency monitoring,Routine,Coast and estuaries,number,972,49
+2025-02,UK government monitoring,Routine,Rivers,number,2612,191
+2025-02,Catchment permit monitoring,Routine,Discharges and sites,number,26,13
+2025-02,Operator self-monitoring,Routine,Discharges and sites,above,2,1
+2025-02,Planned investigation,Investigation,Lakes and other fresh waters,below,16,3
+2025-02,Pollution response,Pollution response,Lakes and other fresh waters,above,1,1
+2025-02,Planned investigation,Investigation,Groundwater,number,26,4
+2025-03,National agency monitoring,Routine,Rivers,below,1635,180
+2025-03,UK government monitoring,Routine,Lakes and other fresh waters,number,90,5
+2025-03,Planned investigation,Investigation,Lakes and other fresh waters,number,72,6
+2025-03,Planned investigation,Investigation,Discharges and sites,above,1,1
+2025-03,Statutory monitoring,Routine,Coast and estuaries,number,625,27
+2025-03,National agency monitoring,Routine,Rivers,above,1,1
+2025-03,Planned investigation,Investigation,Coast and estuaries,number,146,7
+2025-03,Pollution response,Pollution response,Lakes and other fresh waters,below,21,8
+2025-03,Pollution response,Pollution response,Lakes and other fresh waters,above,1,1
+2025-03,National agency monitoring,Routine,Discharges and sites,number,17,1
+2025-03,National agency monitoring,Routine,Rivers,text,107,104
+2025-04,Planned investigation,Investigation,Rivers,number,619,66
+2025-04,National agency monitoring,Routine,Rivers,number,4403,246
+2025-04,Planned investigation,Investigation,Lakes and other fresh waters,number,189,17
+2025-04,Statutory monitoring,Routine,Groundwater,below,215,21
+2025-04,Operator self-monitoring,Routine,Discharges and sites,below,154,115
+2025-04,Pollution response,Pollution response,Rivers,number,381,40
+2025-04,Pollution response,Pollution response,Discharges and sites,below,20,11
+2025-04,Pollution response,Pollution response,Discharges and sites,above,3,3
+2025-04,Permit audit,Routine,Discharges and sites,number,161,52
+2025-04,Statutory monitoring,Routine,Rivers,below,569,45
+2025-04,Statutory monitoring,Routine,Coast and estuaries,number,627,28
+2025-04,Permit audit,Routine,Lakes and other fresh waters,number,2,2
+2025-04,Operator self-monitoring,Routine,Discharges and sites,above,4,3
+2025-04,Pollution response,Pollution response,Lakes and other fresh waters,below,53,20
+2025-04,Pollution response,Pollution response,Lakes and other fresh waters,above,1,1
+2025-04,Planned investigation,Investigation,Bathing waters,below,1,1
+2025-04,National agency monitoring,Routine,Discharges and sites,number,18,1
+2025-04,Pollution response,Pollution response,Coast and estuaries,below,39,2
+2025-04,Planned investigation,Investigation,Discharges and sites,number,8,1
+2025-05,National agency monitoring,Routine,Lakes and other fresh waters,number,468,31
+2025-05,Statutory monitoring,Routine,Lakes and other fresh waters,number,587,28
+2025-05,Operator self-monitoring,Routine,Discharges and sites,number,1070,350
+2025-05,National agency monitoring,Routine,Rivers,below,1608,118
+2025-05,Pollution response,Pollution response,Rivers,number,589,62
+2025-05,Permit audit,Routine,Discharges and sites,below,44,22
+2025-05,Planned investigation,Investigation,Rivers,below,93,36
+2025-05,UK government monitoring,Routine,Rivers,below,1791,153
+2025-05,National agency monitoring,Routine,Coast and estuaries,below,50,20
+2025-05,Planned investigation,Investigation,Rivers,text,90,82
+2025-05,Statutory monitoring,Routine,Bathing waters,text,853,105
+2025-05,Permit audit,Routine,Discharges and sites,text,84,84
+2025-05,Pollution response,Pollution response,Bathing waters,number,2,1
+2025-05,Statutory monitoring,Routine,Bathing waters,below,231,87
+2025-05,UK government monitoring,Routine,Rivers,above,6,6
+2025-05,Permit audit,Routine,Discharges and sites,above,3,3
+2024-12,Permit audit,Routine,Discharges and sites,text,40,40
+2024-12,Planned investigation,Investigation,Rivers,text,10,10
+2025-01,Pollution response,Pollution response,Lakes and other fresh waters,text,4,4
+2025-01,Operator self-monitoring,Routine,Discharges and sites,text,37,37
+2025-01,Statutory monitoring,Routine,Coast and estuaries,text,35,23
+2025-01,Statutory monitoring,Routine,Groundwater,text,4,4
+2025-02,Pollution response,Pollution response,Rivers,text,10,10
+2025-02,Operator self-monitoring,Routine,Discharges and sites,text,35,35
+2025-02,Planned investigation,Investigation,Rivers,text,10,10
+2025-02,Pollution response,Pollution response,Lakes and other fresh waters,text,2,2
+2025-04,Operator self-monitoring,Routine,Discharges and sites,text,28,28
+2025-04,Statutory monitoring,Routine,Groundwater,text,2,2
+2025-04,Pollution response,Pollution response,Lakes and other fresh waters,text,3,3
+2025-05,National agency monitoring,Routine,Rivers,text,83,81
+2025-05,UK government monitoring,Routine,Rivers,text,1,1
+2025-05,Statutory monitoring,Routine,Groundwater,number,98,3
+2025-06,National agency monitoring,Routine,Rivers,number,3230,204
+2025-06,Planned investigation,Investigation,Lakes and other fresh waters,number,109,18
+2025-06,UK government monitoring,Routine,Lakes and other fresh waters,below,62,2
+2025-06,Urban waste water monitoring,Routine,Discharges and sites,number,850,371
+2025-06,Pollution response,Pollution response,Discharges and sites,number,114,11
+2025-06,Permit audit,Routine,Discharges and sites,number,147,52
+2025-06,Planned investigation,Investigation,Rivers,below,152,40
+2025-06,Planned investigation,Investigation,Rivers,text,143,107
+2025-06,National agency monitoring,Routine,Coast and estuaries,below,41,15
+2025-06,Statutory monitoring,Routine,Coast and estuaries,number,448,20
+2025-06,Statutory monitoring,Routine,Bathing waters,number,968,144
+2025-06,Bathing water events,Routine,Rivers,text,3,3
+2025-06,Planned investigation,Investigation,Bathing waters,below,107,21
+2025-06,Statutory monitoring,Routine,Groundwater,number,536,15
+2025-06,Permit audit,Routine,Lakes and other fresh waters,text,4,4
+2025-06,Planned investigation,Investigation,Bathing waters,text,40,5
+2025-06,Permit audit,Routine,Lakes and other fresh waters,below,5,2
+2025-06,National agency monitoring,Routine,Lakes and other fresh waters,below,380,25
+2025-06,National agency monitoring,Routine,Groundwater,number,4,2
+2025-06,National agency monitoring,Routine,Discharges and sites,below,30,2
+2025-07,Operator self-monitoring,Routine,Discharges and sites,number,1126,384
+2025-07,National agency monitoring,Routine,Rivers,number,4177,229
+2025-07,Pollution response,Pollution response,Lakes and other fresh waters,above,1,1
+2025-07,Pollution response,Pollution response,Lakes and other fresh waters,below,30,12
+2025-07,Pollution response,Pollution response,Rivers,number,650,58
+2025-07,Planned investigation,Investigation,Rivers,number,974,143
+2025-07,Pollution response,Pollution response,Discharges and sites,above,3,3
+2025-07,Pollution response,Pollution response,Discharges and sites,below,18,8
+2025-07,Statutory monitoring,Routine,Rivers,number,1564,105
+2025-07,UK government monitoring,Routine,Rivers,above,14,14
+2025-07,UK government monitoring,Routine,Rivers,below,2526,143
+2025-07,Catchment permit monitoring,Routine,Discharges and sites,number,26,13
+2025-07,Statutory monitoring,Routine,Coast and estuaries,below,27,12
+2025-07,Statutory monitoring,Routine,Coast and estuaries,text,37,25
+2025-07,Statutory monitoring,Routine,Groundwater,below,2259,52
+2025-07,National agency monitoring,Routine,Groundwater,number,53,1
+2025-07,Bathing water events,Routine,Bathing waters,number,89,10
+2025-07,Pollution response,Pollution response,Lakes and other fresh waters,text,5,5
+2025-07,Statutory monitoring,Routine,Groundwater,text,1,1
+2025-07,National agency monitoring,Routine,Discharges and sites,below,30,2
+2025-07,Planned investigation,Investigation,Discharges and sites,below,1,1
+2025-07,UK government monitoring,Routine,Lakes and other fresh waters,number,33,3
+2025-08,National agency monitoring,Routine,Lakes and other fresh waters,number,442,30
+2025-08,Statutory monitoring,Routine,Groundwater,below,3126,107
+2025-08,UK government monitoring,Routine,Lakes and other fresh waters,number,40,2
+2025-08,Urban waste water monitoring,Routine,Discharges and sites,number,663,298
+2025-08,Pollution response,Pollution response,Lakes and other fresh waters,number,172,18
+2025-08,Pollution response,Pollution response,Rivers,number,968,106
+2025-08,Catchment permit monitoring,Routine,Discharges and sites,number,28,14
+2025-08,Statutory monitoring,Routine,Coast and estuaries,text,34,23
+2025-08,Statutory monitoring,Routine,Coast and estuaries,below,16,6
+2025-08,Statutory monitoring,Routine,Bathing waters,number,947,134
+2025-08,Statutory monitoring,Routine,Lakes and other fresh waters,number,586,27
+2025-08,Statutory monitoring,Routine,Groundwater,above,1,1
+2025-08,Statutory monitoring,Routine,Groundwater,text,2,2
+2025-08,National agency monitoring,Routine,Groundwater,number,5,1
+2025-08,Permit audit,Routine,Lakes and other fresh waters,below,6,2
+2025-08,Pollution response,Pollution response,Unspecified,number,146,4
+2026-06,Planned investigation,Investigation,Rivers,above,1,1
+2026-07,Planned investigation,Investigation,Rivers,below,118,39
+2026-07,Planned investigation,Investigation,Lakes and other fresh waters,number,175,30
+2026-07,Operator self-monitoring,Routine,Discharges and sites,below,195,117
+2026-07,Urban waste water monitoring,Routine,Discharges and sites,below,23,23
+2026-07,Statutory monitoring,Routine,Rivers,number,1582,105
+2026-07,UK government monitoring,Routine,Rivers,number,2561,204
+2026-07,National agency monitoring,Routine,Lakes and other fresh waters,below,95,30
+2026-07,Catchment permit monitoring,Routine,Discharges and sites,number,30,15
+2026-07,Statutory monitoring,Routine,Coast and estuaries,below,75,18
+2026-07,Planned investigation,Investigation,Rivers,text,211,211
+2026-07,Statutory monitoring,Routine,Coast and estuaries,text,37,26
+2026-07,Operator self-monitoring,Routine,Discharges and sites,text,25,25
+2026-07,Planned investigation,Investigation,Rivers,above,1,1
+2026-07,Permit audit,Routine,Lakes and other fresh waters,text,6,6
+2026-07,Permit audit,Routine,Lakes and other fresh waters,below,18,5
+2026-07,Planned investigation,Investigation,Groundwater,text,1,1
+2026-07,Planned investigation,Investigation,Groundwater,below,5,1
+2026-07,National agency monitoring,Routine,Lakes and other fresh waters,text,21,21
+2026-08,National agency monitoring,Routine,Rivers,below,1858,105
+2026-08,Statutory monitoring,Routine,Lakes and other fresh waters,number,672,27
+2026-08,Planned investigation,Investigation,Rivers,below,122,38
+2026-08,Urban waste water monitoring,Routine,Discharges and sites,below,24,22
+2026-08,Pollution response,Pollution response,Rivers,number,347,39
+2026-08,Pollution response,Pollution response,Discharges and sites,below,38,11
+2026-08,Catchment permit monitoring,Routine,Discharges and sites,number,24,12
+2026-08,Planned investigation,Investigation,Rivers,text,160,160
+2026-08,National agency monitoring,Routine,Coast and estuaries,below,44,18
+2026-08,National agency monitoring,Routine,Groundwater,below,243,1
+2026-08,Pollution response,Pollution response,Lakes and other fresh waters,below,22,10
+2026-08,National agency monitoring,Routine,Lakes and other fresh waters,below,60,22
+2026-08,Pollution response,Pollution response,Discharges and sites,text,8,8
+2026-08,Pollution response,Pollution response,Lakes and other fresh waters,text,4,4
+2026-08,National agency monitoring,Routine,Discharges and sites,number,75,2
+2026-08,Planned investigation,Investigation,Rivers,above,2,2
+2026-08,National agency monitoring,Routine,Rivers,text,100,91
+2026-08,National agency monitoring,Routine,Lakes and other fresh waters,text,18,18
+2026-08,National agency monitoring,Routine,Lakes and other fresh waters,above,1,1
+2026-08,National agency monitoring,Routine,Rivers,above,1,1
+2026-09,National agency monitoring,Routine,Rivers,number,1603,108
+2026-09,Statutory monitoring,Routine,Lakes and other fresh waters,below,426,10
+2026-09,Permit audit,Routine,Discharges and sites,number,155,53
+2026-09,Pollution response,Pollution response,Discharges and sites,number,101,11
+2026-09,Statutory monitoring,Routine,Rivers,below,417,51
+2026-09,UK government monitoring,Routine,Rivers,below,639,107
+2026-09,Statutory monitoring,Routine,Coast and estuaries,text,11,11
+2026-09,Statutory monitoring,Routine,Coast and estuaries,below,13,5
+2026-09,UK government monitoring,Routine,Rivers,above,11,11
+2026-09,National agency monitoring,Routine,Coast and estuaries,below,21,8
+2026-09,Statutory monitoring,Routine,Rivers,text,4,4
+2026-09,Permit audit,Routine,Lakes and other fresh waters,text,4,4
+2026-09,Operator self-monitoring,Routine,Discharges and sites,number,16,10
+2026-09,Permit audit,Routine,Lakes and other fresh waters,below,9,3
+2026-09,National agency monitoring,Routine,Lakes and other fresh waters,below,50,19
+2026-09,Statutory monitoring,Routine,Lakes and other fresh waters,text,30,4
+2026-09,National agency monitoring,Routine,Lakes and other fresh waters,text,15,15
+2026-09,National agency monitoring,Routine,Discharges and sites,below,33,2
+2026-10,Pollution response,Pollution response,Rivers,text,7,7
+2026-10,Permit audit,Routine,Discharges and sites,text,55,55
+2026-10,Statutory monitoring,Routine,Lakes and other fresh waters,below,9,3
+2026-10,Pollution response,Pollution response,Rivers,below,23,8
+2026-10,Statutory monitoring,Routine,Rivers,number,682,52
+2026-10,UK government monitoring,Routine,Rivers,number,997,94
+2026-10,Permit audit,Routine,Discharges and sites,below,20,14
+2026-10,Statutory monitoring,Routine,Coast and estuaries,below,36,9
+2026-10,Statutory monitoring,Routine,Coast and estuaries,text,9,9
+2026-10,Planned investigation,Investigation,Bathing waters,text,28,4
+2026-11,Permit audit,Routine,Discharges and sites,text,23,23
+2026-11,Statutory monitoring,Routine,Rivers,text,1,1
+2026-10,Planned investigation,Investigation,Lakes and other fresh waters,number,33,3
+2026-10,Pollution response,Pollution response,Lakes and other fresh waters,number,35,3
+2026-10,Statutory monitoring,Routine,Groundwater,number,58,2
+2026-10,Permit audit,Routine,Discharges and sites,above,3,2
+2026-10,Pollution response,Pollution response,Rivers,above,1,1
+2026-10,Planned investigation,Investigation,Bathing waters,below,3,1
+2026-10,UK government monitoring,Routine,Lakes and other fresh waters,below,4,3
+2026-11,National agency monitoring,Routine,Rivers,number,172,12
+2026-11,Planned investigation,Investigation,Rivers,number,42,6
+2026-11,Statutory monitoring,Routine,Rivers,below,3,2
+2026-11,Statutory monitoring,Routine,Coast and estuaries,number,32,4
+2025-07,Pollution response,Pollution response,Discharges and sites,text,6,6
+2025-08,Permit audit,Routine,Lakes and other fresh waters,text,2,2
+2026-01,National agency monitoring,Routine,Lakes and other fresh waters,below,51,17
+2026-02,National agency monitoring,Routine,Rivers,below,1460,171
+2026-02,Operator self-monitoring,Routine,Discharges and sites,number,950,300
+2026-02,Planned investigation,Investigation,Lakes and other fresh waters,number,154,13
+2026-02,Urban waste water monitoring,Routine,Discharges and sites,number,669,289
+2026-02,Pollution response,Pollution response,Rivers,number,508,53
+2026-02,Permit audit,Routine,Discharges and sites,below,47,26
+2026-02,National agency monitoring,Routine,Rivers,above,5,2
+2026-02,National agency monitoring,Routine,Coast and estuaries,below,27,16
+2026-02,Permit audit,Routine,Discharges and sites,above,4,3
+2026-02,Permit audit,Routine,Lakes and other fresh waters,below,11,5
+2026-02,Planned investigation,Investigation,Bathing waters,number,11,1
+2026-02,Planned investigation,Investigation,Groundwater,number,21,1
+2026-02,National agency monitoring,Routine,Lakes and other fresh waters,below,58,17
+2026-02,National agency monitoring,Routine,Lakes and other fresh waters,above,1,1
+2026-02,National agency monitoring,Routine,Rivers,text,111,110
+2026-03,Statutory monitoring,Routine,Lakes and other fresh waters,number,678,23
+2026-03,Operator self-monitoring,Routine,Discharges and sites,number,946,320
+2026-03,Pollution response,Pollution response,Lakes and other fresh waters,number,262,26
+2026-03,Permit audit,Routine,Discharges and sites,below,59,32
+2026-03,Statutory monitoring,Routine,Rivers,below,494,45
+2026-03,Planned investigation,Investigation,Rivers,number,449,43
+2026-03,Catchment permit monitoring,Routine,Discharges and sites,number,30,15
+2026-03,UK government monitoring,Routine,Rivers,below,1125,109
+2026-03,Permit audit,Routine,Discharges and sites,above,1,1
+2026-03,UK government monitoring,Routine,Rivers,above,3,3
+2026-04,National agency monitoring,Routine,Rivers,below,1480,179
+2026-04,Pollution response,Pollution response,Lakes and other fresh waters,below,23,12
+2026-04,Pollution response,Pollution response,Rivers,below,43,22
+2026-04,Pollution response,Pollution response,Rivers,above,1,1
+2026-04,Pollution response,Pollution response,Discharges and sites,above,1,1
+2026-04,Pollution response,Pollution response,Discharges and sites,below,5,4
+2026-04,UK government monitoring,Routine,Rivers,below,1701,91
+2026-04,Statutory monitoring,Routine,Rivers,below,383,34
+2026-04,UK government monitoring,Routine,Rivers,above,2,2
+2026-04,Statutory monitoring,Routine,Lakes and other fresh waters,below,1950,14
+2026-04,Waste site monitoring,Routine,Lakes and other fresh waters,number,87,1
+2026-04,Planned investigation,Investigation,Coast and estuaries,below,19,4
+2026-05,National agency monitoring,Routine,Rivers,number,4538,292
+2026-05,National agency monitoring,Routine,Lakes and other fresh waters,below,73,20
+2026-05,Urban waste water monitoring,Routine,Discharges and sites,below,20,19
+2026-05,Statutory monitoring,Routine,Rivers,below,855,42
+2026-05,Planned investigation,Investigation,Coast and estuaries,number,157,12
+2026-05,Statutory monitoring,Routine,Bathing waters,number,485,81
+2026-05,Statutory monitoring,Routine,Lakes and other fresh waters,below,2865,22
+2026-05,Statutory monitoring,Routine,Rivers,text,3,3
+2026-05,Pollution response,Pollution response,Groundwater,number,75,3
+2026-05,Planned investigation,Investigation,Lakes and other fresh waters,below,41,12
+2026-05,Statutory monitoring,Routine,Groundwater,number,118,3
+2026-05,Statutory monitoring,Routine,Lakes and other fresh waters,text,16,2
+2026-05,Planned investigation,Investigation,Lakes and other fresh waters,text,15,15
+2026-06,Statutory monitoring,Routine,Lakes and other fresh waters,below,2442,20
+2026-06,Planned investigation,Investigation,Rivers,number,1068,216
+2026-06,UK government monitoring,Routine,Lakes and other fresh waters,below,16,4
+2026-06,Planned investigation,Investigation,Lakes and other fresh waters,below,53,19
+2026-06,Urban waste water monitoring,Routine,Discharges and sites,number,914,384
+2026-06,Permit audit,Routine,Discharges and sites,below,34,20
+2026-06,Pollution response,Pollution response,Discharges and sites,number,104,14
+2026-06,Pollution response,Pollution response,Lakes and other fresh waters,number,104,10
+2026-06,Statutory monitoring,Routine,Rivers,number,1632,107
+2026-06,National agency monitoring,Routine,Rivers,below,1484,103
+2026-06,Permit audit,Routine,Discharges and sites,text,79,79
+2026-06,Permit audit,Routine,Discharges and sites,above,1,1
+2026-06,Permit audit,Routine,Lakes and other fresh waters,number,14,4
+2026-06,Statutory monitoring,Routine,Groundwater,below,583,8
+2026-06,Planned investigation,Investigation,Bathing waters,number,15,2
+2026-06,Planned investigation,Investigation,Lakes and other fresh waters,text,23,23
+2026-06,National agency monitoring,Routine,Lakes and other fresh waters,below,53,18
+2026-06,National agency monitoring,Routine,Groundwater,below,2,2
+2026-06,Statutory monitoring,Routine,Lakes and other fresh waters,text,40,5
+2026-06,National agency monitoring,Routine,Lakes and other fresh waters,above,1,1
+2026-02,Permit audit,Routine,Discharges and sites,text,57,57
+2026-02,Permit audit,Routine,Lakes and other fresh waters,text,7,7
+2026-03,Permit audit,Routine,Discharges and sites,text,84,84
+2026-04,Pollution response,Pollution response,Rivers,text,9,9
+2026-04,Pollution response,Pollution response,Discharges and sites,text,9,9
+2026-04,National agency monitoring,Routine,Rivers,text,81,79
+2026-04,Pollution response,Pollution response,Lakes and other fresh waters,text,3,3
+2026-04,Planned investigation,Investigation,Coast and estuaries,text,9,5
+2026-04,Statutory monitoring,Routine,Rivers,text,1,1
+2026-05,National agency monitoring,Routine,Lakes and other fresh waters,text,1,1
+2025-09,National agency monitoring,Routine,Lakes and other fresh waters,number,423,30
+2025-09,Operator self-monitoring,Routine,Discharges and sites,number,1074,375
+2025-09,Pollution response,Pollution response,Lakes and other fresh waters,below,29,13
+2025-09,Pollution response,Pollution response,Rivers,number,562,74
+2025-09,Pollution response,Pollution response,Discharges and sites,below,24,9
+2025-09,Pollution response,Pollution response,Discharges and sites,above,2,2
+2025-09,Permit audit,Routine,Discharges and sites,number,167,56
+2025-09,Statutory monitoring,Routine,Rivers,below,537,63
+2025-09,Planned investigation,Investigation,Rivers,number,763,86
+2025-09,National agency monitoring,Routine,Coast and estuaries,number,185,17
+2025-09,UK government monitoring,Routine,Rivers,below,1418,131
+2025-09,UK government monitoring,Routine,Rivers,above,14,14
+2025-09,Statutory monitoring,Routine,Bathing waters,text,626,75
+2025-09,Bathing water events,Routine,Rivers,text,2,2
+2025-09,Statutory monitoring,Routine,Bathing waters,below,99,37
+2025-09,Permit audit,Routine,Lakes and other fresh waters,text,5,5
+2025-09,Bathing water events,Routine,Bathing waters,text,439,47
+2025-09,Permit audit,Routine,Lakes and other fresh waters,below,12,4
+2025-09,Bathing water events,Routine,Bathing waters,below,29,7
+2025-09,Bathing water events,Routine,Bathing waters,above,3,1
+2025-09,Pollution response,Pollution response,Lakes and other fresh waters,text,7,7
+2025-09,National agency monitoring,Routine,Groundwater,below,23,4
+2025-09,Pollution response,Pollution response,Unspecified,number,136,4
+2025-09,UK government monitoring,Routine,Lakes and other fresh waters,below,51,3
+2025-10,National agency monitoring,Routine,Lakes and other fresh waters,below,641,22
+2025-10,Statutory monitoring,Routine,Lakes and other fresh waters,below,3447,24
+2025-10,Urban waste water monitoring,Routine,Discharges and sites,below,67,63
+2025-10,Pollution response,Pollution response,Rivers,number,532,49
+2025-10,Pollution response,Pollution response,Discharges and sites,number,341,29
+2025-10,Statutory monitoring,Routine,Rivers,number,1782,117
+2025-10,Planned investigation,Investigation,Rivers,number,444,45
+2025-10,Catchment permit monitoring,Routine,Discharges and sites,number,30,15
+2025-10,Statutory monitoring,Routine,Coast and estuaries,number,447,24
+2025-10,Permit audit,Routine,Lakes and other fresh waters,number,17,7
+2025-10,Statutory monitoring,Routine,Bathing waters,number,6,1
+2025-10,Planned investigation,Investigation,Bathing waters,number,10,1
+2025-10,Bathing water events,Routine,Bathing waters,below,2,1
+2025-11,Operator self-monitoring,Routine,Discharges and sites,below,280,183
+2025-11,Statutory monitoring,Routine,Rivers,number,1685,112
+2025-11,Planned investigation,Investigation,Rivers,number,428,43
+2025-11,UK government monitoring,Routine,Rivers,below,1513,117
+2025-11,Statutory monitoring,Routine,Coast and estuaries,number,692,30
+2025-11,Operator self-monitoring,Routine,Discharges and sites,above,2,1
+2025-11,Permit audit,Routine,Lakes and other fresh waters,below,13,7
+2025-11,UK government monitoring,Routine,Rivers,above,2,2
+2025-12,National agency monitoring,Routine,Lakes and other fresh waters,below,50,16
+2025-12,National agency monitoring,Routine,Rivers,below,1138,150
+2025-12,UK government monitoring,Routine,Lakes and other fresh waters,number,92,5
+2025-12,Operator self-monitoring,Routine,Discharges and sites,below,327,203
+2025-12,Flow passed forward,Routine,Discharges and sites,number,1384,173
+2025-12,Pollution response,Pollution response,Discharges and sites,below,27,11
+2025-12,Pollution response,Pollution response,Lakes and other fresh waters,number,141,12
+2025-12,Permit audit,Routine,Discharges and sites,number,114,33
+2025-12,UK government monitoring,Routine,Rivers,number,2056,141
+2025-12,Statutory monitoring,Routine,Coast and estuaries,below,16,7
+2026-01,Statutory monitoring,Routine,Lakes and other fresh waters,number,760,24
+2026-01,UK government monitoring,Routine,Lakes and other fresh waters,number,86,4
+2026-01,Operator self-monitoring,Routine,Discharges and sites,below,188,119
+2026-01,Pollution response,Pollution response,Lakes and other fresh waters,below,12,9
+2026-01,Statutory monitoring,Routine,Rivers,number,1647,100
+2026-01,Planned investigation,Investigation,Rivers,below,70,16
+2026-01,Catchment permit monitoring,Routine,Discharges and sites,number,28,14
+2026-01,Statutory monitoring,Routine,Groundwater,below,1815,61
+2026-01,Planned investigation,Investigation,Bathing waters,number,10,1
+2026-01,Operator self-monitoring,Routine,Discharges and sites,text,32,32
+2026-01,National agency monitoring,Routine,Lakes and other fresh waters,text,6,6
+2025-09,Pollution response,Pollution response,Discharges and sites,text,5,5
+2025-10,National agency monitoring,Routine,Lakes and other fresh waters,text,1,1
+2025-10,Bathing water events,Routine,Bathing waters,text,8,1
+2025-11,Operator self-monitoring,Routine,Discharges and sites,text,22,22
+2025-11,Permit audit,Routine,Lakes and other fresh waters,text,7,7
+2025-12,Pollution response,Pollution response,Discharges and sites,text,3,3
+2025-12,Operator self-monitoring,Routine,Discharges and sites,text,17,17
+2025-12,Statutory monitoring,Routine,Coast and estuaries,text,14,14
+2025-12,National agency monitoring,Routine,Rivers,text,90,90
+2026-01,Pollution response,Pollution response,Lakes and other fresh waters,text,7,7
+2026-01,Planned investigation,Investigation,Rivers,text,11,11
+2024-12,Planned investigation,Investigation,Lakes and other fresh waters,number,63,6
+2024-12,Pollution response,Pollution response,Discharges and sites,number,12,2
+2024-12,Planned investigation,Investigation,Rivers,number,418,36
+2024-12,Permit audit,Routine,Discharges and sites,number,99,39
+2024-12,National agency monitoring,Routine,Coast and estuaries,number,271,18
+2024-12,Statutory monitoring,Routine,Rivers,number,690,53
+2024-12,UK government monitoring,Routine,Rivers,below,1633,98
+2024-12,UK government monitoring,Routine,Rivers,above,6,6
+2024-12,Catchment permit monitoring,Routine,Discharges and sites,number,38,19
+2024-12,National agency monitoring,Routine,Lakes and other fresh waters,below,463,13
+2024-12,Permit audit,Routine,Lakes and other fresh waters,below,5,1
+2024-12,Planned investigation,Investigation,Groundwater,number,6,3
+2025-01,Operator self-monitoring,Routine,Discharges and sites,number,1014,332
+2025-01,Permit audit,Routine,Discharges and sites,below,58,30
+2025-01,Pollution response,Pollution response,Rivers,below,68,24
+2025-01,Pollution response,Pollution response,Lakes and other fresh waters,number,182,13
+2025-01,Pollution response,Pollution response,Rivers,above,4,4
+2025-01,Planned investigation,Investigation,Rivers,below,173,19
+2025-01,UK government monitoring,Routine,Rivers,below,2227,117
+2025-01,National agency monitoring,Routine,Lakes and other fresh waters,below,768,21
+2025-01,Statutory monitoring,Routine,Coast and estuaries,number,521,22
+2025-01,Statutory monitoring,Routine,Groundwater,number,1821,57
+2025-01,Permit audit,Routine,Lakes and other fresh waters,below,14,6
+2025-01,Statutory monitoring,Routine,Lakes and other fresh waters,below,75,6
+2025-01,Planned investigation,Investigation,Lakes and other fresh waters,below,17,5
+2025-01,Planned investigation,Investigation,Coast and estuaries,below,21,5
+2025-01,Planned investigation,Investigation,Bathing waters,number,11,1
+2025-01,Permit audit,Routine,Discharges and sites,above,1,1
+2025-01,Planned investigation,Investigation,Discharges and sites,number,12,1
+2025-02,National agency monitoring,Routine,Lakes and other fresh waters,below,192,18
+2025-02,National agency monitoring,Routine,Rivers,above,2,2
+2025-02,Planned investigation,Investigation,Lakes and other fresh waters,number,69,6
+2025-02,Operator self-monitoring,Routine,Discharges and sites,number,1054,343
+2025-02,Pollution response,Pollution response,Lakes and other fresh waters,number,160,14
+2025-02,Pollution response,Pollution response,Rivers,number,372,37
+2025-02,National agency monitoring,Routine,Rivers,below,1328,162
+2025-02,Planned investigation,Investigation,Rivers,number,434,36
+2025-02,National agency monitoring,Routine,Coast and estuaries,below,427,21
+2025-02,UK government monitoring,Routine,Rivers,below,1895,144
+2025-02,UK government monitoring,Routine,Rivers,above,8,8
+2025-02,Statutory monitoring,Routine,Lakes and other fresh waters,below,67,5
+2025-02,Planned investigation,Investigation,Groundwater,below,8,1
+2025-02,National agency monitoring,Routine,Lakes and other fresh waters,above,1,1
+2025-03,National agency monitoring,Routine,Rivers,number,5147,366
+2025-03,UK government monitoring,Routine,Lakes and other fresh waters,below,60,4
+2025-03,Pollution response,Pollution response,Lakes and other fresh waters,number,134,16
+2025-03,Planned investigation,Investigation,Discharges and sites,number,20,3
+2025-03,Statutory monitoring,Routine,Coast and estuaries,below,28,9
+2025-03,Planned investigation,Investigation,Lakes and other fresh waters,below,14,3
+2025-03,Planned investigation,Investigation,Coast and estuaries,below,22,5
+2025-03,National agency monitoring,Routine,Discharges and sites,below,12,1
+2025-03,Planned investigation,Investigation,Groundwater,number,6,3
+2025-04,Planned investigation,Investigation,Rivers,below,80,26
+2025-04,National agency monitoring,Routine,Rivers,below,1951,163
+2025-04,Statutory monitoring,Routine,Groundwater,number,452,22
+2025-04,Operator self-monitoring,Routine,Discharges and sites,number,1099,350
+2025-04,Pollution response,Pollution response,Rivers,below,77,27
+2025-04,Pollution response,Pollution response,Rivers,above,4,4
+2025-04,Pollution response,Pollution response,Discharges and sites,number,122,18
+2025-04,Statutory monitoring,Routine,Rivers,number,1139,107
+2025-04,Statutory monitoring,Routine,Coast and estuaries,below,58,16
+2025-04,Planned investigation,Investigation,Lakes and other fresh waters,below,71,11
+2025-04,Permit audit,Routine,Discharges and sites,below,29,13
+2025-04,Statutory monitoring,Routine,Coast and estuaries,above,1,1
+2025-04,Permit audit,Routine,Discharges and sites,above,2,2
+2025-04,Pollution response,Pollution response,Lakes and other fresh waters,number,380,34
+2025-04,Planned investigation,Investigation,Bathing waters,number,5,1
+2025-04,National agency monitoring,Routine,Discharges and sites,below,11,1
+2025-04,Pollution response,Pollution response,Coast and estuaries,number,77,2
+2025-05,Operator self-monitoring,Routine,Discharges and sites,below,189,124
+2025-05,National agency monitoring,Routine,Rivers,number,3407,211
+2025-05,Statutory monitoring,Routine,Lakes and other fresh waters,below,2781,20
+2025-05,Permit audit,Routine,Discharges and sites,number,193,69
+2025-05,Pollution response,Pollution response,Rivers,below,99,35
+2025-05,Pollution response,Pollution response,Rivers,above,4,4
+2025-05,Planned investigation,Investigation,Rivers,number,913,117
+2025-05,National agency monitoring,Routine,Coast and estuaries,number,484,42
+2025-05,UK government monitoring,Routine,Rivers,number,2442,204
+2025-05,National agency monitoring,Routine,Lakes and other fresh waters,below,546,21
+2025-05,Pollution response,Pollution response,Bathing waters,text,1,1
+2025-05,Pollution response,Pollution response,Bathing waters,below,2,1
+2025-05,Statutory monitoring,Routine,Bathing waters,number,619,105
+2025-05,Operator self-monitoring,Routine,Discharges and sites,text,36,36
+2024-12,Permit audit,Routine,Lakes and other fresh waters,text,2,2
+2025-01,Permit audit,Routine,Discharges and sites,text,93,93
+2025-01,Planned investigation,Investigation,Rivers,text,10,10
+2025-01,Permit audit,Routine,Lakes and other fresh waters,text,6,6
+2025-01,Planned investigation,Investigation,Coast and estuaries,text,11,7
+2025-01,National agency monitoring,Routine,Lakes and other fresh waters,text,1,1
+2025-02,National agency monitoring,Routine,Rivers,text,103,102
+2025-03,Statutory monitoring,Routine,Coast and estuaries,text,39,27
+2025-03,Planned investigation,Investigation,Coast and estuaries,text,11,7
+2025-04,Permit audit,Routine,Discharges and sites,text,70,70
+2025-04,Statutory monitoring,Routine,Coast and estuaries,text,39,27
+2025-04,National agency monitoring,Routine,Rivers,text,93,92
+2025-04,Planned investigation,Investigation,Rivers,text,35,35
+2025-04,Permit audit,Routine,Lakes and other fresh waters,text,2,2
+2025-04,Pollution response,Pollution response,Rivers,text,2,2
+2025-05,Pollution response,Pollution response,Rivers,text,14,13
+2025-05,Statutory monitoring,Routine,Groundwater,below,82,3
+2025-05,Statutory monitoring,Routine,Lakes and other fresh waters,text,24,3
+2025-06,National agency monitoring,Routine,Lakes and other fresh waters,number,486,35
+2025-06,National agency monitoring,Routine,Rivers,below,1729,127
+2025-06,UK government monitoring,Routine,Lakes and other fresh waters,number,63,4
+2025-06,Planned investigation,Investigation,Lakes and other fresh waters,below,20,7
+2025-06,Urban waste water monitoring,Routine,Discharges and sites,below,35,33
+2025-06,Pollution response,Pollution response,Discharges and sites,below,15,8
+2025-06,Permit audit,Routine,Discharges and sites,below,19,13
+2025-06,Planned investigation,Investigation,Rivers,number,984,138
+2025-06,National agency monitoring,Routine,Coast and estuaries,number,234,19
+2025-06,Statutory monitoring,Routine,Coast and estuaries,text,31,19
+2025-06,National agency monitoring,Routine,Rivers,text,77,76
+2025-06,Statutory monitoring,Routine,Bathing waters,text,1184,143
+2025-06,Statutory monitoring,Routine,Coast and estuaries,below,35,12
+2025-06,Statutory monitoring,Routine,Bathing waters,above,1,1
+2025-06,Statutory monitoring,Routine,Bathing waters,below,309,81
+2025-06,Permit audit,Routine,Discharges and sites,above,4,4
+2025-06,Permit audit,Routine,Discharges and sites,text,64,64
+2025-06,Permit audit,Routine,Lakes and other fresh waters,number,17,4
+2025-06,Planned investigation,Investigation,Bathing waters,number,246,26
+2025-06,Bathing water events,Routine,Rivers,number,12,3
+2025-06,Statutory monitoring,Routine,Groundwater,below,940,15
+2025-06,Urban waste water monitoring,Routine,Discharges and sites,above,2,2
+2025-06,National agency monitoring,Routine,Discharges and sites,number,50,2
+2025-06,Pollution response,Pollution response,Discharges and sites,text,1,1
+2025-06,National agency monitoring,Routine,Rivers,above,2,2
+2025-06,Planned investigation,Investigation,Lakes and other fresh waters,text,12,12
+2025-07,Operator self-monitoring,Routine,Discharges and sites,below,245,164
+2025-07,National agency monitoring,Routine,Rivers,below,1974,152
+2025-07,Pollution response,Pollution response,Lakes and other fresh waters,number,252,20
+2025-07,Pollution response,Pollution response,Rivers,below,179,45
+2025-07,Planned investigation,Investigation,Rivers,below,111,34
+2025-07,Pollution response,Pollution response,Discharges and sites,number,149,14
+2025-07,Pollution response,Pollution response,Rivers,above,2,2
+2025-07,Statutory monitoring,Routine,Rivers,below,827,61
+2025-07,UK government monitoring,Routine,Rivers,number,2418,183
+2025-07,Statutory monitoring,Routine,Rivers,above,2,2
+2025-07,Statutory monitoring,Routine,Coast and estuaries,number,561,25
+2025-07,National agency monitoring,Routine,Rivers,text,95,91
+2025-07,Planned investigation,Investigation,Rivers,text,117,117
+2025-07,Operator self-monitoring,Routine,Discharges and sites,text,20,20
+2025-07,Operator self-monitoring,Routine,Discharges and sites,above,6,4
+2025-07,Statutory monitoring,Routine,Groundwater,number,1914,52
+2025-07,Bathing water events,Routine,Bathing waters,text,104,10
+2025-07,National agency monitoring,Routine,Groundwater,below,143,1
+2025-07,Bathing water events,Routine,Bathing waters,below,15,2
+2025-07,National agency monitoring,Routine,Discharges and sites,number,50,2
+2025-07,Planned investigation,Investigation,Discharges and sites,number,15,2
+2025-07,UK government monitoring,Routine,Lakes and other fresh waters,below,2,1
+2025-08,Statutory monitoring,Routine,Groundwater,number,3835,108
+2025-08,UK government monitoring,Routine,Lakes and other fresh waters,below,16,2
+2025-08,Urban waste water monitoring,Routine,Discharges and sites,below,37,35
+2025-08,Pollution response,Pollution response,Lakes and other fresh waters,below,34,12
+2025-08,Pollution response,Pollution response,Rivers,below,223,72
+2025-08,Pollution response,Pollution response,Rivers,above,13,12
+2025-08,Pollution response,Pollution response,Lakes and other fresh waters,above,1,1
+2025-08,Statutory monitoring,Routine,Bathing waters,text,1107,134
+2025-08,Statutory monitoring,Routine,Coast and estuaries,number,544,24
+2025-08,Statutory monitoring,Routine,Bathing waters,below,349,66
+2025-08,Permit audit,Routine,Lakes and other fresh waters,number,15,4
+2025-08,Statutory monitoring,Routine,Lakes and other fresh waters,below,2695,20
+2025-08,National agency monitoring,Routine,Lakes and other fresh waters,below,443,22
+2025-08,Pollution response,Pollution response,Rivers,text,31,19
+2025-08,Statutory monitoring,Routine,Lakes and other fresh waters,text,32,4
+2025-08,Pollution response,Pollution response,Unspecified,text,4,4
+2025-08,National agency monitoring,Routine,Lakes and other fresh waters,text,21,21
+2025-08,Pollution response,Pollution response,Unspecified,below,72,4
+2025-08,Pollution response,Pollution response,Unspecified,above,1,1
+2025-08,National agency monitoring,Routine,Lakes and other fresh waters,above,2,2
+2026-06,National agency monitoring,Routine,Rivers,text,80,79
+2026-06,National agency monitoring,Routine,Rivers,above,1,1
+2026-07,Planned investigation,Investigation,Rivers,number,1162,238
+2026-07,Planned investigation,Investigation,Lakes and other fresh waters,below,117,24
+2026-07,Urban waste water monitoring,Routine,Discharges and sites,number,617,260
+2026-07,Operator self-monitoring,Routine,Discharges and sites,number,996,325
+2026-07,Statutory monitoring,Routine,Rivers,below,1060,69
+2026-07,UK government monitoring,Routine,Rivers,below,2070,168
+2026-07,UK government monitoring,Routine,Rivers,above,15,15
+2026-07,National agency monitoring,Routine,Lakes and other fresh waters,number,391,31
+2026-07,Statutory monitoring,Routine,Rivers,above,1,1
+2026-07,Statutory monitoring,Routine,Coast and estuaries,number,670,27
+2026-07,Statutory monitoring,Routine,Rivers,text,5,5
+2026-07,Permit audit,Routine,Lakes and other fresh waters,number,17,6
+2026-07,Planned investigation,Investigation,Lakes and other fresh waters,text,23,23
+2026-07,Planned investigation,Investigation,Groundwater,number,23,1
+2026-08,National agency monitoring,Routine,Rivers,number,2544,137
+2026-08,Statutory monitoring,Routine,Lakes and other fresh waters,below,2776,24
+2026-08,Planned investigation,Investigation,Rivers,number,964,189
+2026-08,Urban waste water monitoring,Routine,Discharges and sites,number,541,234
+2026-08,Pollution response,Pollution response,Rivers,below,51,27
+2026-08,Pollution response,Pollution response,Discharges and sites,number,196,19
+2026-08,National agency monitoring,Routine,Coast and estuaries,number,254,21
+2026-08,Statutory monitoring,Routine,Lakes and other fresh waters,text,34,6
+2026-08,National agency monitoring,Routine,Groundwater,number,44,1
+2026-08,Pollution response,Pollution response,Lakes and other fresh waters,number,58,15
+2026-08,National agency monitoring,Routine,Lakes and other fresh waters,number,308,24
+2026-08,Pollution response,Pollution response,Rivers,text,15,15
+2026-08,Pollution response,Pollution response,Rivers,above,6,3
+2026-08,National agency monitoring,Routine,Discharges and sites,below,29,2
+2026-09,National agency monitoring,Routine,Rivers,below,1044,76
+2026-09,Statutory monitoring,Routine,Lakes and other fresh waters,number,207,14
+2026-09,Pollution response,Pollution response,Discharges and sites,below,28,9
+2026-09,Statutory monitoring,Routine,Rivers,number,1183,86
+2026-09,UK government monitoring,Routine,Rivers,number,1441,133
+2026-09,Permit audit,Routine,Discharges and sites,text,63,63
+2026-09,Statutory monitoring,Routine,Coast and estuaries,number,238,11
+2026-09,Permit audit,Routine,Discharges and sites,below,51,27
+2026-09,National agency monitoring,Routine,Coast and estuaries,number,112,9
+2026-09,Operator self-monitoring,Routine,Discharges and sites,text,16,16
+2026-09,Operator self-monitoring,Routine,Discharges and sites,below,9,6
+2026-09,Permit audit,Routine,Lakes and other fresh waters,number,16,4
+2026-09,Permit audit,Routine,Discharges and sites,above,2,2
+2026-09,National agency monitoring,Routine,Lakes and other fresh waters,number,286,22
+2026-09,National agency monitoring,Routine,Rivers,text,58,54
+2026-09,National agency monitoring,Routine,Discharges and sites,number,71,2
+2026-10,Statutory monitoring,Routine,Rivers,text,3,3
+2026-09,National agency monitoring,Routine,Rivers,above,1,1
+2026-10,Statutory monitoring,Routine,Lakes and other fresh waters,number,38,3
+2026-10,Pollution response,Pollution response,Rivers,number,130,12
+2026-10,Permit audit,Routine,Discharges and sites,number,98,37
+2026-10,Statutory monitoring,Routine,Rivers,below,53,24
+2026-10,UK government monitoring,Routine,Rivers,below,258,71
+2026-10,UK government monitoring,Routine,Rivers,above,2,2
+2026-10,Statutory monitoring,Routine,Coast and estuaries,number,325,14
+2026-10,Planned investigation,Investigation,Lakes and other fresh waters,text,1,1
+2026-11,Planned investigation,Investigation,Rivers,text,2,2
+2026-10,Planned investigation,Investigation,Bathing waters,number,21,4
+2026-10,Planned investigation,Investigation,Lakes and other fresh waters,below,7,2
+2026-10,Pollution response,Pollution response,Lakes and other fresh waters,below,1,1
+2026-10,Statutory monitoring,Routine,Groundwater,below,67,2
+2026-10,UK government monitoring,Routine,Lakes and other fresh waters,number,32,3
+2026-11,National agency monitoring,Routine,Rivers,below,23,8
+2026-11,Statutory monitoring,Routine,Rivers,number,213,18
+2026-11,Planned investigation,Investigation,Rivers,below,20,4
+2026-11,Permit audit,Routine,Discharges and sites,number,15,7
+2025-08,Pollution response,Pollution response,Lakes and other fresh waters,text,3,3
+2026-11,National agency monitoring,Routine,Rivers,text,6,6
+2026-01,National agency monitoring,Routine,Rivers,number,4523,276
+2026-02,Statutory monitoring,Routine,Lakes and other fresh waters,number,632,22
+2026-02,Statutory monitoring,Routine,Groundwater,number,3387,100
+2026-02,UK government monitoring,Routine,Lakes and other fresh waters,number,55,2
+2026-02,Pollution response,Pollution response,Discharges and sites,number,215,18
+2026-02,Pollution response,Pollution response,Lakes and other fresh waters,number,277,20
+2026-02,Statutory monitoring,Routine,Rivers,below,470,52
+2026-02,Planned investigation,Investigation,Rivers,below,107,21
+2026-02,UK government monitoring,Routine,Rivers,number,2171,152
+2026-02,Statutory monitoring,Routine,Coast and estuaries,below,31,13
+2026-03,National agency monitoring,Routine,Lakes and other fresh waters,number,454,33
+2026-03,National agency monitoring,Routine,Rivers,number,4542,303
+2026-03,UK government monitoring,Routine,Lakes and other fresh waters,below,135,5
+2026-03,Urban waste water monitoring,Routine,Discharges and sites,below,37,34
+2026-03,Pollution response,Pollution response,Rivers,below,82,34
+2026-03,Pollution response,Pollution response,Rivers,above,3,3
+2026-03,Pollution response,Pollution response,Discharges and sites,below,143,14
+2026-03,Pollution response,Pollution response,Discharges and sites,above,1,1
+2026-03,National agency monitoring,Routine,Coast and estuaries,number,446,26
+2026-03,Statutory monitoring,Routine,Coast and estuaries,below,26,12
+2026-03,Statutory monitoring,Routine,Groundwater,number,876,27
+2026-03,National agency monitoring,Routine,Groundwater,below,94,8
+2026-03,Permit audit,Routine,Lakes and other fresh waters,below,14,6
+2026-03,Planned investigation,Investigation,Lakes and other fresh waters,below,28,8
+2026-03,Planned investigation,Investigation,Bathing waters,below,4,1
+2026-03,Planned investigation,Investigation,Groundwater,number,70,3
+2026-04,Operator self-monitoring,Routine,Discharges and sites,number,999,344
+2026-04,National agency monitoring,Routine,Lakes and other fresh waters,below,57,19
+2026-04,UK government monitoring,Routine,Lakes and other fresh waters,number,83,4
+2026-04,Statutory monitoring,Routine,Groundwater,number,461,14
+2026-04,Urban waste water monitoring,Routine,Discharges and sites,number,634,274
+2026-04,Permit audit,Routine,Discharges and sites,below,31,14
+2026-04,Permit audit,Routine,Lakes and other fresh waters,below,10,1
+2026-04,Planned investigation,Investigation,Rivers,number,250,30
+2026-04,National agency monitoring,Routine,Coast and estuaries,below,24,18
+2026-04,Statutory monitoring,Routine,Coast and estuaries,below,71,20
+2026-04,Permit audit,Routine,Discharges and sites,above,1,1
+2026-04,Planned investigation,Investigation,Lakes and other fresh waters,below,23,4
+2026-04,Waste site monitoring,Routine,Discharges and sites,text,342,38
+2026-04,Waste site monitoring,Routine,Discharges and sites,below,714,38
+2026-04,Waste site monitoring,Routine,Discharges and sites,above,1,1
+2026-04,National agency monitoring,Routine,Groundwater,number,20,2
+2026-04,Planned investigation,Investigation,Groundwater,below,4,1
+2026-04,National agency monitoring,Routine,Discharges and sites,number,74,2
+2026-05,UK government monitoring,Routine,Lakes and other fresh waters,below,16,2
+2026-05,Operator self-monitoring,Routine,Discharges and sites,below,194,128
+2026-05,Permit audit,Routine,Discharges and sites,number,204,67
+2026-05,Pollution response,Pollution response,Rivers,below,76,28
+2026-05,Pollution response,Pollution response,Discharges and sites,below,17,10
+2026-05,Planned investigation,Investigation,Rivers,below,106,31
+2026-05,UK government monitoring,Routine,Rivers,number,1961,137
+2026-05,National agency monitoring,Routine,Coast and estuaries,below,52,19
+2026-05,Statutory monitoring,Routine,Coast and estuaries,number,558,23
+2026-05,Operator self-monitoring,Routine,Discharges and sites,text,26,26
+2026-05,Planned investigation,Investigation,Rivers,text,99,99
+2026-05,Permit audit,Routine,Lakes and other fresh waters,number,14,6
+2026-05,Pollution response,Pollution response,Lakes and other fresh waters,number,305,29
+2026-05,Pollution response,Pollution response,Rivers,text,17,17
+2026-05,Pollution response,Pollution response,Rivers,above,2,2
+2026-05,National agency monitoring,Routine,Discharges and sites,number,75,2
+2026-06,Operator self-monitoring,Routine,Discharges and sites,number,912,300
+2026-06,Pollution response,Pollution response,Rivers,below,33,18
+2026-06,National agency monitoring,Routine,Coast and estuaries,number,262,21
+2026-06,UK government monitoring,Routine,Rivers,below,1730,87
+2026-06,UK government monitoring,Routine,Rivers,above,11,11
+2026-06,Catchment permit monitoring,Routine,Discharges and sites,number,28,14
+2026-06,Statutory monitoring,Routine,Coast and estuaries,below,64,19
+2026-06,Statutory monitoring,Routine,Bathing waters,text,1402,182
+2026-06,Statutory monitoring,Routine,Coast and estuaries,text,36,27
+2026-06,Statutory monitoring,Routine,Bathing waters,above,1,1
+2026-06,Planned investigation,Investigation,Coast and estuaries,text,13,9
+2026-06,Pollution response,Pollution response,Rivers,text,4,4
+2026-06,Statutory monitoring,Routine,Bathing waters,below,210,90
+2026-06,Planned investigation,Investigation,Coast and estuaries,below,28,7
+2026-06,Permit audit,Routine,Rivers,number,3,1
+2026-06,Pollution response,Pollution response,Rivers,above,4,2
+2026-02,Statutory monitoring,Routine,Coast and estuaries,text,39,27
+2026-02,Planned investigation,Investigation,Rivers,text,13,13
+2026-03,Pollution response,Pollution response,Discharges and sites,text,1,1
+2026-03,Statutory monitoring,Routine,Coast and estuaries,text,40,28
+2026-03,Permit audit,Routine,Lakes and other fresh waters,text,6,6
+2026-03,Pollution response,Pollution response,Rivers,text,10,10
+2026-04,Permit audit,Routine,Discharges and sites,text,42,42
+2026-04,Statutory monitoring,Routine,Coast and estuaries,text,38,27
+2026-04,Permit audit,Routine,Lakes and other fresh waters,text,2,2
+2026-04,Planned investigation,Investigation,Groundwater,text,1,1
+2026-04,Planned investigation,Investigation,Lakes and other fresh waters,text,3,3
+2026-05,Pollution response,Pollution response,Discharges and sites,text,4,4
+2025-09,Statutory monitoring,Routine,Lakes and other fresh waters,number,599,28
+2025-09,National agency monitoring,Routine,Rivers,below,2352,137
+2025-09,Statutory monitoring,Routine,Groundwater,below,2184,50
+2025-09,Urban waste water monitoring,Routine,Discharges and sites,number,695,303
+2025-09,Catchment permit monitoring,Routine,Discharges and sites,number,32,16
+2025-09,Statutory monitoring,Routine,Coast and estuaries,number,649,28
+2025-09,National agency monitoring,Routine,Rivers,text,80,77
+2025-09,Planned investigation,Investigation,Bathing waters,below,69,14
+2025-09,National agency monitoring,Routine,Rivers,above,9,2
+2025-09,Statutory monitoring,Routine,Groundwater,text,2,2
+2025-09,Planned investigation,Investigation,Bathing waters,text,32,4
+2025-09,Planned investigation,Investigation,Lakes and other fresh waters,below,30,11
+2025-09,Planned investigation,Investigation,Lakes and other fresh waters,text,6,6
+2025-10,National agency monitoring,Routine,Rivers,number,4458,261
+2025-10,UK government monitoring,Routine,Lakes and other fresh waters,below,16,3
+2025-10,Planned investigation,Investigation,Lakes and other fresh waters,below,78,13
+2025-10,Operator self-monitoring,Routine,Discharges and sites,number,1085,365
+2025-10,Pollution response,Pollution response,Lakes and other fresh waters,below,27,12
+2025-10,National agency monitoring,Routine,Coast and estuaries,number,251,13
+2025-10,UK government monitoring,Routine,Rivers,below,2660,154
+2025-10,Permit audit,Routine,Discharges and sites,below,69,34
+2025-10,UK government monitoring,Routine,Rivers,above,5,5
+2025-10,National agency monitoring,Routine,Groundwater,number,2,1
+2025-10,Statutory monitoring,Routine,Groundwater,number,58,2
+2025-10,Planned investigation,Investigation,Groundwater,number,157,7
+2025-10,National agency monitoring,Routine,Discharges and sites,number,51,2
+2025-11,National agency monitoring,Routine,Lakes and other fresh waters,number,460,33
+2025-11,Statutory monitoring,Routine,Lakes and other fresh waters,number,645,23
+2025-11,Planned investigation,Investigation,Lakes and other fresh waters,number,154,13
+2025-11,UK government monitoring,Routine,Lakes and other fresh waters,below,18,2
+2025-11,Urban waste water monitoring,Routine,Discharges and sites,number,1031,461
+2025-11,Permit audit,Routine,Discharges and sites,below,62,37
+2025-11,Pollution response,Pollution response,Rivers,number,658,65
+2025-11,Pollution response,Pollution response,Discharges and sites,number,163,24
+2025-11,Pollution response,Pollution response,Lakes and other fresh waters,number,98,9
+2025-11,National agency monitoring,Routine,Coast and estuaries,below,512,27
+2025-11,National agency monitoring,Routine,Rivers,below,1196,171
+2025-11,National agency monitoring,Routine,Rivers,above,5,2
+2025-11,Planned investigation,Investigation,Bathing waters,number,11,1
+2025-11,Permit audit,Routine,Discharges and sites,above,2,2
+2025-11,National agency monitoring,Routine,Rivers,text,93,92
+2025-12,Planned investigation,Investigation,Lakes and other fresh waters,below,24,7
+2025-12,Urban waste water monitoring,Routine,Discharges and sites,below,47,41
+2025-12,Pollution response,Pollution response,Rivers,number,448,42
+2025-12,Statutory monitoring,Routine,Rivers,number,1646,107
+2025-12,Planned investigation,Investigation,Rivers,below,80,17
+2025-12,Catchment permit monitoring,Routine,Discharges and sites,number,38,19
+2025-12,National agency monitoring,Routine,Coast and estuaries,below,229,18
+2025-12,Statutory monitoring,Routine,Lakes and other fresh waters,below,2121,16
+2025-12,Permit audit,Routine,Lakes and other fresh waters,below,6,1
+2025-12,Planned investigation,Investigation,Bathing waters,below,3,1
+2026-01,Planned investigation,Investigation,Lakes and other fresh waters,number,206,17
+2026-01,Urban waste water monitoring,Routine,Discharges and sites,below,25,23
+2026-01,Permit audit,Routine,Discharges and sites,below,46,27
+2026-01,Pollution response,Pollution response,Rivers,below,83,29
+2026-01,Pollution response,Pollution response,Discharges and sites,number,119,10
+2026-01,National agency monitoring,Routine,Coast and estuaries,number,526,19
+2026-01,UK government monitoring,Routine,Rivers,number,2276,140
+2026-01,Statutory monitoring,Routine,Coast and estuaries,number,430,19
+2026-01,Permit audit,Routine,Lakes and other fresh waters,number,13,3
+2026-01,Planned investigation,Investigation,Groundwater,number,119,5
+2026-01,Permit audit,Routine,Discharges and sites,text,77,77
+2026-01,Pollution response,Pollution response,Rivers,text,33,18
+2026-01,Pollution response,Pollution response,Rivers,above,1,1
+2025-10,Permit audit,Routine,Discharges and sites,text,92,92
+2025-10,Pollution response,Pollution response,Groundwater,text,1,1
+2025-10,Pollution response,Pollution response,Lakes and other fresh waters,text,5,5
+2025-11,Permit audit,Routine,Discharges and sites,text,93,92
+2025-12,Planned investigation,Investigation,Rivers,text,11,11
+2025-12,Permit audit,Routine,Lakes and other fresh waters,text,3,3
+2024-12,National agency monitoring,Routine,Rivers,number,4951,361
+2024-12,Statutory monitoring,Routine,Lakes and other fresh waters,number,246,11
+2024-12,UK government monitoring,Routine,Lakes and other fresh waters,number,76,4
+2024-12,Urban waste water monitoring,Routine,Discharges and sites,number,975,426
+2024-12,Operator self-monitoring,Routine,Discharges and sites,below,228,155
+2024-12,Pollution response,Pollution response,Rivers,number,426,39
+2024-12,Statutory monitoring,Routine,Coast and estuaries,below,21,8
+2024-12,Planned investigation,Investigation,Coast and estuaries,number,20,3
+2024-12,Pollution response,Pollution response,Lakes and other fresh waters,number,61,8
+2024-12,Planned investigation,Investigation,Bathing waters,below,3,1
+2025-01,National agency monitoring,Routine,Rivers,number,5202,407
+2025-01,UK government monitoring,Routine,Lakes and other fresh waters,number,103,6
+2025-01,Urban waste water monitoring,Routine,Discharges and sites,below,29,26
+2025-01,Pollution response,Pollution response,Discharges and sites,above,3,3
+2025-01,Pollution response,Pollution response,Discharges and sites,below,13,7
+2025-01,National agency monitoring,Routine,Coast and estuaries,below,98,16
+2025-01,Statutory monitoring,Routine,Rivers,number,757,50
+2025-01,Catchment permit monitoring,Routine,Discharges and sites,number,22,11
+2025-01,National agency monitoring,Routine,Coast and estuaries,above,1,1
+2025-01,Urban waste water monitoring,Routine,Discharges and sites,above,2,2
+2025-01,Planned investigation,Investigation,Groundwater,below,18,3
+2025-02,Statutory monitoring,Routine,Groundwater,below,2263,103
+2025-02,UK government monitoring,Routine,Lakes and other fresh waters,number,91,5
+2025-02,Urban waste water monitoring,Routine,Discharges and sites,below,21,21
+2025-02,Pollution response,Pollution response,Discharges and sites,number,332,25
+2025-02,Permit audit,Routine,Discharges and sites,number,103,32
+2025-02,Statutory monitoring,Routine,Rivers,number,690,51
+2025-02,Statutory monitoring,Routine,Coast and estuaries,below,31,13
+2025-02,Permit audit,Routine,Lakes and other fresh waters,below,4,1
+2025-02,Planned investigation,Investigation,Coast and estuaries,number,146,7
+2025-02,Urban waste water monitoring,Routine,Discharges and sites,above,2,2
+2025-02,Planned investigation,Investigation,Discharges and sites,below,2,1
+2025-02,Planned investigation,Investigation,Bathing waters,number,11,1
+2025-02,National agency monitoring,Routine,Discharges and sites,below,26,1
+2025-03,National agency monitoring,Routine,Lakes and other fresh waters,number,497,33
+2025-03,Operator self-monitoring,Routine,Discharges and sites,number,1049,325
+2025-03,Statutory monitoring,Routine,Lakes and other fresh waters,number,218,10
+2025-03,Urban waste water monitoring,Routine,Discharges and sites,number,659,286
+2025-03,Permit audit,Routine,Discharges and sites,number,155,54
+2025-03,Pollution response,Pollution response,Rivers,number,418,35
+2025-03,Pollution response,Pollution response,Discharges and sites,below,51,14
+2025-03,Planned investigation,Investigation,Rivers,below,186,20
+2025-03,National agency monitoring,Routine,Coast and estuaries,number,480,39
+2025-03,UK government monitoring,Routine,Rivers,number,2292,167
+2025-03,Catchment permit monitoring,Routine,Discharges and sites,number,28,14
+2025-03,Statutory monitoring,Routine,Rivers,below,198,27
+2025-03,Statutory monitoring,Routine,Groundwater,number,696,23
+2025-03,Permit audit,Routine,Lakes and other fresh waters,below,9,4
+2025-03,Planned investigation,Investigation,Bathing waters,below,4,1
+2025-03,National agency monitoring,Routine,Groundwater,number,17,3
+2025-04,Statutory monitoring,Routine,Lakes and other fresh waters,number,714,28
+2025-04,National agency monitoring,Routine,Lakes and other fresh waters,below,68,23
+2025-04,UK government monitoring,Routine,Lakes and other fresh waters,number,83,5
+2025-04,Urban waste water monitoring,Routine,Discharges and sites,number,626,277
+2025-04,National agency monitoring,Routine,Coast and estuaries,below,35,20
+2025-04,UK government monitoring,Routine,Rivers,below,1993,143
+2025-04,Catchment permit monitoring,Routine,Discharges and sites,number,28,14
+2025-04,UK government monitoring,Routine,Rivers,above,22,21
+2025-04,Planned investigation,Investigation,Groundwater,below,52,10
+2025-04,National agency monitoring,Routine,Lakes and other fresh waters,above,1,1
+2025-05,Planned investigation,Investigation,Lakes and other fresh waters,number,160,19
+2025-05,UK government monitoring,Routine,Lakes and other fresh waters,number,77,5
+2025-05,Urban waste water monitoring,Routine,Discharges and sites,number,648,275
+2025-05,Pollution response,Pollution response,Lakes and other fresh waters,number,382,31
+2025-05,Pollution response,Pollution response,Discharges and sites,number,147,18
+2025-05,Statutory monitoring,Routine,Rivers,number,1612,109
+2025-05,Catchment permit monitoring,Routine,Discharges and sites,number,40,20
+2025-05,Statutory monitoring,Routine,Coast and estuaries,below,94,20
+2025-05,Statutory monitoring,Routine,Coast and estuaries,text,40,28
+2025-05,Planned investigation,Investigation,Bathing waters,number,133,14
+2025-05,Bathing water events,Routine,Rivers,number,12,3
+2025-05,Permit audit,Routine,Lakes and other fresh waters,text,5,5
+2025-05,Bathing water events,Routine,Bathing waters,text,24,3
+2025-05,Permit audit,Routine,Lakes and other fresh waters,below,16,6
+2025-05,Bathing water events,Routine,Bathing waters,below,2,1
+2024-12,Operator self-monitoring,Routine,Discharges and sites,text,33,33
+2024-12,Statutory monitoring,Routine,Coast and estuaries,text,10,10
+2025-01,Pollution response,Pollution response,Discharges and sites,text,5,5
+2025-02,Statutory monitoring,Routine,Groundwater,text,3,3
+2025-02,Statutory monitoring,Routine,Coast and estuaries,text,36,24
+2025-02,Permit audit,Routine,Lakes and other fresh waters,text,2,2
+2025-03,Pollution response,Pollution response,Discharges and sites,text,9,9
+2025-03,Planned investigation,Investigation,Rivers,text,10,10
+2025-03,Permit audit,Routine,Lakes and other fresh waters,text,4,4
+2025-05,National agency monitoring,Routine,Discharges and sites,below,27,2
+2025-06,Pollution response,Pollution response,Rivers,text,36,12
+2025-06,Pollution response,Pollution response,Lakes and other fresh waters,text,4,4
+2025-06,Statutory monitoring,Routine,Lakes and other fresh waters,number,596,26
+2025-06,Operator self-monitoring,Routine,Discharges and sites,number,1043,336
+2025-06,Pollution response,Pollution response,Lakes and other fresh waters,below,26,10
+2025-06,Pollution response,Pollution response,Rivers,below,129,42
+2025-06,Pollution response,Pollution response,Rivers,above,2,2
+2025-06,Statutory monitoring,Routine,Rivers,below,474,56
+2025-06,UK government monitoring,Routine,Rivers,below,1474,117
+2025-06,Statutory monitoring,Routine,Rivers,above,4,4
+2025-06,UK government monitoring,Routine,Rivers,above,13,13
+2025-06,Catchment permit monitoring,Routine,Discharges and sites,number,32,16
+2025-06,Bathing water events,Routine,Bathing waters,number,56,7
+2025-06,Unspecified,Routine,Rivers,number,4,1
+2025-06,Planned investigation,Investigation,Discharges and sites,number,8,1
+2025-07,Statutory monitoring,Routine,Lakes and other fresh waters,number,682,30
+2025-07,Planned investigation,Investigation,Lakes and other fresh waters,below,95,18
+2025-07,Urban waste water monitoring,Routine,Discharges and sites,below,46,44
+2025-07,Permit audit,Routine,Discharges and sites,number,221,78
+2025-07,National agency monitoring,Routine,Lakes and other fresh waters,below,265,24
+2025-07,National agency monitoring,Routine,Coast and estuaries,below,38,18
+2025-07,National agency monitoring,Routine,Coast and estuaries,above,1,1
+2025-07,Statutory monitoring,Routine,Bathing waters,number,1065,155
+2025-07,Permit audit,Routine,Lakes and other fresh waters,number,23,6
+2025-07,Planned investigation,Investigation,Bathing waters,number,257,31
+2025-07,Permit audit,Routine,Rivers,text,1,1
+2025-07,Urban waste water monitoring,Routine,Discharges and sites,above,1,1
+2025-07,Planned investigation,Investigation,Lakes and other fresh waters,text,8,8
+2025-07,Pollution response,Pollution response,Unspecified,number,41,1
+2025-08,National agency monitoring,Routine,Rivers,below,1495,150
+2025-08,Operator self-monitoring,Routine,Discharges and sites,number,1003,342
+2025-08,Planned investigation,Investigation,Rivers,number,1007,125
+2025-08,Pollution response,Pollution response,Discharges and sites,number,238,23
+2025-08,Permit audit,Routine,Discharges and sites,below,27,15
+2025-08,Statutory monitoring,Routine,Rivers,number,1439,104
+2025-08,National agency monitoring,Routine,Coast and estuaries,below,25,12
+2025-08,UK government monitoring,Routine,Rivers,above,18,18
+2025-08,UK government monitoring,Routine,Rivers,below,1603,130
+2025-08,Permit audit,Routine,Discharges and sites,above,2,2
+2025-08,Permit audit,Routine,Discharges and sites,text,61,61
+2025-08,National agency monitoring,Routine,Rivers,text,97,79
+2025-08,Planned investigation,Investigation,Lakes and other fresh waters,below,50,14
+2025-08,Planned investigation,Investigation,Bathing waters,below,91,17
+2025-08,Bathing water events,Routine,Rivers,text,4,4
+2025-08,Bathing water events,Routine,Bathing waters,number,158,20
+2025-08,Planned investigation,Investigation,Discharges and sites,number,301,6
+2025-08,Planned investigation,Investigation,Groundwater,below,30,5
+2025-08,Planned investigation,Investigation,Bathing waters,text,8,1
+2025-08,Planned investigation,Investigation,Groundwater,text,1,1
+2025-08,Planned investigation,Investigation,Lakes and other fresh waters,text,8,8
+2025-08,National agency monitoring,Routine,Rivers,above,4,1
+2026-06,National agency monitoring,Routine,Discharges and sites,number,71,2
+2026-07,National agency monitoring,Routine,Rivers,number,3126,166
+2026-07,Statutory monitoring,Routine,Lakes and other fresh waters,number,707,28
+2026-07,UK government monitoring,Routine,Lakes and other fresh waters,number,90,6
+2026-07,Statutory monitoring,Routine,Groundwater,number,1651,53
+2026-07,Pollution response,Pollution response,Rivers,number,482,47
+2026-07,Pollution response,Pollution response,Discharges and sites,above,2,2
+2026-07,Pollution response,Pollution response,Discharges and sites,below,17,6
+2026-07,Pollution response,Pollution response,Lakes and other fresh waters,below,62,16
+2026-07,Permit audit,Routine,Discharges and sites,below,50,35
+2026-07,National agency monitoring,Routine,Coast and estuaries,below,49,20
+2026-07,Permit audit,Routine,Discharges and sites,text,96,96
+2026-07,Statutory monitoring,Routine,Bathing waters,number,1100,176
+2026-07,Planned investigation,Investigation,Coast and estuaries,text,13,9
+2026-07,Planned investigation,Investigation,Coast and estuaries,below,35,7
+2026-07,Pollution response,Pollution response,Lakes and other fresh waters,text,3,3
+2026-07,Permit audit,Routine,Discharges and sites,above,1,1
+2026-07,National agency monitoring,Routine,Discharges and sites,number,73,2
+2026-08,Statutory monitoring,Routine,Groundwater,below,2946,67
+2026-08,Operator self-monitoring,Routine,Discharges and sites,below,213,119
+2026-08,UK government monitoring,Routine,Lakes and other fresh waters,below,21,4
+2026-08,Planned investigation,Investigation,Lakes and other fresh waters,number,146,23
+2026-08,Planned investigation,Investigation,Discharges and sites,number,8,2
+2026-08,Permit audit,Routine,Discharges and sites,below,33,19
+2026-08,Statutory monitoring,Routine,Rivers,number,1479,97
+2026-08,UK government monitoring,Routine,Rivers,below,1241,116
+2026-08,UK government monitoring,Routine,Rivers,above,14,14
+2026-08,Statutory monitoring,Routine,Coast and estuaries,number,714,28
+2026-08,Planned investigation,Investigation,Coast and estuaries,number,196,16
+2026-08,Statutory monitoring,Routine,Bathing waters,number,967,148
+2026-08,Permit audit,Routine,Discharges and sites,text,70,70
+2026-08,Permit audit,Routine,Discharges and sites,above,7,7
+2026-08,Pollution response,Pollution response,Groundwater,number,9,1
+2026-08,Operator self-monitoring,Routine,Discharges and sites,text,17,17
+2026-08,Permit audit,Routine,Lakes and other fresh waters,text,4,4
+2026-08,Permit audit,Routine,Lakes and other fresh waters,below,4,1
+2026-09,Planned investigation,Investigation,Rivers,above,3,2
+2026-09,Planned investigation,Investigation,Rivers,below,118,32
+2026-09,Statutory monitoring,Routine,Groundwater,number,679,18
+2026-09,Planned investigation,Investigation,Lakes and other fresh waters,below,28,8
+2026-09,Pollution response,Pollution response,Lakes and other fresh waters,below,26,6
+2026-09,Pollution response,Pollution response,Rivers,below,51,25
+2026-09,Pollution response,Pollution response,Rivers,above,2,2
+2026-09,Pollution response,Pollution response,Lakes and other fresh waters,above,1,1
+2026-09,Planned investigation,Investigation,Rivers,text,127,127
+2026-09,Statutory monitoring,Routine,Bathing waters,text,814,110
+2026-09,Planned investigation,Investigation,Coast and estuaries,number,190,14
+2026-09,Statutory monitoring,Routine,Bathing waters,below,72,34
+2026-09,Planned investigation,Investigation,Lakes and other fresh waters,text,15,15
+2026-09,Pollution response,Pollution response,Lakes and other fresh waters,text,6,6
+2026-09,Pollution response,Pollution response,Rivers,text,12,12
+2026-09,UK government monitoring,Routine,Lakes and other fresh waters,number,22,3
+2026-10,National agency monitoring,Routine,Rivers,below,196,35
+2026-10,Pollution response,Pollution response,Discharges and sites,number,40,4
+2026-10,Planned investigation,Investigation,Rivers,number,190,24
+2026-10,National agency monitoring,Routine,Coast and estuaries,number,39,4
+2026-10,Permit audit,Routine,Lakes and other fresh waters,number,8,4
+2026-10,National agency monitoring,Routine,Rivers,text,20,18
+2026-11,Planned investigation,Investigation,Bathing waters,text,20,3
+2026-11,Permit audit,Routine,Lakes and other fresh waters,text,1,1
+2026-10,National agency monitoring,Routine,Lakes and other fresh waters,number,45,3
+2026-10,Operator self-monitoring,Routine,Discharges and sites,number,1,1
+2026-11,National agency monitoring,Routine,Lakes and other fresh waters,below,2,1
+2026-11,Planned investigation,Investigation,Bathing waters,below,2,1
+2025-07,Bathing water events,Routine,Rivers,text,4,4
+2025-07,National agency monitoring,Routine,Lakes and other fresh waters,text,21,21
+2026-08,Statutory monitoring,Routine,Groundwater,text,2,2

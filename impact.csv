@@ -1,0 +1,14 @@
+rule_id,figure,careful,careless,unit,effect_pct,measured
+SRC-02,"Rows counted for last calendar year, if the end date is set to 31 December rather than 1 January",304501.0,303085.0,rows,-0.5,True
+COM-02,"Samples in the latest complete month, as a chart of the raw data would show them, against the same month a year earlier",1867.0,350.0,samples,-81.3,True
+TIM-01,"Days since the newest result: the one date a simple check reads, against the stream that has been silent longest",82.0,8.0,days,-90.2,True
+UNI-01,Rows counted if duplicate addresses were present,551612.0,551612.0,rows,0.0,True
+UNI-02,"Average river ammonia, keeping one value per point and time, against keeping them all",1.046,1.0466,mg/l,0.1,True
+VAL-04,Share of all results that can be put on a map at their true place,100.0,95.1165,%,-4.9,True
+VAL-07,"Average river ammonia with below-limit results dropped, against counted at half the limit",1.0466,1.6904,mg/l,61.5,True
+CON-02,"Average E. coli, keeping the two codes apart, against joining on the name alone",26138.9423,23369.7396,per 100 ml,-10.6,True
+ACC-03,"Average river ammonia with results over 1,000 times the usual level left out, against kept in",0.5416,1.0466,mg/l,93.2,True
+ACC-04,"Average E. coli with above-range ceilings left out, against the sign stripped and the ceiling counted as a measurement",30347.8109,37612.1883,per 100 ml,23.9,True
+AI-01,"Average river phosphate if below-limit results are set to the limit, against set to zero: how far the unknown part can move a training target",0.0662,0.0761,mg/l,15.0,True
+AI-02,"Share of routine river samples taken on a weekday between 07:00 and 17:00, against the share of the week those hours make up",29.7619,99.8103,%,235.4,True
+AI-04,"Share of all samples that look like they were taken at the stated minute, if every clock time is believed, against if stamped times are set aside",86.4221,100.0,%,15.7,True

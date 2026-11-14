@@ -1,0 +1,14 @@
+stream,is_seasonal,sample_dates,newest_date,days_silent,longest_normal_silence,allowed_silence,freshness_status
+Flow passed forward,false,2,2025-12-31,318,365,365,Too few dates to judge
+Bathing water events,true,40,2025-10-02,408,18,21,Seasonal
+National agency monitoring,false,479,2026-11-04,10,16,21,On time
+Permit audit,false,411,2026-11-06,8,16,21,On time
+Waste site monitoring,false,2,2026-04-10,218,1,21,Too few dates to judge
+Catchment permit monitoring,false,83,2026-08-26,80,27,27,Late
+Planned investigation,false,401,2026-11-05,9,18,21,On time
+Operator self-monitoring,false,482,2026-10-13,32,15,21,Late
+Unspecified,false,1,2025-06-23,509,0,21,Too few dates to judge
+Pollution response,false,430,2026-10-28,17,13,21,On time
+UK government monitoring,false,423,2026-10-29,16,14,21,On time
+Statutory monitoring,false,492,2026-11-05,9,16,21,On time
+Urban waste water monitoring,false,466,2026-08-24,82,9,21,Late

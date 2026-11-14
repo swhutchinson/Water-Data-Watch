@@ -1,0 +1,5 @@
+run_id,item,kind,value,fingerprint,previous_fingerprint,changed,status,checked_on
+2026-11-14T09:02Z,Service specification,spec,version 1.3.1,013f828198b2b1fe,013f828198b2b1fe,False,ok,2026-11-14
+2026-11-14T09:02Z,Licence: water quality service,licence,Open Government Licence,7ce8bda6aa1ac1ae,7ce8bda6aa1ac1ae,False,ok,2026-11-14
+2026-11-14T09:02Z,Licence: catalogue record,licence,No licence provided,c86b58eac4398823,c86b58eac4398823,False,ok,2026-11-14
+2026-11-14T09:02Z,Licence: bathing water service,licence,,,,False,failed,2026-11-14

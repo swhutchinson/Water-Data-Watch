@@ -1,0 +1,218 @@
+stream,sample_month,samples,row_count,month_part_complete
+Permit audit,2025-05,111,365,false
+Operator self-monitoring,2025-05,404,1295,false
+Operator self-monitoring,2025-06,375,1246,false
+Permit audit,2025-06,86,260,false
+Catchment permit monitoring,2025-06,16,32,false
+Pollution response,2025-07,93,1352,false
+National agency monitoring,2025-08,270,5867,false
+Statutory monitoring,2025-08,399,15298,false
+UK government monitoring,2025-08,153,3414,false
+Permit audit,2026-06,107,379,false
+Operator self-monitoring,2026-06,322,1131,false
+National agency monitoring,2026-07,241,6379,false
+Statutory monitoring,2026-07,398,14436,false
+UK government monitoring,2026-07,210,4758,false
+National agency monitoring,2025-09,274,7035,false
+Statutory monitoring,2025-09,284,11369,false
+UK government monitoring,2025-09,183,3453,false
+Planned investigation,2025-10,73,1018,false
+Urban waste water monitoring,2025-10,465,1130,false
+Bathing water events,2025-10,1,16,false
+Planned investigation,2025-11,57,723,false
+Urban waste water monitoring,2025-11,462,1104,false
+Operator self-monitoring,2025-12,463,1478,false
+Permit audit,2025-12,48,198,false
+Catchment permit monitoring,2025-12,19,38,false
+Planned investigation,2026-01,61,910,false
+Urban waste water monitoring,2026-01,443,992,false
+Operator self-monitoring,2024-12,416,1258,false
+Permit audit,2024-12,57,179,false
+Catchment permit monitoring,2024-12,19,38,false
+National agency monitoring,2025-01,491,8848,false
+Statutory monitoring,2025-01,143,4990,false
+UK government monitoring,2025-01,174,4910,false
+Planned investigation,2025-02,55,954,false
+Urban waste water monitoring,2025-02,263,653,false
+Operator self-monitoring,2025-03,371,1271,false
+Permit audit,2025-03,83,294,false
+Catchment permit monitoring,2025-03,14,28,false
+Pollution response,2025-04,94,1162,false
+Catchment permit monitoring,2025-05,20,40,false
+Pollution response,2026-02,91,1186,false
+Planned investigation,2026-03,60,832,false
+Urban waste water monitoring,2026-03,327,803,false
+Planned investigation,2026-04,46,659,false
+Urban waste water monitoring,2026-04,274,666,false
+Pollution response,2026-05,80,1395,false
+Catchment permit monitoring,2026-06,14,28,false
+Operator self-monitoring,2026-08,283,981,false
+Permit audit,2026-08,98,345,false
+Catchment permit monitoring,2026-08,12,24,false
+Planned investigation,2026-09,186,1433,true
+Pollution response,2026-10,19,257,true
+Statutory monitoring,2025-05,274,8000,false
+National agency monitoring,2025-05,291,6726,false
+UK government monitoring,2025-05,210,4332,false
+National agency monitoring,2025-06,263,6263,false
+Statutory monitoring,2025-06,301,10074,false
+UK government monitoring,2025-06,156,3490,false
+Unspecified,2025-06,1,4,false
+Planned investigation,2025-07,202,1964,false
+Urban waste water monitoring,2025-07,339,807,false
+Bathing water events,2025-07,14,225,false
+Operator self-monitoring,2025-08,390,1287,false
+Permit audit,2025-08,82,258,false
+Catchment permit monitoring,2025-08,14,28,false
+Statutory monitoring,2026-06,353,9886,false
+National agency monitoring,2026-06,210,5313,false
+UK government monitoring,2026-06,136,3763,false
+Operator self-monitoring,2026-07,356,1216,false
+Permit audit,2026-07,119,396,false
+Catchment permit monitoring,2026-07,15,30,false
+Operator self-monitoring,2025-09,424,1380,false
+Permit audit,2025-09,89,305,false
+Catchment permit monitoring,2025-09,16,32,false
+Pollution response,2025-10,99,1288,false
+Pollution response,2025-11,98,1075,false
+National agency monitoring,2025-12,344,7164,false
+Statutory monitoring,2025-12,148,5459,false
+UK government monitoring,2025-12,146,3111,false
+Flow passed forward,2025-12,173,1384,false
+Pollution response,2026-01,76,1021,false
+National agency monitoring,2024-12,423,8351,false
+Statutory monitoring,2024-12,74,1562,false
+UK government monitoring,2024-12,135,3635,false
+Flow passed forward,2024-12,112,896,false
+Operator self-monitoring,2025-01,393,1247,false
+Permit audit,2025-01,130,395,false
+Catchment permit monitoring,2025-01,11,22,false
+Pollution response,2025-02,76,1089,false
+National agency monitoring,2025-03,451,8516,false
+Statutory monitoring,2025-03,112,3337,false
+UK government monitoring,2025-03,172,4210,false
+Planned investigation,2025-04,96,1291,false
+Urban waste water monitoring,2025-04,277,645,false
+Planned investigation,2026-02,62,844,false
+Urban waste water monitoring,2026-02,290,700,false
+Pollution response,2026-03,113,1511,false
+Pollution response,2026-04,78,791,false
+Planned investigation,2026-05,159,1323,false
+Urban waste water monitoring,2026-05,316,760,false
+National agency monitoring,2026-08,203,5579,false
+Statutory monitoring,2026-08,372,14462,false
+UK government monitoring,2026-08,152,3127,false
+Pollution response,2026-09,51,638,true
+Planned investigation,2026-10,31,357,true
+Planned investigation,2026-11,9,103,true
+Urban waste water monitoring,2025-05,275,659,false
+Planned investigation,2025-05,151,1512,false
+Bathing water events,2025-05,6,63,false
+Planned investigation,2025-06,183,1821,false
+Urban waste water monitoring,2025-06,372,887,false
+Bathing water events,2025-06,10,127,false
+National agency monitoring,2025-07,297,7581,false
+Statutory monitoring,2025-07,369,13685,false
+UK government monitoring,2025-07,186,4993,false
+Pollution response,2025-08,151,1961,false
+Planned investigation,2026-06,260,1861,false
+Urban waste water monitoring,2026-06,384,945,false
+Pollution response,2026-07,82,1050,false
+Pollution response,2025-09,111,1316,false
+Operator self-monitoring,2025-10,402,1336,false
+Permit audit,2025-10,130,422,false
+Catchment permit monitoring,2025-10,15,30,false
+Operator self-monitoring,2025-11,433,1396,false
+Permit audit,2025-11,131,455,false
+Catchment permit monitoring,2025-11,28,56,false
+Planned investigation,2025-12,53,686,false
+Urban waste water monitoring,2025-12,389,926,false
+Operator self-monitoring,2026-01,417,1403,false
+Permit audit,2026-01,95,336,false
+Catchment permit monitoring,2026-01,14,28,false
+Planned investigation,2024-12,49,754,false
+Urban waste water monitoring,2024-12,427,1014,false
+Pollution response,2025-01,70,939,false
+Operator self-monitoring,2025-02,394,1252,false
+Permit audit,2025-02,58,201,false
+Catchment permit monitoring,2025-02,13,26,false
+Planned investigation,2025-03,53,853,false
+Urban waste water monitoring,2025-03,286,684,false
+Statutory monitoring,2025-04,188,7362,false
+National agency monitoring,2025-04,322,7488,false
+UK government monitoring,2025-04,175,4349,false
+National agency monitoring,2026-02,366,7377,false
+Statutory monitoring,2026-02,250,12921,false
+UK government monitoring,2026-02,154,3221,false
+Operator self-monitoring,2026-03,348,1178,false
+Permit audit,2026-03,116,399,false
+Catchment permit monitoring,2026-03,15,30,false
+Operator self-monitoring,2026-04,373,1222,false
+Permit audit,2026-04,58,234,false
+Catchment permit monitoring,2026-04,14,28,false
+Waste site monitoring,2026-04,39,4446,false
+National agency monitoring,2026-05,345,7651,false
+Statutory monitoring,2026-05,235,8519,false
+UK government monitoring,2026-05,142,4031,false
+Planned investigation,2026-08,230,1687,false
+Urban waste water monitoring,2026-08,234,565,false
+Permit audit,2026-09,81,300,true
+Operator self-monitoring,2026-09,29,41,true
+Statutory monitoring,2026-10,73,1280,true
+National agency monitoring,2026-10,61,885,true
+UK government monitoring,2026-10,97,1293,true
+Statutory monitoring,2026-11,23,249,true
+National agency monitoring,2026-11,13,211,true
+Pollution response,2025-05,112,1339,false
+Pollution response,2025-06,79,1048,false
+Operator self-monitoring,2025-07,436,1397,false
+Permit audit,2025-07,135,428,false
+Catchment permit monitoring,2025-07,13,26,false
+Planned investigation,2025-08,174,2436,false
+Urban waste water monitoring,2025-08,299,700,false
+Bathing water events,2025-08,24,364,false
+Pollution response,2026-06,63,557,false
+Planned investigation,2026-07,288,2073,false
+Urban waste water monitoring,2026-07,260,640,false
+Urban waste water monitoring,2025-09,304,735,false
+Planned investigation,2025-09,123,1382,false
+Bathing water events,2025-09,49,885,false
+National agency monitoring,2025-10,312,8531,false
+Statutory monitoring,2025-10,172,7698,false
+UK government monitoring,2025-10,198,5418,false
+National agency monitoring,2025-11,345,7330,false
+Statutory monitoring,2025-11,166,6732,false
+UK government monitoring,2025-11,164,3903,false
+Pollution response,2025-12,95,986,false
+National agency monitoring,2026-01,336,7533,false
+Statutory monitoring,2026-01,204,10374,false
+UK government monitoring,2026-01,144,4404,false
+Pollution response,2024-12,49,585,false
+Planned investigation,2025-01,50,922,false
+Urban waste water monitoring,2025-01,438,979,false
+National agency monitoring,2025-02,448,8608,false
+Statutory monitoring,2025-02,190,7169,false
+UK government monitoring,2025-02,196,4620,false
+Pollution response,2025-03,72,971,false
+Operator self-monitoring,2025-04,400,1285,false
+Permit audit,2025-04,93,266,false
+Catchment permit monitoring,2025-04,14,28,false
+Operator self-monitoring,2026-02,325,1166,false
+Permit audit,2026-02,92,358,false
+Catchment permit monitoring,2026-02,14,28,false
+National agency monitoring,2026-03,371,7596,false
+Statutory monitoring,2026-03,182,7498,false
+UK government monitoring,2026-03,155,3539,false
+National agency monitoring,2026-04,359,6974,false
+Statutory monitoring,2026-04,156,5845,false
+UK government monitoring,2026-04,123,3645,false
+Operator self-monitoring,2026-05,364,1233,false
+Permit audit,2026-05,99,368,false
+Catchment permit monitoring,2026-05,16,32,false
+Pollution response,2026-08,74,759,false
+National agency monitoring,2026-09,146,3294,true
+Statutory monitoring,2026-09,242,5769,true
+UK government monitoring,2026-09,136,2116,true
+Permit audit,2026-10,68,193,true
+Permit audit,2026-11,24,39,true
+Operator self-monitoring,2026-10,1,1,true

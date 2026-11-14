@@ -1,0 +1,5 @@
+rule,decided_on,decision,decided_by,accepted,review_on
+VAL-07,2026-11-04,"Count below-limit results at half the limit, state this on every page, and never drop them.",Data Owner (Results),True,2027-02-01
+TIM-01,2026-11-04,Treat these streams as late rather than stopped until the publisher confirms how they arrive.,Data Owner (Results),True,2026-12-04
+VAL-04,2026-11-04,"Keep stand-in locations off every map, and show them in a separate labelled box.",Data Owner (Sampling Points),True,2027-02-01
+PRV-01,2026-11-04,"Withhold flagged labels, and link to the public source record instead.",Data Owner (Sampling Points),True,2027-05-01

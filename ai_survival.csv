@@ -1,0 +1,8 @@
+step_no,step_name,rows_left,step_note
+1,Every result,551612,Everything in the window.
+2,From rivers,290179,"The model is about rivers, so other waters and discharges are set aside."
+3,With a real location,276343,"A place the model can learn from, not a stand-in."
+4,From routine sampling,257528,"Pollution and investigation samples are real, but were taken because someone suspected a problem."
+5,With a real clock time,257528,Not one of the times that takes a large share of a stream.
+6,With a measured value,167402,"Not below a limit, above a range or a word."
+7,From points with regular history,51378,At least one sample a month on average.

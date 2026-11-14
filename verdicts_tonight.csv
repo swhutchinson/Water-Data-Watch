@@ -1,0 +1,17 @@
+run_id,use_id,use_name,use_phrase,use_order,dataset_id,dataset_name,dataset_order,verdict,gates_failed,gates_unchecked,conditions_open,in_scope,note
+2026-11-14T09:02Z,monthly,Send the monthly report,sending the monthly report,1,results,Water quality results,1,Fit with conditions,0,0,11,True,
+2026-11-14T09:02Z,monthly,Send the monthly report,sending the monthly report,1,points,Sampling point register,2,Fit with conditions,0,0,5,True,
+2026-11-14T09:02Z,monthly,Send the monthly report,sending the monthly report,1,bathing,Bathing water samples,3,Fit with conditions,0,0,1,True,
+2026-11-14T09:02Z,monthly,Send the monthly report,sending the monthly report,1,overall,Overall,0,Fit with conditions,0,0,17,True,
+2026-11-14T09:02Z,trend,Show a long-term trend,showing a long-term trend,2,results,Water quality results,1,Fit with conditions,0,0,7,True,
+2026-11-14T09:02Z,trend,Show a long-term trend,showing a long-term trend,2,points,Sampling point register,2,Fit with conditions,0,0,3,True,
+2026-11-14T09:02Z,trend,Show a long-term trend,showing a long-term trend,2,bathing,Bathing water samples,3,Not checked,0,0,0,False,No readiness rules written for this dataset yet
+2026-11-14T09:02Z,trend,Show a long-term trend,showing a long-term trend,2,overall,Overall,0,Fit with conditions,0,0,10,True,
+2026-11-14T09:02Z,signoff,Sign off a published figure,signing off a published figure,3,results,Water quality results,1,Not fit,1,0,13,True,
+2026-11-14T09:02Z,signoff,Sign off a published figure,signing off a published figure,3,points,Sampling point register,2,Not fit,1,0,6,True,
+2026-11-14T09:02Z,signoff,Sign off a published figure,signing off a published figure,3,bathing,Bathing water samples,3,Not fit,1,0,2,True,
+2026-11-14T09:02Z,signoff,Sign off a published figure,signing off a published figure,3,overall,Overall,0,Not fit,3,0,21,True,
+2026-11-14T09:02Z,ai,Train an AI model,training an AI model,4,results,Water quality results,1,Not fit,4,0,11,True,
+2026-11-14T09:02Z,ai,Train an AI model,training an AI model,4,points,Sampling point register,2,Fit with conditions,0,0,3,True,
+2026-11-14T09:02Z,ai,Train an AI model,training an AI model,4,bathing,Bathing water samples,3,Not checked,0,0,0,False,No readiness rules written for this dataset yet
+2026-11-14T09:02Z,ai,Train an AI model,training an AI model,4,overall,Overall,0,Not fit,4,0,14,True,
