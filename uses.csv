@@ -1,0 +1,5 @@
+use_id,use_order,use_name,question,needs
+monthly,1,Send the monthly report,Can this feed a monthly management report?,"Fresh, consistent figures with a stated method."
+trend,2,Show a long-term trend,Can this show how things have changed over the years?,A method that stays the same over time.
+signoff,3,Sign off a published figure,Could someone put their name to a figure from this?,"An audit trail, reconciled sources and no unexplained changes."
+ai,4,Train an AI model,Could a model safely learn from this?,"Even coverage, trustworthy targets and real clock times."
